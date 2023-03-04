@@ -1,0 +1,771 @@
+#PayLater开户
+-
+  Step: Given
+  Text: Livi Bank登录{user}账号{password}密码
+  Fixture: app
+  Process:
+    -
+      Action: judge,click
+      Element: ${LandingPage}${updateNotificationElement}
+      TestData:
+      Remarks: 判断更新弹窗按钮是否存在，存在即点击
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 等待2
+    -
+      Action: click
+      Element: ${LandingPage}${menuElement}
+      TestData:
+      Remarks: 点击右上角三点，进行切换账号
+    -
+      Action: click
+      Element: ${LandingPage}${SwitchUserElement}
+      TestData:
+      Remarks: 点击切换账号
+    -
+      Action: click
+      Element: ${LandingPage}${phoneInputElement}
+      TestData:
+      Remarks: 点击账号输入框
+    -
+      Action: input
+      Element: ${LandingPage}${phoneInputElement}
+      TestData: '{user}'
+      Remarks: 输入账号{user}
+    -
+      Action: click
+      Element: ${LandingPage}${LoginButtonElement}
+      TestData:
+      Remarks: 点击登录
+    -
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+    -
+      Action: judge,branch
+      Element: ${LandingPage}${passwordInputElement}
+      TestData:
+      Remarks: 判断密码输入框元素是否存在，如果存在则走输入密码分支，如果不存在则走验证码分支
+      ifbranchProcess:
+        -
+          Action: input
+          Element: ${LandingPage}${passwordInputElement}
+          TestData: '{password}'
+          Remarks: 输入密码{password}
+        -
+          Action: click
+          Element: ${LandingPage}${passwordTextElement}
+          TestData:
+          Remarks: 输入密码文本收起键盘
+        -
+          Action: click
+          Element: ${LandingPage}${LoginButtonElement}
+          TestData:
+          Remarks: 点击登录
+      elsebranchProcess:
+        -
+          Action: keyboard
+          Element:
+          TestData: 123456
+          Remarks: 输入验证码
+    -
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+    -
+      Action: judge,click
+      Element: ${LandingPage}${BiometricCertificationBottonElement}
+      TestData:
+      Remarks: 判断是否有生物认证弹窗
+    -
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿2秒
+    -
+      Action: judge,click
+      Element: ${LandingPage}${notifyConfirmBottonElement}
+      TestData:
+      Remarks: 判断是否谷歌服务或者紧张状态账户通知弹窗
+    -
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿2秒
+    -
+      Action: judge,click
+      Element: ${HomePage}${notificationPopupElemnt}
+      TestData:
+      Remarks: 判断是否含有通知弹窗
+    -
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿2秒
+    -
+      Action: judge,branch
+      Element: ${HomePage}${tipsButtonElement}
+      TestData:
+      Remarks: 判断提示是否第一次登录，如果有，先点击提示信息
+      branchProcess:
+        -
+          Action: click
+          Element: ${HomePage}${tipsButtonElement}
+          TestData:
+          Remarks: 点击提示信息
+        -
+          Action: click
+          Element: ${HomePage}${tipsButtonElement}
+          TestData:
+          Remarks: 点击提示信息
+        -
+          Action: click
+          Element: ${HomePage}${tipsButtonElement}
+          TestData:
+          Remarks: 点击提示信息
+        -
+          Action: click
+          Element: ${HomePage}${tipsButtonElement}
+          TestData:
+          Remarks: 点击提示信息
+        -
+          Action: click
+          Element: ${HomePage}${tipsButtonElement}
+          TestData:
+          Remarks: 点击提示信息
+    -
+      Action: sleep
+      Element:
+      TestData: 11
+      Remarks: 停顿11秒
+-
+  Step: Then
+  Text: 我将登录成功，并且进入了Livi Bank主页
+  Fixture: app
+  Process:
+    -
+      Action: get
+      Element: ${HomePage}${underHomeButtonElement}
+      TestData: [ '主页','主頁','Overview' ]
+      Remarks: 断言是否进入主页
+
+
+-
+  Step: Given
+  Text: 进入个人设置中心，设置PIN码为${sotfTokenPIN}
+  Fixture: app
+  Process:
+    -
+      Action: click
+      Element: ${HomePage}${personalCenterElement}
+      TestData:
+      Remarks: 点击右上角进入个人中心
+    -
+      Action: click
+      Element: ${PersonalCenterPage}${appSettingsElement}
+      TestData:
+      Remarks: 点击App设定
+    -
+      Action: click
+      Element: ${AppSettingPage}${softTokenSettingsElement}
+      TestData:
+      Remarks: 点击流动保安编码设置
+    -
+      Action: sleep
+      Element:
+      TestData: 10
+      Remarks: 等待10秒
+    -
+      Action: judge,branch
+      Element: ${AppSettingPage}${ChangePinElement}
+      TestData:
+      Remarks: 判断元素checked是否开启保安流动编码，如果有则执行if分支，否则走else分支
+      ifbranchProcess:
+        -
+          Action: sleep
+          Element:
+          TestData: 5
+          Remarks: 停顿5秒
+        -
+          Action: click
+          Element: ${AppSettingPage}${softTokenSwitchElement1}
+          TestData:
+          Remarks: 关闭pin
+        -
+          Action: sleep
+          Element:
+          TestData: 2
+          Remarks: 停顿2秒
+        -
+          Action: click
+          Element: ${AppSettingPage}${closeSoftTokenSwitchElement_YES}
+          TestData:
+          Remarks: 确认关闭
+        -
+          Action: sleep
+          Element:
+          TestData: 5
+          Remarks: 停顿5秒
+        -
+          Action: click
+          Element: ${AppSettingPage}${softTokenSwitchElement}
+          TestData:
+          Remarks: 打开流动保安编码确认密码开关
+        -
+          Action: sleep
+          Element:
+          TestData: 5
+          Remarks: 停顿5秒
+        -
+          Action: keyboard
+          Element:
+          TestData: 123456
+          Remarks: 输入验证码
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 停顿3秒
+        -
+          Action: sotfToken_input
+          Element:
+          TestData: ${sotfTokenPIN}
+          Remarks: 输入流动编码
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 停顿3秒
+        -
+          Action: sotfToken_input
+          Element:
+          TestData: ${sotfTokenPIN}
+          Remarks: 二次输入流动编码
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 停顿3秒
+      elsebranchProcess:
+        -
+          Action: click
+          Element: ${AppSettingPage}${softTokenSwitchElement}
+          TestData:
+          Remarks: 打开流动保安编码确认密码开关
+        -
+          Action: sleep
+          Element:
+          TestData: 5
+          Remarks: 停顿5秒
+        -
+          Action: keyboard
+          Element:
+          TestData: 123456
+          Remarks: 输入验证码
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 停顿3秒
+        -
+          Action: sotfToken_input
+          Element:
+          TestData: ${sotfTokenPIN}
+          Remarks: 输入流动编码
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 停顿3秒
+        -
+          Action: sotfToken_input
+          Element:
+          TestData: ${sotfTokenPIN}
+          Remarks: 二次输入流动编码
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 停顿3秒
+-
+  Step: Then
+  Text: 我能看到PIN码设置成功页面
+  Fixture: app
+  Process:
+    -
+      Action: get
+      Element: ${AppSettingPage}${softTokenSettingsSuccessElement}
+      TestData: [ '你已成功启用流动保安编码！','你已成功啟用流動保安編碼！','Your Soft Token has been activated successfully!' ]
+      Remarks: 校验是否成功启动流动保安编码！
+    -
+      Action: backHome
+      Element:
+      TestData:
+      Remarks: 返回首页
+
+-
+  Step: Given
+  Text: 进入卡设置页面
+  Fixture: app
+  Process:
+    -
+      Action: click
+      Element: ${HomePage}${personalCenterElement}
+      TestData:
+      Remarks: 点击右上角进入个人中心
+    -
+      Action: sleep
+      Element:
+      TestData: 8
+      Remarks: 等待8秒
+    -
+      Action: click
+      Element: ${BankServiceSettingElementPage}${BankServicesElement}
+      TestData:
+      Remarks: 点击银行服务
+    -
+      Action: click
+      Element: ${BankServiceSettingElementPage}${cardElement}
+      TestData:
+      Remarks: 点击银行卡
+    -
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 等待5秒
+    -
+      Action: slide
+      Element: left
+      TestData:
+      Remarks: 向左滑
+    -
+      Action: sleep
+      Element:
+      TestData: 15
+      Remarks: 等待15秒,等待卡頁面報錯信息
+-
+  Step: Given
+  Text: 点击申请PayLater
+  Fixture: app
+  Process:
+    -
+      Action: click
+      Element: ${BankServiceSettingElementPage}${ApplyForLiviPayLaterButton}
+      TestData:
+      Remarks: 点击申请PayLater
+##进入申请流程****************
+    -
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${ContinueOpenButtonElement}
+      TestData:
+      Remarks: 点击继续按钮
+    -
+      Action: sleep
+      Element:
+      TestData: 10
+      Remarks: 停顿10秒
+    -
+      Action: slide
+      Element: bottom
+      TestData:
+      Remarks: 滑动到底部
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${AgreementButtonElement}
+      TestData:
+      Remarks: 勾选协议
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${ContinueButtonElement}
+      TestData:
+      Remarks: 勾选协议后，点击继续按钮
+    -
+      Action: sleep
+      Element:
+      TestData: 10
+      Remarks: 停顿10秒
+    -
+      Action: judge,branch
+      Element: ${PayLatrPage}${OTPElement}
+      TestData:
+      Remarks: 判断是否调用OTP核身方式
+      ifbranchProcess:
+        -
+          Action: keyboard
+          Element:
+          TestData: 123456
+          Remarks: 输入验证码
+      elsebranchProcess:
+        -
+          Action: sotfToken_input
+          Element:
+          TestData: 147258
+          Remarks: SoftTokenInput
+    -
+      Action: sleep
+      Element:
+      TestData: 10
+      Remarks: 停顿10秒
+    -
+      Action: slide
+      Element: bottom
+      TestData:
+      Remarks: 滑动到底部
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${ReviewConfirmButtonElement}
+      TestData:
+      Remarks: 点击确定按钮
+    -
+      Action: sleep
+      Element:
+      TestData: 10
+      Remarks: 停顿10秒
+  #    这里iOS需要适配学生的情况
+    -
+      Action: judge,branch
+      Element: ${LendingPayLaterApplyElement}${ProfessionButtonElement}
+      TestData:
+      Remarks: 判断职业是否为学生
+      ifbranchProcess:
+        -
+          Action: click
+          Element: ${LendingPayLaterApplyElement}${ProfessionButtonElement}
+          TestData:
+          Remarks: 选择职业
+        -
+          Action: click
+          Element: ${LendingPayLaterApplyElement}${ProfessionElement}
+          TestData:
+          Remarks: 选择职业-专业人士
+        -
+          Action: click
+          Element: ${LendingPayLaterApplyElement}${OccupationElement}
+          TestData:
+          Remarks: 选择行业-会计师
+        -
+          Action: click
+          Element: ${LendingPayLaterApplyElement}${IndustryButtonElement}
+          TestData:
+          Remarks: 选择行业
+        -
+          Action: click
+          Element: ${LendingPayLaterApplyElement}${SelectIndustryElement}
+          TestData:
+          Remarks: 选择行业-金融
+        -
+          Action: click
+          Element: ${LendingPayLaterApplyElement}${IndustryElement}
+          TestData:
+          Remarks: 选择行业-银行业
+      elsebranchProcess:
+        - Action: sleep
+          Element:
+          TestData: 10
+          Remarks: 等待10秒
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${CompanyNameElement}
+      TestData:
+      Remarks: 点击输入框-公司名称
+    -
+      Action: input
+      Element: ${LendingPayLaterApplyElement}${CompanyNameElement}
+      TestData: qwe
+      Remarks: 输入公司名称
+  #  -
+  #    Action: keyboard
+  #    Element:
+  #    TestData: recovery
+  #    Remarks: 关闭键盘
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${PersonalInformationElement}
+      TestData:
+      Remarks: 点击页头
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${EmploymentStatusButtonElement}
+      TestData:
+      Remarks: 点击就业状况下拉框
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${EmploymentStatusElement}
+      TestData:
+      Remarks: 选择就业状况
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${CurrentJobPeriodButtonElement}
+      TestData:
+      Remarks: 点击当前工作任期下拉框
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${CurrentJobDoneButtonElement}
+      TestData:
+      Remarks: 点击完成
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${MonthlyIncomeElement}
+      TestData:
+      Remarks: 点击每月输入
+    -
+      Action: input
+      Element: ${LendingPayLaterApplyElement}${MonthlyIncomeElement}
+      TestData: 50000
+      Remarks: 输入月收入
+  #  -
+  #    Action: keyboard
+  #    Element:
+  #    TestData: recovery
+  #    Remarks: 关闭键盘
+    -
+      Action: click
+      Element: ${PayLatrPage}${PersonalInformationElement}
+      TestData:
+      Remarks: 点击页头
+    -
+      Action: slide
+      Element: up
+      TestData:
+      Remarks: 向上滑动
+    -
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 停顿3秒
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${MaritalStatusButtonElement}
+      TestData:
+      Remarks: 选择婚姻状况
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${MaritalStatusElement}
+      TestData:
+      Remarks: 选择未婚
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${EducationLevelButtonElement}
+      TestData:
+      Remarks: 选择教育程度
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${UniversityOrAboveElement}
+      TestData:
+      Remarks: 选择大学或以上
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${HousingStatusButtonElement}
+      TestData:
+      Remarks: 选择现居状况
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${SelfOwneDwithNoMortgageElement}
+      TestData:
+      Remarks: 选择自有无抵押
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+#未生效，待排查原因
+    -
+      Action: judge_platform
+      Element:
+      TestData: ios
+      Remarks: 如果是iOS设备，选择关联人士
+      branchProcess:
+        -
+          Action: click
+          Element: [50,666]
+          TestData:
+          Remarks: 关联人士选择否，坐标从iPhone 12 mini机型获取
+        -
+          Action: sleep
+          Element:
+          TestData: 1
+          Remarks: 停顿1秒
+    -
+      Action: judge_platform
+      Element:
+      TestData: android
+      Remarks: 如果是android设备，选择关联人士
+      branchProcess:
+        -
+          Action: click
+          Element: [137,2040]
+          TestData:
+          Remarks: 关联人士选否
+        -
+          Action: sleep
+          Element:
+          TestData: 2
+          Remarks: 停顿2秒
+#    -
+#      Action: click
+#      Element: [137,2040]
+#      TestData:
+#      Remarks: 关联人士选否
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${ContinueOpenButtonElement}
+      TestData:
+      Remarks: 点击个人信息页面的继续按钮
+    -
+      Action: sleep
+      Element:
+      TestData: 10
+      Remarks: 停顿10秒
+    -
+      Action: slide
+      Element: bottom
+      TestData:
+      Remarks: 滑动到底部
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${ReviewConfirmButtonElement}
+      TestData:
+      Remarks: 点击个人信息页面的确定按钮
+    -
+      Action: sleep
+      Element:
+      TestData: 10
+      Remarks: 停顿10秒
+  #  -
+  #    Action: slide
+  #    Element: up
+  #    TestData:
+  #    Remarks: 滑一次就够了
+    -
+      Action: slide
+      Element: bottom
+      TestData:
+      Remarks: 滑动到底部，安卓需要滑动到底部
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${AgreementButtonElement1}
+      TestData:
+      Remarks: 点击协议1
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${AgreementButtonElement2}
+      TestData:
+      Remarks: 点击协议2
+    -
+      Action: click
+      Element: ${LendingPayLaterApplyElement}${ContinueOpenButtonElement}
+      TestData:
+      Remarks: 点击继续按钮
+    -
+      Action: sleep
+      Element:
+      TestData: 25
+      Remarks: 停顿25秒
+    -
+      Action: judge,branch
+      Element: ${LendingPayLaterApplicationApproved}${viewOfferPageElement}
+      TestData:
+      Remarks: 判断是否进入额度确认页面
+      ifbranchProcess:
+        -
+          Action: sleep
+          Element:
+          TestData: 5
+          Remarks: 秒批通过
+      elsebranchProcess:
+        -
+          Action: sleep
+          Element:
+          TestData: 2
+          Remarks: 等待2秒
+        -
+          Action: judge,branch
+          Element: ${LendingPayLaterApplicationApproved}${ApplicationFailedElement}
+          TestData:
+          Remarks: 判断申請是否通過，若未通過，走if分支
+          ifbranchProcess:
+            -
+              Action: sleep
+              Element:
+              TestData: 2
+              Remarks: 申请失败
+            -
+              Action: click
+              Element: ${LendingPayLaterApplicationApproved}${ApplicationFailedPageBackToHomeElement}
+              TestData:
+              Remarks: 点击申请失败页面中，返回主页
+            -
+              Action: sleep
+              Element:
+              TestData: 5
+              Remarks: 申請失敗
+          elsebranchProcess:
+            -
+              Action: sleep
+              Element:
+              TestData: 2
+              Remarks: 未秒批通过，进入审批中页面
+#            -
+#              Action: click
+#              Element: ${LendingPayLaterApplicationApproved}${CurrentJobDoneButtonElement}
+#              TestData:
+#              Remarks: 点击审批中页面完成按钮
+#            -
+#              Action: sleep
+#              Element:
+#              TestData: 5
+#              Remarks: 審批中，待web端審批
+-
+  Step: Then
+  Text: 我能看到PayLater正在申请处理中
+  Fixture: app
+  Process:
+    -
+      Action: get
+      Element: ${LendingPayLaterApplicationApproved}${ApplicationPendingElement}
+      TestData: [ '申请处理中！','申請處理中！','Application Pending' ]
+      Remarks: 校验是否进入审批中页面
+    -
+      Action: click
+      Element: ${LendingPayLaterApplicationApproved}${CurrentJobDoneButtonElement}
+      TestData:
+      Remarks: 点击审批中页面完成按钮
+    -
+      Action: backHome
+      Element:
+      TestData:
+      Remarks: 返回首页

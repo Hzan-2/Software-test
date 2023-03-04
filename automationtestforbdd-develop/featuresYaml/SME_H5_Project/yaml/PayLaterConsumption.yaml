@@ -1,0 +1,12 @@
+#PayLater消费成功后，登录app检查消费信息
+
+-
+  Step: Given
+  Text: 进入account页面，查看消费信息11
+  Fixture: app
+  Process:
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒

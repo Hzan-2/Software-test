@@ -1,0 +1,311 @@
+#快速存入頁面元素--by yang.yang
+QuickSaveElementPage:
+  android:
+    #标题
+    QuickSavetittleElement:
+      SimplifiedChinese: //*[contains(@content-desc, '快速存入')]
+      TraditionalChinese: //*[contains(@content-desc, '快速存入')]
+      English: //*[contains(@content-desc, 'Quick Save')]
+
+    #生效中
+    ActiveElement:
+      SimplifiedChinese: //*[contains(@text, '生效中')]
+      TraditionalChinese: //*[contains(@text, '生效中')]
+      English: //*[contains(@text, 'Active')]
+    #无效
+    InactiveElement:
+      SimplifiedChinese: //*[contains(@text, '无效')]
+      TraditionalChinese: //*[contains(@text, '無效')]
+      English: //*[contains(@text, 'Inactive')]
+
+    #更改
+    EditElement:
+      SimplifiedChinese: //*[contains(@text, '更改')]
+      TraditionalChinese: //*[contains(@text, '更改')]
+      English: //*[contains(@text, 'Edit')]
+    #快速存入详细
+    QuickSaveDetailElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[9]/android.widget.Image
+    #快速存入详细信息页面元素--更改
+    #快速存入修改-金额输入框
+    QuickSaveAmountElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[9]/android.widget.EditText
+    #快速存入修改-存入频率
+    QuickSaveFrequencyElement:
+      SimplifiedChinese: //*[contains(@text, '存入频率')]
+      TraditionalChinese: //*[contains(@text, '存入頻率')]
+      English: //*[contains(@text, 'Frequency')]
+    #存入频率下拉详情
+    #存入频率-特定日期
+    OnASpecificDateElement:
+      SimplifiedChinese: //*[contains(@text, '具体日期')]
+      TraditionalChinese: //*[contains(@text, '指定日期')]
+      English: //*[contains(@text, 'On a Specific Date')]
+    #转账频率-每日
+    DailyElement:
+      SimplifiedChinese: //*[contains(@text, '每日')]
+      TraditionalChinese: //*[contains(@text, '每日')]
+      English: //*[contains(@text, 'Daily')]
+    #转账频率-每星期
+    WeeklyElement:
+      SimplifiedChinese: //*[contains(@text, '每星期')]
+      TraditionalChinese: //*[contains(@text, '每星期')]
+      English: //*[contains(@text, 'Weekly')]
+    #转账频率-每两星期
+    BiweeklyElement:
+      SimplifiedChinese: //*[contains(@text, '每两周')]
+      TraditionalChinese: //*[contains(@text, '每兩星期')]
+      English: //*[contains(@text, 'Bi-weekly')]
+    #转账频率-每月
+    MonthlyElement:
+      SimplifiedChinese: //*[contains(@text, '每月')]
+      TraditionalChinese: //*[contains(@text, '每月')]
+      English: //*[contains(@text, 'Monthly')]
+    #转账频率-每季
+    QuarterlyElement:
+      SimplifiedChinese: //*[contains(@text, '每季')]
+      TraditionalChinese: //*[contains(@text, '每季')]
+      English: //*[contains(@text, 'Quarterly')]
+
+    #快速存入修改-开始日期
+    QuickSaveStartDateElement:
+      SimplifiedChinese: //*[contains(@text, '开始日期')]
+      TraditionalChinese: //*[contains(@text, '開始日期')]
+      English: //*[contains(@text, 'Start Date')]
+    #快速存入修改-开始日期-具体值
+    QuickSaveStartDatevalue: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[11]/android.view.View[1]/android.view.View[2]
+    #快速存入修改-結束日期
+    QuickSaveEndDateElement:
+      SimplifiedChinese: //*[contains(@text, '结束日期')]
+      TraditionalChinese: //*[contains(@text, '結束日期')]
+      English: //*[contains(@text, 'End Date')]
+    #快速存入修改-備注修改
+    QuickSaveNotesElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[13]
+    #快速存入修改-繼續
+    QuickSaveContinueElement:
+      SimplifiedChinese: //*[contains(@text, '继续')]
+      TraditionalChinese: //*[contains(@text, '繼續')]
+      English: //*[contains(@text, 'Continue')]
+    #取消快速存入
+    StopThisQuickSaveElement:
+      SimplifiedChinese: //*[contains(@text, '取消此快速存入')]
+      TraditionalChinese: //*[contains(@text, '取消此快速存入')]
+      English: //*[contains(@text, 'Stop this Quick Save')]
+    #取消/修改快速存入确认框--确定
+    QuickSaveConfirmElement:
+      SimplifiedChinese: //android.view.View[(@text='确定')]
+      TraditionalChinese: //android.view.View[(@text='確定')]
+      English: //android.view.View[(@text='Confirm')]
+    #取消/修改快速存入确认框--返回
+    QuickSaveBackElement:
+      SimplifiedChinese: //*[contains(@text, '返回')]
+      TraditionalChinese: //*[contains(@text, '返回')]
+      English: //*[contains(@text, 'Back')]
+
+    #核对资料页面
+    #核对资料标题
+    ReviewtittleElement:
+      SimplifiedChinese: //*[contains(@content-desc, '核对信息')]
+      TraditionalChinese: //*[contains(@content-desc, '核對資料')]
+      English: //*[contains(@content-desc, 'Review')]
+    #核对信息-确定
+    ReviewConfirmElement:
+      SimplifiedChinese: //*[contains(@text, '确定')]
+      TraditionalChinese: //*[contains(@text, '確定')]
+      English: //*[contains(@text, 'Confirm')]
+
+    #更新结果页面
+    #更新结果
+    EditResultElement:
+      SimplifiedChinese: //*[contains(@text, '你的快速存入指示已更新')]
+      TraditionalChinese: //*[contains(@text, '你的快速存入指示已更新')]
+      English: //*[contains(@text, 'Your Quick Save instruction is updated')]
+    #更新结果页面完成按钮
+    EditResultDoneElement:
+      SimplifiedChinese: //*[contains(@text, '完成')]
+      TraditionalChinese: //*[contains(@text, '完成')]
+      English: //*[contains(@text, 'Done')]
+
+    #重新启用快速存入
+    #重新启用按钮
+    TurnonElement:
+      SimplifiedChinese: //*[contains(@text, '重新启用')]
+      TraditionalChinese: //*[contains(@text,  '重新啟用')]
+      English: //*[contains(@text, 'Turn on')]
+    #激活结果页面
+    #激活结果
+    TurnonResultElement:
+      SimplifiedChinese: //*[contains(@text, '快速存入现已激活')]
+      TraditionalChinese: //*[contains(@text, '快速存入現已啓用')]
+      English: //*[contains(@text, 'Quick Save is now activated')]
+    #更新结果页面完成按钮
+    TurnonResultDoneElement:
+      SimplifiedChinese: //*[contains(@text, '完成')]
+      TraditionalChinese: //*[contains(@text, '完成')]
+      English: //*[contains(@text, 'Done')]
+
+
+
+
+    #查看已绑定的银行账号
+    ViewLinkedBankAccountsElement:
+      SimplifiedChinese: //*[contains(@text, '查看已绑定银行账户')]
+      TraditionalChinese: //*[contains(@text, '查看已綁定的銀行戶口')]
+      English: //*[contains(@text, 'View Linked Bank Accounts')]
+    #设立新快速存入指示
+    SetUpNewQuickSaveElement:
+      SimplifiedChinese: //*[contains(@text, '设置新快速存入指示')]
+      TraditionalChinese: //*[contains(@text, '設立新快速存入指示')]
+      English: //*[contains(@text, 'Set up new Quick Save')]
+
+
+  ios:
+    #标题
+    QuickSavetittleElement:
+      SimplifiedChinese: //*[contains(@name, '快速存入')]
+      TraditionalChinese: //*[contains(@name, '快速存入')]
+      English: //*[contains(@name, 'Quick Save')]
+
+    #生效中
+    ActiveElement:
+      SimplifiedChinese: //*[contains(@name, '生效中')]
+      TraditionalChinese: //*[contains(@name, '生效中')]
+      English: //*[contains(@name, 'Active')]
+    #无效
+    InactiveElement:
+      SimplifiedChinese: //*[contains(@name, '无效')]
+      TraditionalChinese: //*[contains(@name, '無效')]
+      English: //*[contains(@name, 'Inactive')]
+
+    #更改
+    EditElement:
+      SimplifiedChinese: (//XCUIElementTypeStaticText[@name='更改'])[1]
+      TraditionalChinese: (//XCUIElementTypeStaticText[@name='更改'])[1]
+      English: (//XCUIElementTypeStaticText[@name='Edit'])[1]
+    #快速存入详细
+    QuickSaveDetailElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[11]
+    #快速存入详细信息页面元素--更改
+    #快速存入修改-金额输入框
+    QuickSaveAmountElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[9]/XCUIElementTypeTextField
+    #快速存入修改-存入频率
+    QuickSaveFrequencyElement:
+      SimplifiedChinese: //*[contains(@name, '存入频率')]
+      TraditionalChinese: //*[contains(@name, '存入頻率')]
+      English: //*[contains(@name, 'Frequency')]
+    #存入频率下拉详情
+    #存入频率-特定日期
+    OnASpecificDateElement:
+      SimplifiedChinese: //*[contains(@name, '具体日期')]
+      TraditionalChinese: //*[contains(@name, '指定日期')]
+      English: //*[contains(@name, 'On a Specific Date')]
+    #转账频率-每日
+    DailyElement:
+      SimplifiedChinese: //*[contains(@name, '每日')]
+      TraditionalChinese: //*[contains(@name, '每日')]
+      English: //*[contains(@name, 'Daily')]
+    #转账频率-每星期
+    WeeklyElement:
+      SimplifiedChinese: //*[contains(@name, '每周')]
+      TraditionalChinese: //*[contains(@name, '每星期')]
+      English: //*[contains(@name, 'Weekly')]
+    #转账频率-每两星期
+    BiweeklyElement:
+      SimplifiedChinese: //*[contains(@name, '每两周')]
+      TraditionalChinese: //*[contains(@name, '每兩星期')]
+      English: //*[contains(@name, 'Bi-weekly')]
+    #转账频率-每月
+    MonthlyElement:
+      SimplifiedChinese: //*[contains(@name, '每月')]
+      TraditionalChinese: //*[contains(@name, '每月')]
+      English: //*[contains(@name, 'Monthly')]
+    #转账频率-每季
+    QuarterlyElement:
+      SimplifiedChinese: //*[contains(@name, '每季')]
+      TraditionalChinese: //*[contains(@name, '每季')]
+      English: //*[contains(@name, 'Quarterly')]
+
+    #快速存入修改-开始日期
+    QuickSaveStartDateElement:
+      SimplifiedChinese: //*[contains(@name, '开始日期')]
+      TraditionalChinese: //*[contains(@name, '開始日期')]
+      English: //*[contains(@name, 'Start Date')]
+    #快速存入修改-开始日期-具体值
+    QuickSaveStartDatevalue: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[11]/android.view.View[1]/android.view.View[2]
+    #快速存入修改-結束日期
+    QuickSaveEndDateElement:
+      SimplifiedChinese: //*[contains(@name, '结束日期')]
+      TraditionalChinese: //*[contains(@name, '結束日期')]
+      English: //*[contains(@name, 'End Date')]
+    #快速存入修改-備注修改
+    QuickSaveNotesElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[13]
+    #快速存入修改-繼續
+    QuickSaveContinueElement:
+      SimplifiedChinese: //*[contains(@name, '继续')]
+      TraditionalChinese: //*[contains(@name, '繼續')]
+      English: //*[contains(@name, 'Continue')]
+    #取消快速存入
+    StopThisQuickSaveElement:
+      SimplifiedChinese: //*[contains(@name, '取消此快速存入')]
+      TraditionalChinese: //*[contains(@name, '取消此快速存入')]
+      English: //*[contains(@name, 'Stop this Quick Save')]
+    #取消/修改快速存入确认框--确定
+    QuickSaveConfirmElement:
+      SimplifiedChinese: //XCUIElementTypeStaticText[@name="确定"]
+      TraditionalChinese: //XCUIElementTypeStaticText[@name="確定"]
+      English: //XCUIElementTypeStaticText[@name="Confirm"]
+    #取消/修改快速存入确认框--返回
+    QuickSaveBackElement:
+      SimplifiedChinese: //*[contains(@name, '返回')]
+      TraditionalChinese: //*[contains(@name, '返回')]
+      English: //*[contains(@name, 'Back')]
+
+    #核对资料页面
+    #核对资料标题
+    ReviewtittleElement:
+      SimplifiedChinese: //*[contains(@name, '核对信息')]
+      TraditionalChinese: //*[contains(@name, '核對資料')]
+      English: //*[contains(@name, 'Review')]
+    #核对信息-确定
+    ReviewConfirmElement:
+      SimplifiedChinese: //XCUIElementTypeStaticText[@name="确定"]
+      TraditionalChinese: //XCUIElementTypeStaticText[@name="確定"]
+      English: //XCUIElementTypeStaticText[@name="Confirm"]
+
+    #更新结果页面
+    #更新结果
+    EditResultElement:
+      SimplifiedChinese: //*[contains(@name, '你的快速存入指示已更新')]
+      TraditionalChinese: //*[contains(@name, '你的快速存入指示已更新')]
+      English: //*[contains(@name, 'Your Quick Save instruction is updated')]
+    #更新结果页面完成按钮
+    EditResultDoneElement:
+      SimplifiedChinese: //*[contains(@name, '完成')]
+      TraditionalChinese: //*[contains(@name, '完成')]
+      English: //*[contains(@name, 'Done')]
+
+    #重新启用快速存入
+    #重新启用按钮
+    TurnonElement:
+      SimplifiedChinese: //*[contains(@name, '重新启用')]
+      TraditionalChinese: //*[contains(@name, '重新啓用')]
+      English: //*[contains(@name, 'Turn on')]
+    #激活结果页面
+    #激活结果
+    TurnonResultElement:
+      SimplifiedChinese: //*[contains(@name, '快速存入现已激活')]
+      TraditionalChinese: //*[contains(@name, '快速存入現已啓用')]
+      English: //*[contains(@name, 'Quick Save is now activated')]
+    #更新结果页面完成按钮
+    TurnonResultDoneElement:
+      SimplifiedChinese: //*[contains(@name, '完成')]
+      TraditionalChinese: //*[contains(@name, '完成')]
+      English: //*[contains(@name, 'Done')]
+
+    #查看已绑定的银行账号
+    ViewLinkedBankAccountsElement:
+      SimplifiedChinese: //*[contains(@name, '查看已绑定银行账户')]
+      TraditionalChinese: //*[contains(@name, '查看已綁定的銀行戶口')]
+      English: //*[contains(@name, 'View Linked Bank Accounts')]
+    #设立新快速存入指示
+    SetUpNewQuickSaveElement:
+      SimplifiedChinese: //*[contains(@name, '设置新快速存入指示')]
+      TraditionalChinese: //*[contains(@name, '設立新快速存入指示')]
+      English: //*[contains(@name, 'Set up new Quick Save')]

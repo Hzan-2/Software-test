@@ -1,0 +1,100 @@
+#Cash分期详情元素
+LoanViewDetailsElementPage:
+  android:
+    #右上角設置按鈕
+    SettingButtonElement: //android.view.View/android.view.View[1]/android.view.View[3]
+    #完整还款计划
+    FullRepaymentPlanElement:
+      SimplifiedChinese: //*[contains(@content-desc, '完整还款计划')]
+      TraditionalChinese: //*[contains(@content-desc, '完整還款計劃')]
+      Englist: //*[contains(@content-desc, 'Full Repayment Plan')]
+    #查看分期詳情
+    ViewinstalmentdetailsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '查看分期详情')]
+      TraditionalChinese: //*[contains(@content-desc, '查看分期詳情')]
+      Englist: //*[contains(@content-desc, 'View instalment details')]
+
+    #查阅贷款确认书
+    #查阅贷款确认书
+    ViewFacilityLetterElement:
+      SimplifiedChinese: //*[contains(@content-desc, '查阅贷款确认书')]
+      TraditionalChinese: //*[contains(@content-desc, '查閲貸款確認書')]
+      Englist: //*[contains(@content-desc, 'View Facility Letter')]
+    #贷款确认书-返回
+    ViewFacilityLetterbackElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]
+    #贷款确认书-下载
+    ViewFacilityLetterdownloadElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView
+
+    #确认下载
+    DownloadElement:
+      SimplifiedChinese: //*[contains(@content-desc, '是')]
+      TraditionalChinese: //*[contains(@content-desc, '是')]
+      Englist: //*[contains(@content-desc, 'Yes')]
+    #取消下载-返回
+    BackElement:
+      SimplifiedChinese: //*[contains(@content-desc, '返回')]
+      TraditionalChinese: //*[contains(@content-desc, '返回')]
+      Englist: //*[contains(@content-desc, 'Back')]
+
+    #livi灵活贷条款
+    #livi灵活贷条款
+    liviConditionsforFlexiLoanElement:
+      SimplifiedChinese: //*[contains(@content-desc, '理慧灵活贷条款')]
+      TraditionalChinese: //*[contains(@content-desc, '理慧靈活貸條款')]
+      Englist: //*[contains(@content-desc,  'livi Conditions for Flexi Loan')]
+    #灵活贷条款-返回
+    liviConditionsforFlexiLoanbackElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]
+
+
+    #产品资料概要
+    #产品资料概要
+    KeyFactsStatementElement:
+      SimplifiedChinese: //*[contains(@content-desc, '产品资料概要')]
+      TraditionalChinese: //*[contains(@content-desc, '產品資料概要')]
+      Englist: //*[contains(@content-desc, 'Key Facts Statement')]
+    #产品资料概要-返回
+    KeyFactsStatementbackElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]
+
+    #常见问题
+    #常见问题
+    FAQElement:
+      SimplifiedChinese: //*[contains(@content-desc, '常见问题')]
+      TraditionalChinese: //*[contains(@content-desc, '常見問題')]
+      Englist: //*[contains(@content-desc, 'FAQ')]
+    #常见问题-返回
+    FAQbackElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]
+
+  ios:
+    #右上角設置按鈕
+    SettingButtonElement: //android.view.View[]/android.view.View[1]/android.view.View[3]
+    #完整还款计划
+    FullRepaymentPlanElement:
+      SimplifiedChinese: //*[contains(@content-desc, '完整还款计划')]
+      TraditionalChinese: //*[contains(@content-desc, '完整還款計劃')]
+      Englist: //*[contains(@content-desc, 'Full Repayment Plan')]
+    #查看分期詳情
+    ViewinstalmentdetailsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '查看分期详情')]
+      TraditionalChinese: //*[contains(@content-desc, '查看分期詳情')]
+      Englist: //*[contains(@content-desc, 'View instalment details')]
+
+    #查阅贷款确认书
+    ViewFacilityLetterElement:
+      SimplifiedChinese: //*[contains(@content-desc, '查阅贷款确认书')]
+      TraditionalChinese: //*[contains(@content-desc, '查閲貸款確認書')]
+      Englist: //*[contains(@content-desc, 'View Facility Letter')]
+    #livi灵活贷条款
+    liviConditionsforFlexiLoanElement:
+      SimplifiedChinese: //*[contains(@content-desc, '理慧灵活贷条款')]
+      TraditionalChinese: //*[contains(@content-desc, '理慧靈活貸條款')]
+      Englist: //*[contains(@content-desc,  'livi Conditions for Flexi Loan')]
+    #产品资料概要
+    KeyFactsStatementElement:
+      SimplifiedChinese: //*[contains(@content-desc, '产品资料概要')]
+      TraditionalChinese: //*[contains(@content-desc, '產品資料概要')]
+      Englist: //*[contains(@content-desc, 'Key Facts Statement')]
+    #常见问题
+    FAQElement:
+      SimplifiedChinese: //*[contains(@content-desc, '常见问题')]
+      TraditionalChinese: //*[contains(@content-desc, '常見問題')]
+      Englist: //*[contains(@content-desc, 'FAQ')]

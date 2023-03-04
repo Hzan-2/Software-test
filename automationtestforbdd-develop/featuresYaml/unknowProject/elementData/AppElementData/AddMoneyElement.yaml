@@ -1,0 +1,289 @@
+#存入頁面元素--by yang.yang
+AddMoneyElementPage:
+  android:
+    #标题
+    AddMoneytittleElement:
+      SimplifiedChinese: //*[contains(@content-desc, '存入')]
+      TraditionalChinese: //*[contains(@content-desc, '存入')]
+      English: //*[contains(@content-desc, 'Add Money')]
+    #页面关闭按钮
+    ClosePageElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]
+    #存入方式
+    #eDDA
+    eDDAElement:
+      SimplifiedChinese: //*[@content-desc='eDDA']
+      TraditionalChinese: //*[@content-desc='eDDA']
+      English: //*[@content-desc='eDDA']
+    #添加银行账户
+    AddBankAccountlement:
+      SimplifiedChinese: //*[contains(@content-desc, '添加银行账户')]
+      TraditionalChinese: //*[contains(@content-desc, '添加銀行戶口')]
+      English: //*[contains(@content-desc, 'AddBankAccount')]
+    #银行账户详细-下拉按钮（添加银行账户按钮不存在时，可点击该按钮，显示添加按钮）
+    #详细-开启
+    BankAccountDetailElement1: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.view.View[6]/android.widget.ImageView[2]
+    #详细-关闭
+    BankAccountDetailElement2: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.widget.ImageView[6]
+
+    #账户号码
+    AccountElement:
+      SimplifiedChinese: //*[contains(@content-desc, '账户号码')]
+      TraditionalChinese: //*[contains(@content-desc, '戶口號碼')]
+      English: //*[contains(@content-desc, 'AccountE')]
+    #转数快
+    FPSElement:
+      SimplifiedChinese: //*[contains(@content-desc, '转数快')]
+      TraditionalChinese: //*[contains(@content-desc, '轉數快')]
+      English: //*[contains(@content-desc, 'FPS')]
+
+    #存入信息
+    #金额
+    AmountElement:
+      SimplifiedChinese: //*[contains(@text, '金额')]
+      TraditionalChinese: //*[contains(@text, '金額')]
+      English: //*[contains(@text, 'Amount')]
+    #转账时间 Time of Transfer
+    #现在
+    NowElement:
+      SimplifiedChinese: //*[contains(@content-desc, '现在')]
+      TraditionalChinese: //*[contains(@content-desc, '現在')]
+      English: //*[contains(@content-desc, 'Now')]
+    #稍后
+    LaterElement:
+      SimplifiedChinese: //*[contains(@content-desc, '稍后')]
+      TraditionalChinese: //*[contains(@content-desc, '稍後')]
+      English: //*[contains(@content-desc, 'Later')]
+
+    #预约存入信息
+    #预约存入-转账频率
+    FrequencyElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.widget.ImageView[11]
+
+    #转账频率下拉详情
+    #转账频率-特定日期
+    OnASpecificDateElement:
+      SimplifiedChinese: //*[contains(@content-desc, '特定日期')]
+      TraditionalChinese: //*[contains(@content-desc, '特定日期')]
+      English: //*[contains(@content-desc, 'On a Specific Date')]
+    #转账频率-每日
+    DailyElement:
+      SimplifiedChinese: //*[contains(@content-desc, '每日')]
+      TraditionalChinese: //*[contains(@content-desc, '每日')]
+      English: //*[contains(@content-desc, 'Daily')]
+    #转账频率-每星期
+    WeeklyElement:
+      SimplifiedChinese: //*[contains(@content-desc, '每星期')]
+      TraditionalChinese: //*[contains(@content-desc, '每星期')]
+      English: //*[contains(@content-desc, 'Weekly')]
+    #转账频率-每两星期
+    BiweeklyElement:
+      SimplifiedChinese: //*[contains(@content-desc, '每两星期')]
+      TraditionalChinese: //*[contains(@content-desc, '每兩星期')]
+      English: //*[contains(@content-desc, 'Bi-weekly')]
+    #转账频率-每月
+    MonthlyElement:
+      SimplifiedChinese: //*[contains(@content-desc, '每月')]
+      TraditionalChinese: //*[contains(@content-desc, '每月')]
+      English: //*[contains(@content-desc, 'Monthly')]
+    #转账频率-每季
+    QuarterlyElement:
+      SimplifiedChinese: //*[contains(@content-desc, '每季')]
+      TraditionalChinese: //*[contains(@content-desc, '每季')]
+      English: //*[contains(@content-desc, 'Quarterly')]
+    #预约存入-开始日期
+    StartDateElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.widget.ImageView[9]
+
+    #预约存入-结束日期
+    EndDateElement:  /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.widget.ImageView[10]
+
+
+    #备注
+    #加入备注
+    AddNotesElement:
+      SimplifiedChinese: //*[contains(@content-desc, '加入备注')]
+      TraditionalChinese: //*[contains(@content-desc, '加入備註')]
+      English: //*[contains(@content-desc, 'Add Notes')]
+    #备注的存储按钮
+    NotesSaveElement:
+      SimplifiedChinese: //*[contains(@content-desc, '保存')]
+      TraditionalChinese: //*[contains(@content-desc, '儲存')]
+      English: //*[contains(@content-desc, 'Save')]
+
+    #继续按钮
+    ContiuneElement:
+      SimplifiedChinese: //*[contains(@content-desc, '继续')]
+      TraditionalChinese: //*[contains(@content-desc, '繼續')]
+      English: //*[contains(@content-desc, 'Contiune')]
+
+    #review页面-
+    #标题
+    ReviewtittleElement:
+      SimplifiedChinese: //*[contains(@content-desc, '以下信息正确吗')]
+      TraditionalChinese: //*[contains(@content-desc, '以下資料正確嗎')]
+      English: //*[contains(@content-desc, 'Are these details correct')]
+    #确定按钮
+    ReviewConfirmElement:
+      SimplifiedChinese: //*[contains(@content-desc, '确定')]
+      TraditionalChinese: //*[contains(@content-desc, '確定')]
+      English: //*[contains(@content-desc, 'Confirm')]
+
+
+    #存入结果页面
+    #标题
+    ResulttittleElement:
+      SimplifiedChinese: //*[contains(@content-desc, '处理中')]
+      TraditionalChinese: //*[contains(@content-desc, '處理中')]
+      English: //*[contains(@content-desc, 'Processing')]
+    #完成按钮
+    ResultDoneElement:
+      SimplifiedChinese: //*[contains(@content-desc, '完成')]
+      TraditionalChinese: //*[contains(@content-desc, '完成')]
+      English: //*[contains(@content-desc, 'Done')]
+
+
+
+
+
+  ios:
+    #标题
+    AddMoneytittleElement:
+      SimplifiedChinese: //*[contains(@name, '存入')]
+      TraditionalChinese: //*[contains(@name, '存入')]
+      English: //*[contains(@name, 'Add Money')]
+    #页面关闭按钮
+    ClosePageElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]
+    #存入方式
+    #eDDA
+    eDDAElement:
+      SimplifiedChinese: //*[@name='eDDA']
+      TraditionalChinese: //*[@name='eDDA']
+      English: //*[@name='eDDA']
+    #添加银行账户
+    AddBankAccountlement:
+      SimplifiedChinese: //*[contains(@name, '添加银行账户')]
+      TraditionalChinese: //*[contains(@name, '添加銀行戶口')]
+      English: //*[contains(@name, 'Add Bank Account')]
+    #银行账户详细-下拉按钮（添加银行账户按钮不存在时，可点击该按钮，显示添加按钮）
+    #详细-开启
+    BankAccountDetailElement1: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[2]
+    #详细-关闭
+    BankAccountDetailElement2: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeImage[6]
+
+    #账户号码
+    AccountElement:
+      SimplifiedChinese: //*[contains(@name, '账户号码')]
+      TraditionalChinese: //*[contains(@name, '戶口號碼')]
+      English: //*[contains(@name, 'AccountE')]
+    #转数快
+    FPSElement:
+      SimplifiedChinese: //*[contains(@name, '转数快')]
+      TraditionalChinese: //*[contains(@name, '轉數快')]
+      English: //*[contains(@name, 'FPS')]
+
+    #存入信息
+    #金额 金額 Amount
+    AmountElement:
+      SimplifiedChinese: //XCUIElementTypeTextField[@name="金额"]
+      TraditionalChinese: //XCUIElementTypeTextField[@name="金額"]
+      English: //XCUIElementTypeTextField[@name="Amount"]
+    #转账时间 Time of Transfer
+    #现在
+    NowElement:
+      SimplifiedChinese: //*[contains(@name, '现在')]
+      TraditionalChinese: //*[contains(@name, '現在')]
+      English: //*[contains(@name, 'Now')]
+    #稍后
+    LaterElement:
+      SimplifiedChinese: //*[contains(@name, '稍后')]
+      TraditionalChinese: //*[contains(@name, '稍後')]
+      English: //*[contains(@name, 'Later')]
+
+    #预约存入信息
+    #预约存入-转账频率
+    FrequencyElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeImage[11]
+
+    #转账频率下拉详情
+    #转账频率-特定日期
+    OnASpecificDateElement:
+      SimplifiedChinese: //*[contains(@name, '特定日期')]
+      TraditionalChinese: //*[contains(@name, '特定日期')]
+      English: //*[contains(@name, 'On a Specific Date')]
+    #转账频率-每日
+    DailyElement:
+      SimplifiedChinese: //*[contains(@name, '每天')]
+      TraditionalChinese: //*[contains(@name, '每日')]
+      English: //*[contains(@name, 'Daily')]
+    #转账频率-每星期
+    WeeklyElement:
+      SimplifiedChinese: //*[contains(@name, '每周')]
+      TraditionalChinese: //*[contains(@name, '每星期')]
+      English: //*[contains(@name, 'Weekly')]
+    #转账频率-每两星期
+    BiweeklyElement:
+      SimplifiedChinese: //*[contains(@name, '每两周')]
+      TraditionalChinese: //*[contains(@name, '每兩星期')]
+      English: //*[contains(@name, 'Bi-weekly')]
+    #转账频率-每月
+    MonthlyElement:
+      SimplifiedChinese: //*[contains(@name, '每月')]
+      TraditionalChinese: //*[contains(@name, '每月')]
+      English: //*[contains(@name, 'Monthly')]
+    #转账频率-每季
+    QuarterlyElement:
+      SimplifiedChinese: //*[contains(@name, '每季')]
+      TraditionalChinese: //*[contains(@name, '每季')]
+      English: //*[contains(@name, 'Quarterly')]
+    #预约存入-开始日期
+    StartDateElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.widget.ImageView[9]
+
+    #预约存入-结束日期
+    EndDateElement:  /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.widget.ImageView[10]
+
+
+    #备注
+    #加入备注
+    AddNotesElement:
+      SimplifiedChinese: //XCUIElementTypeImage[@name="加入备注"]
+      TraditionalChinese: //XCUIElementTypeImage[@name="加入備註"]
+      English: //XCUIElementTypeImage[@name="Add Notes"]
+    #备注输入框 //XCUIElementTypeTextField[@name="在此输入"]
+    NotesInputElement:
+      SimplifiedChinese: //XCUIElementTypeTextField[@name="在此输入"]
+      TraditionalChinese: //XCUIElementTypeTextField[@name="在此輸入"]
+      English: //XCUIElementTypeTextField[@name="Enter Them Here"]
+    #备注的存储按钮
+    NotesSaveElement:
+      SimplifiedChinese: //*[contains(@name, '储存')]
+      TraditionalChinese: //*[contains(@name, '儲存')]
+      English: //*[contains(@name, 'Save')]
+
+    #继续按钮
+    ContiuneElement:
+      SimplifiedChinese: //*[contains(@name, '继续')]
+      TraditionalChinese: //*[contains(@name, '繼續')]
+      English: //*[contains(@name, 'Contiune')]
+
+    #review页面-
+    #标题
+    ReviewtittleElement:
+      SimplifiedChinese: //*[contains(@name, '以下信息正确吗')]
+      TraditionalChinese: //*[contains(@name, '以下資料正確嗎')]
+      English: //*[contains(@name, 'Are these details correct')]
+    #确定按钮
+    ReviewConfirmElement:
+      SimplifiedChinese: //*[contains(@name, '确定')]
+      TraditionalChinese: //*[contains(@name, '確定')]
+      English: //*[contains(@name, 'Confirm')]
+
+
+    #存入结果页面
+    #标题
+    ResulttittleElement:
+      SimplifiedChinese: //*[contains(@name, '处理中')]
+      TraditionalChinese: //*[contains(@name, '處理中')]
+      English: //*[contains(@name, 'Processing')]
+    #完成按钮
+    ResultDoneElement:
+      SimplifiedChinese: //XCUIElementTypeButton[@name="完成"]
+      TraditionalChinese: //XCUIElementTypeButton[@name="完成"]
+      English: //XCUIElementTypeButton[@name="Done"]
+

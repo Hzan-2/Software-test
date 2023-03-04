@@ -1,0 +1,295 @@
+#个人设置-银行服务设定-转账-预约转账
+ScheduledTransferPage:
+  android:
+    #页面标题
+    ScheduledTransfertittle:
+      SimplifiedChinese: //*[contains(@content-desc, '预约转账')]
+      TraditionalChinese: //*[contains(@content-desc, '預設轉賬')]
+      English: //*[contains(@content-desc, 'Scheduled Transfer')]
+    #无转账记录时显示
+    NoRecordsFound:
+      SimplifiedChinese: //*[contains(@text, '无纪录')]
+      TraditionalChinese: //*[contains(@text, '無紀錄')]
+      English: //*[contains(@text, 'No Records Found')]
+
+    #生效的预约转账信息
+    ActiveScheduledTransfer:
+      SimplifiedChinese: //*[contains(@text, '生效中')]
+      TraditionalChinese: //*[contains(@text, '生效中')]
+      English: //*[contains(@text, 'Active')]
+    #查看詳情
+    ViewDetails:
+      SimplifiedChinese: //*[contains(@text, '查看详情')]
+      TraditionalChinese: //*[contains(@text, '查看詳情')]
+      English: //*[contains(@text, 'View Details')]
+    #隱藏
+    HideDetails:
+      SimplifiedChinese: //*[contains(@text, '隐藏')]
+      TraditionalChinese: //*[contains(@text, '隱藏')]
+      English: //*[contains(@text, 'Hide Details')]
+    #更改
+    Change:
+      SimplifiedChinese: //*[contains(@text, '更改')]
+      TraditionalChinese: //*[contains(@text, '更改')]
+      English: //*[contains(@text, 'Change')]
+
+    ####转账指示页面 转账详情页
+    #标题
+    TransferDetailstittle:
+      SimplifiedChinese: //*[contains(@content-desc, '转账指示')]
+      TraditionalChinese: //*[contains(@content-desc, '轉賬指示')]
+      English: //*[contains(@content-desc, 'Transfer Details')]
+    #金额输入框
+    AmountEdit: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.widget.EditText
+    #转账频率下拉框
+    Frequency:
+      SimplifiedChinese: //*[contains(@text, '频率')]
+      TraditionalChinese: //*[contains(@text, '頻率')]
+      English: //*[contains(@text, 'Frequency')]
+    #存入频率下拉详情
+    #存入频率-特定日期
+    OnASpecificDateElement:
+      SimplifiedChinese: //*[contains(@text, '具体日期')]
+      TraditionalChinese: //*[contains(@text, '指定日期')]
+      English: //*[contains(@text, 'On a Specific Date')]
+    #转账频率-每日
+    DailyElement:
+      SimplifiedChinese: //*[contains(@text, '每日')]
+      TraditionalChinese: //*[contains(@text, '每日')]
+      English: //*[contains(@text, 'Daily')]
+    #转账频率-每星期
+    WeeklyElement:
+      SimplifiedChinese: //*[contains(@text, '每星期')]
+      TraditionalChinese: //*[contains(@text, '每星期')]
+      English: //*[contains(@text, 'Weekly')]
+    #转账频率-每两星期
+    BiweeklyElement:
+      SimplifiedChinese: //*[contains(@text, '每两周')]
+      TraditionalChinese: //*[contains(@text, '每兩星期')]
+      English: //*[contains(@text, 'Bi-weekly')]
+    #转账频率-每月
+    MonthlyElement:
+      SimplifiedChinese: //*[contains(@text, '每月')]
+      TraditionalChinese: //*[contains(@text, '每月')]
+      English: //*[contains(@text, 'Monthly')]
+    #转账频率-每季
+    QuarterlyElement:
+      SimplifiedChinese: //*[contains(@text, '每季')]
+      TraditionalChinese: //*[contains(@text, '每季')]
+      English: //*[contains(@text, 'Quarterly')]
+    #开始日期选择
+    StartDate:
+      SimplifiedChinese: //*[contains(@text, '开始日期')]
+      TraditionalChinese: //*[contains(@text, '開始日期')]
+      English: //*[contains(@text, 'Start Date')]
+    #结束日期选择
+    EndDate:
+      SimplifiedChinese: //*[contains(@text, '结束日期')]
+      TraditionalChinese: //*[contains(@text, '結束日期')]
+      English: //*[contains(@text, 'End Date')]
+    #转账备注编辑
+    Notes: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[11]
+    NotesInput: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[13]/android.view.View[2]/android.widget.EditText
+    #备注存储按钮
+    NotesSave:
+      SimplifiedChinese: //android.widget.Button[contains(@text, '保存')]
+      TraditionalChinese: //android.widget.Button[contains(@text, '儲存')]
+      English: //android.widget.Button[contains(@text, 'Save')]
+
+    #确定按钮
+    ConfirmButton:
+      SimplifiedChinese: //android.widget.Button[contains(@text, '确定')]
+      TraditionalChinese: //android.widget.Button[contains(@text, '確定')]
+      English: //android.widget.Button[contains(@text, 'Confirm')]
+
+    #更新结果页面
+    #更新结果-指示内容
+    UpdateResult:
+      SimplifiedChinese: //*[contains(@text, '预约转账指示已更新')]
+      TraditionalChinese: //*[contains(@text, '成功更新預設轉賬指示')]
+      English: //*[contains(@text, 'Your Transfer Details have been Updated')]
+    #更新结果-完成按鈕
+    DoneButton:
+      SimplifiedChinese: //android.widget.Button[contains(@text, '完成')]
+      TraditionalChinese: //android.widget.Button[contains(@text, '完成')]
+      English: //android.widget.Button[contains(@text, 'Done')]
+
+
+    #取消转账
+    StopMakingThisTransfer:
+      SimplifiedChinese: //*[contains(@text, '取消此转账')]
+      TraditionalChinese: //*[contains(@text, '取消此轉賬')]
+      English: //*[contains(@text, 'Stop making this transfer')]
+    #取消转账弹框-确认按钮
+    YesButton: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[13]/android.view.View/android.widget.Button
+#弹框确定按钮与详细页面的确定按钮重复，无法用模糊定位
+#      SimplifiedChinese: //android.widget.Button[contains(@text, '确定')]
+#      TraditionalChinese: //android.widget.Button[contains(@text, '確定')]
+#      English: //android.widget.Button[contains(@text, 'Yes')]
+    #取消转账弹框-取消按钮
+    Cancel:
+      SimplifiedChinese: //*[contains(@text, '取消')]
+      TraditionalChinese: //*[contains(@text, '取消')]
+      English: //*[contains(@text, 'Cancel')]
+
+
+    #无效的预约转账信息
+    InactiveScheduledTransfer:
+      SimplifiedChinese: //*[contains(@text, '已失效')]
+      TraditionalChinese: //*[contains(@text, '已無效')]
+      English: //*[contains(@text, 'Inactive')]
+    #无效转账重启按钮
+    #重启转账
+    Reactivate:
+      SimplifiedChinese: //android.widget.Button[contains(@text, '重启转账')]
+      TraditionalChinese: //android.widget.Button[contains(@text, '重啟此轉賬')]
+      English: //android.widget.Button[contains(@text, 'Reactivate')]
+
+
+
+
+
+
+  ios:
+    #页面标题
+    ScheduledTransfertittle:
+      SimplifiedChinese: //*[contains(@name, '预约转账')]
+      TraditionalChinese: //*[contains(@name, '預設轉賬')]
+      English: //*[contains(@name, 'Scheduled Transfer')]
+    #无转账记录时显示
+    NoRecordsFound:
+      SimplifiedChinese: //*[contains(@name, '无纪录')]
+      TraditionalChinese: //*[contains(@name, '無紀錄')]
+      English: //*[contains(@name, 'No Records Found')]
+
+    #生效的预约转账信息
+    ActiveScheduledTransfer:
+      SimplifiedChinese: //*[contains(@name, '生效中')]
+      TraditionalChinese: //*[contains(@name, '生效中')]
+      English: //*[contains(@name, 'Active')]
+    #查看詳情
+    ViewDetails:
+      SimplifiedChinese: //*[contains(@name, '查看详情')]
+      TraditionalChinese: //*[contains(@name, '查看詳情')]
+      English: //*[contains(@name, 'View Details')]
+    #隱藏
+    HideDetails:
+      SimplifiedChinese: //*[contains(@name, '隐藏')]
+      TraditionalChinese: //*[contains(@name, '隱藏')]
+      English: //*[contains(@name, 'Hide Details')]
+    #更改
+    Change:
+      SimplifiedChinese: //*[contains(@name, '更改')]
+      TraditionalChinese: //*[contains(@name, '更改')]
+      English: //*[contains(@name, 'Change')]
+
+    ####转账指示页面 转账详情页
+    #标题
+    TransferDetailstittle:
+      SimplifiedChinese: //*[contains(@name, '转账指示')]
+      TraditionalChinese: //*[contains(@name, '轉賬指示')]
+      English: //*[contains(@name, 'Transfer Details')]
+    #金额输入框
+    AmountEdit: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField
+    #转账频率下拉框 //XCUIElementTypeStaticText[@name="频率"]
+    Frequency:
+      SimplifiedChinese: //*[contains(@name, '频率')]
+      TraditionalChinese: //*[contains(@name, '頻率')]
+      English: //*[contains(@name, 'Frequency')]
+    #存入频率下拉详情
+    #存入频率-特定日期
+    OnASpecificDateElement:
+      SimplifiedChinese: //*[contains(@name, '具体日期')]
+      TraditionalChinese: //*[contains(@name, '指定日期')]
+      English: //*[contains(@name, 'On a Specific Date')]
+    #转账频率-每日
+    DailyElement:
+      SimplifiedChinese: //*[contains(@name, '每日')]
+      TraditionalChinese: //*[contains(@name, '每日')]
+      English: //*[contains(@name, 'Daily')]
+    #转账频率-每星期
+    WeeklyElement:
+      SimplifiedChinese: //*[contains(@name, '每星期')]
+      TraditionalChinese: //*[contains(@name, '每星期')]
+      English: //*[contains(@name, 'Weekly')]
+    #转账频率-每两星期
+    BiweeklyElement:
+      SimplifiedChinese: //*[contains(@name, '每两周')]
+      TraditionalChinese: //*[contains(@name, '每兩星期')]
+      English: //*[contains(@name, 'Bi-weekly')]
+    #转账频率-每月
+    MonthlyElement:
+      SimplifiedChinese: //*[contains(@name, '每月')]
+      TraditionalChinese: //*[contains(@name, '每月')]
+      English: //*[contains(@name, 'Monthly')]
+    #转账频率-每季
+    QuarterlyElement:
+      SimplifiedChinese: //*[contains(@name, '每季')]
+      TraditionalChinese: //*[contains(@name, '每季')]
+      English: //*[contains(@name, 'Quarterly')]
+    #开始日期选择
+    StartDate:
+      SimplifiedChinese: //*[contains(@name, '开始日期')]
+      TraditionalChinese: //*[contains(@name, '開始日期')]
+      English: //*[contains(@name, 'Start Date')]
+    #结束日期选择
+    EndDate:
+      SimplifiedChinese: //*[contains(@name, '结束日期')]
+      TraditionalChinese: //*[contains(@name, '結束日期')]
+      English: //*[contains(@name, 'End Date')]
+    #转账备注编辑
+    Notes: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[11]
+    NotesInput: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[13]/android.view.View[2]/android.widget.EditText
+    #备注存储按钮
+    NotesSave:
+      SimplifiedChinese: //*[contains(@name, '保存')]
+      TraditionalChinese: //*[contains(@name, '儲存')]
+      English: //*[contains(@name, 'Save')]
+
+    #确定按钮
+    ConfirmButton:
+      SimplifiedChinese: //*[contains(@name, '确定')]
+      TraditionalChinese: //*[contains(@name, '確定')]
+      English: //*[contains(@name, 'Confirm')]
+
+    #更新结果页面
+    #更新结果-指示内容
+    UpdateResult:
+      SimplifiedChinese: //*[contains(@name, '预约转账指示已更新')]
+      TraditionalChinese: //*[contains(@name, '成功更新預設轉賬指示')]
+      English: //*[contains(@name, 'Your Transfer Details have been Updated')]
+    #更新结果-完成按鈕
+    DoneButton:
+      SimplifiedChinese: //*[contains(@name, '完成')]
+      TraditionalChinese: //*[contains(@name, '完成')]
+      English: //*[contains(@name, 'Done')]
+
+
+    #取消转账
+    StopMakingThisTransfer:
+      SimplifiedChinese: //*[contains(@name, '取消此转账')]
+      TraditionalChinese: //*[contains(@name, '取消此轉賬')]
+      English: //*[contains(@name, 'Stop making this transfer')]
+    #取消转账弹框-确认按钮
+    YesButton:
+      SimplifiedChinese: //*[contains(@name, '确定')][2]
+      TraditionalChinese: //*[contains(@name, '確定')][2]
+      English: //*[contains(@name, 'Yes')][1]
+    #取消转账弹框-取消按钮
+    Cancel:
+      SimplifiedChinese: //*[contains(@name, '取消')]
+      TraditionalChinese: //*[contains(@name, '取消')]
+      English: //*[contains(@name, 'Cancel')]
+
+
+    #无效的预约转账信息
+    InactiveScheduledTransfer:
+      SimplifiedChinese: //*[contains(@name, '已失效')]
+      TraditionalChinese: //*[contains(@name, '已無效')]
+      English: //*[contains(@name, 'Inactive')]
+    #无效转账重启按钮
+    #重启转账
+    Reactivate:
+      SimplifiedChinese: //*[contains(@name, '重启转账')]
+      TraditionalChinese: //*[contains(@name, '重啟此轉賬')]
+      English: //*[contains(@name, 'Reactivate')]

@@ -1,0 +1,42 @@
+#修改分期起点页面
+LendingPayLaterMinimumInstalmentAmount:
+  android:
+    #触发分期起点金额
+    UpdateMinimumInstalmentAmountElement: //*[contains(@text, '400')]
+    #触发提交按钮
+    ConfirmButtonElement:
+      SimplifiedChinese: //*[contains(@text, '确 定')]
+      TraditionalChinese: //*[contains(@text, '確 定')]
+      English: //*[contains(@text, 'Confirm')]
+    #分期起点页面
+    MinimumInstalmentAmountElement:
+      SimplifiedChinese: //*[contains(@content-desc, '最低分期金额')]
+      TraditionalChinese: //*[contains(@content-desc, '最低分期金額')]
+      English: //*[contains(@content-desc, 'Minimum Instalment Amount')]
+    #当前分期起点金额:
+    NowMinimumInstalmentAmount: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.view.View
+    #触发分期起点金额
+    UpdateMinimumInstalmentAmountElement1: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.widget.EditText
+
+
+
+
+
+
+  ios:
+    #触发分期起点金额
+    UpdateMinimumInstalmentAmountElement: //XCUIElementTypeStaticText[@name="400"]
+    #触发提交按钮
+    ConfirmButtonElement:
+      SimplifiedChinese: //*[contains(@name, '确 定')]
+      TraditionalChinese: //*[contains(@name, '確 定')]
+      English: //*[contains(@name, 'Confirm')]
+    #更新后的最低分期金额
+    UpdateMinimumInstalmentAmountElement1: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField
+    #分期起点页面
+    MinimumInstalmentAmountElement:
+      SimplifiedChinese: //*[contains(@name, '最低分期金额')]
+      TraditionalChinese: //*[contains(@name, '最低分期金額')]
+      English: //*[contains(@name, 'Minimum Instalment Amount')]
+    #当前分期起点金额:
+    NowMinimumInstalmentAmount: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[3]/XCUIElementTypeStaticText

@@ -1,0 +1,106 @@
+LendingPayLaterApplicationApproved:
+  android:
+    #PayLater额度确认页面
+    #额度确认页面点击修改分期期数
+    EditDefaultPeriodButtonElement:
+#  /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[9]
+      SimplifiedChinese: //*[contains(@text, '更改')][2]
+      TraditionalChinese: //*[contains(@text, '更改')][2]
+      English: //*[contains(@text, 'Edit')][1]
+    #额度确认页面点击修改分期起点金额
+    ChangeMinimumInstalmentAmountElement:
+#    /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[13]
+      SimplifiedChinese: //*[contains(@text, '更改')][4]
+      TraditionalChinese: //*[contains(@text, '更改')][4]
+      English: //*[contains(@text, 'Edit')][2]
+    #查閱授信函
+    ViewFacilityLetterElement:
+      SimplifiedChinese: //*[contains(@text, '查阅授信函')]
+      TraditionalChinese: //*[contains(@text, '查閱授信函')]
+      English: //*[contains(@text, 'View Facility Letter')]
+    #授信函页面返回上一页
+    BackPageButtonElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView
+    #勾选协议按钮
+    AgreementButtonElement: [84,2008]
+#    /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[17]
+    #接受并继续 接受並繼續
+    AcceptAndContinueButtonElement:
+      SimplifiedChinese: //*[contains(@text, '接受并继续')]
+      TraditionalChinese: //*[contains(@text, '接受並繼續')]
+      English: //*[contains(@text, 'Accept and Continue')]
+    #判断是否进入额度确认页面
+    viewOfferPageElement:
+      SimplifiedChinese: //*[contains(@text, '申请已批准')]
+      TraditionalChinese: //*[contains(@text, '申請已批核')]
+      English: //*[contains(@text, 'Application Approved!')]
+    #判断是否进入额度确认页面
+    ApplicationPendingElement:
+      SimplifiedChinese: //*[contains(@content-desc, '申请处理中')]
+      TraditionalChinese: //*[contains(@content-desc, '申請處理中')]
+      English: //*[contains(@content-desc, 'Application Pending')]
+    #接受额度成功，点击完成按钮
+    CurrentJobDoneButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '完成')]
+      TraditionalChinese: //*[contains(@content-desc, '完成')]
+      English: //*[contains(@content-desc, 'Done')]
+    #额度确认页面，点击关闭
+    CancelApplicationElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView
+    #点击取消额度申请按钮
+    CancelApplicationButtonElement:
+      SimplifiedChinese: //*[contains(@text, '取消申请')]
+      TraditionalChinese: //*[contains(@text, '取消申請')]
+      English: //*[contains(@text, 'Cancel Application')]
+    #申请未通过元素
+    ApplicationFailedElement:
+      SimplifiedChinese: //*[contains(@content-desc, '申请未能通过')]
+      TraditionalChinese: //*[contains(@content-desc, '申請未能通過')]
+      English: //*[contains(@content-desc, '待補充')]
+    #申請失敗頁面返回主頁
+    ApplicationFailedPageBackToHomeElement:
+      SimplifiedChinese: //*[contains(@content-desc, '返回主页')]
+      TraditionalChinese: //*[contains(@content-desc, '返回主頁')]
+      English: //*[contains(@content-desc, 'Back to Overview')]
+
+
+  ios:
+    #额度确认页面点击修改分期起点
+    EditDefaultPeriodButtonElement:
+      SimplifiedChinese: (//XCUIElementTypeStaticText[@name="更改"])[1]
+      TraditionalChinese: (//XCUIElementTypeStaticText[@name="更改"])[1]
+      English: (//XCUIElementTypeStaticText[@name="Edit"])[1]
+    #额度确认页面点击修改分期起点金额
+    ChangeMinimumInstalmentAmountElement:
+      SimplifiedChinese: (//XCUIElementTypeStaticText[@name="更改"])[2]
+      TraditionalChinese: (//XCUIElementTypeStaticText[@name="更改"])[2]
+      English: (//XCUIElementTypeStaticText[@name="Edit"])[2]
+    #查閱授信函
+    ViewFacilityLetterElement:
+      SimplifiedChinese: //*[contains(@name, '查阅授信函')]
+      TraditionalChinese: //*[contains(@name, '查閱授信函')]
+      English: //*[contains(@name, 'View Facility Letter')]
+    # 授信函页面返回上一页
+    BackPageButtonElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage
+    #勾选协议按钮
+    AgreementButtonElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[20]
+    #接受并继续 接受並繼續
+    AcceptAndContinueButtonElement:
+      SimplifiedChinese: //*[contains(@name, '接受并继续')]
+      TraditionalChinese: //*[contains(@name, '接受並繼續')]
+      English: //*[contains(@name, 'Accept and Continue')]
+    #判断是否进入额度确认页面
+    viewOfferPageElement:
+      SimplifiedChinese: //*[contains(@name, '申请已批准')]
+      TraditionalChinese: //*[contains(@name, '申請已批核')]
+      English: //*[contains(@name, 'Application Approved!')]
+    #接受额度成功点击完成按钮
+    CurrentJobDoneButtonElement:
+      SimplifiedChinese: //XCUIElementTypeButton[@name="完成"]
+      TraditionalChinese: //XCUIElementTypeButton[@name="完成"]
+      English: //XCUIElementTypeButton[@name="Done"]
+    #额度确认页面，点击左上角X按钮
+    CancelApplicationElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage
+    #点击取消额度申请按钮
+    CancelApplicationButtonElement:
+      SimplifiedChinese: //*[contains(@name, '取消申请')]
+      TraditionalChinese: //*[contains(@name, '取消申請')]
+      English: //*[contains(@name, 'Cancel Application')]

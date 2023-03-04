@@ -1,0 +1,230 @@
+  #首页元素
+HomePage:
+  android:
+    #提示页按钮
+    tipsButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '明白了！')]
+      TraditionalChinese: //*[contains(@content-desc, '明白了！')]
+      English: //*[contains(@content-desc, 'Got It!')]
+    #登录页的问候语
+    greetingsElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]
+    #右上角的个人中心头像
+    personalCenterElement: ${greetingsElement}/android.widget.ImageView[3]
+    #通知弹窗确认按钮
+    notificationPopupElemnt:
+      SimplifiedChinese: //*[contains(@content-desc, '确认')]
+      TraditionalChinese: //*[contains(@content-desc, '確認')]
+      English: //*[contains(@content-desc, 'OK')]
+    #导肮头
+    #liviSave按钮
+    liviSaveElement:
+      SimplifiedChinese: //*[contains(@content-desc, '存款')]
+      TraditionalChinese: //*[contains(@content-desc, 'liviSave')]
+      English: //*[contains(@content-desc, 'liviSave')]
+    #paylater按钮
+    paylaterElement: //*[contains(@content-desc, 'PayLater')]
+    #Loan按钮
+    LoanElement:
+      SimplifiedChinese: //*[contains(@content-desc, '贷款')]
+      TraditionalChinese: //*[contains(@content-desc, '貸款')]
+      English: //*[contains(@content-desc, 'Loan')]
+    #保险按钮
+    insuranceElement:
+      SimplifiedChinese: //*[contains(@content-desc, '保险')]
+      TraditionalChinese: //*[contains(@content-desc, '保險')]
+      English: //*[contains(@content-desc, 'Insurance')]
+    #贷款按钮
+    loanElement:
+      SimplifiedChinese: //*[contains(@content-desc, '贷款')]
+      TraditionalChinese: //*[contains(@content-desc, '貸款')]
+      English: //*[contains(@content-desc, 'Loan')]
+
+    #贷款卡片-灵活贷
+    #小眼睛隐藏按钮
+    hideButtonElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[1]
+    #小眼睛显示按钮
+    displayButtonElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[1]
+    #查看详情按钮
+    ViewDetailsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '查看详情')]
+      TraditionalChinese: //*[contains(@content-desc, '查看詳情')]
+      English: //*[contains(@content-desc, 'View Details')]
+    #灵活贷-已用额度
+    UsedLimitElement:
+      SimplifiedChinese: //*[contains(@content-desc, '已用额度（HKD）')]
+      TraditionalChinese: //*[contains(@content-desc, '已用額度（HKD）')]
+      English: //*[contains(@content-desc, 'Used Limit (HKD)')]
+    #灵活贷-即时加借金额
+    InstantTopupAmountElement:
+      SimplifiedChinese: //*[contains(@content-desc, '即时加借金额（HKD）')]
+      TraditionalChinese: //*[contains(@content-desc, '即時加借金額（HKD）')]
+      English: //*[contains(@content-desc, 'Instant Top-up Amount (HKD)')]
+    #灵活贷-下一期还款额
+    NextRepaymentAmountElement:
+      SimplifiedChinese: //*[contains(@content-desc, '下一期还款额（HKD）')]
+      TraditionalChinese: //*[contains(@content-desc, '下一期還款額（HKD）')]
+      English: //*[contains(@content-desc, 'Next Repayment Amount (HKD)')]
+
+    #账户余额--Save卡片户口余额
+    accountBalanceElemnet: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]
+
+
+
+    #中间部分按钮
+    #存入按钮
+    AddMoneyButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '存入')]
+      TraditionalChinese: //*[contains(@content-desc, '存入')]
+      English: //*[contains(@content-desc, 'Add Money')]
+    #转账按钮
+    TransferButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '转账')]
+      TraditionalChinese: //*[contains(@content-desc, '轉賬')]
+      English: //*[contains(@content-desc, 'Transfer')]
+    #支付按钮
+    PayButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '支付')]
+      TraditionalChinese: //*[contains(@content-desc, '支付')]
+      English: //*[contains(@content-desc, 'Add Money')]
+    #QR提款按钮
+    QRCashButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, 'QR提款')]
+      TraditionalChinese: //*[contains(@content-desc, 'QR提款')]
+      English: //*[contains(@content-desc, 'QR Cash')]
+    #YUU ID按钮
+    yuuIDButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, 'yuu ID')]
+      TraditionalChinese: //*[contains(@content-desc, 'yuu ID')]
+      English: //*[contains(@content-desc, 'yuu ID')]
+
+
+    #页面底下三个按钮
+    #首页按钮
+    underHomeButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '主页')]
+      TraditionalChinese: //*[contains(@content-desc, '主頁')]
+      English: //*[contains(@content-desc, 'Overview')]
+    #随你赏按钮
+    underHappinessButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '随你赏')]
+      TraditionalChinese: //*[contains(@content-desc, '隨你賞')]
+      English: //*[contains(@content-desc, 'Happiness')]
+    #交易记录按钮
+    underTransactionsButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '交易纪录')]
+      TraditionalChinese: //*[contains(@content-desc, '交易紀錄')]
+      English: //*[contains(@content-desc, 'Transactions')]
+
+  ios:
+    #提示页按钮
+    tipsButtonElement:
+      SimplifiedChinese: //*[contains(@name, '明白了！')]
+      TraditionalChinese: //*[contains(@name, '明白了！')]
+      English: //*[contains(@name, 'Got It!')]
+    #登录页的问候语
+    greetingsElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther
+    #右上角的个人中心头像
+    personalCenterElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[3]
+    #通知弹窗确认按钮
+    notificationPopupElemnt:
+      SimplifiedChinese: //*[contains(@name, '确认')]
+      TraditionalChinese: //*[contains(@name, '確認')]
+      English: //*[contains(@name, 'ok')]
+    #导肮头
+    #liviSave按钮
+    liviSaveElement:
+      SimplifiedChinese: //*[contains(@name, '存款')]
+      TraditionalChinese: //*[contains(@name, 'liviSave')]
+      English: //*[contains(@name, 'liviSave')]
+    #paylater按钮
+    paylaterElement: //*[contains(@name, 'PayLater')]
+    #保险按钮
+    insuranceElement:
+      SimplifiedChinese: //*[contains(@name, '保险')]
+      TraditionalChinese: //*[contains(@name, '保險')]
+      English: //*[contains(@name, 'Insurance')]
+    #贷款按钮
+    LoanElement:
+      SimplifiedChinese: //*[contains(@name, '贷款')]
+      TraditionalChinese: //*[contains(@name, '貸款')]
+      English: //*[contains(@name, 'Loan')]
+    #贷款按钮
+    loanElement:
+      SimplifiedChinese: //*[contains(@name, '贷款')]
+      TraditionalChinese: //*[contains(@name, '貸款')]
+      English: //*[contains(@name, 'Loan')]
+
+    #贷款卡片-灵活贷
+    #小眼睛隐藏按钮
+    hideButtonElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[1]
+   #小眼睛显示按钮
+    displayButtonElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[1]
+    #查看详情按钮
+    ViewDetailsElement:
+      SimplifiedChinese: //*[contains(@name, '查看详情')]
+      TraditionalChinese: //*[contains(@name, '查看詳情')]
+      English: //*[contains(@name, 'View Details')]
+    #灵活贷-已用额度
+    UsedLimitElement:
+      SimplifiedChinese: //*[contains(@name, '已用额度（HKD）')]
+      TraditionalChinese: //*[contains(@name, '已用額度（HKD）')]
+      English: //*[contains(@name, 'Used Limit (HKD)')]
+    #灵活贷-即时加借金额
+    InstantTopupAmountElement:
+      SimplifiedChinese: //*[contains(@name, '即时加借金额（HKD）')]
+      TraditionalChinese: //*[contains(@name, '即時加借金額（HKD）')]
+      English: //*[contains(@name, 'Instant Top-up Amount (HKD)')]
+    #灵活贷-下一期还款额
+    NextRepaymentAmountElement:
+      SimplifiedChinese: //*[contains(@name, '下一期还款额（HKD）')]
+      TraditionalChinese: //*[contains(@name, '下一期還款額（HKD）')]
+      English: //*[contains(@name, 'Next Repayment Amount (HKD)')]
+
+    #账户余额
+    accountBalanceElemnet: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeStaticText[2]
+
+    #中间部分按钮
+    #存入按钮
+    AddMoneyButtonElement:
+      SimplifiedChinese: //*[contains(@name, '存入')]
+      TraditionalChinese: //*[contains(@name, '存入')]
+      English: //*[contains(@name, 'Add Money')]
+    #转账按钮
+    TransferButtonElement:
+      SimplifiedChinese: //*[contains(@name, '转账')]
+      TraditionalChinese: //*[contains(@name, '轉賬')]
+      English: //*[contains(@name, 'Transfer')]
+    #支付按钮
+    PayButtonElement:
+      SimplifiedChinese: //*[contains(@name, '支付')]
+      TraditionalChinese: //*[contains(@name, '支付')]
+      English: //*[contains(@name, 'Add Money')]
+    #QR提款按钮
+    QRCashButtonElement:
+      SimplifiedChinese: //*[contains(@name, 'QR提款')]
+      TraditionalChinese: //*[contains(@name, 'QR提款')]
+      English: //*[contains(@name, 'QR Cash')]
+    #YUU ID按钮
+    yuuIDButtonElement:
+      SimplifiedChinese: //*[contains(@name, 'yuu ID')]
+      TraditionalChinese: //*[contains(@name, 'yuu ID')]
+      English: //*[contains(@name, 'yuu ID')]
+
+
+
+    #页面底下三个按钮
+    #首页按钮
+    underHomeButtonElement:
+      SimplifiedChinese: //*[contains(@name, '主页')]
+      TraditionalChinese: //*[contains(@name, '主頁')]
+      English: //*[contains(@name, 'Overview')]
+    #随你赏按钮
+    underHappinessButtonElement:
+      SimplifiedChinese: //*[contains(@name, '随你赏')]
+      TraditionalChinese: //*[contains(@name, '隨你賞')]
+      English: //*[contains(@name, 'Happiness')]
+    #交易记录按钮
+    underTransactionsButtonElement:
+      SimplifiedChinese: //*[contains(@name, '交易纪录')]
+      TraditionalChinese: //*[contains(@name, '交易紀錄')]
+      English: //*[contains(@name, 'Transactions')]

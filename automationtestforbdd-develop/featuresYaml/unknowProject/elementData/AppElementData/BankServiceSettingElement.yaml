@@ -1,0 +1,89 @@
+#银行服务设定元素--by yang.yang
+BankServiceSettingElementPage:
+  android:
+    #标题
+    BankServicesElement:
+      SimplifiedChinese: //*[contains(@content-desc, '银行服务设定')]
+      TraditionalChinese: //*[contains(@content-desc, '銀行服務設定')]
+      English: //*[contains(@content-desc, 'Bank Services')]
+    #支付和转账
+    cardElement:
+      SimplifiedChinese: //*[contains(@content-desc, '银行卡')]
+      TraditionalChinese: //*[contains(@content-desc, '銀行卡')]
+      English: //*[contains(@content-desc, 'Cards')]
+    QRPaymentElement:
+      SimplifiedChinese: //*[contains(@content-desc, '二维码支付')]
+      TraditionalChinese: //*[contains(@content-desc, '二維碼消費')]
+      English: //*[contains(@content-desc, 'QR Payment')]
+    TransferElement:
+      SimplifiedChinese: //android.widget.ImageView[@content-desc="转账"]
+      TraditionalChinese: //android.widget.ImageView[@content-desc="轉賬"]
+      English: //android.widget.ImageView[@content-desc="Transfer"]
+    #限额设定
+    TransferLimitElement:
+      SimplifiedChinese: //*[contains(@content-desc, '转账限额')]
+      TraditionalChinese: //*[contains(@content-desc, '轉賬限額')]
+      English: //*[contains(@content-desc, 'Transfer Limit')]
+    PaymentLimitElement:
+      SimplifiedChinese: //*[contains(@content-desc, '支付限额')]
+      TraditionalChinese: //*[contains(@content-desc, '支付限額')]
+      English: //*[contains(@content-desc, 'Payment Limit')]
+    QRCashLimitElement:
+      SimplifiedChinese: //*[contains(@content-desc, 'QR提款限额')]
+      TraditionalChinese: //*[contains(@content-desc, 'QR提款限額')]
+      English: //*[contains(@content-desc, 'QR Cash Limit')]
+    MastercardDailyPaymentLimitElement:
+      SimplifiedChinese: //*[contains(@content-desc, 'Mastercard® 每日支付限额')]
+      TraditionalChinese: //*[contains(@content-desc, 'Mastercard® 每日支付限額')]
+      English: //*[contains(@content-desc, 'Mastercard® Daily Payment Limit')]
+    #终止服务
+    ServiceTerminationElement:
+      SimplifiedChinese: //*[contains(@content-desc, '终止服务')]
+      TraditionalChinese: //*[contains(@content-desc, '終止服務')]
+      English: //*[contains(@content-desc, 'Service Termination')]
+    #申请PayLater
+    ApplyForLiviPayLaterButton:
+      SimplifiedChinese: //*[contains(@content-desc, '申请 livi PayLater')]
+      TraditionalChinese: //*[contains(@content-desc, '申請 livi PayLater')]
+      English: //*[contains(@content-desc, 'Apply for livi PayLater')]
+  ios:
+    #标题
+    BankServicesElement:
+      SimplifiedChinese: //*[contains(@name, '银行服务设定')]
+      TraditionalChinese: //*[contains(@name, '銀行服務設定')]
+      English: //*[contains(@name, 'Bank Services')]
+    #支付和转账
+    cardElement:
+      SimplifiedChinese: //*[contains(@name, '银行卡')]
+      TraditionalChinese: //*[contains(@, '銀行卡')]
+      English: //*[contains(@name, 'Cards')]
+    QRPaymentElement:
+      SimplifiedChinese: //*[contains(@name, '二维码消费')]
+      TraditionalChinese: //*[contains(@name, '二維碼消費')]
+      English: //*[contains(@name, 'QR Payment')]
+    TransferElement:
+      SimplifiedChinese: //XCUIElementTypeAny[@name="转账"]
+      TraditionalChinese: //XCUIElementTypeAny[@name="轉賬"]
+      English: //XCUIElementTypeAny[@name="Transfer"]
+    #限额设定
+    TransferLimitElement:
+      SimplifiedChinese: //*[contains(@name, '转账限额')]
+      TraditionalChinese: //*[contains(@name, '轉賬限額')]
+      English: //*[contains(@name, 'Transfer Limit')]
+    PaymentLimitElement:
+      SimplifiedChinese: //*[contains(@name, '支付限额')]
+      TraditionalChinese: //*[contains(@name, '支付限額')]
+      English: //*[contains(@name, 'Payment Limit')]
+    QRCashLimitElement:
+      SimplifiedChinese: //*[contains(@name, 'QR提款限额')]
+      TraditionalChinese: //*[contains(@name, 'QR提款限額')]
+      English: //*[contains(@name, 'QR Cash Limit')]
+    MastercardDailyPaymentLimitElement:
+      SimplifiedChinese: //*[contains(@name, 'Mastercard® 每日支付限额')]
+      TraditionalChinese: //*[contains(@name, 'Mastercard® 每日支付限額')]
+      English: //*[contains(@name, 'Mastercard® Daily Payment Limit')]
+    #终止服务
+    ServiceTerminationElement:
+      SimplifiedChinese: //*[contains(@name, '终止服务')]
+      TraditionalChinese: //*[contains(@name, '終止服務')]
+      English: //*[contains(@name, 'Service Termination')]

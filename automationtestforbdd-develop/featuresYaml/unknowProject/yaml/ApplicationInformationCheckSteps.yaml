@@ -1,0 +1,216 @@
+# 项目：保险项目
+# 作者：jiaqian.li
+# Feature描述：能够在后管菜单提供家居保险相关资料
+
+-
+  Step: Given
+  Text: 我登录保险后管系统
+  Fixture: web
+  Process:
+    step1:
+      Action: open
+      Element:
+      TestData: ${Insurance}${url}
+      Remarks: 打开地址${Insurance}${url}
+    step2:
+      Action: click
+      Element: ${LoginPage}${detailsElement}
+      TestData:
+      Remarks: 点击高级
+    step3:
+      Action: click
+      Element: ${LoginPage}${proceedElement}
+      TestData:
+      Remarks: 点击进入安全连接
+    step4:
+      Action: click
+      Element: ${LoginPage}${detailsElement}
+      TestData:
+      Remarks: 点击高级
+    step5:
+      Action: click
+      Element: ${LoginPage}${proceedElement}
+      TestData:
+      Remarks: 点击进入安全连接
+    step6:
+      Action: input
+      Element: ${LoginPage}${userNameInputElement}
+      TestData: ${Insurance}${userName}
+      Remarks: 输入用户名${Insurance}${userName}
+    step7:
+      Action: input
+      Element: ${LoginPage}${passWordInputElement}
+      TestData: ${Insurance}${passWord}
+      Remarks: 输入密码${Insurance}${passWord}
+    step8:
+      Action: input
+      Element: ${LoginPage}${validateCodeInputElement}
+      TestData: 1234
+      Remarks: 输入验证码1234
+    step9:
+      Action: click
+      Element: ${LoginPage}${submitBottomElement}
+      TestData:
+      Remarks: 点击登录
+    step10:
+      Action: sleep
+      Element:
+      TestData: 10
+      Remarks: 停顿10秒
+-
+  Step: Then
+  Text: 我能够看到页面左上角的logo显示为Livi Bank
+  Fixture: web
+  Process:
+    step1:
+      Action: get
+      Element: ${HomePage}${LiviBankTextElement}
+      TestData: Livi Bank
+      Remarks: 验证是否进入首页
+
+-
+  Step: Given
+  Text: 我进入Application管理页面之后
+  Fixture: web
+  Process:
+      step1:
+        Action: click
+        Element: ${HomePage}${ApplicationSpanElement}
+        TestData:
+        Remarks: 点击Application
+
+-
+  Step: When
+  Text: 我筛选policy_Type为{text}
+  Fixture: web
+  Process:
+    step1:
+      Action: select
+      Element: ${HomePage}${policyTypeSelectElement}
+      TestData: '{text}'
+      Remarks: 将policy Type下拉选择成{text}
+    step2:
+      Action: click
+      Element: ${HomePage}${SearchButtonElement}
+      TestData:
+      Remarks: 点击Search按钮
+    step3:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+
+-
+  Step: Then
+  Text: 我预期能够看到Application的列表中policy_Type都为{text}
+  Fixture: web
+  Process:
+    step1:
+      Action: get_global
+      Element:
+      TestData: $${var}
+      Remarks: 声明全局变量var
+    step2:
+      Action: get_text
+      Element: $${var}
+      TestData: 1
+      Remarks: 将1赋值给变量var
+    step3:
+      Action: loop
+      Element: $${var}
+      TestData: 10
+      Remarks: 验证是否进入首页
+      branchProcess:
+        step1:
+          Action: get
+          Element: //*[@id='datagrid1']/tbody/tr[$${var}]/td[3]
+          TestData: '{text}'
+          Remarks: 验证policy Type是否变成{text}
+        step2:
+          Action: get_text
+          Element: $${var}
+          TestData: $${var} + 1
+          Remarks: 让变量值加1
+    step4:
+      Action: sleep
+      Element:
+      TestData: 10
+      Remarks: 停顿10秒
+
+-
+  Step: And
+  Text: 我去查看Application的{text}申请单ID时
+  Fixture: web
+  Process:
+    step1:
+      Action: click
+      Element: //*[@id='datagrid1']/tbody/tr[1]/td[1]/a
+      TestData:
+      Remarks: 点击家居保列表第一行进入{text}保险详情页
+    step2:
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+-
+  Step: Then
+  Text: 我可以正常的查看到{text}的状态信息
+  Fixture: web
+  Process:
+    step1:
+      Action: get
+      Element: ${HomePage}${ApplicationStatusTextElement}
+      TestData: Application Status
+      Remarks: 验证是否能查看到{text}的状态信息
+
+-
+  Step: When
+  Text: 我去export所有记录时
+  Fixture: web
+  Process:
+    step1:
+      Action: click
+      Element: ${HomePage}${ApplicationSpanElement}
+      TestData:
+      Remarks: 点击Application
+    step2:
+      Action: select
+      Element: ${HomePage}${policyTypeSelectElement}
+      TestData: PolicyType - ALL
+      Remarks: 将policy Type下拉选择成PolicyType - ALL
+    step3:
+      Action: click
+      Element: ${HomePage}${exportButtonElement}
+      TestData:
+      Remarks: 点击export按钮
+    step4:
+      Action: click
+      Element: ${HomePage}${yesButtonElement}
+      TestData:
+      Remarks: 点击Yes.按钮
+    step5:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+    step6:
+      Action: keyboard
+      Element:
+      TestData: Enter
+      Remarks: 敲击键盘回车
+    step7:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+
+-
+  Step: Then
+  Text: 我在下载的文件夹中能找到export的文件
+  Fixture: web
+  Process:
+    step1:
+      Action: file_exists
+      Element: 'C:/Users/vb-lijiaqian/Downloads'
+      TestData: Application_
+      Remarks: 检测Application_文件是否存在

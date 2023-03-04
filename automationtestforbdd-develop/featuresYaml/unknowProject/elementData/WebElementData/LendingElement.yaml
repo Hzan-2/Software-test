@@ -1,0 +1,401 @@
+#Lending
+LendingElement:
+#流程管理tab***************************************************************
+  #流程管理
+  AdministrationProcess: //*[@id='main_menu']/ul/li[3]/a
+  #PayLater/Cash进度查询
+  PayLater&CashProgressQuery: //*[@id='main_menu']/ul/li[3]/ul/li[1]/a
+  #表单元素1
+  AdministrationIframe1: /html/body/div[2]/div/iframe
+  #表单元素2
+  AdministrationIframe2: /html/body/div/div/div[2]/div/iframe
+  #表单元素3
+  AdministrationIframe3: /html/body/div/div[3]/iframe
+  #搜索按钮
+  SearchButtonElement: //*[@id='TH_Left_myiframe0']/tr/th[1]/div
+  #搜索按钮
+  SearchButtonElement1: //*[@id='A_div_0010']/table/tbody/tr/td[2]/span[1]/a
+  #输入客户号
+  InputCustomerIdElement: //*[@id='DOFILTER_MAIN1_CUSTOMERID']/input
+  #输入客户号
+  InputCustomerIdElement1: //*[@id='CUSTOMERID']
+  #输入额度编号
+  InputLimitSerialno: //*[@id='DOFILTER_MAIN1_SERIALNO']/input
+  #点击确定按钮
+  ConfirmButtonElement: //*[@id='TableFilter_AREA']/div[2]/table/tbody/tr/td/input[1]
+  #点击确定按钮
+  ConfirmButtonElement5: /html/body/table/tbody/tr/td/div/div[1]/div[2]/table/tbody/tr/td/input[1]
+  #当前阶段
+  NowStageElement: //*[@id='INPUT_myiframe0_PhaseName_0_7']
+  #申请流水号
+  ApplySerialNumberElement: //*[@id='INPUT_myiframe0_ObjectNo_0_0']
+#授信流程tab************************************************************************
+  #授信流程
+  CreditProcessElement: //*[@id='main_menu']/ul/li[6]/a
+  #Livi Cash/Livi PayLater审查审批
+  ApprovalAndReviewElement: //*[@id='main_menu']/ul/li[6]/ul/li[1]/a
+  #切入表单
+  CreditIframe1: /html/body/div[2]/div/iframe
+  #切入表单
+  CreditIframe2: /html/body/div/div/div[2]/div[1]/iframe
+  #切入表单
+  CreditIframe3: /html/body/div[3]/div/div[2]/div[1]/iframe
+  #切入表单
+  CreditIframe4: /html/body/div[5]/div/table/tbody/tr[2]/td/div/iframe
+  #切入表单
+  CreditIframe5: //*[@id='SelectDialog']
+  #切入表单
+  CreditIframe6: //*[@id='main_bottom']/div/iframe
+  #切入表单
+  CreditIframe7: //*[@id='tabT01right0']
+  #切入表单
+  CreditIframe8: //*[@id='tabT0101']
+#  #切入表单与表单4一致
+#  CreditIframe9: /html/body/div[5]/div/table/tbody/tr[2]/td/div/iframe
+  #切入表单
+  CreditIframe10: //*[@id='tabT0103130']
+  #切入表单
+  CreditIframe11: //*[@id='tabT010011']
+  #切入表单
+  CreditIframe12: /html/body/div[6]/div/table/tbody/tr[2]/td/div/iframe
+  #切入表单
+  CreditIframe13: //*[@id='tabT01right2']
+  #切入表单
+  CreditIframe14: //*[@id='SecondFrame']/iframe
+  #切入表单
+  CreditIframe15: //*[@id='tabT0103120']
+  #切入表单
+  CreditIframe16: //*[@id='tabT01right3']
+  #切入表单
+  CreditIframe17: //*[@id='tabT01right1']
+  #切入表单
+  CreditIframe18: //*[@id='tabT01right4']
+  #切入表单
+  CreditIframe19: //*[@id='@SysSub0030']/tbody/tr[1]/td/table/tbody/tr/td/iframe
+  #切入表单
+  CreditIframe20: //*[@id='@SysSub0040']/tbody/tr[1]/td/table/tbody/tr/td/iframe
+  #切入表单
+  CreditIframe21: //*[@id='@SysSub0050']/tbody/tr[1]/td/table/tbody/tr/td/iframe
+  #切入表单
+  CreditIframe22: //*[@id='@SysSub0070']/tbody/tr[1]/td/table/tbody/tr/td/iframe
+  #切入表单
+  CreditIframe23: //*[@id='@SysSub0080']/tbody/tr[1]/td/table/tbody/tr/td/iframe
+  #切入表单
+  CreditIframe24: /html/body/table/tbody/tr[3]/td/div/form/div[1]/table[2]/tbody/tr[1]/td/table/tbody/tr/td/iframe
+  #切入表单
+  CreditIframe25: //*[@id='main_bottom']/div[3]/iframe
+  #切入表单
+  CreditIframe26: //*[@id='tabT010300']
+  #切入表单
+  CreditIframe27: /html/body/table/tbody/tr[3]/td/div/form/div[2]/table[2]/tbody/tr[1]/td/table/tbody/tr/td/iframe
+  #切入表单
+  CreditIframe28: //*[@id='tabT0103100']
+  #切入表单
+  CreditIframe29: //*[@id='tabT010318']
+  #切入表单
+  CreditIframe30: //*[@id='tabT010312']
+  #切入表单
+  CreditIframe31: /html/body/iframe[7]
+  #切入表单
+  CreditIframe32: //*[@id='tabT012040021']
+  #切入表单
+  CreditIframe33: //*[@id='tabT01001']
+  #切入表单
+  CreditIframe34: /html/body/iframe
+  #切入表单
+  CreditIframe35: //*[@id='tabT010014']
+  #切入表单
+  CreditIframe36: //*[@id='handle_2070021']/span[2]/a
+  #切入表单
+  CreditIframe37: //*[@id='tabT012070021']
+  #点击材料复核按钮
+  DocumentsUnderReviewButtonElement: //*[@id='handle_right4']/span[2]/a
+  #pcsm人工复核按钮
+  PcsmManualToReviewElement: //*[@id='handle_right3']/span[2]/a
+  #自动获取任务
+  GetTaskButtonElement: /html/body/table/tbody/tr[1]/td/table/tbody/tr/td[1]/a
+  #自动获取任务
+  GetTaskButtonElement1: /html/body/table/tbody/tr[1]/td/table/tbody/tr/td[2]/a/span[3]
+  #点击确定按钮
+  ConfirmButtonElement1: /html/body/div/table/tbody/tr/td/a[1]
+  #查看申请详情
+  ApplyDetailsButtonElement: /html/body/table/tbody/tr[1]/td/table/tbody/tr/td[2]/a/span[3]/span[2]
+  #查看申请详情
+  ApplyDetailsButtonElement1: /html/body/table/tbody/tr[1]/td/table/tbody/tr/td[1]/a/span[3]/span[2]
+  #签署意见
+  SignCommentsButtonElement: /html/body/div[3]/div/div[1]/ul/li[3]/span[2]/a
+  #签署意见
+  SignCommentsButtonElement1: //*[@id='handle_03120']/span[2]/a
+  #签署意见
+  SignCommentsButtonElement2: /html/body/table/tbody/tr[1]/td/table/tbody/tr/td[4]/a/span[3]
+  #签署意见
+  SignCommentsButtonElement3: /html/body/table/tbody/tr[1]/td/table/tbody/tr/td[3]/a/span[3]/span[2]
+  #签署意见
+  SignCommentsButtonElement4: /html/body/table/tbody/tr[1]/td/table/tbody/tr/td[4]/a/span[3]/span[2]
+  #签署意见
+  SignCommentsButtonElement5: //*[@id='handle_0011']/span[2]
+  #签署意见
+  SignCommentsButtonElement6: //*[@id='handle_0312']/span[2]/a
+#  //*[@id='handle_03130']/span[2]/a
+  #选择同意
+  AgreeButtonElement: //*[@id='PHASECHOICE_0']
+  #录入备注
+  RemarksElement: //*[@id='PHASEOPINION']
+  #点击保存
+  PreservationButtonElement: /html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/a/span[3]
+  #点击保存1
+  PreservationButtonElement1: /html/body/table/tbody/tr[3]/td/table/tbody/tr/td/a/span[3]
+  #点击保存2
+  PreservationButtonElement2: /html/body/table/tbody/tr[3]/td/table/tbody/tr/td/a/span[3]/span[2]
+  #点击保存2
+  PreservationButtonElement3: /html/body/table/tbody/tr[3]/td/div[2]/table/tbody/tr/td/a/span[3]
+  #点击保存2
+  PreservationButtonElement4: /html/body/table/tbody/tr[3]/td/div[2]/table/tbody/tr/td[1]/a/span[3]
+  #点击提交按钮
+  SubmitButtonElement: /html/body/div[1]/a/span[3]/span[2]
+  #点击提交按钮
+  SubmitButtonElement1: /html/body/div[1]/table/tbody/tr/td[1]/a/span[3]
+  #点击提交按钮
+  SubmitButtonElement2: /html/body/div[1]/a[5]/span[3]/span[2]
+  #点击提交按钮
+  SubmitButtonElement3: /html/body/div[1]/a[2]/span[3]
+  #点击提交按钮
+  SubmitButtonElement4: /html/body/div[1]/a/span[3]
+  #点击提交按钮
+  SubmitButtonElement5: /html/body/div[1]/table/tbody/tr/td[1]/a/span[3]/span[2]
+  #点击提交按钮
+  SubmitButtonElement6: /html/body/table/tbody/tr[1]/td/table/tbody/tr/td[3]/a/span[3]
+  #点击提交按钮
+  SubmitButtonElement7: /html/body/div[1]/table/tbody/tr/td[1]/a
+  #点击提交按钮
+  SubmitButtonElement8: /html/body/table/tbody/tr[1]/td/table/tbody/tr/td[5]/a/span[3]/span[2]
+  #调用下一步
+  CallNextStepElement: //*[@id='opinionset']/div[2]/a/input
+  #调用下一步
+  CallNextStepElement1: /html/body/div[3]/div[2]/a[22]/input
+  #调用下一步
+  CallNextStepElement2: //*[@id='phaseaction']/a[9]/input
+  #调用下一步
+  CallNextStepElement3: //*[@id='phaseaction']/a[13]/input
+  #调用下一步
+  CallNextStepElement4: //*[@id='phaseaction']/a[21]/input
+  #选择审批人
+  ApproverNextStepElement: //*[@id='phaseaction']/a/input
+  #Pcsm人工审核
+  PcsmManualReviewElement: //*[@id='handle_right2']/span[2]/a
+  #输入客户名称
+  InputCustomerNameElement: //*[@id='DOFILTER_MAIN1_CUSTOMERNAME']/input
+  #输入批准额度
+  InputApprovedLimitElement: //*[@id='APPROVED_LIMIT']
+  #保存并查询决策引擎
+  PreservationAndQueryPcsmButtonElement: /html/body/table/tbody/tr[3]/td/table/tbody/tr/td[1]/a/span[3]/span[2]
+  #获取系统审批额度
+  SystemLimitElement: //*[@id='ADVICELIMIT']
+  #获取审批等级
+  SystemApproverLevel: //*[@id='SYSTEM_APPROVER_LEVEL']
+  #修改系统审批等级
+  ApproverLevelOverride: //*[@id='APPROVER_LEVEL_OVERRIDE']
+  #选择审批等级L1
+  ApproverLevelElement: //*[@id='APPROVER_LEVEL_OVERRIDE']/option[3]
+  #反欺诈人审
+  ManualRiskReviewElement: //*[@id='handle_right1']/span[2]/a
+  #选择文件细项
+  DocumentClassification: //*[@id='VFY_DETAIL_TYPE_0']
+  #签署审批意见
+  ApprovalOpinions: //*[@id='CONFIRM_STATUS']
+  #签署审批意见
+  ApprovalOpinions1: //*[@id='handle_0312']/span[2]
+  #选择已审核通过
+  SelectApprovedElement: //*[@id='CONFIRM_STATUS']/option[3]
+  #选择已审核通过
+  SelectApprovedElement1: //*[@id='CONFIRM_STATUS']/option[4]
+  #录入核实收入
+  VerifyIncomeElement: //*[@id='VFY_INCOME']
+#Policy Financing授信申请*************************************************************
+  #Policy Financing授信申请
+  PolicyFinancingCreditApprovalElement: //*[@id='main_menu']/ul/li[6]/ul/li[2]/a
+  #点击Middle Office Maker
+  MiddleOfficeMakerButtonElement: //*[@id='handle_right0']/span[2]/a
+  #Flexiloan pending阶段取消的申请
+  FLPendingCancelApply: //*[@id='handle_right0']/span[2]
+  #F点击”Flexiloan pending阶段取消“
+  FLPendingCancelApply1: //*[@id='main_menu']/ul/li[6]/ul/li[10]/a
+  #点击新增申请按钮
+  NewApplicationButtonElement: /html/body/table/tbody/tr[1]/td/table/tbody/tr/td[1]/a/span[3]
+  #点击确定按钮
+  ConfirmButtonElement2: /html/body/div/table/tbody/tr/td/a[1]/span[3]/span[2]
+  #点击确定按钮
+  ConfirmButtonElement3: /html/body/div/table/tbody/tr/td/a[1]/span[3]
+  #点击确定按钮
+  ConfirmButtonElement4: /html/body/table/tbody/tr[2]/td/div/div[1]/div[2]/table/tbody/tr/td/input[1]
+  #贷款金额
+  InputBusinessSumElement: //*[@id='BUSINESSSUM']
+  #点击贷款用途
+  PurposeDescriptionElement: //*[@id='PURPOSEDESCRIPTION']
+  #选择消费
+  SelectConsumptionElement: //*[@id='PURPOSEDESCRIPTION']/option[9]
+  #输入利率
+  InputStageFeeRateElement: //*[@id='STAGE_FEE_RATE']
+  #选择分期期数
+  SelectTenorInterestRateElement: //*[@id='TENOR_INTEREST_RATE_1']
+  #选择12期
+  SelectTenorInterestRateElement12: //*[@id='TENOR_INTEREST_RATE_1']/option[2]
+  #输入保单权益人/保单持有人名称（英文）
+  InputPolicyHolderElement: //*[@id='POLICYHOLDER']
+  #输入保单受益人
+  InputBenefiCiaryName: //*[@id='BENEFICIARY_NAME']
+  #输入最新退保价值
+  InputLatestSurrenderValue: //*[@id='LATEST_SURRENDER_VALUE']
+  #输入退保价值的估值日期
+  InputSurrenderValueValuationDate: //*[@id='SURRENDER_VALUE_VALUATION_DATE']
+  #输入客户经理
+  InputCustomerManager: //*[@id='CUSTOMER_MANAGER']
+  #点击申请客户信息
+  ApplyforCustomerInformation: //*[@id='handle_03100']/span[2]/a
+  #教育水平
+  EducationalLevelEelement: //*[@id='EDUDEGREE']
+  #选择大学
+  SelectUniversityElement: //*[@id='EDUDEGREE']/option[2]
+  #选择婚姻状态
+  MarrigaeStatusElement: //*[@id='MARRIAGE']
+  #选择已婚
+  SelectMarriedElement: //*[@id='MARRIAGE']/option[3]
+  #选择工作性质
+  JobCategoryElement: //*[@id='2_JOB_CATEGORY']
+  #选择受雇固定收入
+  EmploymentFixedIncomeElement: //*[@id='2_JOB_CATEGORY']/option[2]
+  #输入任职年期
+  InputJobYearsElement: //*[@id='2_JOB_YEARS']
+  #输入任职月期
+  InputJobMonthsElement: //*[@id='2_JOB_MONTHS']
+  #输入月平均收入
+  InputMonthlySalaryAvgElement: //*[@id='2_MONTHLY_SALARY_AVG']
+  #英文住宅地址区域（大）
+  EnglishProvinceNameBigElement: //*[@id='3_ENGLISH_PROVINCE_NAME_BIG']
+  #英文住宅地址区域（大）-香港
+  EnglishProvinceNameBigHKElement: //*[@id='3_ENGLISH_PROVINCE_NAME_BIG']/option[2]
+  ##英文住宅地址区域（小）
+  EnglishProvinceNameSmallElement: //*[@id='3_ENGLISH_PROVINCE_NAME_SMALL_NAME']
+  #选择英文住宅地址区域(小)-ADMIRALTY
+  InputMyiframeItemnElement: //*[@id='INPUT_myiframe0_ITEMNO_0_0']
+  #输入英文住宅地址街道村
+  EnglishStreetVillageElement: //*[@id='3_ENGLISH_STREET_VILLAGE']
+  #输入英文住宅地址小区屋苑楼宇
+  EnglishEstateBuildingElement: //*[@id='3_ENGLISH_ESTATE_BUILDING']
+#  #输入英文住宅地址小区屋苑楼宇
+  EnglishBlockElement: //*[@id='3_ENGLISH_BLOCK']
+  #输入英文住宅地址小区屋苑楼宇
+  EnglishFloorElement: //*[@id='3_ENGLISH_FLOOR']
+  #输入英文住宅地址单位
+  EnglishUnitElement: //*[@id='3_ENGLISH_UNIT']
+  #点击还款能力
+  RepaymentAbilityElement: /html/body/div[3]/div/div[1]/ul/li[5]/span[2]/a
+  #输入每月基本薪金
+  MonthlySalaryElement: //*[@id='MONTHLY_SALARY']
+  #输入花红、佣金
+  BonusAndCommissionElement: //*[@id='BONUS_AND_COMMISSION']
+  #输入房屋津贴
+  HousingAllowanceElement: //*[@id='HOUSING_ALLOWANCE']
+  #调用天盾
+  CallRiskElement: /html/body/div[1]/a[1]/span[3]/span[2]
+  #调用TU
+  CallTuElement: /html/body/div[1]/a[2]/span[3]/span[2]
+  #调用PCSM
+  CallPcsmElement: /html/body/div[1]/a[3]/span[3]/span[2]
+  #同步客户信息
+  SynchronizeCustomerInformationElement: /html/body/div[1]/a[4]/span[3]/span[2]
+  #点击”CRM人审“
+  CrmApprovalElement: //*[@id='handle_right3']/span[2]
+  #获取当前会计日
+  SysmentDataElement: //*[@id='main_sys']/ul/li[1]/a
+  #额度确认管理
+  ConfirmationLimitElement: //*[@id='main_menu']/ul/li[7]/a
+  #Policy Financing额度确认申请审批
+  PFLimitConfirmationElement: //*[@id='main_menu']/ul/li[7]/ul/li[1]/a
+  #点击关闭按钮
+  ClosedButtonElement: /html/body/div[5]/div/table/tbody/tr[1]/td/button
+  #放款日期
+  DisbursementDateElement: //*[@id='PUTOUTDATE']
+#cash*****************************************************************************
+  #Flexiloan批核后取消
+  FlexiLoanCancelApprovalElement: //*[@id='main_menu']/ul/li[6]/ul/li[8]/a
+  #额度终止管理
+  LimitTerminationElement: //*[@id='main_menu']/ul/li[6]/ul/li[4]/a
+#PF提前还款************************************************************************
+  #贷后管理
+  PostLoanManagementElement: //*[@id='main_menu']/ul/li[9]/a
+  #提前还款
+  PFEarlySettlement: //*[@id='main_menu']/ul/li[9]/ul/li[16]/a
+  #输入提前还款日期
+  PrepaymentDateElement: //*[@id='TRANSDATE']
+  #选择提前还款方式
+  PrepaymentMethodElement: //*[@id='PREPAYTYPE']
+  #输入还款金额
+  RepaymentAmountElement: //*[@id='PREPAYPRINCIPALAMT']
+  #待处理
+  PendingElement: //*[@id='handle_2040021']/span[2]/a
+#FF授信申请*************************************************************************
+  #FF授信审批
+  FranchiseFinancingCreditApprovalElement: //*[@id='main_menu']/ul/li[6]/ul/li[3]/a
+  #上传文件
+  FileTypeElement: //*[@id='sel']
+  #选择上传文件按钮
+  UpdateFileButtonElement: //*[@id='file']
+  #文件提交按钮
+  FileSubmitButtonElement: /html/body/form/input[2]
+  #选择贷款期数
+  BusinessTermmonthElement: //*[@id='BUSINESSTERMMONTH']
+  #选择贷款类型
+  FranchiseLoanTypeElement: //*[@id='1_FRANCHISE_LOAN_TYPE']
+  #输入Franchise Fee
+  FranchiseFeeElement: //*[@id='1_FRANCHISE_FEE']
+  #输入输入Deposit Fee
+  DepositFeeElement: //*[@id='1_DEPOSIT_FEE']
+  #输入Projected income
+  ProjectedIncomeElement: //*[@id='1_PROJECTED_INCOME']
+  #点击还款能力
+  RepaymentAbility: //*[@id='handle_0318']/span[2]/a
+  #输入还款能力：Total Loan Amount from other non-bank financial institutions
+  DeclaredLoanOutstandingElement: //*[@id='DECLARED_LOAN_OUTSTANDING']
+  #输入还款能力：Monthly Repayment Amount from other non-bank financial institutions
+  DeclaredLoanMonthlyCommitmentElement: //*[@id='DECLARED_LOAN_MONTHLY_COMMITMENT']
+  #Franchise Financing额度确认申请审批
+  FFLimitConfirmationApplicationApproval: //*[@id='main_menu']/ul/li[7]/ul/li[2]/a
+  #选择放款账户
+  AccountTypeElement: //*[@id='ACCOUNTTYPE']
+  #选择复审岗位
+  ReviewPositionElement: //*[@id='phaseaction']/a[text()='jiangjunqi jiangjunqi 1003 额度确认复核岗FF']
+#PCMS补充资料*********************************************************************************************************8
+  #选择补充资料
+  SupplementaryInformationElement: //*[@id='handle_0014']/span[2]
+  #选择补充类型
+  SelectSendalertsElement: //*[@id='SENDALERTS']
+  #选择收入证明
+  SelectIncomeProveElement: //*[@id='SENDALERTS']/option[3]
+  #选择上传类型
+  DeclinedTypeElement: //*[@id='DECLINED_TYPE']
+  #选择额外文件
+  DeclinedTypeElement2: //*[@id='DECLINED_TYPE']/option[2]
+  #选择额外文件
+  SendFileTypeElement: //*[@id='SEND_FILE_TYPE']
+  #选择额外文件类型
+  SendFileTypeElement2: //*[@id='SEND_FILE_TYPE']/option[7]
+  #退回补充资料
+  ReturnSupplementaryInformationElement: //*[@id='PHASECHOICE_4']
+#FF提前还款****************************************************************
+  #Franchise Financing提前还款
+  FFEarlySettlement: //*[@id='main_menu']/ul/li[9]/ul/li[17]/a
+  #选择处理人
+  SelectApproverElement: //*[@id='phaseaction']/a[text()='wanghuan wanghuan 115 Block Code - Checker']
+#PayLater消费**************************************************************
+  #选择消费环境-UAT3
+  ConsumptionCnvironment: /html/body/div[2]/div/div/div/div[2]/div/div/div[5]/div
+#  选择消费环境-sit1
+#  ConsumptionCnvironment: /html/body/div[2]/div/div/div/div[2]/div/div/div[2]/div
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+#银行服务设定元素
+BankServiceSettingElementPage:
+  android:
+    #支付和转账
+    cardElement:
+      SimplifiedChinese: //*[contains(@content-desc, '银行卡')]
+      TraditionalChinese: //*[contains(@content-desc, '銀行卡')]
+      Englist: //*[contains(@content-desc, 'Cards')]
+    QRPaymentElement:
+      SimplifiedChinese: //*[contains(@content-desc, '二维码消费')]
+      TraditionalChinese: //*[contains(@content-desc, '二維碼消費')]
+      Englist: //*[contains(@content-desc, 'QR Payment')]
+    TransferElement:
+      SimplifiedChinese: //*[contains(@content-desc, '转账')]
+      TraditionalChinese: //*[contains(@content-desc, '轉賬')]
+      Englist: //*[contains(@content-desc, 'Transfer')]
+    #限额设定
+    TransferLimitElement:
+      SimplifiedChinese: //*[contains(@content-desc, '转账限额')]
+      TraditionalChinese: //*[contains(@content-desc, '轉賬限額')]
+      Englist: //*[contains(@content-desc, 'Transfer Limit')]
+    #终止服务
+    Service TerminationElement:
+      SimplifiedChinese: //*[contains(@content-desc, '终止服务')]
+      TraditionalChinese: //*[contains(@content-desc, '終止服務')]
+      Englist: //*[contains(@content-desc, 'Service Termination')]
+  ios:
+    #支付和转账
+    cardElement:
+      SimplifiedChinese: //*[contains(@content-desc, '银行卡')]
+      TraditionalChinese: //*[contains(@content-desc, '銀行卡')]
+      Englist: //*[contains(@content-desc, 'Cards')]
+    QRPaymentElement:
+      SimplifiedChinese: //*[contains(@content-desc, '二维码消费')]
+      TraditionalChinese: //*[contains(@content-desc, '二維碼消費')]
+      Englist: //*[contains(@content-desc, 'QR Payment')]
+    TransferElement:
+      SimplifiedChinese: //*[contains(@content-desc, '转账')]
+      TraditionalChinese: //*[contains(@content-desc, '轉賬')]
+      Englist: //*[contains(@content-desc, 'Transfer')]
+    #限额设定
+    TransferLimitElement:
+      SimplifiedChinese: //*[contains(@content-desc, '转账限额')]
+      TraditionalChinese: //*[contains(@content-desc, '轉賬限額')]
+      Englist: //*[contains(@content-desc, 'Transfer Limit')]
+    #终止服务
+    Service TerminationElement:
+      SimplifiedChinese: //*[contains(@content-desc, '终止服务')]
+      TraditionalChinese: //*[contains(@content-desc, '終止服務')]
+      Englist: //*[contains(@content-desc, 'Service Termination')]

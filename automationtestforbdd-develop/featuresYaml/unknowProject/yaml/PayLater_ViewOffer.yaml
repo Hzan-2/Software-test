@@ -1,0 +1,379 @@
+#PayLater取消申请
+-
+  Step: Given
+  Text: 接受PayLater申请
+  Fixture: app
+  Process:
+    -
+      Action: click
+      Element: ${HomePage}${paylaterElement}
+      TestData:
+      Remarks: 点击首页-paylater卡片
+    -
+      Action: sleep
+      Element:
+      TestData: 8
+      Remarks: 等待8秒
+    -
+      Action: judge,branch
+      Element: ${LendingPayLaterHomeElement}${ViewOfferButtonElement}
+      TestData:
+      Remarks: 判断是否接受额度
+      ifbranchProcess:
+        -
+          Action: click
+          Element: ${LendingPayLaterHomeElement}${ViewOfferButtonElement}
+          TestData:
+          Remarks: 点击查看结果
+        -
+          Action: sleep
+          Element:
+          TestData: 5
+          Remarks: 等待5秒
+        -
+          Action: slide
+          Element: bottom
+          TestData:
+          Remarks: 滑动到底部
+        -
+          Action: sleep
+          Element:
+          TestData: 5
+          Remarks: 等待5秒
+        -
+          Action: click
+          Element: ${LendingPayLaterApplicationApproved}${EditDefaultPeriodButtonElement}
+          TestData:
+          Remarks: 点击更改默认分期按钮
+        -
+          Action: sleep
+          Element:
+          TestData: 5
+          Remarks: 等待5秒
+        -
+          Action: click
+          Element: ${LendingPayLaterChangeRepaymentPeriod}${ChangeRepaymentPeriod}
+          TestData:
+          Remarks: 选择修改的期数-6期
+        -
+          Action: click
+          Element: ${LendingPayLaterChangeRepaymentPeriod}${DoneButtonElement}
+          TestData:
+          Remarks: 修改分期页面点击完成
+        -
+          Action: sleep
+          Element:
+          TestData: 5
+          Remarks: 等待5秒
+        -
+          Action: click
+          Element: ${LendingPayLaterApplicationApproved}${ChangeMinimumInstalmentAmountElement}
+          TestData:
+          Remarks: 点击更改，修改最低分期金额
+        -
+          Action: sleep
+          Element:
+          TestData: 5
+          Remarks: 等待5秒
+        -
+          Action: click
+          Element: ${LendingPayLaterMinimumInstalmentAmount}${UpdateMinimumInstalmentAmountElement}
+          TestData:
+          Remarks: 选择400
+        -
+          Action: click
+          Element: ${LendingPayLaterMinimumInstalmentAmount}${ConfirmButtonElement}
+          TestData:
+          Remarks: 修改最低分期金额页面点击提交
+        -
+          Action: sleep
+          Element:
+          TestData: 5
+          Remarks: 等待5秒
+        -
+          Action: click
+          Element: ${LendingPayLaterApplicationApproved}${ViewFacilityLetterElement}
+          TestData:
+          Remarks: 查看授信函（待判断授信函中的金额是否正确）
+        -
+          Action: sleep
+          Element:
+          TestData: 5
+          Remarks: 等待5秒
+        -
+          Action: slide
+          Element: bottom
+          TestData:
+          Remarks: 滑动到底部
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 等待3秒
+        -
+          Action: click
+          Element: ${LendingPayLaterApplicationApproved}${BackPageButtonElement}
+          TestData:
+          Remarks: 返回上一页
+        -
+          Action: sleep
+          Element:
+          TestData: 2
+          Remarks: 等待2秒
+        -
+          Action: slide
+          Element: bottom
+          TestData:
+          Remarks: 滑动到底部
+        -
+          Action: judge_platform
+          Element:
+          TestData: ios
+          Remarks: 如果是iOS设备，
+          branchProcess:
+            -
+              Action: click
+              Element: [30, 686]
+              TestData:
+              Remarks: 勾选协议，坐标获取机型是iPhone12 mini
+        -
+          Action: judge_platform
+          Element:
+          TestData: android
+          Remarks: 如果是android设备，
+          branchProcess:
+            -
+              Action: click
+              Element: ${LendingPayLaterApplicationApproved}${AgreementButtonElement}
+              TestData:
+              Remarks: 勾选协议(中英文元素路径不一致，更新为坐标)
+        -
+          Action: click
+          Element: ${LendingPayLaterApplicationApproved}${AcceptAndContinueButtonElement}
+          TestData:
+          Remarks: 点击接受并继续按钮
+        -
+          Action: sleep
+          Element:
+          TestData: 5
+          Remarks: 等待11秒
+        -
+          Action: judge,branch
+          Element: ${PayLatrPage}${OTPElement}
+          TestData:
+          Remarks: 判断是否调用OTP核身方式
+          ifbranchProcess:
+            -
+              Action: keyboard
+              Element:
+              TestData: 123456
+              Remarks: 输入验证码
+          elsebranchProcess:
+            -
+              Action: sotfToken_input
+              Element:
+              TestData: ${sotfTokenPIN}
+              Remarks: SoftTokenInput
+        -
+          Action: sleep
+          Element:
+          TestData: 50
+          Remarks: 等待50秒
+        -
+          Action: judge,branch
+          Element: ${LendingPayLaterApplicationApproved}${AcceptAndContinueButtonElement}
+          TestData:
+          Remarks: 判断接受额度是否成功，若失败，则走IF
+          ifbranchProcess:
+            -
+              Action: click
+              Element: ${LendingPayLaterApplicationApproved}${AcceptAndContinueButtonElement}
+              TestData:
+              Remarks: 点击接受并继续按钮
+            -
+              Action: sleep
+              Element:
+              TestData: 5
+              Remarks: 等待11秒
+            -
+              Action: judge,branch
+              Element: ${PayLatrPage}${OTPElement}
+              TestData:
+              Remarks: 判断是否调用OTP核身方式
+              ifbranchProcess:
+                -
+                  Action: keyboard
+                  Element:
+                  TestData: 123456
+                  Remarks: 输入验证码
+              elsebranchProcess:
+                -
+                  Action: sotfToken_input
+                  Element:
+                  TestData: ${sotfTokenPIN}
+                  Remarks: SoftTokenInput
+            -
+              Action: sleep
+              Element:
+              TestData: 50
+              Remarks: 等待50秒
+          elsebranchProcess:
+            -
+              Action: sleep
+              Element:
+              TestData: 5
+              Remarks: 等待5秒
+        -
+          Action: click
+          Element: ${LendingPayLaterApplicationApproved}${CurrentJobDoneButtonElement}
+          TestData:
+          Remarks: 点击完成按钮
+        -
+          Action: sleep
+          Element:
+          TestData: 10
+          Remarks: 等待10秒
+        -
+          Action: click
+          Element: ${LendingPayLaterHomeElement}${TriggerMcCardElement}
+          TestData:
+          Remarks: 点击MC卡片
+        -
+          Action: sleep
+          Element:
+          TestData: 15
+          Remarks: 等待15秒
+        -
+          Action: judge
+          Element: //*[contains(@content-desc, '4')]
+          TestData: true
+          Remarks: 判断是否修改成功
+        -
+          Action: judge
+          Element: ${LendingPayLaterMasterCardElement}${NowRepaymentPeriodElement2}
+          TestData: true
+          Remarks: 判断是否修改成功
+        -
+          Action: sleep
+          Element:
+          TestData: 5
+          Remarks: 等待5秒
+      elsebranchProcess:
+        -
+          Action: sleep
+          Element:
+          TestData: 5
+          Remarks: 等待5秒
+
+
+-
+  Step: Then
+  Text: 我在卡设置页面能看到详细资料按钮
+  Fixture: app
+  Process:
+    -
+      Action: judge
+      Element: ${LendingPayLaterMasterCardElement}${DetailButtonElement}
+      TestData: true
+      Remarks: 判断存在详细资料
+
+-
+  Step: Given
+  Text: 我能看到web端该额度状态为正常
+  Fixture: web
+  Process:
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 等待2秒
+    -
+      Action: mouse
+      Element: ${LendingElement}${PostLoanManagementElement}
+      TestData: hover
+      Remarks: 将鼠标悬停在指定元素上-贷后管理
+    -
+      Action: click
+      Element: //*[@id='main_menu']/ul/li[9]/ul/li[1]/a/span[2]
+      TestData:
+      Remarks: 点击额度管理
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 等待2秒
+    -
+      Action: iframe
+      Element: //*[@id='main_bottom']/div/iframe
+      TestData:
+      Remarks: 切入表单
+    -
+      Action: click
+      Element: //*[@id='handle_right0']/span[2]/a
+      TestData:
+      Remarks: 点击额度台账
+    -
+      Action: iframe
+      Element: //*[@id='tabT01right0']
+      TestData:
+      Remarks: 切入表单
+    -
+      Action: sleep
+      Element:
+      TestData: 1
+      Remarks: 等待1秒
+    -
+      Action: click
+      Element: //*[@id='TH_Left_myiframe0']/tr/th[1]/div
+      TestData:
+      Remarks: 点击搜索
+    -
+      Action: input
+      Element: //*[@id='DOFILTER_MAIN1_CUSTOMERID']/input
+      TestData: ${Lending}${CustomerId}
+      Remarks: 输入客户号
+    -
+      Action: click
+      Element: //*[@id='DOFILTER_MAIN1_BUSINESSTYPE']/span[1]
+      TestData:
+      Remarks: 点击基础产品
+    -
+      Action: sleep
+      Element:
+      TestData: 1
+      Remarks: 等待1秒
+    -
+      Action: click
+      Element: //a[text()='livi PayLater']
+      TestData:
+      Remarks: 选择livi PayLater
+#    -
+#      Action: click
+#      Element: //*[@id='DOFILTER_MAIN1_LIMIT_STATUS']
+#      TestData:
+#      Remarks: 点击额度状态
+#    -
+#      Action: click
+#      Element: //a[text()='已终止']
+#      TestData:
+#      Remarks: 选择额度状态为-已终止
+    -
+      Action: click
+      Element: //*[@id='TableFilter_AREA']/div[2]/table/tbody/tr/td/input[1]
+      TestData:
+      Remarks: 点击确定
+    -
+      Action: get_text
+      Element: //*[@id='INPUT_myiframe0_SerialNo_0_0']
+      TestData: $${LimitSerialno}
+      Remarks: 获取额度编号
+    -
+      Action: get
+      Element: //*[@id='INPUT_myiframe0_LIMIT_STATUS_0_10']
+      TestData: '正常'
+      Remarks: 断言，判断额度状态是否终止
+    -
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 等待3秒

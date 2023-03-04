@@ -1,0 +1,72 @@
+#转账限额元素--by yang.yang
+TransferLimitElementPage:
+  android:
+    #标题
+    TransferLimittittleElement:
+      SimplifiedChinese: //*[contains(@content-desc, '转账限额')]
+      TraditionalChinese: //*[contains(@content-desc, '轉賬限額')]
+      English: //*[contains(@content-desc, 'Transfer Limit')]
+    #每日转账限额
+    DailyTransferLimitElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.widget.EditText
+    #每日小额转账限额
+    DailySmallValueTransferLimitElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[2]/android.widget.EditText
+    #每日转账限额上限
+    DailyTransferLimitMaximumElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View[3]/android.widget.TextView
+    #每日小额转账限额上限
+    DailySmallValueTransferLimitMaximumElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[2]/android.view.View[4]/android.widget.TextView
+    #确认按钮
+    ConfirmElement:
+      SimplifiedChinese: //*[contains(@text, '确定')]
+      TraditionalChinese: //*[contains(@text, '確定')]
+      English: //*[contains(@text, 'Confirm')]
+    #限额设定结果
+    LimitSetResultElement:
+      SimplifiedChinese: //*[contains(@text, '限额设置成功')]
+      TraditionalChinese: //*[contains(@text, '限額設定成功')]
+      English: //*[contains(@text, 'Limit set')]
+    #限额设定结果-完成按钮
+    LimitSetResultButtonElement:
+      SimplifiedChinese: //*[contains(@text, '完成')]
+      TraditionalChinese: //*[contains(@text, '完成')]
+      English: //*[contains(@text, 'Done')]
+    #限额设定超出上限
+    LimitexceededElement:
+      SimplifiedChinese: //*[contains(@text, '超出上限')]
+      TraditionalChinese: //*[contains(@text, '超出上限')]
+      English: //*[contains(@text, 'Limit exceeded')]
+
+  ios:
+    #标题
+    TransferLimittittleElement:
+      SimplifiedChinese: //*[contains(@name, '转账限额')]
+      TraditionalChinese: //*[contains(@name, '轉賬限額')]
+      English: //*[contains(@name, 'Transfer Limit')]
+    #每日转账限额
+    DailyTransferLimitElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField[1]
+    #每日小额转账限额
+    DailySmallValueTransferLimitElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField[2]
+    #每日转账限额上限
+    DailyTransferLimitMaximumElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[4]/XCUIElementTypeStaticText
+    #每日小额转账限额上限
+#    DailySmallValueTransferLimitMaximumElement: //XCUIElementTypeStaticText[@name="10,000.00"]
+    DailySmallValueTransferLimitMaximumElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[9]/XCUIElementTypeStaticText
+    #确认按钮
+    ConfirmElement:
+      SimplifiedChinese: //*[contains(@name, '确定')]
+      TraditionalChinese: //*[contains(@name, '確定')]
+      English: //*[contains(@name, 'Confirm')]
+    #限额设定结果
+    LimitSetResultElement:
+      SimplifiedChinese: //*[contains(@name, '限额设置成功')]
+      TraditionalChinese: //*[contains(@name, '限額設定成功')]
+      English: //*[contains(@name, 'Limit set')]
+    #限额设定结果-完成按钮
+    LimitSetResultButtonElement:
+      SimplifiedChinese: //*[contains(@name, '完成')]
+      TraditionalChinese: //*[contains(@name, '完成')]
+      English: //*[contains(@name, 'Done')]
+    #限额设定超出上限
+    LimitexceededElement:
+      SimplifiedChinese: //*[contains(@name, '超出上限')]
+      TraditionalChinese: //*[contains(@name, '超出上限')]
+      English: //*[contains(@name, 'Limit exceeded')]

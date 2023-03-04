@@ -1,0 +1,92 @@
+Transaction:
+  android:
+    #交易信息元素
+    StatementElement:
+      SimplifiedChinese: //*[contains(@content-desc, '月结单')]
+      TraditionalChinese: //*[contains(@content-desc, '月結單')]
+      Englist: //*[contains(@content-desc, 'Statement')]
+
+     #筛选元素
+    filterElement:
+      SimplifiedChinese: //*[contains(@content-desc, '筛选')]
+      TraditionalChinese: //*[contains(@content-desc, '篩選')]
+      Englist: //*[contains(@content-desc, 'Filter')]
+
+    #日期筛选
+    DateElement:
+      SimplifiedChinese: //*[contains(@content-desc, '日期')]
+      TraditionalChinese: //*[contains(@content-desc, '日期')]
+      Englist: //*[contains(@content-desc, 'Date')]
+
+    #日历向左翻页
+    leftpageElement: //android.widget.FrameLayout[@resource-id='android:id/content']/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.widget.ImageView[4]
+
+
+    #日期6元素
+    DatesixElement:
+      SimplifiedChinese: //*[contains(@content-desc, '星期五, 2022年5月6日')]
+      TraditionalChinese: //*[contains(@content-desc, '星期五, 2022年5月6日')]
+      Englist: //*[contains(@content-desc, 'Friday, May 6, 2022')]
+
+
+    #交易类型筛选
+    TransactionTypeElement:
+      SimplifiedChinese: //*[contains(@content-desc, '交易类型')]
+      TraditionalChinese: //*[contains(@content-desc, '交易類型')]
+      Englist: //*[contains(@content-desc, 'Transaction Type')]
+
+    #营销奖赏元素
+    MarketingRewardElement:
+      SimplifiedChinese: //*[contains(@content-desc, '营销奖赏')]
+      TraditionalChinese: //*[contains(@content-desc, '營銷獎賞')]
+      Englist: //*[contains(@content-desc, 'Marketing Reward')]
+
+    #完成筛选条件元素
+    DoneElement:
+      SimplifiedChinese: //*[contains(@content-desc, '完成')]
+      TraditionalChinese: //*[contains(@content-desc, '完成')]
+      Englist: //*[contains(@content-desc, 'Done')]
+
+    #营销奖赏断言
+    assertMarketingRewardElement:
+      SimplifiedChinese: //*[contains(@content-desc, '营销奖赏')]
+      TraditionalChinese: //*[contains(@content-desc, '營銷獎賞')]
+      Englist: //*[contains(@content-desc, 'Marketing Reward')]
+
+    #营销奖赏详情断言
+    assertTranactionDetailsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '交易详情')]
+      TraditionalChinese: //*[contains(@content-desc, '交易詳情')]
+      Englist: //*[contains(@content-desc, 'Transaction Details')]
+
+    assertAmountElement:
+      SimplifiedChinese: //*[contains(@text, '+100.00 HKD')]
+      TraditionalChinese: //*[contains(@text, '+100.00 HKD')]
+      Englist: //*[contains(@text, '+100.00 HKD')]
+
+    assertTransactionTypeElement:
+      SimplifiedChinese: //*[contains(@text, '营销奖赏')]
+      TraditionalChinese: //*[contains(@text, '營銷獎賞')]
+      Englist: //*[contains(@text, 'Marketing Reward')]
+
+    assertFromAccountElement:
+      SimplifiedChinese: //android.view.View[@text='1']
+      TraditionalChinese: //android.view.View[@text='1']
+      Englist: //android.view.View[@text='1']
+
+    assertToAccountElement:
+      SimplifiedChinese: //*[contains(@text, '存款账户')]
+      TraditionalChinese: //*[contains(@text, 'liviSave')]
+      Englist: //*[contains(@text, 'liviSave')]
+
+    assertTransactionTimeElement: //android.view.View[@text='06/05/2022']
+
+    assertRemarksElement: //android.view.View[@text='20220627582506406332461056']
+
+    assertTransactionNumberElement: //android.view.View[@text='202205060250100500000077001']
+
+
+
+
+
+

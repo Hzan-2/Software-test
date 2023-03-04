@@ -1,0 +1,6 @@
+#保险项目参数
+
+Insurance:
+  url: https://iasim.sit1.livibank.hk/index
+  userName: vb-lijiaqian
+  passWord: AES<<66b53544d5a94c7b90d0d04ba9cc8586>>AES

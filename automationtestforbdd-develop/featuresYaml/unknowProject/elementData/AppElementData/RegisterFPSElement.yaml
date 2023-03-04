@@ -1,0 +1,94 @@
+#登记转数快/核對資料頁面元素--by yang.yang
+RegisterFPSElementPage:
+  android:
+    #标题
+    RegisterFPStittleElement:
+      SimplifiedChinese: //*[contains(@content-desc, '转数快')]
+      TraditionalChinese: //*[contains(@content-desc, '轉數快')]
+      English: //*[contains(@content-desc, 'Register FPS')]
+
+    ReviewtittleElement:
+      SimplifiedChinese: //*[contains(@content-desc, '核对信息')]
+      TraditionalChinese: //*[contains(@content-desc, '核對資料')]
+      English: //*[contains(@content-desc, 'Review')]
+
+    VerifyMobileNumbertittleElement:
+      SimplifiedChinese: //*[contains(@content-desc, '验证手机号码')]
+      TraditionalChinese: //*[contains(@content-desc, '驗證手提電話號碼')]
+      English: //*[contains(@content-desc, 'Verify Mobile Number')]
+
+
+    VerifyEmailtittleElement:
+      SimplifiedChinese: //*[contains(@content-desc, '验证邮箱地址')]
+      TraditionalChinese: //*[contains(@content-desc, '驗證電郵地址')]
+      English: //*[contains(@content-desc, 'Verify Email')]
+
+    #设定livi为预设收款银行-勾选框
+    RegisterforFPS_MobileElement: webkit.WebView/android.webkit.WebView/android.widget.ListView/android.view.View[1]/android.view.View[2]/android.widget.Image[2]/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View[7]/android.widget.Image
+    #登记「转数快」页面确定按钮
+    ConfirmElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View[8]
+    #登记「转数快」页面继续按钮
+    ContinueElement:
+      SimplifiedChinese: //*[contains(@text, '继续')]
+      TraditionalChinese: //*[contains(@text, '繼續')]
+      English: //*[contains(@text, 'Continue')]
+    #核對資料页面确定按钮
+    ReviewConfirmElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View[15]
+    #核對資料頁面取消按鈕
+    ReviewCancelElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View[16]
+    #成功登记转数快提示信息
+    ResultTipElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View[2]
+    #成功登记转数快-完成按钮
+    ResultButtonElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View[4]
+  ios:
+    #标题
+    RegisterFPStittleElement:
+      SimplifiedChinese: //*[contains(@name, '转数快')]
+      TraditionalChinese: //*[contains(@name, '轉數快')]
+      English: //*[contains(@name, 'Register FPS')]
+
+    ReviewtittleElement:
+      SimplifiedChinese: //*[contains(@name, '核对信息')]
+      TraditionalChinese: //*[contains(@name, '核對資料')]
+      English: //*[contains(@name, 'Review')]
+
+    VerifyMobileNumbertittleElement:
+      SimplifiedChinese: //*[contains(@name, '验证手机号码')]
+      TraditionalChinese: //*[contains(@name, '驗證手提電話號碼')]
+      English: //*[contains(@name, 'Verify Mobile Number')]
+
+    VerifyEmailtittleElement:
+      SimplifiedChinese: //*[contains(@name, '验证电邮地址')]
+      TraditionalChinese: //*[contains(@name, '驗證電郵地址')]
+      English: //*[contains(@name, 'Verify Email')]
+
+    #设定livi为预设收款银行-勾选框
+    RegisterforFPS_MobileElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeImage
+    #登记「转数快」页面确定按钮
+    ConfirmElement:
+      SimplifiedChinese: //XCUIElementTypeStaticText[@name='确定']
+      TraditionalChinese: //XCUIElementTypeStaticText[@name='確定']
+      English: //XCUIElementTypeStaticText[@name='Confirm']
+    #登记「转数快」页面继续按钮
+    ContinueElement:
+      SimplifiedChinese: //*[contains(@name, '继续')]
+      TraditionalChinese: //*[contains(@name, '繼續')]
+      English: //*[contains(@name, 'Continue')]
+    #核對資料页面确定按钮
+    ReviewConfirmElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[13]
+    #核對資料頁面取消按鈕
+    ReviewCancelElement:
+      SimplifiedChinese: //XCUIElementTypeStaticText[@name='取消']
+      TraditionalChinese: //XCUIElementTypeStaticText[@name='取消']
+      English: //XCUIElementTypeStaticText[@name='Cancel']
+    #成功登记转数快提示信息
+    ResultTipElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[3]/XCUIElementTypeOther
+#      SimplifiedChinese: //XCUIElementTypeStaticText[@name='完成']
+#      TraditionalChinese: //XCUIElementTypeStaticText[@name='完成']
+#      English: //XCUIElementTypeStaticText[@name='Done']
+    #成功登记转数快-完成按钮
+    ResultButtonElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[3]/XCUIElementTypeOther
+#      SimplifiedChinese: //XCUIElementTypeStaticText[@name='完成']
+#      TraditionalChinese: //XCUIElementTypeStaticText[@name='完成']
+#      English: //XCUIElementTypeStaticText[@name='Done']
+ 

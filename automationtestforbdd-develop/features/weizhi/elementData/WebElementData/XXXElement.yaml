@@ -1,0 +1,4 @@
+#XXX页面元素
+#举个例子
+XXXPage:
+  LiviBankTextElement: //span[text()='Livi Bank']

@@ -1,0 +1,39 @@
+LendingPayLaterAccountElement:
+  android:
+    #PayLater-account页面
+    #触发还款按钮
+    RepayButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '还款')]
+      TraditionalChinese: //*[contains(@content-desc, '還款')]
+      English: //android.widget.ImageView[@content-desc='Repay']
+    #account页面元素：livi PayLater
+    AccountElement: //*[contains(@content-desc, 'livi PayLater')]
+    #查看还款计划
+    InstalmentsPlansElement:
+      SimplifiedChinese: //*[contains(@content-desc, '交易日期')]
+      TraditionalChinese: //*[contains(@content-desc, '交易日期')]
+      English: //*[contains(@content-desc, 'Transaction date')]
+    #返回上一页
+    BackPageButtonElement1: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]
+    #返回上一页
+    BackPageButtonElement2: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]
+
+
+
+  ios:
+    #触发还款按钮
+    RepayButtonElement:
+      SimplifiedChinese: //XCUIElementTypeImage[@name="还款"]
+      TraditionalChinese: //XCUIElementTypeImage[@name="還款"]
+      English: //XCUIElementTypeImage[@name="Repay"]
+    #account页面元素：livi PayLater
+    AccountElement: //*[contains(@name, 'livi PayLater')]
+    #查看还款计划
+    InstalmentsPlansElement:
+      SimplifiedChinese: //*/XCUIElementTypeImage[contains(@name, '交易日期') and @visible='true']
+      TraditionalChinese: //*/XCUIElementTypeImage[contains(@name, '交易日期') and @visible='true']
+      English: //*/XCUIElementTypeImage[contains(@name, 'Transaction date') and @visible='true']
+    #返回上一页
+    BackPageButtonElement1: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]
+    #返回上一页
+    BackPageButtonElement2: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]

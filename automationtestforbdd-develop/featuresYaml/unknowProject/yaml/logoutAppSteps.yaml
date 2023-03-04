@@ -1,0 +1,46 @@
+# 作者：jiaqian.li
+# 描述：Livi Bank的app退出步骤
+
+-
+  Step: Given
+  Text: 我进入Livi Bank的个人中心
+  Fixture: app
+  Process:
+    step1:
+      Action: click
+      Element: ${HomePage}${personalCenterElement}
+      TestData:
+      Remarks: 点击右上角的个人中心头像
+
+-
+  Step: When
+  Text: 我点击了右上角的退出按钮
+  Fixture: app
+  Process:
+    step1:
+      Action: click
+      Element: ${PersonalCenterPage}${exitButtonElement}
+      TestData:
+      Remarks: 点击右上角的退出按钮
+
+-
+  Step: And
+  Text: 我点击了确定
+  Fixture: app
+  Process:
+    step1:
+      Action: click
+      Element: ${PersonalCenterPage}${exitwindowElementYes}
+      TestData:
+      Remarks: 点击确定
+
+-
+  Step: Then
+  Text: 我可以正常的退出到登录界面
+  Fixture: app
+  Process:
+    step1:
+      Action: judge
+      Element: ${LandingPage}${LoginButtonElement}
+      TestData: true
+      Remarks: 判断登录页的登录按钮元素是否存在

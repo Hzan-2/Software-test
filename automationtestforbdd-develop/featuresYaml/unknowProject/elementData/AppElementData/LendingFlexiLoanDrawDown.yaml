@@ -1,0 +1,78 @@
+#FlexiLoan -提款页面
+LendingFlexiLoanDrawDown:
+  android:
+    #触发提款输入框
+    DrawdownloanAmountButtonElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.view.View
+    #录入提款金额输入框
+    DrawdownloanAmountElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.widget.EditText
+    #触发提交按钮
+    ConfirmButtonElement:
+      SimplifiedChinese: //*[contains(@text, '确 定')]
+      TraditionalChinese: //*[contains(@text, '確 定')]
+      English: //*[contains(@text, 'Confirm')]
+    #提款详情页面
+    LoanDisbursementPageElement:
+      SimplifiedChinese: //*[contains(@content-desc, '提取贷款')]
+      TraditionalChinese: //*[contains(@content-desc, '提取貸款')]
+      English: //*[contains(@content-desc, 'Loan Disbursement')]
+    #提款成功页面
+    SuccessfullyDrawDownPageElement:
+      SimplifiedChinese: //*[contains(@text, '成功提取金额！')]
+      TraditionalChinese: //*[contains(@text, '成功提取金額')]
+      English: //*[contains(@text, 'Drawdown successful!')]
+    #提款成功页面，点击返回主页面
+    SuccessfullyDrawDownPageBackToHomeElement:
+      SimplifiedChinese: //*[contains(@text,'返回主页')]
+      TraditionalChinese: //*[contains(@text,'返回主頁')]
+      English: //*[contains(@text, 'Back to Overview')]
+    #查看完整还款计划
+    RepaymentPlanElement:
+      SimplifiedChinese: //*[contains(@text,'完整还款计划')]
+      TraditionalChinese: //*[contains(@text,'完整還款計劃')]
+      English: //*[contains(@text, 'Full Repayment Plan')]
+    #点击提款金额
+    DrawdownLoanAmountTitleElement:
+      SimplifiedChinese: //*[contains(@text,'提取贷款额')]
+      TraditionalChinese: //*[contains(@text,'提取貸款額')]
+      English: //*[contains(@text, 'Drawdown loan amount')]
+    #获取还款计划
+    RepaymentPlanTextElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.view.View[2]
+
+
+
+
+
+
+
+
+
+  ios:
+    #触发提款输入框
+    DrawdownloanAmountButtonElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeStaticText
+    #录入提款金额输入框
+    DrawdownloanAmountElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField
+    #触发提交按钮
+    ConfirmButtonElement:
+      SimplifiedChinese: //*[contains(@name, '确 定')]
+      TraditionalChinese: //*[contains(@name, '確 定')]
+      English: //*[contains(@name, 'Confirm')]
+    #提款详情页面
+    LoanDisbursementPageElement:
+      SimplifiedChinese: //*[contains(@name, '提取贷款')]
+      TraditionalChinese: //*[contains(@name, '提取貸款')]
+      English: //*[contains(@name, 'Loan Disbursement')]
+    #提款成功页面
+    SuccessfullyDrawDownPageElement:
+      SimplifiedChinese: //*[contains(@name, '成功提取金额！')]
+      TraditionalChinese: //*[contains(@name, '成功提取金額！')]
+      English: //*[contains(@name, 'Drawdown successful!')]
+    #提款成功页面返回主页按钮
+    SuccessfullyDrawDownPageBackToHomeElement:
+      SimplifiedChinese: //*[contains(@name, '返回主页')]
+      TraditionalChinese: //*[contains(@name, '返回主頁')]
+      English: //*[contains(@name, 'Back to Overview')]
+    #点击提款金额
+    DrawdownLoanAmountTitleElement:
+      SimplifiedChinese: //*[contains(@name,'提取贷款额')]
+      TraditionalChinese: //*[contains(@name,'提取貸款額')]
+      English: //*[contains(@name, 'Drawdown loan amount')]

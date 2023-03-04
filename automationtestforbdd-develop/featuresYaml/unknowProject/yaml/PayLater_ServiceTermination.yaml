@@ -1,0 +1,318 @@
+#终止PayLater
+-
+  Step: Given
+  Text: App端进行PayLater销户操作
+  Fixture: app
+  Process:
+    -
+      Action: click
+      Element: ${HomePage}${personalCenterElement}
+      TestData:
+      Remarks: 点击右上角进入个人中心
+    -
+      Action: sleep
+      Element:
+      TestData: 8
+      Remarks: 等待8秒
+    -
+      Action: click
+      Element: ${BankServiceSettingElementPage}${BankServicesElement}
+      TestData:
+      Remarks: 点击银行服务
+    -
+      Action: click
+      Element: ${BankServiceSettingElementPage}${ServiceTerminationElement}
+      TestData:
+      Remarks: 选择终止服务
+    -
+      Action: click
+      Element: ${AppServiceTermination}${PayLaterButtonElement}
+      TestData:
+      Remarks: 选择终止PayLater服务
+    -
+      Action: sleep
+      Element:
+      TestData: 15
+      Remarks: 等待15秒
+    -
+      Action: judge,branch
+      Element: ${AppServiceTermination}${ServiceTerminationElement}
+      TestData:
+      Remarks: 判断是否已暂停PayLaterMastercard
+      ifbranchProcess:
+        -
+          Action: sleep
+          Element:
+          TestData: 8
+          Remarks: 等待8秒
+        -
+          Action: click
+          Element: ${AppServiceTermination}${PayLaterMastercardElement}
+          TestData:
+          Remarks: 选择暂停Mastercard
+        -
+          Action: sleep
+          Element:
+          TestData: 20
+          Remarks: 等待20秒
+        -
+          Action: click
+          Element: ${LendingPayLaterMasterCardElement}${CardStatusElement}
+          TestData:
+          Remarks: 变更卡状态为停用
+        -
+          Action: click
+          Element: ${LendingPayLaterMasterCardElement}${SuspendMCElement}
+          TestData:
+          Remarks: 触发弹出确认按钮
+        -
+          Action: sleep
+          Element:
+          TestData: 20
+          Remarks: 等待20秒
+        -
+          Action: judge
+          Element: ${LendingPayLaterMasterCardElement}${ResumeCardElement}
+          TestData: true
+          Remarks: 判断卡状态是否为停用
+        -
+          Action: sleep
+          Element:
+          TestData: 2
+          Remarks: 等待2秒
+        -
+          Action: click
+          Element: ${LendingPayLaterMasterCardElement}${BackPageButtonElement2}
+          TestData:
+          Remarks: 返回上一页
+        -
+          Action: click
+          Element: ${BankServiceSettingElementPage}${ServiceTerminationElement}
+          TestData:
+          Remarks: 选择终止服务
+        -
+          Action: sleep
+          Element:
+          TestData: 10
+          Remarks: 等待10秒
+        -
+          Action: click
+          Element: ${AppServiceTermination}${PayLaterButtonElement}
+          TestData:
+          Remarks: 选择终止PayLater服务
+      elsebranchProcess:
+        -
+          Action: sleep
+          Element:
+          TestData: 1
+          Remarks: 等待1秒
+    -
+      Action: sleep
+      Element:
+      TestData: 10
+      Remarks: 等待10秒
+    -
+      Action: click
+      Element: ${AppServiceTermination}${TerminataReasonButtonElement}
+      TestData:
+      Remarks: 选择终止原因
+    -
+      Action: sleep
+      Element:
+      TestData: 8
+      Remarks: 等待8秒
+    -
+      Action: click
+      Element: ${AppServiceTermination}${TerminateReasonListElement1}
+      TestData:
+      Remarks: 点击终止原因列表中的一项
+  #        此处安卓需要优化
+  #  -
+  #    Action: judge_platform
+  #    Element:
+  #    TestData: android
+  #    Remarks: 判断是否android设备
+  #    branchProcess:
+  #      -
+  #        Action: click
+  #        Element: [ 262,1237 ]
+  #        TestData:
+  #        Remarks: 选择终止原因-坐标？
+    -
+      Action: sleep
+      Element:
+      TestData: 8
+      Remarks: 等待8秒
+    -
+      Action: click
+      Element: ${AppServiceTermination}${AgreementButtonElement4}
+      TestData:
+      Remarks: 勾选协议
+  #  -
+  #    Action: click
+  #    Element: ${PayLatrPage}${AgreementButtonElement5}
+  #    TestData:
+  #    Remarks: 勾选协议
+    -
+      Action: click
+      Element: ${AppServiceTermination}${ContinueOpenButtonElement1}
+      TestData:
+      Remarks: 点击继续按钮
+    -
+      Action: sleep
+      Element:
+      TestData: 8
+      Remarks: 等待8秒
+    -
+      Action: judge,branch
+      Element: ${AppServiceTermination}${EnterYoNurIDumberElemnet}
+      TestData:
+      Remarks: 判断是否录入身份证号码
+      ifbranchProcess:
+        -
+          Action: input
+          Element: ${AppServiceTermination}${EnterYoNurIDumberElemnet}
+          TestData: '${IDumber}'
+          Remarks: 输入身份证号码
+        -
+          Action: click
+          Element: ${AppServiceTermination}${ContinueOpenButtonElement}
+          TestData:
+          Remarks: 核身身份页面点击继续按钮
+        -
+          Action: sleep
+          Element:
+          TestData: 20
+          Remarks: 等待20秒
+        -
+          Action: judge
+          Element: ${AppServiceTermination}${TerminatedServiceElement}
+          TestData: true
+          Remarks: 判断是否已终止
+        -
+          Action: click
+          Element: ${AppServiceTermination}${DoneButtonElement3}
+          TestData:
+          Remarks: 点击完成按钮
+      elsebranchProcess:
+        -
+          Action: sleep
+          Element:
+          TestData: 10
+          Remarks: 等待10秒
+        -
+          Action: click
+          Element: ${AppServiceTermination}${DoneButtonElement3}
+          TestData:
+          Remarks: 额度终止页面点击好的
+        -
+          Action: judge
+          Element: ${AppServiceTermination}${TerminatedServiceElement}
+          TestData: true
+          Remarks: 判断是否已终止
+        -
+          Action: sleep
+          Element:
+          TestData: 8
+          Remarks: 等待8秒
+
+-
+  Step: Given
+  Text: 我能看到web端该额度状态为终止
+  Fixture: web
+  Process:
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 等待2秒
+    -
+      Action: mouse
+      Element: ${LendingElement}${PostLoanManagementElement}
+      TestData: hover
+      Remarks: 将鼠标悬停在指定元素上-贷后管理
+    -
+      Action: click
+      Element: //*[@id='main_menu']/ul/li[9]/ul/li[1]/a/span[2]
+      TestData:
+      Remarks: 点击额度管理
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 等待2秒
+    -
+      Action: iframe
+      Element: //*[@id='main_bottom']/div/iframe
+      TestData:
+      Remarks: 切入表单
+    -
+      Action: click
+      Element: //*[@id='handle_right0']/span[2]/a
+      TestData:
+      Remarks: 点击额度台账
+    -
+      Action: iframe
+      Element: //*[@id='tabT01right0']
+      TestData:
+      Remarks: 切入表单
+    -
+      Action: sleep
+      Element:
+      TestData: 1
+      Remarks: 等待1秒
+    -
+      Action: click
+      Element: //*[@id='TH_Left_myiframe0']/tr/th[1]/div
+      TestData:
+      Remarks: 点击搜索
+    -
+      Action: input
+      Element: //*[@id='DOFILTER_MAIN1_CUSTOMERID']/input
+      TestData: ${Lending}${CustomerId}
+      Remarks: 输入客户号
+    -
+      Action: click
+      Element: //*[@id='DOFILTER_MAIN1_BUSINESSTYPE']/span[1]
+      TestData:
+      Remarks: 点击基础产品
+    -
+      Action: sleep
+      Element:
+      TestData: 1
+      Remarks: 等待1秒
+    -
+      Action: click
+      Element: //a[text()='livi PayLater']
+      TestData:
+      Remarks: 选择livi PayLater
+#    -
+#      Action: click
+#      Element: //*[@id='DOFILTER_MAIN1_LIMIT_STATUS']
+#      TestData:
+#      Remarks: 点击额度状态
+#    -
+#      Action: click
+#      Element: //a[text()='已终止']
+#      TestData:
+#      Remarks: 选择额度状态为-已终止
+    -
+      Action: click
+      Element: //*[@id='TableFilter_AREA']/div[2]/table/tbody/tr/td/input[1]
+      TestData:
+      Remarks: 点击确定
+    -
+      Action: get_text
+      Element: //*[@id='INPUT_myiframe0_SerialNo_0_0']
+      TestData: $${LimitSerialno}
+      Remarks: 获取额度编号
+    -
+      Action: get
+      Element: //*[@id='INPUT_myiframe0_LIMIT_STATUS_0_10']
+      TestData: '已终止'
+      Remarks: 断言，判断额度状态是否终止
+    -
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 等待3秒

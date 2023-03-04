@@ -1,0 +1,16 @@
+#OTP验证码输入页面元素--by yang.yang
+OTPInputElementPage:
+  android:
+    #标题
+    OTPInputtittleElement:
+      SimplifiedChinese: //*[@content-desc='验证手机号码']
+      TraditionalChinese: //*[@content-desc='驗證手提電話號碼']
+      English: //*[@content-desc='Verify Mobile Number']
+
+
+  ios:
+    #标题
+    OTPInputtittleElement:
+      SimplifiedChinese: //*[@name='验证手机号码']
+      TraditionalChinese: //*[@name='驗證手提電話號碼']
+      English: //*[@name='Verify Mobile Number']

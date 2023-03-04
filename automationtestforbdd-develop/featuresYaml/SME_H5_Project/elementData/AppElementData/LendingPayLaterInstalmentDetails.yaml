@@ -1,0 +1,48 @@
+#分期详情页面
+LendingPayLaterInstalmentDetails:
+  android:
+    #进入详情页面
+    StagingDetailElement:
+      SimplifiedChinese: //*[contains(@content-desc, '分期贷款详情')]
+      TraditionalChinese: //*[contains(@content-desc, '分期貸款詳情')]
+      English: //*[contains(@content-desc, 'Instalment Details')]
+    #查看还款计划
+    RepaymentPlanButtonElement:
+      SimplifiedChinese: //*[contains(@text, '还款计划')]
+      TraditionalChinese: //*[contains(@text, '還款計劃')]
+      English: //*[contains(@text, 'Full Repayment Plan')]
+    #进入还款计划页面
+    RepaymentPlanElement:
+      SimplifiedChinese: //*[contains(@text, '还款计划')]
+      TraditionalChinese: //*[contains(@text, '還款計劃')]
+      English: //*[contains(@text, 'Repayment Plan')]
+    #返回上一页
+    BackPageButtonElement: //*[contains(@text, 'back')]
+    #返回上一页
+    BackPageButtonElement1: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]
+
+
+
+
+
+
+  ios:
+    #进入详情页面
+    StagingDetailElement:
+      SimplifiedChinese: //*/XCUIElementTypeOther[contains(@name, '分期贷款详情')]
+      TraditionalChinese: //*/XCUIElementTypeOther[contains(@name, '分期貸款詳情')]
+      English: //*/XCUIElementTypeOther[contains(@name, 'Instalment Details')]
+    #查看还款计划
+    RepaymentPlanButtonElement:
+      SimplifiedChinese: //*[contains(@name, '还款计划')]
+      TraditionalChinese: //*[contains(@name, '還款計劃')]
+      English: //*[contains(@name, 'Full Repayment Plan')]
+    #进入还款计划页面
+    RepaymentPlanElement:
+      SimplifiedChinese: //*[contains(@name, '还款计划')]
+      TraditionalChinese: //*[contains(@name, '還款計劃')]
+      English: //*[contains(@name, 'Repayment Plan')]
+    #返回上一页
+    BackPageButtonElement: //XCUIElementTypeImage[@name="back"]
+    #返回上一页
+    BackPageButtonElement1: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]

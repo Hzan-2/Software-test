@@ -1,0 +1,97 @@
+#上传补充资料页面
+LendingPayLaterUploadDocumentsElement:
+  android:
+    #上传文件
+    UploadFileButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '上传文件')]
+      TraditionalChinese: //*[contains(@content-desc, '上載文件')]
+      English: //*[contains(@content-desc, 'Upload Documents')]
+    #添加文件按钮
+    AddFileButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '添加档案')]
+      TraditionalChinese: //*[contains(@content-desc, '新增檔案')]
+      English: //*[contains(@content-desc, 'Add file(s)')]
+    #上传图片(上传文件修改名称：Files)
+    UploadFileFromElement:
+      SimplifiedChinese: //*[contains(@content-desc, '图片库')]
+      TraditionalChinese: //*[contains(@content-desc, '圖片庫')]
+      English: //*[contains(@content-desc, 'Gallery')]
+    #选择图片(选择第一张)
+    SelectPictureElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.ImageView[1]
+    #选择图片
+    UploadFileFromElement2: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]
+    #返回上一页
+    BackPageButtonElement1: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]
+    #选择图片后，点击好的
+    UploadFileFromElement1:
+      SimplifiedChinese: //*[contains(@content-desc, '好的')]
+      TraditionalChinese: //*[contains(@content-desc, '好')]
+      English: //*[contains(@content-desc, 'OK')]
+    #上传按钮
+    UploadButtonElement:
+      SimplifiedChinese: //android.widget.Button[@content-desc='上传']
+      TraditionalChinese: //android.widget.Button[@content-desc='上載']
+      English: //android.widget.Button[@content-desc='Upload']
+    #上传文件完成页面好的按钮
+    UploadFileCompletePageOKButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '好的')]
+      TraditionalChinese: //*[contains(@content-desc, '好')]
+      English: //*[contains(@content-desc, 'OK')]
+    #上传文件完成页面--待补充三语
+    UploadFileCompletePageElement:
+      SimplifiedChinese: //*[contains(@content-desc, '完成！我们会尽快与你联系。')]
+      TraditionalChinese: //*[contains(@content-desc, '')]
+      English: //*[contains(@content-desc, 'OK')]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ios:
+    # 上传文件按钮
+    UploadFileButtonElement:
+      SimplifiedChinese: //*[contains(@name, '上传文件')]
+      TraditionalChinese: //*[contains(@name, '上載文件')]
+      English: //*[contains(@name, 'Upload File')]
+    #添加文件按钮
+    AddFileButtonElement:
+      SimplifiedChinese: //*[contains(@name, '添加档案')]
+      TraditionalChinese: //*[contains(@name, '新增檔案')]
+      English: //*[contains(@name, 'Add file(s)')]
+    #上传图片(上传文件修改名称：Files)
+    UploadFileFromElement:
+      SimplifiedChinese: //*[contains(@name, '图片库')]
+      TraditionalChinese: //*[contains(@name, '圖片庫')]
+      English: //*[contains(@name, 'Gallery')]
+    #选择图片(选择第一张)
+    SelectPictureElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeImage
+    #选择图片
+    UploadFileFromElement2: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]
+    #返回上一页
+    BackPageButtonElement1: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]
+    #选择图片后，点击好的
+    UploadFileFromElement1:
+      SimplifiedChinese: //*[contains(@name, '好的')]
+      TraditionalChinese: //*[contains(@name, '好')]
+      English: //*[contains(@name, 'OK')]
+    #上传按钮
+    UploadButtonElement:
+      SimplifiedChinese: //*[@name='上传']
+      TraditionalChinese: //*[@name='上載']
+      English: //*[@name='Upload']
+    #上传文件完成页面好的按钮
+    UploadFileCompletePageOKButtonElement:
+      SimplifiedChinese: //*[contains(@name, '好的')]
+      TraditionalChinese: //*[contains(@name, '好')]
+      English: //*[contains(@name, 'OK')]

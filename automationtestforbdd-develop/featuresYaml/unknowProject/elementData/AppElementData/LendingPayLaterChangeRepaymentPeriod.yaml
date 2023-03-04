@@ -1,0 +1,83 @@
+#修改分期期数页面
+LendingPayLaterChangeRepaymentPeriod:
+  android:
+    #修改分期期数-6
+    ChangeRepaymentPeriod:
+      SimplifiedChinese: //*[contains(@text, '6 个月')]
+      TraditionalChinese: //*[contains(@text, '6 個月')]
+      English: //*[contains(@text, '6 months')]
+#    /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[2]
+    #触发完成按钮
+    DoneButtonElement:
+      SimplifiedChinese: //*[contains(@text, '完 成')]
+      TraditionalChinese: //*[contains(@text, '完 成')]
+      English: //*[contains(@text, 'Done')]
+    #修改分期期数页面
+    RepaymentPeriodElement:
+      SimplifiedChinese: //*[contains(@content-desc, '更改还款期')]
+      TraditionalChinese: //*[contains(@content-desc, '更改還款期')]
+      English: //*[contains(@content-desc, 'Change Repayment Period')]
+    #修改分期期数-6
+    ChangeRepaymentPeriod2:
+      SimplifiedChinese: //*[contains(@text, '6 个月')]
+      TraditionalChinese: //*[contains(@text, '6 個月')]
+      English: //*[contains(@text, '6 months')]
+    #修改分期期数-3
+    ChangeRepaymentPeriod1: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]
+    #触发更改分期
+    ChangeRepaymentPeriodButtonElement:
+      SimplifiedChinese: //*[contains(@text, '更改还款期')]
+      TraditionalChinese: //*[contains(@text, '更改還款期')]
+      English: //*[contains(@text, 'Change Repayment Period')]
+    #触发提交按钮
+    ConfirmButtonElement: [536,2200]
+#      SimplifiedChinese: //*[contains(@text, '确 定')]
+#      TraditionalChinese: //*[contains(@text, '確 定')]
+#      English: //*[contains(@content-desc, 'Confirm')]
+    #触发提交按钮2
+    ConfirmButtonElement2: [735,1337]
+#      SimplifiedChinese: //*[contains(@text, '确 定')]
+#      TraditionalChinese: //*[contains(@text, '確 定')]
+#      English: //*[contains(@text, 'Confirm')]
+    #返回上一页
+    BackPageButtonElement1: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]
+
+
+
+  ios:
+    #触发完成按钮
+    DoneButtonElement:
+      SimplifiedChinese: //*[contains(@name, '完 成')]
+      TraditionalChinese: //*[contains(@name, '完 成')]
+      English: //*[contains(@name, 'Done')]
+    #修改分期期数页面
+    RepaymentPeriodElement:
+      SimplifiedChinese: //*[contains(@name, '更改还款期')]
+      TraditionalChinese: //*[contains(@name, '更改還款期')]
+      English: //*[contains(@name, 'Change Repayment Period')]
+    #修改分期期数-6
+    ChangeRepaymentPeriod2:
+      SimplifiedChinese: //*[contains(@name, '6 个月')]
+      TraditionalChinese: //*[contains(@name, '6 個月')]
+      English: //*[contains(@name, '6 months')]
+    #修改分期期数-3
+    ChangeRepaymentPeriod1: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]
+    #修改分期期数-6
+    ChangeRepaymentPeriod: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]
+    #触发更改分期
+    ChangeRepaymentPeriodButtonElement:
+      SimplifiedChinese: //XCUIElementTypeStaticText[contains(@name, '更改还款期')]
+      TraditionalChinese: //XCUIElementTypeStaticText[contains(@name, '更改還款期')]
+      English: //XCUIElementTypeStaticText[contains(@name, 'Change Repayment Period')]
+    #触发提交按钮
+    ConfirmButtonElement:
+      SimplifiedChinese: //*[contains(@name, '确 定')]
+      TraditionalChinese: //*[contains(@name, '確 定')]
+      English: //*[contains(@name, 'Confirm')]
+    #触发提交按钮2
+    ConfirmButtonElement2:
+      SimplifiedChinese: //XCUIElementTypeStaticText[@name="确定"]
+      TraditionalChinese: //XCUIElementTypeStaticText[@name="確定"]
+      English: //XCUIElementTypeStaticText[@name="Confirm"]
+    #返回上一页
+    BackPageButtonElement1: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]

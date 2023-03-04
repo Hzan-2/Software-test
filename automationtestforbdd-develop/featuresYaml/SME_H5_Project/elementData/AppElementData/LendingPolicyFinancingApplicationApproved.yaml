@@ -1,0 +1,52 @@
+#PF申请
+LendingPolicyFinancingApplicationApproved:
+  android:
+    #PF-banner
+    PolicyFinancingBannerElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.HorizontalScrollView[1]/android.widget.ImageView[2]
+    #勾选协议
+    AgreementButtonElement: //*[contains(@text, 'agree')]
+    #提交按钮
+    ContinueButtonElement:
+      SimplifiedChinese: //*[contains(@text, '继 续')]
+      TraditionalChinese: //*[contains(@text, '繼 續')]
+      English: //*[contains(@text, 'Continue')]
+    #点击保险公司名称
+    NameOfInsurerElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[2]
+    #选择保险公司名称
+    SelectNameOfInsurerElement:
+      SimplifiedChinese: //*[contains(@text, 'Prudential')]
+      TraditionalChinese: //*[contains(@text, 'Prudential_ZH')]
+      English: //*[contains(@text, 'Prudential_EN')]
+    #点击保险计划
+    NameOfInsurancePlanElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[5]
+    #选择保险计划
+    SelectNameOfInsurancePlanElement:
+      SimplifiedChinese: //*[contains(@text, 'insurance_plan_Livi00101')]
+      TraditionalChinese: //*[contains(@text, 'insurance_plan_Livi00101_ZH')]
+      English: //*[contains(@text, 'insurance_plan_Livi00101_EN')]
+    #输入保单编号
+    PolicyNumberElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.widget.EditText
+    #提交保单申请
+    SubmitButtonElement:
+      SimplifiedChinese: //*[contains(@text, '提 交')]
+      TraditionalChinese: //*[contains(@text, '提 交')]
+      English: //*[contains(@text, 'Submit')]
+    #触发完成按钮
+    DoneButtonElement:
+      SimplifiedChinese: //*[contains(@text, '完 成')]
+      TraditionalChinese: //*[contains(@text, '完 成')]
+      English: //*[contains(@text, 'Done')]
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ios:

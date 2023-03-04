@@ -1,0 +1,159 @@
+TravelPageToLoginAccunt:
+  -
+    Action: judge,click
+    Element: ${LandingPage}${updateNotificationElement}
+    TestData:
+    Remarks: 判断更新弹窗按钮是否存在，存在即点击
+
+  -
+    Action: sleep
+    Element:
+    TestData: 2
+    Remarks: 等待2
+
+  -
+    Action: click
+    Element: ${LandingPage}${menuElement}
+    TestData:
+    Remarks: 点击右上角三点，进行切换账号
+
+  -
+    Action: click
+    Element: ${LandingPage}${SwitchUserElement}
+    TestData:
+    Remarks: 点击切换账号
+
+  -
+    Action: click
+    Element: ${LandingPage}${phoneInputElement}
+    TestData:
+    Remarks: 点击账号输入框
+
+  -
+    Action: input
+    Element: ${LandingPage}${phoneInputElement}
+    TestData: ${phone_L3}
+    Remarks: 输入账号
+
+  -
+    Action: click
+    Element: ${LandingPage}${LoginButtonElement}
+    TestData:
+    Remarks: 点击登录
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 停顿5秒
+
+  -
+    Action: judge,branch
+    Element: ${LandingPage}${passwordInputElement}
+    TestData:
+    Remarks: 判断密码输入框元素是否存在，如果存在则走输入密码分支，如果不存在则走验证码分支
+    ifbranchProcess:
+      -
+        Action: input
+        Element: ${LandingPage}${passwordInputElement}
+        TestData: ${password}
+        Remarks: 输入密码
+
+      -
+        Action: click
+        Element: ${LandingPage}${passwordTextElement}
+        TestData:
+        Remarks: 输入密码文本收起键盘
+
+      -
+        Action: click
+        Element: ${LandingPage}${LoginButtonElement}
+        TestData:
+        Remarks: 点击登录
+
+    elsebranchProcess:
+      -
+        Action: keyboard
+        Element:
+        TestData: 123456
+        Remarks: 输入验证码
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 停顿5秒
+
+#  -
+#    Action: judge,click
+#    Element: ${LandingPage}${BiometricCertificationBottonElement}
+#    TestData:
+#    Remarks: 判断是否有生物认证弹窗
+#
+#  -
+#    Action: sleep
+#    Element:
+#    TestData: 2
+#    Remarks: 停顿2秒
+#
+#  -
+#    Action: judge,click
+#    Element: ${LandingPage}${notifyConfirmBottonElement}
+#    TestData:
+#    Remarks: 判断是否谷歌服务或者紧张状态账户通知弹窗
+#
+#  -
+#    Action: sleep
+#    Element:
+#    TestData: 2
+#    Remarks: 停顿2秒
+#
+#  -
+#    Action: judge,click
+#    Element: ${HomePage}${notificationPopupElemnt}
+#    TestData:
+#    Remarks: 判断是否含有通知弹窗
+#
+#  -
+#    Action: sleep
+#    Element:
+#    TestData: 2
+#    Remarks: 停顿2秒
+#
+#  -
+#    Action: judge,branch
+#    Element: ${HomePage}${tipsButtonElement}
+#    TestData:
+#    Remarks: 判断提示是否第一次登录，如果有，先点击提示信息
+#    branchProcess:
+#      -
+#        Action: click
+#        Element: ${HomePage}${tipsButtonElement}
+#        TestData:
+#        Remarks: 点击提示信息
+#      -
+#        Action: click
+#        Element: ${HomePage}${tipsButtonElement}
+#        TestData:
+#        Remarks: 点击提示信息
+#      -
+#        Action: click
+#        Element: ${HomePage}${tipsButtonElement}
+#        TestData:
+#        Remarks: 点击提示信息
+#      -
+#        Action: click
+#        Element: ${HomePage}${tipsButtonElement}
+#        TestData:
+#        Remarks: 点击提示信息
+#      -
+#        Action: click
+#        Element: ${HomePage}${tipsButtonElement}
+#        TestData:
+#        Remarks: 点击提示信息
+#
+#  -
+#    Action: sleep
+#    Element:
+#    TestData: 11
+#    Remarks: 停顿11秒

@@ -1,0 +1,100 @@
+#设置MC卡状态为正常
+-
+  Step: Given
+  Text: App端启用MC卡
+  Fixture: app
+  Process:
+    -
+      Action: click
+      Element: ${HomePage}${paylaterElement}
+      TestData:
+      Remarks: 点击首页-paylater卡片
+    -
+      Action: sleep
+      Element:
+      TestData: 8
+      Remarks: 等待8秒
+    -
+      Action: click
+      Element: ${LendingPayLaterHomeElement}${TriggerMcCardElement}
+      TestData:
+      Remarks: 点击MC卡片
+    -
+      Action: sleep
+      Element:
+      TestData: 20
+      Remarks: 等待20秒
+    -
+      Action: click
+      Element: ${LendingPayLaterMasterCardElement}${ResumeCardElement}
+      TestData:
+      Remarks: 变更卡状态为正常
+    -
+      Action: sleep
+      Element:
+      TestData: 15
+      Remarks: 等待15秒
+    -
+      Action: judge,branch
+      Element: ${OTPInputElementPage}${OTPInputtittleElement}
+      TestData:
+      Remarks: 判斷当前页面标题是否为手机验证码输入页面
+      branchProcess:
+        -
+          Action: keyboard
+          Element:
+          TestData: 123456
+          Remarks: 输入验证码123456
+        -
+          Action: sleep
+          Element:
+          TestData: 5
+          Remarks: 停顿5秒
+    -
+      Action: judge,branch
+      Element: ${SofttokenInputElementPage}${SofttokenInputtittleElement}
+      TestData:
+      Remarks: 判斷当前页面标题是否为PIN码输入页面
+      branchProcess:
+        -
+          Action: sotfToken_input
+          Element:
+          TestData: ${sotfTokenPIN}
+          Remarks: 输入PIN码
+        -
+          Action: sleep
+          Element:
+          TestData: 5
+          Remarks: 停顿5秒
+    -
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 等待3秒
+
+
+-
+  Step: Given
+  Text: 我能看到MC卡状态为正常
+  Fixture: app
+  Process:
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 等待2秒
+    -
+      Action: judge
+      Element: ${LendingPayLaterMasterCardElement}${DetailButtonElement}
+      TestData: true
+      Remarks: 判断卡状态是更新为正常
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 等待2秒
+    -
+      Action: backHome
+      Element:
+      TestData:
+      Remarks: 返回首页

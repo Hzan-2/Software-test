@@ -1,0 +1,316 @@
+#个人信息元素
+PersonalInformationPage:
+  android:
+    #标题
+    PersonalInformationtittle:
+      SimplifiedChinese: //*[contains(@content-desc, '个人信息')]
+      TraditionalChinese: //*[contains(@content-desc, '個人資料')]
+      English: //*[contains(@content-desc, 'Personal Information')]
+
+    #邮箱
+    EmailElement:
+      SimplifiedChinese: //*[contains(@content-desc, '电邮')]
+      TraditionalChinese: //*[contains(@content-desc, '電郵')]
+      English: //*[contains(@content-desc, 'Email')]
+    #邮箱未验证
+    UnverifiedEmailElement:
+      SimplifiedChinese: //*[contains(@content-desc, '未验证')]
+      TraditionalChinese: //*[contains(@content-desc, '未驗證')]
+      English: //*[contains(@content-desc, 'Unverified')]
+    #香港身份证
+    HKIDElement:
+      SimplifiedChinese: //*[contains(@content-desc, '香港身份证')]
+      TraditionalChinese: //*[contains(@content-desc, '香港身份證')]
+      English: //*[contains(@content-desc, 'HKID')]
+    #手机号码
+    MobileNumberElement:
+      SimplifiedChinese: //*[contains(@content-desc, '手机号码')]
+      TraditionalChinese: //*[contains(@content-desc, '手提電話號碼')]
+      English: //*[contains(@content-desc, 'Mobile Number')]
+    #地址
+    AddressElement:
+      SimplifiedChinese: //*[contains(@content-desc, '地址')]
+      TraditionalChinese: //*[contains(@content-desc, '地址')]
+      English: //*[contains(@content-desc, 'Address')]
+
+
+
+    #国籍
+    NationalityElement:
+      SimplifiedChinese: //*[contains(@content-desc, '国籍')]
+      TraditionalChinese: //*[contains(@content-desc, '國籍')]
+      English: //*[contains(@content-desc, 'Nationality')]
+    #添加国籍
+    AddNationalityElement:
+      SimplifiedChinese: //*[contains(@content-desc, '添加国籍')]
+      TraditionalChinese: //*[contains(@content-desc, '新增國籍')]
+      English: //*[contains(@content-desc, 'Add nationality')]
+    #保存按钮
+    SaveButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '储存')]
+      TraditionalChinese: //*[contains(@content-desc, '儲存')]
+      English: //*[contains(@content-desc, 'Save')]
+    #国籍2
+    Nationality2Element:
+      SimplifiedChinese: //*[contains(@content-desc, '国籍 2')]
+      TraditionalChinese: //*[contains(@content-desc, '國籍 2')]
+      English: //*[contains(@content-desc, 'Nationality 2')]
+    #移除添加项
+    RemoveElement:
+      SimplifiedChinese: //*[contains(@content-desc, '删除')]
+      TraditionalChinese: //*[contains(@content-desc, '刪除')]
+      English: //*[contains(@content-desc, 'Remove')]
+    #国籍2-国籍选择页
+    NationalityList: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ImageView[4]
+    #更新结果
+    UpdateNationalityPending:
+      SimplifiedChinese: //*[contains(@content-desc, '收到更新指示')]
+      TraditionalChinese: //*[contains(@content-desc, '收到更新指示')]
+      English: //*[contains(@content-desc, 'Update Pending')]
+    #更新稅務居民資料
+    UpdateTaxResidencyElement:
+      SimplifiedChinese: //*[contains(@content-desc, '更新税务居民资料')]
+      TraditionalChinese: //*[contains(@content-desc, '更新稅務居民資料')]
+      English: //*[contains(@content-desc, 'Update Tax Residency')]
+    #完成按鈕
+    DoneElement:
+      SimplifiedChinese: //*[contains(@content-desc, '完成')]
+      TraditionalChinese: //*[contains(@content-desc, '完成')]
+      English: //*[contains(@content-desc, 'Done')]
+
+
+
+    #税务
+    TaxResidencyElement:
+      SimplifiedChinese: //*[contains(@content-desc, '税务居民身份')]
+      TraditionalChinese: //*[contains(@content-desc, '稅務居民身份')]
+      English: //*[contains(@content-desc, 'Tax Residency')]
+    #你的稅務居民身份狀況是  What is your tax residency status  你的税务居民身份状况是
+    TaxResidencytittle:
+      SimplifiedChinese: //*[contains(@content-desc, '你的税务居民身份状况是')]
+      TraditionalChinese: //*[contains(@content-desc, '你的稅務居民身份狀況是')]
+      English: //*[contains(@content-desc, 'What is your tax residency status')]
+    #你是香港的稅務居民嗎 Are you a tax resident in Hong Kong  你是香港的税务居民吗
+    #是-1 Yes
+    Yes1Element:
+      SimplifiedChinese: (//*[(@content-desc='是')])[1]
+      TraditionalChinese: (//*[(@content-desc='是')])[1]
+      English: (//*[(@content-desc='Yes')])[1]
+    #不是—1 No
+    No1Element:
+      SimplifiedChinese: (//*[(@content-desc='不是')])[1]
+      TraditionalChinese: (//*[(@content-desc='不是')])[1]
+      English: (//*[(@content-desc='No')])[1]
+    #你是其他國家的稅務居民嗎  Are you a tax resident in other jurisdictions  你是其他国家的税务居民吗
+    #是-2
+    Yes2Element:
+      SimplifiedChinese: (//*[(@content-desc='是')])[2]
+      TraditionalChinese: (//*[(@content-desc='是')])[2]
+      English: (//*[(@content-desc='Yes')])[2]
+    #不是—2
+    No2Element:
+      SimplifiedChinese: (//*[(@content-desc='不是')])[2]
+      TraditionalChinese: (//*[(@content-desc='不是')])[2]
+      English: (//*[(@content-desc='No')])[2]
+    #司法税务管辖区
+    TaxJurisdiction: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.ImageView[1]
+    #税务编号
+    TaxIdentificationNumber:
+      SimplifiedChinese: //*[contains(@text, '税务编号')]
+      TraditionalChinese: //*[contains(@text, '稅務編號')]
+      English: //*[contains(@text, 'Tax Identification Number')]
+    #添加税务居民身份
+    AddTaxResidencies:
+      SimplifiedChinese: //*[contains(@content-desc, '添加税务居民身份')]
+      TraditionalChinese: //*[contains(@content-desc, '新增稅務居民身份')]
+      English: //*[contains(@content-desc, 'Add tax residencies')]
+    #更新结果
+    UpdateTaxPending:
+      SimplifiedChinese: //*[contains(@content-desc, '成功更新个人资料')]
+      TraditionalChinese: //*[contains(@content-desc, '成功更新個人資料')]
+      English: //*[contains(@content-desc, 'Your information has been updated')]
+    #完成按鈕
+    OKElement:
+      SimplifiedChinese: //*[contains(@content-desc, '好的')]
+      TraditionalChinese: //*[contains(@content-desc, '好')]
+      English: //*[contains(@content-desc, 'OK')]
+
+
+
+
+    #工作信息
+    ProfessionElement:
+      SimplifiedChinese: //*[contains(@content-desc, '职业')]
+      TraditionalChinese: //*[contains(@content-desc, '職業')]
+      English: //*[contains(@content-desc, 'Profession')]
+    #账户活动
+    AccountActivitiesElement:
+      SimplifiedChinese: //*[contains(@content-desc, '预计账户活动')]
+      TraditionalChinese: //*[contains(@content-desc, '預計戶口活動')]
+      English: //*[contains(@content-desc, 'Account Activities')]
+    #上传文件
+    UploadDocumentsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '上传文件')]
+      TraditionalChinese: //*[contains(@content-desc, '上載文件')]
+      English: //*[contains(@content-desc, 'Upload Documents')]
+
+
+
+
+
+
+
+
+  ios:
+    #标题
+    PersonalInformationtittle:
+      SimplifiedChinese: //*[contains(@name, '个人信息')]
+      TraditionalChinese: //*[contains(@name, '個人資料')]
+      English: //*[contains(@name, 'Personal Information')]
+
+    #邮箱
+    EmailElement:
+      SimplifiedChinese: //*[contains(@name, '电邮')]
+      TraditionalChinese: //*[contains(@name, '電郵')]
+      English: //*[contains(@name, 'Email')]
+    #邮箱未验证
+    UnverifiedEmailElement:
+      SimplifiedChinese: //*[contains(@name, '未验证')]
+      TraditionalChinese: //*[contains(@name, '未驗證')]
+      English: //*[contains(@name, 'Unverified')]
+    #香港身份证
+    HKIDElement:
+      SimplifiedChinese: //*[contains(@name, '香港身份证')]
+      TraditionalChinese: //*[contains(@name, '香港身份證')]
+      English: //*[contains(@name, 'HKID')]
+    #手机号码
+    MobileNumberElement:
+      SimplifiedChinese: //*[contains(@name, '手机号码')]
+      TraditionalChinese: //*[contains(@name, '手提電話號碼')]
+      English: //*[contains(@name, 'Mobile Number')]
+    #地址
+    AddressElement:
+      SimplifiedChinese: //*[contains(@name, '地址')]
+      TraditionalChinese: //*[contains(@name, '地址')]
+      English: //*[contains(@name, 'Address')]
+
+
+
+    #国籍
+    NationalityElement:
+      SimplifiedChinese: //*[contains(@name, '国籍')]
+      TraditionalChinese: //*[contains(@name, '國籍')]
+      English: //*[contains(@name, 'Nationality')]
+    #添加国籍
+    AddNationalityElement:
+      SimplifiedChinese: //*[contains(@name, '添加国籍')]
+      TraditionalChinese: //*[contains(@name, '新增國籍')]
+      English: //*[contains(@name, 'Add nationality')]
+    #保存按钮
+    SaveButtonElement:
+      SimplifiedChinese: //*[contains(@name, '储存')]
+      TraditionalChinese: //*[contains(@name, '儲存')]
+      English: //*[contains(@name, 'Save')]
+    #国籍2
+    Nationality2Element:
+      SimplifiedChinese: //*[contains(@name, '国籍 2')]
+      TraditionalChinese: //*[contains(@name, '國籍 2')]
+      English: //*[contains(@name, 'Nationality 2')]
+    #移除添加项
+    RemoveElement:
+      SimplifiedChinese: //*[contains(@name, '删除')]
+      TraditionalChinese: //*[contains(@name, '刪除')]
+      English: //*[contains(@name, 'Remove')]
+    #国籍2-国籍选择页
+    NationalityList: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeImage[4]
+    #更新结果
+    UpdateNationalityPending:
+      SimplifiedChinese: //*[contains(@name, '收到更新指示')]
+      TraditionalChinese: //*[contains(@name, '收到更新指示')]
+      English: //*[contains(@name, 'Update Pending')]
+    #更新稅務居民資料
+    UpdateTaxResidencyElement:
+      SimplifiedChinese: //*[contains(@name, '更新税务居民资料')]
+      TraditionalChinese: //*[contains(@name, '更新稅務居民資料')]
+      English: //*[contains(@name, 'Update Tax Residency')]
+    #完成按鈕
+    DoneElement:
+      SimplifiedChinese: //*[contains(@name, '完成')]
+      TraditionalChinese: //*[contains(@name, '完成')]
+      English: //*[contains(@name, 'Done')]
+
+
+
+    #税务
+    TaxResidencyElement:
+      SimplifiedChinese: //*[contains(@name, '税务居民身份')]
+      TraditionalChinese: //*[contains(@name, '稅務居民身份')]
+      English: //*[contains(@name, 'Tax Residency')]
+    #你的稅務居民身份狀況是  What is your tax residency status  你的税务居民身份状况是
+    TaxResidencytittle:
+      SimplifiedChinese: //*[contains(@name, '你的税务居民身份状况是')]
+      TraditionalChinese: //*[contains(@name, '你的稅務居民身份狀況是')]
+      English: //*[contains(@name, 'What is your tax residency status')]
+    #你是香港的稅務居民嗎 Are you a tax resident in Hong Kong  你是香港的税务居民吗
+    #是-1 Yes
+    Yes1Element:
+      SimplifiedChinese: (//*[(@name='是')])[1]
+      TraditionalChinese: (//*[(@name='是')])[1]
+      English: (//*[(@name='Yes')])[1]
+    #不是—1 No
+    No1Element:
+      SimplifiedChinese: (//*[(@name='不是')])[1]
+      TraditionalChinese: (//*[(@name='不是')])[1]
+      English: (//*[(@name='No')])[1]
+    #你是其他國家的稅務居民嗎  Are you a tax resident in other jurisdictions  你是其他国家的税务居民吗
+    #是-2
+    Yes2Element:
+      SimplifiedChinese: (//*[(@name='是')])[2]
+      TraditionalChinese: (//*[(@name='是')])[2]
+      English: (//*[(@name='Yes')])[2]
+    #不是—2
+    No2Element:
+      SimplifiedChinese: (//*[(@name='不是')])[2]
+      TraditionalChinese: (//*[(@name='不是')])[2]
+      English: (//*[(@name='No')])[2]
+    #司法税务管辖区
+    TaxJurisdiction: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeImage[2]
+    #税务编号
+    TaxIdentificationNumber:
+      SimplifiedChinese: //XCUIElementTypeTextField[@name="税务编号"]
+      TraditionalChinese: //XCUIElementTypeTextField[@name="稅務編號"]
+      English: //XCUIElementTypeTextField[@name="Tax Identification Number"]
+    #添加税务居民身份
+    AddTaxResidencies:
+      SimplifiedChinese: //*[contains(@name, '添加税务居民身份')]
+      TraditionalChinese: //*[contains(@name, '新增稅務居民身份')]
+      English: //*[contains(@name, 'Add tax residencies')]
+    #更新结果
+    UpdateTaxPending:
+      SimplifiedChinese: //*[contains(@name, '成功更新个人资料')]
+      TraditionalChinese: //*[contains(@name, '成功更新個人資料')]
+      English: //*[contains(@name, 'Your information has been updated')]
+    #完成按鈕
+    OKElement:
+      SimplifiedChinese: //*[contains(@name, '好的')]
+      TraditionalChinese: //*[contains(@name, '好')]
+      English: //*[contains(@name, 'OK')]
+
+
+
+
+    #工作信息
+    ProfessionElement:
+      SimplifiedChinese: //*[contains(@name, '职业')]
+      TraditionalChinese: //*[contains(@name, '職業')]
+      English: //*[contains(@name, 'Profession')]
+    #账户活动
+    AccountActivitiesElement:
+      SimplifiedChinese: //*[contains(@name, '预计账户活动')]
+      TraditionalChinese: //*[contains(@name, '預計戶口活動')]
+      English: //*[contains(@name, 'Account Activities')]
+    #上传文件
+    UploadDocumentsElement:
+      SimplifiedChinese: //*[contains(@name, '上传文件')]
+      TraditionalChinese: //*[contains(@name, '上載文件')]
+      English: //*[contains(@name, 'Upload Documents')]

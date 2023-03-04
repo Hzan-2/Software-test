@@ -1,0 +1,68 @@
+#设置MC卡状态为停用
+-
+  Step: Given
+  Text: App端停用MC卡
+  Fixture: app
+  Process:
+    -
+      Action: click
+      Element: ${HomePage}${paylaterElement}
+      TestData:
+      Remarks: 点击首页-paylater卡片
+    -
+      Action: sleep
+      Element:
+      TestData: 8
+      Remarks: 等待8秒
+    -
+      Action: click
+      Element: ${LendingPayLaterHomeElement}${TriggerMcCardElement}
+      TestData:
+      Remarks: 点击MC卡片
+    -
+      Action: sleep
+      Element:
+      TestData: 20
+      Remarks: 等待20秒
+    -
+      Action: click
+      Element: ${LendingPayLaterMasterCardElement}${CardStatusElement}
+      TestData:
+      Remarks: 变更卡状态为停用
+    -
+      Action: click
+      Element: ${LendingPayLaterMasterCardElement}${SuspendMCElement}
+      TestData:
+      Remarks: 触发弹出确认按钮
+    -
+      Action: sleep
+      Element:
+      TestData: 15
+      Remarks: 等待15秒
+
+
+-
+  Step: Given
+  Text: 我能看到MC卡状态为停用
+  Fixture: app
+  Process:
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 等待2秒
+    -
+      Action: judge
+      Element: ${LendingPayLaterMasterCardElement}${ResumeCardElement}
+      TestData: true
+      Remarks: 判断卡状态是否为停用
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 等待2秒
+    -
+      Action: backHome
+      Element:
+      TestData:
+      Remarks: 返回首页

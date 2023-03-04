@@ -1,0 +1,141 @@
+finishPendingTravelInsurancePolicy:
+  -
+    Action: click
+    Element: ${HomePage}${insuranceElement}
+    TestData:
+    Remarks: 进入保险首页
+
+  -
+    Action: sleep
+    Element:
+    TestData: 2
+    Remarks: 等待2
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${TravelbannerElement}
+    TestData:
+    Remarks: 点击Travelbanner
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${continuePendingPolicyElement}
+    TestData:
+    Remarks: 点击继续保单
+
+  -
+    Action: sleep
+    Element:
+    TestData: 8
+    Remarks: 等待8
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${addingInsuredPersonInformationElement}
+    TestData:
+    Remarks: 点击受保人图标
+
+  -
+    Action: sleep
+    Element:
+    TestData: 2
+    Remarks: 等待2
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${importInsuredPersonInformationElement}
+    TestData:
+    Remarks: 点击载入受保人信息
+
+  -
+    Action: sleep
+    Element:
+    TestData: 2
+    Remarks: 等待2
+
+  -
+    Action: slide_space
+    Element: up
+    TestData: 0.9 -> 0.1
+    Remarks: 向上滑动
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${TravelpageNextElement}
+    TestData:
+    Remarks: 点击下一步4
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+  -
+    Action: slide
+    Element: bottom
+    TestData:
+    Remarks: 滑动至底部
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${understandAndAgreeElement}
+    TestData:
+    Remarks: 点击同意协议
+
+  -
+    Action: sleep
+    Element:
+    TestData: 3
+    Remarks: 等待3
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${sureFileButtonElement}
+    TestData:
+    Remarks: 点击确定
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+  -
+    Action: slide_space
+    Element: up
+    TestData: 0.9 -> 0.1
+    Remarks: 向上滑动
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${proceedToPayElement}
+    TestData:
+    Remarks: 点击付款
+
+  -
+    Action: sleep
+    Element:
+    TestData: 15
+    Remarks: 等待15
+
+  -
+    Action: get
+    Element: ${InsuranceTravelPage}${assertseccussfullElement}
+    TestData: ['投保成功!','投保成功!','Successful!']
+    Remarks: 断言投保成功
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${backtohomepageElement}
+    TestData:
+    Remarks: 点击返回首页
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+
+

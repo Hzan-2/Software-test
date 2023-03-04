@@ -1,0 +1,79 @@
+#编辑好友信息页面--by yang.yang
+UpdateFriendInfoElementPage:
+  android:
+    #标题
+    UpdateFriendInfoElement:
+      SimplifiedChinese: //*[contains(@content-desc, '更新好友信息')]
+      TraditionalChinese: //*[contains(@content-desc, '更新好友資料')]
+      English: //*[contains(@content-desc, 'Update Friend's Info')]
+    #页面关闭按钮
+    ClosePageElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]
+    #收款人類別
+    #個人
+    PersonalElement:
+      SimplifiedChinese: //*[contains(@content-desc, '个人')]
+      TraditionalChinese: //*[contains(@content-desc, '個人')]
+      English: //*[contains(@content-desc, 'Personal')]
+    #商戶
+    MerchantsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '商户')]
+      TraditionalChinese: //*[contains(@content-desc, '商戶')]
+      English: //*[contains(@content-desc, 'Merchants')]
+    #收款人姓名输入框
+    PayeeNameEditElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.EditText[1]
+    #電話號碼输入框
+    MobileNumberElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.EditText[2]
+    #通訊錄
+    AddressBookElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.ImageView[4]
+    #更新按钮
+    SaveChangesElement:
+      SimplifiedChinese: //android.widget.Button[@content-desc='保存']
+      TraditionalChinese: //android.widget.Button[@content-desc='更新']
+      English: //android.widget.Button[@content-desc='Save Changes']
+    #移除好友按钮
+    RemoveFriendElement:
+      SimplifiedChinese: //*[contains(@content-desc, '移除好友')]
+      TraditionalChinese: //*[contains(@content-desc, '移除好友')]
+      English: //*[contains(@content-desc, 'Remove Friend')]
+
+  ios:
+    #标题
+    UpdateFriendInfoElement:
+      SimplifiedChinese: //*[contains(@name, '更新好友信息')]
+      TraditionalChinese: //*[contains(@name, '更新好友資料')]
+      English: //*[contains(@name, 'Update friend’s Info')]
+    #页面关闭按钮
+    ClosePageElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]
+    #收款人類別
+    #個人
+    PersonalElement:
+      SimplifiedChinese: //*[contains(@name, '个人')]
+      TraditionalChinese: //*[contains(@name, '個人')]
+      English: //*[contains(@name, 'Personal')]
+    #商戶
+    MerchantsElement:
+      SimplifiedChinese: //*[contains(@name, '商户')]
+      TraditionalChinese: //*[contains(@name, '商戶')]
+      English: //*[contains(@name, 'Merchants')]
+    #收款人姓名输入框
+    PayeeNameEditElement:
+      SimplifiedChinese: //XCUIElementTypeTextField[@name="收款人姓名"]
+      TraditionalChinese: //XCUIElementTypeTextField[@name="收款人姓名"]
+      English: //XCUIElementTypeTextField[@name="Payee Name"]
+    #電話號碼输入框
+    MobileNumberElement:
+      SimplifiedChinese: //XCUIElementTypeTextField[@name="手机号码"]
+      TraditionalChinese: //XCUIElementTypeTextField[@name="手提電話號碼"]
+      English: //XCUIElementTypeTextField[@name="Mobile Number"]
+    #通訊錄
+    AddressBookElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeImage[4]
+    #更新按钮
+    SaveChangesElement:
+      SimplifiedChinese: //*[contains(@name, '保存')]
+      TraditionalChinese: //*[contains(@name, '更新')]
+      English: //*[contains(@name, 'Save Changes')]
+    #移除好友按钮
+    RemoveFriendElement:
+      SimplifiedChinese: //*[contains(@name, '移除好友')]
+      TraditionalChinese: //*[contains(@name, '移除好友')]
+      English: //*[contains(@name, 'Remove Friend')]

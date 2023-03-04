@@ -1,0 +1,115 @@
+#个人中心元素
+PersonalCenterPage:
+  android:
+    #退出按钮
+    exitButtonElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]
+
+    #退出弹窗
+    #确认退出
+    exitwindowElementYes:
+      SimplifiedChinese: //*[contains(@content-desc, '是')]
+      TraditionalChinese: //*[contains(@content-desc, '是')]
+      English: //*[contains(@content-desc, 'Yes')]
+    exitwindowElementCancel:
+      SimplifiedChinese: //*[contains(@content-desc, '取消')]
+      TraditionalChinese: //*[contains(@content-desc, '取消')]
+      English: //*[contains(@content-desc, 'Cancel')]
+
+    #个人信息
+    personalInformationElement:
+      SimplifiedChinese: //*[contains(@content-desc, '个人信息')]
+      TraditionalChinese: //*[contains(@content-desc, '個人資料')]
+      English: //*[contains(@content-desc, 'Personal Information')]
+
+    #银行服务设定
+    bankingServiceSettingsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '银行服务设定')]
+      TraditionalChinese: //*[contains(@content-desc, '銀行服務設定')]
+      English: //*[contains(@content-desc, 'Bank Services')]
+
+    #App设定
+    appSettingsElement:
+      SimplifiedChinese: //*[contains(@content-desc, 'App 设定')]
+      TraditionalChinese: //*[contains(@content-desc, 'App 設定')]
+      English: //*[contains(@content-desc, 'App Settings')]
+
+    #支援中心
+    supportCenterElement:
+      SimplifiedChinese: //*[contains(@content-desc, '帮助中心')]
+      TraditionalChinese: //*[contains(@content-desc, '支援中心')]
+      English: //*[contains(@content-desc, 'Help Centre')]
+
+    #我们的故事
+    ourStoryElement:
+      SimplifiedChinese: //*[contains(@content-desc, '我们的故事')]
+      TraditionalChinese: //*[contains(@content-desc, '我們的故事')]
+      English: //*[contains(@content-desc, 'Our Story')]
+
+    #意见
+    opinionElement:
+      SimplifiedChinese: //*[contains(@content-desc, '意见反馈')]
+      TraditionalChinese: //*[contains(@content-desc, '意見')]
+      English: //*[contains(@content-desc, 'Feedback')]
+
+    #条款及细则
+    termsAndConditions:
+      SimplifiedChinese: //*[contains(@content-desc, '条款及细则')]
+      TraditionalChinese: //*[contains(@content-desc, '條款及細則')]
+      English: //*[contains(@content-desc, 'Terms and Conditions')]
+
+  ios:
+    #退出按钮
+    exitButtonElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage
+
+    #退出弹窗
+    #确认退出
+    exitwindowElementYes:
+      SimplifiedChinese: //*[contains(@name, '是')]
+      TraditionalChinese: //*[contains(@name, '是')]
+      English: //*[contains(@name, 'Yes')]
+    exitwindowElementCancel:
+      SimplifiedChinese: //*[contains(@name, '取消')]
+      TraditionalChinese: //*[contains(@name, '取消')]
+      English: //*[contains(@name, 'Cancel')]
+
+    #个人信息
+    personalInformationElement:
+      SimplifiedChinese: //*[contains(@name, '个人信息')]
+      TraditionalChinese: //*[contains(@name, '個人資料')]
+      English: //*[contains(@name, 'Personal Information')]
+
+    #银行服务设定
+    bankingServiceSettingsElement:
+      SimplifiedChinese: //*[contains(@name, '银行服务设定')]
+      TraditionalChinese: //*[contains(@name, '銀行服務設定')]
+      English: //*[contains(@name, 'Bank Services')]
+
+    #App设定
+    appSettingsElement:
+      SimplifiedChinese: //*[contains(@name, 'App 设定')]
+      TraditionalChinese: //*[contains(@name, 'App 設定')]
+      English: //*[contains(@name, 'App Settings')]
+
+    #支援中心
+    supportCenterElement:
+      SimplifiedChinese: //*[contains(@name, '帮助中心')]
+      TraditionalChinese: //*[contains(@name, '支援中心')]
+      English: //*[contains(@name, 'Help Centre')]
+
+    #我们的故事
+    ourStoryElement:
+      SimplifiedChinese: //*[contains(@name, '我们的故事')]
+      TraditionalChinese: //*[contains(@name, '我們的故事')]
+      English: //*[contains(@name, 'Our Story')]
+
+    #意见
+    opinionElement:
+      SimplifiedChinese: //*[contains(@name, '意见反馈')]
+      TraditionalChinese: //*[contains(@name, '意見')]
+      English: //*[contains(@name, 'Feedback')]
+
+    #条款及细则
+    termsAndConditions:
+      SimplifiedChinese: //*[contains(@name, '条款及细则')]
+      TraditionalChinese: //*[contains(@name, '條款及細則')]
+      English: //*[contains(@name, 'Terms and Conditions')]

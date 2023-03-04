@@ -1,0 +1,109 @@
+#PayLater及FlexiLoan审批
+
+-
+  Step: Given
+  Text: 获取当前账户${CustomerId}对应的审批节点
+  Fixture: web
+  Process:
+    -
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 停顿3秒
+    -
+      Action: mouse
+      Element: ${LendingElement}${AdministrationProcess}
+      TestData: hover
+      Remarks: 将鼠标悬停在流程管理上
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+    -
+      Action: click
+      Element: ${LendingElement}${PayLater&CashProgressQuery}
+      TestData:
+      Remarks: PayLater/Cash进度查询
+    -
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 停顿3秒
+    -
+      Action: iframe
+      Element: ${LendingElement}${AdministrationIframe1}
+      TestData:
+      Remarks: 切入iframe1
+    -
+      Action: iframe
+      Element: ${LendingElement}${AdministrationIframe2}
+      TestData:
+      Remarks: 切入iframe2
+    -
+      Action: iframe
+      Element: ${LendingElement}${AdministrationIframe3}
+      TestData:
+      Remarks: 切入iframe3
+    -
+      Action: click
+      Element: ${LendingElement}${SearchButtonElement}
+      TestData:
+      Remarks: 点击搜索按钮
+    -
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 停顿3秒
+    -
+      Action: click
+      Element: //*[@id='DOFILTER_MAIN1_CUSTOMERID']/input
+      TestData:
+      Remarks: 点击客户号
+    -
+      Action: input
+      Element: //*[@id='DOFILTER_MAIN1_CUSTOMERID']/input
+      TestData: ${Lending}${CustomerId}
+      Remarks: 输入客户号
+      #${LendingElement}${InputCustomerIdElement}
+    -
+      Action: click
+      Element: ${LendingElement}${ConfirmButtonElement}
+      TestData:
+      Remarks: 点击确定
+    -
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 停顿3秒
+
+-
+  Step: Then
+  Text: 我能看到PayLater申请节点
+  Fixture: web
+  Process:
+    -
+      Action: get_text
+      Element: //*[@id='INPUT_myiframe0_PhaseName_0_7']
+      TestData: $${ApprovalStage}
+      Remarks: 查询审批阶段
+    -
+      Action: get_text
+      Element: //*[@id='INPUT_myiframe0_CustomerName_0_2']
+      TestData: $${CustomerName}
+      Remarks: 获取客户姓名
+    -
+      Action: q_iframe
+      Element:
+      TestData:
+      Remarks: 切出iframe3
+    -
+      Action: q_iframe
+      Element:
+      TestData:
+      Remarks: 切出iframe2
+    -
+      Action: q_iframe
+      Element:
+      TestData:
+      Remarks: 切出iframe1

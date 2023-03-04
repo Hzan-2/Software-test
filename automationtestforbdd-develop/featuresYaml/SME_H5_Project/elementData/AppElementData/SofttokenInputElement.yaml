@@ -1,0 +1,19 @@
+#PIN码输入页面元素--by yang.yang
+SofttokenInputElementPage:
+  android:
+    #标题
+    SofttokenInputtittleElement:
+      SimplifiedChinese: //*[@content-desc='认证你的身份']
+      TraditionalChinese: //*[@content-desc='核實你的身份']
+      English: //*[@content-desc='Verify Your Identity']
+
+
+  ios:
+    #标题
+    SofttokenInputtittleElement:
+      SimplifiedChinese: //*[@name='认证你的身份']
+      TraditionalChinese: //*[@name='核實你的身份']
+      English: //*[@name='Verify Your Identity']
+
+
+

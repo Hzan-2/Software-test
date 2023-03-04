@@ -1,0 +1,52 @@
+#选择国籍页面
+NationalitySelectPage:
+  android:
+    #标题
+    Nationalitylisttittle:
+      SimplifiedChinese: //*[contains(@content-desc, '选择国籍')]
+      TraditionalChinese: //*[contains(@content-desc, '選擇國籍')]
+      English: //*[contains(@content-desc, 'Select your nationality')]
+    #标题2
+    TaxJurisdictiontittle:
+      SimplifiedChinese: //*[contains(@content-desc, '选择税务司法管辖区')]
+      TraditionalChinese: //*[contains(@content-desc, '選擇稅務司法管轄區')]
+      English: //*[contains(@content-desc, 'Select tax jurisdiction')]
+
+
+    #国籍输入框
+    RegionEdit:
+      SimplifiedChinese: //*[contains(@text, '国家 / 地区')]
+      TraditionalChinese: //*[contains(@text, '國家 / 地區')]
+      English: //*[contains(@text, 'Region')]
+
+    #查询结果
+    SearchResult1: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View
+    SearchResult2: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.ImageView
+
+
+
+
+
+  ios:
+    #标题
+    Nationalitylisttittle:
+      SimplifiedChinese: //*[contains(@name, '选择国籍')]
+      TraditionalChinese: //*[contains(@name, '選擇國籍')]
+      English: //*[contains(@name, 'Select your nationality')]
+    #标题2
+    TaxJurisdictiontittle:
+      SimplifiedChinese: //*[contains(@name, '选择税务司法管辖区')]
+      TraditionalChinese: //*[contains(@name, '選擇稅務司法管轄區')]
+      English: //*[contains(@name, 'Select tax jurisdiction')]
+
+
+    #国籍输入框
+    RegionEdit:
+      SimplifiedChinese: //*[contains(@name, '国家 / 地区')]
+      TraditionalChinese: //*[contains(@name, '國家 / 地區')]
+      English: //*[contains(@name, 'Region')]
+
+    #查询结果 //XCUIElementTypeStaticText[@name="J#加拿大"]
+    SearchResult1: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeStaticText
+
+    SearchResult2: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeImage

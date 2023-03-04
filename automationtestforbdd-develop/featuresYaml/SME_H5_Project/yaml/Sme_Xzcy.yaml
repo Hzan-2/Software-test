@@ -1,0 +1,658 @@
+# 描述：Livi Bank的app登陆步骤
+
+-
+  Step: Given
+  Text: Livi Bank登录{user}账号{password}密码2
+  Fixture: app
+  Process:
+    step1:
+      Action: judge,click
+      Element: ${LandingPage}${updateNotificationElement}
+      TestData:
+      Remarks: 判断更新弹窗按钮是否存在，存在即点击
+
+    step2:
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 等待2
+
+    step3:
+      Action: click
+      Element: ${LandingPage}${menuElement}
+      TestData:
+      Remarks: 点击右上角三点，进行切换账号
+
+    step4:
+      Action: click
+      Element: ${LandingPage}${SwitchUserElement}
+      TestData:
+      Remarks: 点击切换账号
+
+    step5:
+      Action: click
+      Element: ${LandingPage}${phoneInputElement}
+      TestData:
+      Remarks: 点击账号输入框
+
+    step6:
+      Action: input
+      Element: ${LandingPage}${phoneInputElement}
+      TestData: '{user}'
+      Remarks: 输入账号
+
+    step7:
+      Action: click
+      Element: ${LandingPage}${LoginButtonElement}
+      TestData:
+      Remarks: 点击登录
+
+    step8:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+
+    step9:
+      Action: judge,branch
+      Element: ${LandingPage}${passwordInputElement}
+      TestData:
+      Remarks: 判断密码输入框元素是否存在，如果存在则走输入密码分支，如果不存在则走验证码分支
+      ifbranchProcess:
+        step1:
+          Action: input
+          Element: ${LandingPage}${passwordInputElement}
+          TestData: '{password}'
+          Remarks: 输入密码
+
+        step2:
+          Action: click
+          Element: ${LandingPage}${passwordTextElement}
+          TestData:
+          Remarks: 输入密码文本收起键盘
+
+        step3:
+          Action: click
+          Element: ${LandingPage}${LoginButtonElement}
+          TestData:
+          Remarks: 点击登录
+
+      elsebranchProcess:
+        step1:
+          Action: keyboard
+          Element:
+          TestData: 123456
+          Remarks: 输入验证码
+
+    step10:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+
+    step11:
+      Action: judge,branch
+      Element: ${LandingPage}${PermissionWindowAllowsElement}
+      TestData:
+      Remarks: 判断是否需要授权权限
+      branchProcess:
+        step1:
+          Action: empowerment
+          Element:
+          TestData: 1
+          Remarks: 给手机授权
+
+    step12:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+
+    step13:
+      Action: judge,branch
+      Element: ${LandingPage}${BiometricCertificationBottonElement}
+      TestData:
+      Remarks: 判断是否有生物认证弹窗
+      branchProcess:
+        step1:
+          Action: click
+          Element:
+          TestData:
+          Remarks: 点击屏幕中间
+        step2:
+          Action: click
+          Element: ${LandingPage}${BiometricCertificationBottonElement}
+          TestData:
+          Remarks: 点击生物认证弹窗
+
+    step14:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+
+    step15:
+      Action: judge,branch
+      Element: ${LandingPage}${PermissionWindowAllowsElement}
+      TestData:
+      Remarks: 判断是否需要授权权限
+      branchProcess:
+        step1:
+          Action: empowerment
+          Element:
+          TestData: 1
+          Remarks: 给手机授权
+
+    step16:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+
+    step17:
+      Action: judge,branch
+      Element: ${LandingPage}${notifyConfirmBottonElement}
+      TestData:
+      Remarks: 判断是否谷歌服务或者紧张状态账户通知弹窗
+      branchProcess:
+        step1:
+          Action: click
+          Element:
+          TestData:
+          Remarks: 点击屏幕中间
+        step2:
+          Action: click
+          Element: ${LandingPage}${notifyConfirmBottonElement}
+          TestData:
+          Remarks: 点击谷歌服务或者紧张状态账户通知弹窗
+
+    step18:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+
+    step19:
+      Action: judge,branch
+      Element: ${LandingPage}${PermissionWindowAllowsElement}
+      TestData:
+      Remarks: 判断是否需要授权权限
+      branchProcess:
+        step1:
+          Action: empowerment
+          Element:
+          TestData: 1
+          Remarks: 给手机授权
+
+    step20:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+
+    step21:
+      Action: judge,branch
+      Element: ${LandingPage}${KeepSMSNotificationsBottonElement}
+      TestData:
+      Remarks: 判断是否保留推送通知权限弹窗
+      branchProcess:
+        step1:
+          Action: click
+          Element:
+          TestData:
+          Remarks: 点击屏幕中间
+        step2:
+          Action: click
+          Element: ${LandingPage}${KeepSMSNotificationsBottonElement}
+          TestData:
+          Remarks: 点击保留推送通知权限弹窗
+
+    step22:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+
+    step23:
+      Action: judge,branch
+      Element: ${LandingPage}${PermissionWindowAllowsElement}
+      TestData:
+      Remarks: 判断是否需要授权权限
+      branchProcess:
+        step1:
+          Action: empowerment
+          Element:
+          TestData: 1
+          Remarks: 给手机授权
+
+    step24:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+
+    step25:
+      Action: judge,branch
+      Element: ${HomePage}${notificationPopupElemnt}
+      TestData:
+      Remarks: 判断是否含有通知弹窗
+      branchProcess:
+        step1:
+          Action: click
+          Element:
+          TestData:
+          Remarks: 点击屏幕中间
+        step2:
+          Action: click
+          Element: ${HomePage}${notificationPopupElemnt}
+          TestData:
+          Remarks: 点击通知弹窗
+
+    step26:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿2秒
+
+    step27:
+      Action: judge,branch
+      Element: ${HomePage}${tipsButtonElement}
+      TestData:
+      Remarks: 判断提示是否第一次登录，如果有，先点击提示信息
+      branchProcess:
+        step1:
+          Action: click
+          Element: ${HomePage}${tipsButtonElement}
+          TestData:
+          Remarks: 点击提示信息
+        step2:
+          Action: click
+          Element: ${HomePage}${tipsButtonElement}
+          TestData:
+          Remarks: 点击提示信息
+        step3:
+          Action: click
+          Element: ${HomePage}${tipsButtonElement}
+          TestData:
+          Remarks: 点击提示信息
+        step4:
+          Action: click
+          Element: ${HomePage}${tipsButtonElement}
+          TestData:
+          Remarks: 点击提示信息
+        step5:
+          Action: click
+          Element: ${HomePage}${tipsButtonElement}
+          TestData:
+          Remarks: 点击提示信息
+
+    step28:
+      Action: sleep
+      Element:
+      TestData: 11
+      Remarks: 停顿11秒
+
+-
+  Step: Then
+  Text: 登录成功，并且进入了Livi Bank主页2
+  Fixture: app
+  Process:
+    step1:
+      Action: get
+      Element: ${HomePage}${underHomeButtonElement}
+      TestData: [ '主页','主頁','Overview' ]
+      Remarks: 断言是否进入主页
+
+-
+  Step: Given
+  Text: 点击左上角切换至对公跳转页面2
+  Fixture: app
+  Process:
+    step1:
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 停顿3秒
+    step2:
+      Action: click
+      Element: ${HomePage}${SmedgqhButtonElement}
+      TestData:
+      Remarks: 点击切换按钮
+    step3:
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 停顿3秒
+    step4:
+      Action: click
+      Element: ${HomePage}${SmedgqhshzhButtonElement}
+      TestData:
+      Remarks: 点击切换按钮
+    step5:
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 停顿3秒
+    step6:
+      Action: click
+      Element: ${HomePage}${SmedgqhshzhcgButtonElement}
+      TestData:
+      Remarks: 点击商业账户切换
+    step7:
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+    step8:
+      Action: judge,branch
+      Element: ${HomePage}${SmesytcButtonElement}
+      TestData:
+      Remarks: 判断提示是否第一次进入对公首页，如果有，先点击提示信息
+      branchProcess:
+        step1:
+          Action: click
+          Element: ${HomePage}${SmesytcButtonElement}
+          TestData:
+          Remarks: 点击弹窗提示信息
+        step2:
+          Action: sleep
+          Element:
+          TestData: 2
+          Remarks: 停顿2秒
+        step3:
+          Action: click
+          Element: ${HomePage}${SmesytcButtonElement}
+          TestData:
+          Remarks: 点击弹窗提示信息
+        step4:
+          Action: sleep
+          Element:
+          TestData: 2
+          Remarks: 停顿2秒
+        step5:
+          Action: click
+          Element: ${HomePage}${SmesytcButtonElement}
+          TestData:
+          Remarks: 点击弹窗提示信息
+        step6:
+          Action: sleep
+          Element:
+          TestData: 2
+          Remarks: 停顿2秒
+        step7:
+          Action: click
+          Element: ${HomePage}${SmesytcButtonElement}
+          TestData:
+          Remarks: 点击弹窗提示信息
+        step8:
+          Action: sleep
+          Element:
+          TestData: 2
+          Remarks: 停顿2秒
+        step9:
+          Action: click
+          Element: ${HomePage}${SmesytcButtonElement}
+          TestData:
+          Remarks: 点击弹窗提示信息
+        step10:
+          Action: sleep
+          Element:
+          TestData: 2
+          Remarks: 停顿2秒
+    step28:
+      Action: sleep
+      Element:
+      TestData: 6
+      Remarks: 停顿6秒
+-
+  Step: Then
+  Text: 切换成功，并且成功进入SME首页2
+  Fixture: app
+  Process:
+    step1:
+      Action: get
+      Element: ${HomePage}${SmesysyButtonElement}
+      TestData: [ '主页','主頁','Overview' ]
+      Remarks: 断言是否进入主页
+-
+  Step: Given
+  Text: SME首页点击设置页，进入SME设置页2
+  Fixture: app
+  Process:
+    step1:
+      Action: click
+      Element: ${HomePage}${SmeszButtonElement}
+      TestData:
+      Remarks: 成功进入SME设置页
+    step2:
+      Action: sleep
+      Element:
+      TestData: 6
+      Remarks: 停顿6秒
+-
+  Step: And
+  Text: 选择公司成员按钮，进入成员设定页面2
+  Fixture: app
+  Process:
+    step1:
+      Action: click
+      Element:
+      TestData: '[391,676]'
+      Remarks: 进入成员设定页面
+    step2:
+      Action: sleep
+      Element:
+      TestData: 10
+      Remarks: 停顿10秒
+-
+  Step: And
+  Text: 选择商业账户，点击进入公司成员页面2
+  Fixture: app
+  Process:
+    step1:
+      Action: find_text
+      Element: $${shangyezhanghu}
+      TestData: 商业账户
+      Remarks: 获取商业账户坐标
+    step2:
+      Action: click
+      Element:
+      TestData: $${shangyezhanghu}
+      Remarks: 点击商业账户坐标
+    step3:
+      Action: sleep
+      Element:
+      TestData: 10
+      Remarks: 停顿10秒
+-
+  Step: And
+  Text: 点击右上角添加成员，进入新增公司成员页面2
+  Fixture: app
+  Process:
+    step1:
+      Action: click
+      Element: ${HomePage}${SmexinzengchengyuanButtonElement}
+      TestData:
+      Remarks: 进入公司成员
+    step2:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+    step3:
+      Action: click
+      Element: //*[contains(@text, '姓（英文）')]
+      TestData:
+      Remarks: 点击英文姓名
+    step4:
+      Action: input
+      Element: ${HomePage}${SmegscyshuruyingwenxingmingButtonElement}
+      TestData: MING
+      Remarks: 点击输入英文姓名
+    step5:
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+    step6:
+      Action: click
+      Element: //*[contains(@text, '名字（英文）')]
+      TestData:
+      Remarks: 点击英文名字
+    step7:
+      Action: input
+      Element: ${HomePage}${SmegscyshuruyingwenmingziButtonElement}
+      TestData: Weiwei
+      Remarks: 点击输入名字
+    step8:
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+    step9:
+      Action: click
+      Element: //*[contains(@text, '香港身份证号码')]
+      TestData:
+      Remarks: 点击香港身份证号
+    step10:
+      Action: input
+      Element: ${HomePage}${SmegscyshuruxiangganshenfenzhenButtonElement}
+      TestData: Q679198(7)
+      Remarks: 输入香港身份证号
+    step11:
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+    step12:
+      Action: click
+      Element: //*[contains(@text, '手机号码')]
+      TestData:
+      Remarks: 点击手机号
+    step13:
+      Action: input
+      Element: ${HomePage}${SmegscyshoujihaoButtonElement}
+      TestData: 59998774
+      Remarks: 输入手机号码
+    step14:
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+    step15:
+      Action: click
+      Element: //*[contains(@text, '电邮地址')]
+      TestData:
+      Remarks: 点击电邮地址
+    step16:
+      Action: input
+      Element: ${HomePage}${SmegscydianyoudizhioButtonElement}
+      TestData: hsush@hsdhhd.com
+      Remarks: 输入电邮地址
+    step17:
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+    step18:
+      Action: click
+      Element: //*[contains(@text, '管理人')]
+      TestData:
+      Remarks: 点击管理人
+    step19:
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+    step20:
+      Action: slide
+      Element: bottom
+      TestData:
+      Remarks: 向下滑动屏幕
+    step21:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+    step22:
+      Action: click
+      Element: //*[contains(@text, '审批人员')]
+      TestData:
+      Remarks: 点击审批人员
+    step23:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+    step24:
+      Action: click
+      Element: //*[contains(@text, '发起人')]
+      TestData:
+      Remarks: 点击发起人
+    step25:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+    step26:
+      Action: slide
+      Element: bottom
+      TestData:
+      Remarks: 向下滑动屏幕
+    step27:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+    step28:
+      Action: click
+      Element: //*[contains(@text, '金额')]
+      TestData:
+      Remarks: 点击金额
+    step29:
+      Action: input
+      Element: ${HomePage}${SmegscyshurujineButtonElement}
+      TestData: 5000
+      Remarks: 输入金额5000
+    step30:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+    step31:
+      Action: click
+      Element: //*[contains(@text, '下一步')]
+      TestData:
+      Remarks: 点击下一步
+    step32:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+    step33:
+      Action: click
+      Element: //*[contains(@text, '下一步')]
+      TestData:
+      Remarks: 点击下一步
+    step34:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+-
+  Step: Then
+  Text: 成功发起指示流程2
+  Fixture: app
+  Process:
+    step1:
+      Action: get
+      Element: //*[contains(@text, '成功建立指示')]
+      TestData: [ '成功建立指示' ]
+      Remarks: 成功建立指示
+    step2:
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+
+

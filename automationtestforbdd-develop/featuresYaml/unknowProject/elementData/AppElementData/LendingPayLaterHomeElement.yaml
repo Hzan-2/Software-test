@@ -1,0 +1,54 @@
+LendingPayLaterHomeElement:
+  android:
+    #首页-PayLater页面及卡片
+    #点击PayLater-Banner
+    PayLaterBannerElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View/android.widget.ImageView
+#    /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView
+    #点击MC卡
+    TriggerMcCardElement: //android.view.View/android.view.View[5]
+    #触发查看详情-进入acount页面
+    ViewDetailsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '查看详情')]
+      TraditionalChinese: //*[contains(@content-desc, '查看詳情')]
+      English: //android.view.View[@content-desc="View Details"]
+    #继续开户按钮
+    ResumeButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '继续开户')]
+      TraditionalChinese: //*[contains(@content-desc, '繼續開戶')]
+      English: //*[contains(@content-desc, 'Resume')]
+    #接受额度按钮
+    ViewOfferButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '查看结果')]
+      TraditionalChinese: //*[contains(@content-desc, '查閱結果')]
+      English: //android.view.View[@content-desc="View Offer"]
+#      English: //*[contains(@cont  ent-desc,'View Offer')]
+    #获取文件复核字样
+    DocumentsUnderReviewElement:
+      SimplifiedChinese: //android.view.View[@content-desc='文件复核中']
+      TraditionalChinese: //android.view.View[@content-desc="文件覆核中"]
+      English: //android.view.View[@content-desc="Documents Under Review"]
+
+
+
+
+
+  ios:
+    #触发PayLater-banner
+    PayLaterBannerElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage
+    #点击MC卡
+    TriggerMcCardElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther
+    #触发查看详情-进入acount页面
+    ViewDetailsElement:
+      SimplifiedChinese: //*[contains(@name, '查看详情')]
+      TraditionalChinese: //*[contains(@name, '查看詳情')]
+      English: //*[contains(@name, 'View Details')]
+    #继续开户按钮
+    ResumeButtonElement:
+      SimplifiedChinese: //*[contains(@name, '继续开户')]
+      TraditionalChinese: //*[contains(@name, '繼續開戶')]
+      English: //*[contains(@name, 'Resume')]
+    #接受额度按钮
+    ViewOfferButtonElement:
+      SimplifiedChinese: //*[contains(@name, '查看结果')]
+      TraditionalChinese: //*[contains(@name, '查閱結果')]
+      English: //*[contains(@name, 'View Offer')]

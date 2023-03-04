@@ -1,0 +1,88 @@
+#添加银行账户页面元素--by yang.yang
+AddBankAccountElementPage:
+  android:
+    #标题
+    AddBankAccounttittleElement:
+      SimplifiedChinese: //*[contains(@content-desc, '添加银行账户')]
+      TraditionalChinese: //*[contains(@content-desc, '添加銀行戶口')]
+      English: //*[contains(@content-desc, 'Add Bank Account')]
+
+    #选择转账银行
+    TransferBankSelectElement: //android.view.View/android.widget.ImageView[2]
+
+    #账户号码输入框
+    AccountNumberTextElement:
+      SimplifiedChinese: //*[contains(@text, '账户号码')]
+      TraditionalChinese: //*[contains(@text, '戶口號碼')]
+      English: //*[contains(@text, 'Account Number')]
+    #交易限额输入框
+    LimitTextElement:
+      SimplifiedChinese: //*[contains(@text, '交易限额')]
+      TraditionalChinese: //*[contains(@text, '交易限額')]
+      English: //*[contains(@text, 'Limit')]
+    #继续按钮
+    ContiuneButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '继续')]
+      TraditionalChinese: //*[contains(@content-desc, '繼續')]
+      English: //*[contains(@content-desc, 'Contiune')]
+    #完成按钮
+    CompleteButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '完成')]
+      TraditionalChinese: //*[contains(@content-desc, '完成')]
+      English: //*[contains(@content-desc, 'Done')]
+    CompleteButtonElement2:
+      SimplifiedChinese: //*[contains(@content-desc, '好的')]
+      TraditionalChinese: //*[contains(@content-desc, '好')]
+      English: //*[contains(@content-desc, 'OK')]
+    #再试一次按钮 Try again
+    TryagainButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '再试一次')]
+      TraditionalChinese: //*[contains(@content-desc, '再試一次')]
+      English: //*[contains(@content-desc, 'Try again')]
+    #返回按钮 Back
+    BackButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '返回')]
+      TraditionalChinese: //*[contains(@content-desc, '返回')]
+      English: //*[contains(@content-desc, 'Back')]
+
+  ios:
+    #标题 //XCUIElementTypeOther[@name="添加银行账户"] 添加銀行戶口 Add Bank Account
+    AddBankAccounttittleElement:
+      SimplifiedChinese: //XCUIElementTypeOther[@name="添加银行账户"]
+      TraditionalChinese: //*[contains(@name, '添加銀行戶口')]
+      English: //*[contains(@name, 'Add Bank Account')]
+
+    #选择转账银行
+    TransferBankSelectElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeImage[2]
+
+    #账户号码输入框
+    AccountNumberTextElement:
+      SimplifiedChinese: //*[contains(@name, '账户号码')]
+      TraditionalChinese: //*[contains(@name, '戶口號碼')]
+      English: //*[contains(@name, 'Account Number')]
+    #交易限额输入框 交易限額
+    LimitTextElement:
+      SimplifiedChinese: //XCUIElementTypeTextField[@name="交易限额"]
+      TraditionalChinese: //XCUIElementTypeTextField[@name="交易限額"]
+      English: //XCUIElementTypeTextField[@name="Limit"]
+    #继续按钮
+    ContiuneButtonElement:
+      SimplifiedChinese: //*[contains(@name, '继续')]
+      TraditionalChinese: //*[contains(@name, '繼續')]
+      English: //*[contains(@name, 'Contiune')]
+    #完成按钮
+    CompleteButtonElement:
+      SimplifiedChinese: //*[contains(@name, '完成')]
+      TraditionalChinese: //*[contains(@name, '完成')]
+      English: //*[contains(@name, 'Done')]
+    #再试一次按钮 Try again
+    TryagainButtonElement:
+      SimplifiedChinese: //*[contains(@name, '再试一次')]
+      TraditionalChinese: //*[contains(@name, '再試一次')]
+      English: //*[contains(@name, 'Try again')]
+    #返回按钮 Back
+    BackButtonElement:
+      SimplifiedChinese: //*[contains(@name, '返回')]
+      TraditionalChinese: //*[contains(@name, '返回')]
+      English: //*[contains(@name, 'Back')]
+

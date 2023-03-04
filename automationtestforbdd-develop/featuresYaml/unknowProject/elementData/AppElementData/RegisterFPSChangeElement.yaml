@@ -1,0 +1,42 @@
+#转数快更改頁面元素--by yang.yang
+RegisterFPSChangeElementPage:
+  android:
+    #标题
+    RegisterFPSChangetittleElement:
+      SimplifiedChinese: //*[contains(@content-desc, '更改')]
+      TraditionalChinese: //*[contains(@content-desc, '更改')]
+      English: //*[contains(@content-desc, 'Change')]
+
+    #設定livi為預設收款行勾選框
+    SetLiviAsDefaultReceivingBank: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View[7]/android.view.View
+    #移除轉數快
+    RemoveFPSElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View[8]
+    #删除确认弹框
+    RemoveConfirmElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View[9]/android.view.View[4]
+    #删除取消弹框
+    RemoveCancelElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View[9]/android.view.View[5]
+
+  ios:
+    #标题
+    RegisterFPSChangetittleElement:
+      SimplifiedChinese: //*[contains(@name, '更改')]
+      TraditionalChinese: //*[contains(@name, '更改')]
+      English: //*[contains(@name, 'Change')]
+
+    #設定livi為預設收款行勾選框
+    SetLiviAsDefaultReceivingBank: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeImage
+    #移除轉數快
+    RemoveFPSElement:
+      SimplifiedChinese: //*[contains(@name, '将此账户从"转数快"中移除')]
+      TraditionalChinese: //*[contains(@name, '將此戶口從「轉數快」中移除')]
+      English: //*[contains(@name, 'Remove this account from FPS')]
+    #删除确认弹框
+    RemoveConfirmElement:
+      SimplifiedChinese: //XCUIElementTypeStaticText[@name="确定"]
+      TraditionalChinese: //XCUIElementTypeStaticText[@name="確定"]
+      English: //XCUIElementTypeStaticText[@name="Confirm"]
+    #删除取消弹框
+    RemoveCancelElement:
+      SimplifiedChinese: //XCUIElementTypeStaticText[@name="取消"]
+      TraditionalChinese: //XCUIElementTypeStaticText[@name="取消"]
+      English: //XCUIElementTypeStaticText[@name="Cancel"]

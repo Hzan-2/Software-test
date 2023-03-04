@@ -1,0 +1,53 @@
+#Lending-PayLater涉及元素
+BankSettingsPage:
+  android:
+    # 银行服务设定
+    # 支付和转账
+    # 银行卡
+    BankCardElement:
+      SimplifiedChinese: //*[contains(@content-desc, '银行卡')]
+      TraditionalChinese: //*[contains(@content-desc, '银行卡')]
+      English: //*[contains(@content-desc, 'Card')]
+
+    #二维码支付
+    QRCodePaymentElement:
+      SimplifiedChinese: //*[contains(@content-desc, '二维码支付')]
+      TraditionalChinese: //*[contains(@content-desc, '二维码支付')]
+      English: //*[contains(@content-desc, 'QR Code Payment')]
+
+    #转账
+    TransferAccountsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '转账')]
+      TraditionalChinese: //*[contains(@content-desc, '转账')]
+      English: //*[contains(@content-desc, 'transfer accounts')]
+
+    # 限额设定
+    # 单笔交易限额
+    SingleLimitElement:
+      SimplifiedChinese: //*[contains(@content-desc, '单笔交易限额')]
+      TraditionalChinese: //*[contains(@content-desc, '单笔交易限额')]
+      English: //*[contains(@content-desc, 'Single limit')]
+
+    # 支付限额
+    PaymentLimitElement:
+      SimplifiedChinese: //*[contains(@content-desc, '支付限额')]
+      TraditionalChinese: //*[contains(@content-desc, '支付限额')]
+      English: //*[contains(@content-desc, 'Payment limit')]
+
+    # QR提款限额
+    QRWithdrawalLimitElement:
+      SimplifiedChinese: //*[contains(@content-desc, 'QR提款限额')]
+      TraditionalChinese: //*[contains(@content-desc, 'QR提款限额')]
+      English: //*[contains(@content-desc, 'QR withdrawal limit')]
+
+    # 万事达每日支付限额
+    PWSDaymentLimitElement:
+      SimplifiedChinese: //*[contains(@content-desc, '万事达每日支付限额')]
+      TraditionalChinese: //*[contains(@content-desc, '万事达每日支付限额')]
+      English: //*[contains(@content-desc, 'WSD Payment limit')]
+
+    # 终止服务
+    TerminationServicesElement:
+      SimplifiedChinese: //*[contains(@content-desc, '终止服务')]
+      TraditionalChinese: //*[contains(@content-desc, '终止服务')]
+      English: //*[contains(@content-desc, 'Termination of services')]

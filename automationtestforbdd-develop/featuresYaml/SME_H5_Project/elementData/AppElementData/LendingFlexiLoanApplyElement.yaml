@@ -1,0 +1,160 @@
+#灵活贷-申请
+LendingFlexiLoanApplyElement:
+  android:
+    #点击申请灵活贷按钮
+    ApplyFlexiLoanButtonElement:
+      SimplifiedChinese: //*[contains(@text, '申请')]
+      TraditionalChinese: //*[contains(@text, '申请靈活貸')]
+      English: //*[contains(@text, 'Apply Flexi Loan')]
+    #触发立即申请按钮
+    ApplyNowButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc,'马上申请')]
+      TraditionalChinese: //*[contains(@content-desc,'馬上申請')]
+      English: //*[contains(@content-desc,'Apply Now')]
+    #勾选协议按钮
+    AgreementButtonElement: //*[contains(@text, 'agree')]
+    #触发继续按钮
+    ContinueOpenButtonElement: [531,2190]
+#    /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.widget.Button
+#      SimplifiedChinese: //*[contains(@text, '继 续')]
+#      TraditionalChinese: //*[contains(@text, '繼 續')]
+#      English: //*[contains(@text, 'Continue')]
+    #选择个人使用
+    LoanPurposePageElement:
+      SimplifiedChinese: //*[contains(@content-desc,'个人使用')]
+      TraditionalChinese: //*[contains(@content-desc,'個人使用')]
+      English: //*[contains(@content-desc,'Personal use')]
+    #触发继续按钮
+    ContinueOpenButtonElement1:
+      SimplifiedChinese: //*[contains(@content-desc, '继续')]
+      TraditionalChinese: //*[contains(@content-desc, '繼續')]
+      English: //*[contains(@content-desc, 'Continue')]
+    #触发公司名称
+    CompanyNameElement:
+      SimplifiedChinese: //*[contains(@text, '公司英文名称')]
+      TraditionalChinese: //*[contains(@text, '公司英文名稱')]
+      English: //*[contains(@text, 'Company Name')]
+#      //*[contains(@text, 'Company Name (In English)')]
+    #触发就业状态
+    EmploymentStatusButtonElement1: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.ImageView[5]
+    #触发工作年限
+    CurrentJobPeriodButtonElement1: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.ImageView[6]
+    #判断是否开通PayLater-我們需要一些額外的細節
+    SomeAdditionalDetailsadditionalDetails:
+      SimplifiedChinese: //*[contains(@content-desc,'我们需要一些额外细节')]
+      TraditionalChinese: //*[contains(@content-desc,'我們需要一些額外的細節')]
+      English: //*[contains(@content-desc,'We need some additional details')]
+    #选择贷款目的：
+    LoanPurposeElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.ImageView[3]
+    #个人信息确认页面的确定按钮
+    ReviewConfirmButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc,'确认')]
+      TraditionalChinese: //*[contains(@content-desc,'確認')]
+      English: //*[contains(@content-desc,'Confirm')]
+    #勾选协议按钮
+    AgreementButtonElement1: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.widget.Image[1]
+#    //*[contains(@text, 'agree')][1]
+    #勾选协议按钮
+    AgreementButtonElement2: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.widget.Image[2]
+#    //*[contains(@text, 'agree')][2]
+    #点击同意及提交按钮
+    AgreeAndSubmitButtonElement:
+      SimplifiedChinese: //*[contains(@text, '同意及提交')]
+      TraditionalChinese: //*[contains(@text, '同意及提交')]
+      English: //*[contains(@text, 'Agree and submit')]
+    #提款成功页面，点击返回主页面
+    SuccessfullyDrawDownPageBackToHomeElement:
+      SimplifiedChinese: //*[contains(@content-desc,'返回主页')]
+      TraditionalChinese: //*[contains(@content-desc,'返回主頁')]
+      English: //*[contains(@content-desc,'Back to Overview')]
+    #判断是否秒批通过
+    ApplicationPendingElement:
+      SimplifiedChinese: //*[contains(@content-desc,'申请处理中')]
+      TraditionalChinese: //*[contains(@content-desc,'申請處理中')]
+      English: //*[contains(@content-desc,'Application Pending')]
+
+
+
+
+
+
+
+
+
+
+
+
+  ios:
+    #点击申请灵活贷按钮
+    ApplyFlexiLoanButtonElement:
+      SimplifiedChinese: //XCUIElementTypeButton[contains(@name, '申请')]
+      TraditionalChinese: //XCUIElementTypeButton[contains(@name, '申请')]
+      English: //XCUIElementTypeButton[contains(@name, 'Apply')]
+    #触发立即申请按钮
+    ApplyNowButtonElement:
+      SimplifiedChinese: //*[contains(@name,'马上申请')]
+      TraditionalChinese: //*[contains(@name,'馬上申請')]
+      English: //*[contains(@name,'Apply Now')]
+    #勾选协议按钮
+    AgreementButtonElement: //XCUIElementTypeImage[@name="agree"]
+    #触发继续按钮
+    ContinueOpenButtonElement:
+      SimplifiedChinese: //*[contains(@name, '继 续')]
+      TraditionalChinese: //*[contains(@name, '繼 續')]
+      English: //*[contains(@name, 'Continue')]
+#    #选择个人使用
+#    PersonalUseElement:
+#      SimplifiedChinese: //*[contains(@name,'个人使用')]
+#      TraditionalChinese: //*[contains(@name,'個人使用')]
+#      English: //*[contains(@name,'Personal use')]
+    #选择个人使用
+    LoanPurposePageElement:
+      SimplifiedChinese: //*[contains(@name,'个人使用')]
+      TraditionalChinese: //*[contains(@name,'個人使用')]
+      English: //*[contains(@name,'Personal use')]
+    #触发继续按钮
+    ContinueOpenButtonElement1:
+      SimplifiedChinese: //*[contains(@name, '继续')]
+      TraditionalChinese: //*[contains(@name, '繼續')]
+      English: //*[contains(@name, 'Contiune')]
+    #触发公司名称
+    CompanyNameElement:
+      SimplifiedChinese: //XCUIElementTypeTextField[contains(@name, '公司英文名称')]
+      TraditionalChinese: //XCUIElementTypeTextField[contains(@name, '公司英文名稱')]
+      English: //XCUIElementTypeTextField[contains(@name, 'Company Name (In English)')]
+    #触发就业状态
+    EmploymentStatusButtonElement1: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeImage[5]
+    #触发工作年限
+    CurrentJobPeriodButtonElement1: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeImage[6]
+    #判断是否开通PayLater-我們需要一些額外的細節
+    SomeAdditionalDetailsadditionalDetails:
+      SimplifiedChinese: //*[contains(@name,'我们需要一些额外细节')]
+      TraditionalChinese: //*[contains(@name,'我們需要一些額外的細節')]
+      English: //*[contains(@name,'We need some additional details')]
+    #选择贷款目的：
+    LoanPurposeElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeImage[3]
+    #个人信息确认页面的确定按钮
+    ReviewConfirmButtonElement:
+      SimplifiedChinese: //*[contains(@name,'确认')]
+      TraditionalChinese: //*[contains(@name,'確認')]
+      English: //*[contains(@name,'Confirm')]
+    #勾选协议按钮 坐标点的机型是iPhone12 mini
+#    AgreementButtonElement1: (//XCUIElementTypeImage[@name="agree"])[1]
+    AgreementButtonElement1: [30,650]
+    #勾选协议按钮
+    AgreementButtonElement2: (//XCUIElementTypeImage[@name="agree"])[2]
+    #点击同意及提交按钮
+    AgreeAndSubmitButtonElement:
+      SimplifiedChinese: //*[contains(@name, '同意及提交')]
+      TraditionalChinese: //*[contains(@name, '同意及提交')]
+      English: //*[contains(@name, 'Agree and submit')]
+    #提款成功页面，点击返回主页面
+    SuccessfullyDrawDownPageBackToHomeElement:
+      SimplifiedChinese: //*[contains(@name,'返回主页')]
+      TraditionalChinese: //*[contains(@name,'返回主頁')]
+      English: //*[contains(@name,'Back to Overview')]
+    #判断是否秒批通过
+    ApplicationPendingElement:
+      SimplifiedChinese: //*[contains(@name,'申请处理中')]
+      TraditionalChinese: //*[contains(@name,'申請處理中')]
+      English: //*[contains(@name,'Application Pending')]

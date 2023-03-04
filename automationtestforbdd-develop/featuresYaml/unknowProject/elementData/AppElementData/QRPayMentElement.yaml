@@ -1,0 +1,384 @@
+#QR设置相关元素 点击首页小人-银行服务设定-二维码支付
+QRPayMent:
+  android:
+    #二维码支付界面
+    QRPaymentElement:
+      SimplifiedChinese: //*[contains(@content-desc, '二维码支付')]
+      TraditionalChinese: //*[contains(@content-desc, '二維碼消費')]
+      English: //*[contains(@content-desc, 'QR Payment')]
+
+    #二维码支付界面-二维码设定
+    QRSettingsElement:
+      SimplifiedChinese: //*[contains(@text, '二维码设定')]
+      TraditionalChinese: //*[contains(@text, '二維碼設定')]
+      English: //*[contains(@text, 'QR Settings')]
+
+    #二维码支付界面-二维码设定-支付限額-----------------------------------
+    QRPaymentLimitElement:
+      SimplifiedChinese: //*[contains(@text, '支付限额')]
+      TraditionalChinese: //*[contains(@text, '支付限額')]
+      English: //*[contains(@text, 'Payment Limit')]
+
+    #二维码支付界面-二维码设定-支付限額-金额输入框
+    AmountInputBoxElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.EditText
+
+    #二维码支付界面-二维码设定-支付限額-确定按钮
+    ConfirmButtonElement:
+      SimplifiedChinese: //*[contains(@text, '确定')]
+      TraditionalChinese: //*[contains(@text, '確定')]
+      English: //*[contains(@text, 'Confirm')]
+
+    #二维码支付界面-二维码设定-香港境外二維碼消費----------------------
+    OutsideHongKongQRPaymentElement:
+      SimplifiedChinese: //*[contains(@text, '香港境外二维码支付')]
+      TraditionalChinese: //*[contains(@text, '香港境外二維碼消費')]
+      English: //*[contains(@text, 'Outside Hong Kong QR Payment')]
+
+    #二维码支付界面-二维码设定-香港境外二維碼消費开关按钮（指的是按钮状态）
+    OutsideHongKongQRPaymentOffButtonElement:
+      SimplifiedChinese: //*[contains(@text, '关闭')]
+      TraditionalChinese: //*[contains(@text, '關閉')]
+      English: //*[contains(@text, 'Off')]
+
+
+    #二维码支付界面-二维码设定-香港境外二維碼消費-关闭时的弹框确定按钮
+    OutsideHongKongQRPaymentOffConfirmButtConfirmElement:
+      SimplifiedChinese: //*[contains(@text, '确定')]
+      TraditionalChinese: //*[contains(@text, '確定')]
+      English: //*[contains(@text, 'Confirm')]
+
+    #二维码支付界面-二维码设定-香港境外二維碼消費开启按钮（指的是按钮状态）
+    OutsideHongKongQRPaymentOnButtonElement:
+      SimplifiedChinese: //*[contains(@text, '开启')]
+      TraditionalChinese: //*[contains(@text, '開啟')]
+      English: //*[contains(@text, 'On')]
+
+
+    #二维码支付界面-二维码设定-香港境外二維碼消費-确定开启按钮
+    OutsideHongKongQRPaymentOnButtConfirmElement:
+      SimplifiedChinese: //*[contains(@text, '确定')]
+      TraditionalChinese: //*[contains(@text, '確定')]
+      English: //*[contains(@text, 'Confirm')]
+
+    #二维码支付界面-二维码设定-本地每日二維碼提款限額--------------------------------
+    LocalDailyQRCashLimitElement:
+      SimplifiedChinese: //*[contains(@text, '本地每日二维码提款限额')]
+      TraditionalChinese: //*[contains(@text, '本地每日二維碼提款限額')]
+      English: //*[contains(@text, 'Local Daily QR Cash Limit')]
+
+    #二维码支付界面-二维码设定-本地每日二維碼提款限額-金额输入框
+    LocalDailyAmountInputBoxElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.EditText
+
+    #二维码支付界面-二维码设定-本地每日二維碼提款限額-确定按钮
+    LocalDailyConfirmButtonElement:
+      SimplifiedChinese: //*[contains(@text, '确定')]
+      TraditionalChinese: //*[contains(@text, '確定')]
+      English: //*[contains(@text, 'Confirm')]
+
+
+    #二维码支付界面-二维码设定-香港境外二維碼提款--------------------------------
+    OutsideHongKongQRCashtElement:
+      SimplifiedChinese: //*[contains(@text, '香港境外二维码提款')]
+      TraditionalChinese: //*[contains(@text, '香港境外二維碼提款')]
+      English: //*[contains(@text, 'Outside Hong Kong QR Cash')]
+
+    #二维码支付界面-二维码设定-香港境外二維碼提款（指的是按钮状态）
+    OutsideHongKongQRCashtOffButtonElement:
+      SimplifiedChinese: //*[contains(@text, '关闭')]
+      TraditionalChinese: //*[contains(@text, '關閉')]
+      English: //*[contains(@text, 'Off')]
+
+    #二维码支付界面-二维码设定-香港境外二維碼提款-金额输入框
+    OutsideHongKongQRCashOffInputBoxElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.EditText
+
+    #二维码支付界面-二维码设定-香港境外二維碼提款-关闭时的弹框确定按钮
+    OutsideHongKongQRCashOffConfirmButtConfirmElement:
+      SimplifiedChinese: //*[contains(@text, '确定')]
+      TraditionalChinese: //*[contains(@text, '確定')]
+      English: //*[contains(@text, 'Confirm')]
+
+    #二维码支付界面-二维码设定-香港境外二維碼提款（指的是按钮状态）
+    OutsideHongKongQRCashOnButtonElement:
+      SimplifiedChinese: //*[contains(@text, '开启')]
+      TraditionalChinese: //*[contains(@text, '開啟')]
+      English: //*[contains(@text, 'On')]
+
+
+    #二维码支付界面-二维码设定-香港境外二維碼提款-确定开启按钮
+    OutsideHongKongQRCashOnButtConfirmElement:
+      SimplifiedChinese: //*[contains(@text, '确定')]
+      TraditionalChinese: //*[contains(@text, '確定')]
+      English: //*[contains(@text, 'Confirm')]
+
+    #二维码支付界面-摇一摇-----------------
+    ShakeShakeElement:
+      SimplifiedChinese: //*[contains(@text, '摇一摇')]
+      TraditionalChinese: //*[contains(@text, '搖一搖')]
+      English: //*[contains(@text, 'Shake Shake')]
+
+    ShakeShakePageElement:
+      SimplifiedChinese: //*[contains(@text, '摇一摇')]
+      TraditionalChinese: //*[contains(@text, '搖一搖')]
+      English: //*[contains(@text, 'Shake Shake')]
+
+
+    #二维码支付界面-交易纪录
+    QRTransactionHistoryElement:
+      SimplifiedChinese: //*[contains(@text, '交易纪录')]
+      TraditionalChinese: //*[contains(@text, '交易紀錄')]
+      English: //*[contains(@text, 'Transaction History')]
+
+    #二维码支付界面-交易纪录页面的判断
+    QRTransactionHistoryPageElement:
+      SimplifiedChinese: //*[contains(@text, '交易纪录')]
+      TraditionalChinese: //*[contains(@text, '交易紀錄')]
+      English: //*[contains(@text, 'Transaction History')]
+
+    #二维码支付界面-接受银联二维码商户------------
+    UnionPayQRMerchantsElement:
+      SimplifiedChinese: //*[contains(@text, '接受银联二维码商户')]
+      TraditionalChinese: //*[contains(@text, '接受銀聯二維碼商戶')]
+      English: //*[contains(@text, 'UnionPay QR Merchants')]
+
+    #二维码支付界面-接受银联二维码商户-前往按钮
+    UnionPayQRMerchantsContinueButtonElement: /hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.Button
+#
+#      SimplifiedChinese: //*[contains(@text, '前往')]
+#      TraditionalChinese: //*[contains(@text, '前往')]
+#      English: //*[contains(@text, 'Continue')]
+
+    #二维码支付界面-接受银联二维码商户-判断是否有银联LOG
+    UnionPayQRMerchantslogoElement:
+      SimplifiedChinese: //*[contains(@text, 'logo')]
+      TraditionalChinese: //*[contains(@text, 'logo')]
+      English: //*[contains(@text, 'logo')]
+
+
+    #二维码支付界面-绑定电子钱包-------------------
+    QRLinkDigitalWalletElement:
+      SimplifiedChinese: //*[contains(@text, '绑定电子钱包')]
+      TraditionalChinese: //*[contains(@text, '綁定電子錢包')]
+      English: //*[contains(@text, 'Link Digital Wallet')]
+
+    #二维码支付界面-绑定电子钱包-绑定页面的+
+    QRLinkDigitalWalletplusButtonElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ImageButton
+
+    #二维码支付界面-绑定电子钱包-绑定页面的+
+    QRLinkDigitalWalletCheckBoxElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.CheckBox
+
+    #二维码支付界面-绑定电子钱包-我已阅读并同意
+    QRLinkDigitalWalletAgreedButtonElement:
+      SimplifiedChinese: //*[contains(@text, '我已阅读并同意')]
+      TraditionalChinese: //*[contains(@text, '我已閱讀並同意')]
+      English: //*[contains(@text, 'I have read and agreed')]
+
+     #二维码支付界面-绑定电子钱包-确定按钮
+    QRLinkDigitalWalletConfirmButtonElementt:
+      SimplifiedChinese: //*[contains(@text, '确定')]
+      TraditionalChinese: //*[contains(@text, '確定')]
+      English: //*[contains(@text, 'Confirm')]
+
+    #二维码支付界面-绑定电子钱包-添加卡片
+    QRLinkDigitalWalletAddCardButtonElement:
+      SimplifiedChinese: //*[contains(@text, '添加卡片')]
+      TraditionalChinese: //*[contains(@text, '添加卡片')]
+      English: //*[contains(@text, '添加卡片')]
+
+
+    #二维码支付界面-停用二维码支付,去停用--------------
+    SuspendQRPaymentElement:
+      SimplifiedChinese: //*[contains(@text, '停用二维码支付')]
+      TraditionalChinese: //*[contains(@text, '停用二維碼消費')]
+      English: //*[contains(@text, 'Suspend QR Payment')]
+
+    #二维码支付界面-停用二维码支付--暂停
+    SuspendQRPaymentYesButtonElement: /hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.Button
+
+
+    #二维码支付界面-启用二维码支付--去启用------------
+    ActivateQRPaymentElement:
+      SimplifiedChinese: //*[contains(@text, '启用二维码支付')]
+      TraditionalChinese: //*[contains(@text, '啟用二維碼消費')]
+      English: //*[contains(@text, 'Activate QR Payment')]
+
+  # iOS元素适配
+  ios:
+    #二维码支付界面
+    QRPaymentElement:
+      SimplifiedChinese: //*[contains(@name, '二维码支付')]
+      TraditionalChinese: //*[contains(@name, '二維碼消費')]
+      English: //*[contains(@name, 'QR Payment')]
+
+    #二维码支付界面-二维码设定
+    QRSettingsElement:
+      SimplifiedChinese: //*[contains(@name, '二维码设定')]
+      TraditionalChinese: //*[contains(@name, '二維碼設定')]
+      English: //*[contains(@name, 'QR Settings')]
+
+    #二维码支付界面-二维码设定-支付限額
+    QRPaymentLimitElement:
+      SimplifiedChinese: //*[contains(@name, '支付限额')]
+      TraditionalChinese: //*[contains(@name, '支付限額')]
+      English: //*[contains(@name, 'Payment Limit')]
+
+    #二维码支付界面-二维码设定-支付限額-金额输入框
+    AmountInputBoxElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeTextField
+
+    #二维码支付界面-二维码设定-支付限額-确定按钮
+    ConfirmButtonElement:
+      SimplifiedChinese: //*[contains(@name, '确定')]
+      TraditionalChinese: //*[contains(@name, '確定')]
+      English: //*[contains(@name, 'Confirm')]
+
+    #二维码支付界面-二维码设定-香港境外二維碼消費
+    OutsideHongKongQRPaymentElement:
+      SimplifiedChinese: //*[contains(@name, '香港境外二维码支付')]
+      TraditionalChinese: //*[contains(@name, '香港境外二維碼消費')]
+      English: //*[contains(@name, 'Outside Hong Kong QR Payment')]
+
+    #二维码支付界面-二维码设定-香港境外二維碼消費开关按钮（指的是按钮状态）
+    OutsideHongKongQRPaymentOffButtonElement: //XCUIElementTypeApplication[@name="livi 理慧银行"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeSwitch[contains(@value, 0)]
+
+    #二维码支付界面-二维码设定-香港境外二維碼消費-关闭时的弹框确定按钮
+    OutsideHongKongQRPaymentOffConfirmButtConfirmElement:
+      SimplifiedChinese: //*[contains(@name, '确定')]
+      TraditionalChinese: //*[contains(@name, '確定')]
+      English: //*[contains(@name, 'Confirm')]
+
+    #二维码支付界面-二维码设定-香港境外二維碼消費开启按钮（指的是按钮状态）
+    OutsideHongKongQRPaymentOnButtonElement: //XCUIElementTypeApplication[@name="livi 理慧银行"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeSwitch[contains(@value, 1)]
+
+    #二维码支付界面-二维码设定-香港境外二維碼消費-确定开启按钮
+    OutsideHongKongQRPaymentOnButtConfirmElement:
+      SimplifiedChinese: //*[contains(@name, '确定')]
+      TraditionalChinese: //*[contains(@name, '確定')]
+      English: //*[contains(@name, 'Confirm')]
+
+    #二维码支付界面-二维码设定-本地每日二維碼提款限額--------------------------------
+    LocalDailyQRCashLimitElement:
+      SimplifiedChinese: //*[contains(@name, '本地每日二维码提款限额')]
+      TraditionalChinese: //*[contains(@name, '本地每日二維碼提款限額')]
+      English: //*[contains(@name, 'Local Daily QR Cash Limit')]
+
+    #二维码支付界面-二维码设定-本地每日二維碼提款限額-金额输入框
+    LocalDailyAmountInputBoxElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeTextField
+
+    #二维码支付界面-二维码设定-本地每日二維碼提款限額-确定按钮
+    LocalDailyConfirmButtonElement:
+      SimplifiedChinese: //*[contains(@name, '确定')]
+      TraditionalChinese: //*[contains(@name, '確定')]
+      English: //*[contains(@name, 'Confirm')]
+
+
+    #二维码支付界面-二维码设定-香港境外二維碼提款--------------------------------
+    OutsideHongKongQRCashtElement:
+      SimplifiedChinese: //*[contains(@name, '香港境外二维码提款')]
+      TraditionalChinese: //*[contains(@name, '香港境外二維碼提款')]
+      English: //*[contains(@name, 'Outside Hong Kong QR Cash')]
+
+    #二维码支付界面-二维码设定-香港境外二維碼提款（指的是按钮状态）
+    OutsideHongKongQRCashtOffButtonElement: //XCUIElementTypeSwitch[@value="0"]
+
+    #二维码支付界面-二维码设定-香港境外二維碼提款-金额输入框
+    OutsideHongKongQRCashOffInputBoxElement: //XCUIElementTypeTextField[@value="0.00"]
+
+    #二维码支付界面-二维码设定-香港境外二維碼提款-关闭时的弹框确定按钮
+    OutsideHongKongQRCashOffConfirmButtConfirmElement:
+      SimplifiedChinese: //*[contains(@name, '确定')]
+      TraditionalChinese: //*[contains(@name, '確定')]
+      English: //*[contains(@name, 'Confirm')]
+
+    #二维码支付界面-二维码设定-香港境外二維碼提款（指的是按钮状态）
+    OutsideHongKongQRCashOnButtonElement: //XCUIElementTypeSwitch[@value="1"]
+
+    #二维码支付界面-二维码设定-香港境外二維碼提款-确定开启按钮
+    OutsideHongKongQRCashOnButtConfirmElement:
+      SimplifiedChinese: //*[contains(@name, '确定')]
+      TraditionalChinese: //*[contains(@name, '確定')]
+      English: //*[contains(@name, 'Confirm')]
+
+    #二维码支付界面-摇一摇-----------------
+    ShakeShakeElement:
+      SimplifiedChinese: //*[contains(@name, '摇一摇')]
+      TraditionalChinese: //*[contains(@name, '搖一搖')]
+      English: //*[contains(@name, 'Shake Shake')]
+
+    ShakeShakePageElement:
+      SimplifiedChinese: //*[contains(@name, '摇一摇')]
+      TraditionalChinese: //*[contains(@name, '搖一搖')]
+      English: //*[contains(@name, 'Shake Shake')]
+
+    #二维码支付界面-交易纪录
+    QRTransactionHistoryElement:
+      SimplifiedChinese: //*[contains(@name, '交易纪录')]
+      TraditionalChinese: //*[contains(@name, '交易紀錄')]
+      English: //*[contains(@name, 'Transaction History')]
+
+    #二维码支付界面-交易纪录页面的判断
+    QRTransactionHistoryPageElement:
+      SimplifiedChinese: //*[contains(@name, '交易纪录')]
+      TraditionalChinese: //*[contains(@name, '交易紀錄')]
+      English: //*[contains(@name, 'Transaction History')]
+
+    #二维码支付界面-接受银联二维码商户
+    UnionPayQRMerchantsElement:
+      SimplifiedChinese: //*[contains(@name, '接受银联二维码商户')]
+      TraditionalChinese: //*[contains(@name, '接受銀聯二維碼商戶')]
+      English: //*[contains(@name, 'UnionPay QR Merchants')]
+
+    #二维码支付界面-接受银联二维码商户-前往按钮
+    UnionPayQRMerchantsContinueButtonElement:
+      SimplifiedChinese: //*/XCUIElementTypeButton[contains(@name, '前往')]
+      TraditionalChinese: //*/XCUIElementTypeButton[contains(@name, '前往')]
+      English: //*/XCUIElementTypeButton[contains(@name, 'Continue')]
+
+    #二维码支付界面-接受银联二维码商户-判断是否有银联LOG
+    UnionPayQRMerchantslogoElement: //XCUIElementTypeOther/XCUIElementTypeLink[1]/XCUIElementTypeImage
+
+    #二维码支付界面-绑定电子钱包
+    QRLinkDigitalWalletElement:
+      SimplifiedChinese: //*[contains(@name, '绑定电子钱包')]
+      TraditionalChinese: //*[contains(@name, '綁定電子錢包')]
+      English: //*[contains(@name, 'Link Digital Wallet')]
+
+    #二维码支付界面-绑定电子钱包-绑定页面的+
+    QRLinkDigitalWalletplusButtonElement: //XCUIElementTypeButton[@name="manage expand"]
+
+    #二维码支付界面-绑定电子钱包-绑定页面的+ 复选框
+    QRLinkDigitalWalletCheckBoxElement: //XCUIElementTypeButton[@name="scanTnc selectBtnInactive"]
+
+    #二维码支付界面-绑定电子钱包-我已阅读并同意
+    QRLinkDigitalWalletAgreedButtonElement:
+      SimplifiedChinese: //*[contains(@name, '我已阅读并同意')]
+      TraditionalChinese: //*[contains(@name, '我已閱讀並同意')]
+      English: //*[contains(@name, 'I have read and agreed')]
+
+     #二维码支付界面-绑定电子钱包-确定按钮
+    QRLinkDigitalWalletConfirmButtonElementt:
+      SimplifiedChinese: //*[contains(@name, '确定')]
+      TraditionalChinese: //*[contains(@name, '確定')]
+      English: //*[contains(@name, 'Confirm')]
+
+    #二维码支付界面-绑定电子钱包-添加卡片
+    QRLinkDigitalWalletAddCardButtonElement:
+      SimplifiedChinese: //*[contains(@name, '添加卡片')]
+      TraditionalChinese: //*[contains(@name, '添加卡片')]
+      English: //*[contains(@name, '添加卡片')]
+
+    #二维码支付界面-停用二维码支付
+    SuspendQRPaymentElement:
+      SimplifiedChinese: //*[contains(@name, '停用二维码支付')]
+      TraditionalChinese: //*[contains(@name, '停用二維碼消費')]
+      English: //*[contains(@name, 'Suspend QR Payment')]
+
+    #二维码支付界面-停用二维码支付--暂停
+    SuspendQRPaymentYesButtonElement:
+      SimplifiedChinese: //XCUIElementTypeButton[@name="暂停"]
+      TraditionalChinese: //XCUIElementTypeButton[@name="暫停"]
+      English: //XCUIElementTypeButton[@name="Yes"]
+
+    #二维码支付界面-启用二维码支付--去启用------------
+    ActivateQRPaymentElement:
+      SimplifiedChinese: //*[contains(@name, '启用二维码支付')]
+      TraditionalChinese: //*[contains(@name, '啟用二維碼消費')]
+      English: //*[contains(@name, 'Activate QR Payment')]

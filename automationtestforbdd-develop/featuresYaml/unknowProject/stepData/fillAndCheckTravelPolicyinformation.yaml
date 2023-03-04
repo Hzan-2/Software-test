@@ -1,0 +1,617 @@
+fillAndCheckTravelPolicyinformation:
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${TravelNowPlusElement}
+    TestData:
+    Remarks: 选择旅游计划
+
+  -
+    Action: sleep
+    Element:
+    TestData: 2
+    Remarks: 等待2
+
+  -
+    Action: slide
+    Element: bottom
+    TestData:
+    Remarks: 滑至底部
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${TravelpageNextElement}
+    TestData:
+    Remarks: 点击下一步2
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${TravelpageNextElement}
+    TestData:
+    Remarks: 点击下一步3
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+  -
+    Action: input
+    Element: ${InsuranceTravelPage}${insuredPersonNameElement}
+    TestData: ddddd
+    Remarks: 输入人名
+
+  -
+    Action: input
+    Element: ${InsuranceTravelPage}${insuredPersonHKIDelement}
+    TestData: A1111119
+    Remarks: 输入身份证号
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${insuredPersonDateOfBirthElement}
+    TestData:
+    Remarks: 点击生日
+
+  -
+    Action: sleep
+    Element:
+    TestData: 3
+    Remarks: 等待3
+
+  -
+    Action: get_text
+    Element: $${var}
+    TestData: 1
+    Remarks: 循环初始赋值
+
+  -
+    Action: get_text
+    Element: $${yearvalueAim}
+    TestData: 2003
+    Remarks: 赋值目标元素
+
+  -
+    Action: loop
+    Element: $${var}
+    TestData: 2
+    Remarks: 判断是否继续滑动
+    branchProcess:
+      -
+        Action: get_text
+        Element: ${InsuranceTravelPage}${insuredPersonDateOfBirthYearElement01}
+        TestData: $${yearvalue01}
+        Remarks: 赋值判断元素01
+
+      -
+        Action: compare
+        Element:
+        TestData: $${yearvalue01} == $${yearvalueAim}
+        Remarks: 判断01元素是否正确
+        ifbranchProcess:
+          -
+            Action: click
+            Element: ${InsuranceTravelPage}${insuredPersonDateOfBirthYearElement01}
+            TestData:
+            Remarks: 点击元素
+
+          -
+            Action: get_text
+            Element: $${var}
+            TestData: 2
+            Remarks: 点击元素
+
+        elsebranchProcess:
+
+          -
+            Action: slide_custom
+            Element:
+            TestData: '[230,1750] -> [230,1890]'
+            Remarks: 滑动生日-年
+
+          -
+            Action: click
+            Element: ${InsuranceTravelPage}${insuredPersonDateOfBirthCompleteElement}
+            TestData:
+            Remarks: 点击生日确定
+
+          -
+            Action: sleep
+            Element:
+            TestData: 2
+            Remarks: 等待2
+
+          -
+            Action: click
+            Element: ${InsuranceTravelPage}${insuredPersonDateOfBirthElement}
+            TestData:
+            Remarks: 点击生日
+
+          -
+            Action: sleep
+            Element:
+            TestData: 3
+            Remarks: 等待3
+
+  -
+    Action: get_text
+    Element: $${var}
+    TestData: 1
+    Remarks: 循环初始赋值
+
+  -
+    Action: get_text
+    Element: $${monthvalueAim}
+    TestData: '07'
+    Remarks: 赋值目标元素
+
+  -
+    Action: loop
+    Element: $${var}
+    TestData: 2
+    Remarks: 判断是否继续滑动
+    branchProcess:
+      -
+        Action: get_text
+        Element: ${InsuranceTravelPage}${insuredPersonDateOfBirthMonthElement01}
+        TestData: $${monthvalue01}
+        Remarks: 赋值判断元素01
+
+      -
+        Action: compare
+        Element:
+        TestData: $${monthvalue01} == $${monthvalueAim}
+        Remarks: 判断01元素是否正确
+        ifbranchProcess:
+          -
+            Action: click
+            Element: ${InsuranceTravelPage}${insuredPersonDateOfBirthMonthElement01}
+            TestData:
+            Remarks: 点击元素
+
+          -
+            Action: get_text
+            Element: $${var}
+            TestData: 2
+            Remarks: 点击元素
+
+        elsebranchProcess:
+
+          -
+            Action: slide_custom
+            Element:
+            TestData: '[540,1750] -> [540,1890]'
+            Remarks: 滑动生日-月
+
+          -
+            Action: click
+            Element: ${InsuranceTravelPage}${insuredPersonDateOfBirthCompleteElement}
+            TestData:
+            Remarks: 点击生日确定
+
+          -
+            Action: sleep
+            Element:
+            TestData: 2
+            Remarks: 等待2
+
+          -
+            Action: click
+            Element: ${InsuranceTravelPage}${insuredPersonDateOfBirthElement}
+            TestData:
+            Remarks: 点击生日
+
+          -
+            Action: sleep
+            Element:
+            TestData: 3
+            Remarks: 等待3
+
+  -
+    Action: get_text
+    Element: $${var}
+    TestData: 1
+    Remarks: 循环初始赋值
+
+  -
+    Action: get_text
+    Element: $${dayvalueAim}
+    TestData: 20
+    Remarks: 赋值目标元素
+
+  -
+    Action: loop
+    Element: $${var}
+    TestData: 2
+    Remarks: 判断是否继续滑动
+    branchProcess:
+      -
+        Action: get_text
+        Element: ${InsuranceTravelPage}${insuredPersonDateOfBirthDayElement01}
+        TestData: $${dayvalue01}
+        Remarks: 赋值判断元素01
+
+      -
+        Action: compare
+        Element:
+        TestData: $${dayvalue01} == $${dayvalueAim}
+        Remarks: 判断01元素是否正确
+        ifbranchProcess:
+          -
+            Action: click
+            Element: ${InsuranceTravelPage}${insuredPersonDateOfBirthDayElement01}
+            TestData:
+            Remarks: 点击元素
+
+          -
+            Action: get_text
+            Element: $${var}
+            TestData: 2
+            Remarks: 点击元素
+
+        elsebranchProcess:
+
+          -
+            Action: slide_custom
+            Element:
+            TestData: '[850,1750] -> [850,1890]'
+            Remarks: 滑动生日-月
+
+          -
+            Action: click
+            Element: ${InsuranceTravelPage}${insuredPersonDateOfBirthCompleteElement}
+            TestData:
+            Remarks: 点击生日确定
+
+          -
+            Action: sleep
+            Element:
+            TestData: 2
+            Remarks: 等待2
+
+          -
+            Action: click
+            Element: ${InsuranceTravelPage}${insuredPersonDateOfBirthElement}
+            TestData:
+            Remarks: 点击生日
+
+          -
+            Action: sleep
+            Element:
+            TestData: 3
+            Remarks: 等待3
+
+  -
+    Action: sleep
+    Element:
+    TestData: 1
+    Remarks: 等待1
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${insuredPersonDateOfBirthCompleteElement}
+    TestData:
+    Remarks: 点击生日确定
+
+  -
+    Action: sleep
+    Element:
+    TestData: 3
+    Remarks: 等待3
+
+  -
+    Action: slide_space
+    Element: up
+    TestData: 0.9 -> 0.1
+    Remarks: 向上滑动
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${TravelpageNextElement}
+    TestData:
+    Remarks: 点击下一步4
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${policyInformationEditElement}
+    TestData:
+    Remarks: 点击保单信息编辑
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+  -
+    Action: get
+    Element: ${InsuranceTravelPage}${assertPolicyInformationPageElement}
+    TestData: ['Select plan type','选择计划','選擇計劃']
+    Remarks: 断言返回投保信息页
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${policyInformationBackElement}
+    TestData:
+    Remarks: 点击保单信息页返回
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+  -
+    Action: get_text
+    Element: $${var}
+    TestData: 1
+    Remarks: 建立循环初始值
+
+  -
+    Action: loop
+    Element: $${var}
+    TestData: 2
+    Remarks: 循环判断
+    branchProcess:
+      -
+        Action: judge,branch
+        Element: ${InsuranceTravelPage}${insuredPersonInformationEditElement}
+        TestData:
+        Remarks: 判断受保人编辑
+        ifbranchProcess:
+          -
+            Action: click
+            Element: ${InsuranceTravelPage}${insuredPersonInformationEditElement}
+            TestData:
+            Remarks: 点击受保人编辑
+
+          -
+            Action: get_text
+            Element: $${var}
+            TestData: 2
+            Remarks: 跳出循环赋值
+
+        elsebranchProcess:
+          -
+            Action: slide_space
+            Element: up
+            TestData: 0.6 -> 0.5
+            Remarks: 向上滑动
+
+          - Action: sleep
+            Element:
+            TestData: 2
+            Remarks: 等待2
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+  -
+    Action: get
+    Element: ${InsuranceTravelPage}${assertInsuredPersonInformationPageElement}
+    TestData: ['Insured Person information','受保人资料','受保人資料']
+    Remarks: 断言返回投保信息页
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${addingInsuredPersonInformationElement}
+    TestData:
+    Remarks: 点击添加投保人
+
+  -
+    Action: get
+    Element: ${InsuranceTravelPage}${assertRecentInsuredPersonsElement}
+    TestData: ddddd
+    Remarks: 断言受保人信息保存
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${importInsuredPersonInformationElement02}
+    TestData:
+    Remarks: 点击加载投保人
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${policyInformationBackElement}
+    TestData:
+    Remarks: 点击保单信息页返回
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+  -
+    Action: slide
+    Element: bottom
+    TestData:
+    Remarks: 滑动至底部
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${policyReselectElement}
+    TestData:
+    Remarks: 点击重新选择
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+  -
+    Action: slide
+    Element: bottom
+    TestData:
+    Remarks: 滑动至底部
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${TravelpageNextElement}
+    TestData:
+    Remarks: 点击下一步1
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${acceptEmployeeDiscountElement}
+    TestData:
+    Remarks: 点击下一步1
+
+  -
+    Action: sleep
+    Element:
+    TestData: 3
+    Remarks: 等待3
+
+  -
+    Action: slide
+    Element: bottom
+    TestData:
+    Remarks: 滑至底部
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${TravelpageNextElement}
+    TestData:
+    Remarks: 点击下一步2
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${TravelpageNextElement}
+    TestData:
+    Remarks: 点击下一步3
+
+  -
+    Action: slide_space
+    Element: up
+    TestData: 0.9 -> 0.1
+    Remarks: 向上滑动
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${TravelpageNextElement}
+    TestData:
+    Remarks: 点击下一步4
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+  -
+    Action: slide
+    Element: bottom
+    TestData:
+    Remarks: 滑动至底部
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${understandAndAgreeElement}
+    TestData:
+    Remarks: 点击同意协议
+
+  -
+    Action: sleep
+    Element:
+    TestData: 3
+    Remarks: 等待3
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${sureFileButtonElement}
+    TestData:
+    Remarks: 点击确定
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+  -
+    Action: slide_space
+    Element: up
+    TestData: 0.9 -> 0.1
+    Remarks: 向上滑动
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${proceedToPayElement}
+    TestData:
+    Remarks: 点击付款
+
+  -
+    Action: sleep
+    Element:
+    TestData: 2
+    Remarks: 等待2
+
+  -
+    Action: get
+    Element: ${InsuranceTravelPage}${assertNotEnoughToPayElement}
+    TestData: ['Your account balance is insufficient, please add money with linking a bank account or FPS.','你的余额不足，请绑定银行或使用FPS完成增值。','你的餘額不足，請綁定銀行或使用FPS完成增值。']
+    Remarks: 断言余额不足
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${addMoneyButtonElement}
+    TestData:
+    Remarks: 点击增值
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+  -
+    Action: get
+    Element: ${InsuranceTravelPage}${assertPageElement}
+    TestData: ['Add Money','存入','存入']
+    Remarks: 断言余额不足
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5

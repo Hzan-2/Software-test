@@ -1,0 +1,107 @@
+InsuranceTravelPage:
+  android:
+#保险首页
+    TravelbannerElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[2]
+#    //android.widget.HorizontalScrollView[1]/android.widget.ImageView[1]
+    endownmentbannerElement: //android.widget.HorizontalScrollView[1]/android.widget.ImageView[2]
+    InsurancelistElement:
+      SimplifiedChinese: //*[contains(@content-desc, '我的保单')]
+      TraditionalChinese: //*[contains(@content-desc, '我的保單')]
+      English: //*[contains(@content-desc, 'My Policy')]
+    InsurancelistDetailElement:
+      SimplifiedChinese: //*[contains(@content-desc, '查看详情')]
+      TraditionalChinese: //*[contains(@content-desc, '查看詳情')]
+      English: //*[contains(@content-desc, 'View Details')]
+#    预填保单登录
+    InsuranceLoginElement: //android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.widget.Button
+
+  #目的地
+    TravelToAsiaArea: //android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.view.View[5]
+    TravelToWorldwideArea: //android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.view.View[6]
+  #旅游信息页
+    pendingPolicyRestartElement: //*[contains(@resource-id, 'fixedRoot')]/android.view.View[3]/android.view.View[2]
+    TravelTimeInsureElement:
+      SimplifiedChinese: //*[contains(@text, '确定')]
+      TraditionalChinese: //*[contains(@text, '確定')]
+      English: //*[contains(@text, 'Confirm')]
+    TravellerFamilyButtonElement: //android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[6]
+    TravelScopeOfCoverageElement:
+      SimplifiedChinese: //*[contains(@text, '详细保障范围')]
+      TraditionalChinese: //*[contains(@text, '詳細保障範圍')]
+      English: //*[contains(@text, 'Scope of Coverage')]
+    TravelFamilyCouplepairElement: //android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[7]
+    TravelInfividualElement: //*[contains(@resource-id, 'fixedRoot')]/android.view.View/android.view.View[7]
+    TravelAddAdultPersonElement: //*[contains(@resource-id, 'fixedRoot')]/android.view.View/android.widget.ListView[1]/android.view.View[1]/android.view.View[2]
+    assertTravelpageFamilyCouplepairElement:
+      SimplifiedChinese: //*[contains(@text, '夫妇二人')]
+      TraditionalChinese: //*[contains(@text, '夫婦二人')]
+      English: //*[contains(@text, 'Couple (pair)')]
+    assertTravelpagetotalpersonElement:
+      SimplifiedChinese: //*[contains(@text, '总共 2 位受保人')]
+      TraditionalChinese: //*[contains(@text, '總共 2 位受保人')]
+      English: //*[contains(@text, 'Total 2 Insured Person(s)')]
+    TravelpageNextElement:
+      SimplifiedChinese: //*[contains(@text, '下一步')]
+      TraditionalChinese: //*[contains(@text, '下一步')]
+      English: //*[contains(@text, 'Next')]
+    gainEmployeeDiscountInformationElement: //*[contains(@resource-id, 'mask')]/android.view.View[1]
+    acceptEmployeeDiscountElement: //*[contains(@resource-id, 'mask')]/android.view.View[4]
+    assertgainEmployeeDiscountInformationElement: //*[contains(@resource-id, 'fixedRoot')]/android.view.View/android.widget.TextView
+    TravelNowPlusElement: //*[contains(@resource-id, 'fixedRoot')]/android.view.View/android.view.View[2]
+    TravelNowLiteElement: //*[contains(@resource-id, 'fixedRoot')]/android.view.View/android.view.View[3]
+    PersonInformationMenuElement: //android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView
+    savePendingPolicyElement: //android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[*]/android.view.View/android.widget.ListView/android.view.View[1]
+    continuePendingPolicyElement: //android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[*]/android.widget.Button
+    insuredPersonNameElement: //*[contains(@resource-id, 'fixedRoot')]/android.view.View/android.widget.ListView/android.view.View[1]/android.view.View/android.view.View[1]/android.view.View[2]/android.widget.EditText
+    insuredPersonHKIDelement: //*[contains(@resource-id, 'fixedRoot')]/android.view.View/android.widget.ListView/android.view.View[2]/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText
+    insuredPersonDateOfBirthElement: //*[contains(@resource-id, 'fixedRoot')]/android.view.View/android.widget.ListView/android.view.View[3]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.widget.EditText
+    insuredPersonDateOfBirthYearElement01: //android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.view.View/android.view.View[2]/android.view.View[1]/android.widget.ListView/android.view.View[6]
+    insuredPersonDateOfBirthYearElement02: //android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.view.View/android.view.View[2]/android.view.View[1]/android.widget.ListView/android.view.View[5]
+    insuredPersonDateOfBirthMonthElement01: //android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.view.View/android.view.View[3]/android.view.View[1]/android.widget.ListView/android.view.View[6]
+    insuredPersonDateOfBirthMonthElement02: //android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.view.View/android.view.View[3]/android.view.View[1]/android.widget.ListView/android.view.View[5]
+    insuredPersonDateOfBirthDayElement01: //android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.view.View/android.view.View[4]/android.view.View[1]/android.widget.ListView/android.view.View[6]
+    insuredPersonDateOfBirthDayElement02: //android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.view.View/android.view.View[4]/android.view.View[1]/android.widget.ListView/android.view.View[5]
+    insuredPersonDateOfBirthCompleteElement: //*[contains(@resource-id, 'fixedRoot')]/android.view.View/android.view.View[3]/android.view.View/android.view.View[1]/android.view.View[2]
+    insuredPersonDateOfBirthBackElement: //*[contains(@resource-id, 'fixedRoot')]/android.view.View/android.view.View[3]/android.view.View/android.view.View[1]/android.view.View[1]
+    addingInsuredPersonInformationElement: //android.widget.ListView/android.view.View[1]/android.view.View/android.view.View[2]/android.widget.Image
+    importInsuredPersonInformationElement: //*[contains(@resource-id, 'fixedRoot')]/android.view.View/android.view.View[5]/android.view.View/android.view.View/android.widget.ListView/android.view.View[1]
+    importInsuredPersonInformationElement02: //*[contains(@resource-id, 'fixedRoot')]/android.view.View/android.view.View[3]/android.view.View/android.view.View/android.widget.ListView/android.view.View[1]
+    assertRecentInsuredPersonsElement: //*[contains(@text, 'ddddd')]
+    policyInformationEditElement: //*[contains(@resource-id, 'fixedRoot')]/android.view.View/android.view.View[3]/android.view.View
+    assertPolicyInformationPageElement: //*[contains(@resource-id, 'fixedRoot')]/android.view.View/android.view.View[1]
+    policyInformationBackElement: //android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]
+    insuredPersonInformationEditElement: //android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[4]/android.view.View
+    assertInsuredPersonInformationPageElement: //*[contains(@resource-id, 'fixedRoot')]/android.view.View/android.view.View[1]
+    insuredPersonInformationBackElement: //android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]
+    policyReselectElement:
+      SimplifiedChinese: //*[contains(@text, '重新选择')]
+      TraditionalChinese: //*[contains(@text, '重新選擇')]
+      English: //*[contains(@text, 'Reselect')]
+    understandAndAgreeElement: //android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[*]/android.widget.CheckBox
+    sureFileButtonElement: //android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[*]/android.widget.Button
+    assertNotEnoughToPayElement: //android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View[2]
+    addMoneyButtonElement: //android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]
+    assertPageElement: //android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]
+    proceedToPayElement: //android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[*]/android.widget.Button
+    assertseccussfullElement: //android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[1]
+    backtohomepageElement:
+      SimplifiedChinese: //*[contains(@text, '返回首页')]
+      TraditionalChinese: //*[contains(@text, '返回首頁')]
+      English: //*[contains(@text, 'Home')]
+
+    #保单详情页
+    selectTravelPolicyElement: //*[contains(@resource-id, 'fixedRoot')]/android.view.View[3]
+    policyCategoryMenuElement: //*[contains(@resource-id, 'fixedRoot')]/android.widget.Image
+    selectInForcePolicyElement: //android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[*]/android.view.View/android.view.View[4]
+    selectPolicyRecordlineElement: //*[contains(@resource-id, 'fixedRoot')]/android.view.View[5]
+    assertApplicantInformationElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View
+#    //*[contains(@resource-id, 'fixedRoot')]/android.view.View[2]/android.view.View[1]/android.view.View
+    assertPolicyInformationElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.widget.ListView[1]/android.view.View[8]/android.view.View
+#    //*[contains(@resource-id, 'fixedRoot')]/android.view.View[2]/android.view.View[2]/android.view.View
+    assertProductNameElement: //*[contains(@resource-id, 'sharePlan')]/android.widget.ListView/android.view.View[1]/android.view.View
+    assertPersonInformationElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View
+#    //*[contains(@resource-id, 'sharePlan')]/android.view.View
+    sharePlanElement: //*[contains(@resource-id, 'fixedRoot')]/android.view.View/android.widget.ListView/android.view.View[2]/android.widget.TextView
+    shareToNoteElement: //androidx.viewpager.widget.ViewPager/android.widget.GridView/android.widget.LinearLayout[7]
+    assertShareToNoteElement: //android.view.View[@content-desc="图片笔记"]
+    shareToNoteBackElement: //*[contains(@resource-id, 'com.miui.notes:id/home')]

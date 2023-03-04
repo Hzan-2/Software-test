@@ -1,0 +1,54 @@
+#绑定银行账户元素--by yang.yang
+LinkedBankAccountsElementPage:
+  android:
+    #标题
+    #绑定银行账户
+    LinkedBankAccountsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '绑定银行账户')]
+      TraditionalChinese: //*[contains(@content-desc, '綁定銀行戶口')]
+      English: //*[contains(@content-desc, 'Linked Bank Accounts')]
+
+    #银行账户删除按钮--第一笔数据的
+    DeleteAccountElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]
+    #删除银行账户-确定按钮
+    DeleteAccountConfirmElement:
+      SimplifiedChinese: //android.view.View[(@text='确定')]
+      TraditionalChinese: //android.view.View[(@text='確定')]
+      English: //android.view.View[(@text='Confirm')]
+    #删除银行账户-返回按钮
+    DeleteAccountBackElement:
+      SimplifiedChinese: //*[contains(@text, '返回')]
+      TraditionalChinese: //*[contains(@text, '返回')]
+      English: //*[contains(@text, 'Back')]
+    #删除银行账户-完成按钮
+    DeleteAccountDoneElement:
+      SimplifiedChinese: //*[contains(@text, '完成')]
+      TraditionalChinese: //*[contains(@text, '完成')]
+      English: //*[contains(@text, 'Done')]
+
+  ios:
+    #标题
+    #绑定银行账户
+    LinkedBankAccountsElement:
+      SimplifiedChinese: //*[contains(@name, '绑定银行账户')]
+      TraditionalChinese: //*[contains(@name, '綁定銀行戶口')]
+      English: //*[contains(@name, 'Linked Bank Accounts')]
+
+    #银行账户删除按钮--第一笔数据的
+    DeleteAccountElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[3]
+    #删除银行账户-确定按钮
+    DeleteAccountConfirmElement:
+      SimplifiedChinese: //*[(@name='确定')]
+      TraditionalChinese: //*[(@name='確定')]
+      English: //*[(@name='Confirm')]
+    #删除银行账户-返回按钮
+    DeleteAccountBackElement:
+      SimplifiedChinese: //*[contains(@name, '返回')]
+      TraditionalChinese: //*[contains(@name, '返回')]
+      English: //*[contains(@name, 'Back')]
+    #删除银行账户-完成按钮
+    DeleteAccountDoneElement:
+      SimplifiedChinese: //*[contains(@name, '完成')]
+      TraditionalChinese: //*[contains(@name, '完成')]
+      English: //*[contains(@name, 'Done')]
+

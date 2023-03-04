@@ -1,0 +1,137 @@
+#终止银行服务页面
+AppServiceTermination:
+  android:
+    #选择PayLater终止服务
+    PayLaterButtonElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[5]/android.widget.Button
+    #判断是否存在终止须知
+    ServiceTerminationElement:
+      SimplifiedChinese: //*[contains(@text, '终止livi PayLater前须')]
+      TraditionalChinese: //*[contains(@text, '終止livi PayLater前須')]
+      English: //*[contains(@text, 'Before you terminate livi PayLater')]
+    #选择暂停PayLaterMastercard
+    PayLaterMastercardElement:
+      SimplifiedChinese: //*[contains(@text, '暂停 livi PayLater Mastercard')]
+      TraditionalChinese: //*[contains(@text, '暂停 livi PayLater Mastercard')]
+      English: //*[contains(@text, 'Suspend livi PayLater Mastercard')]
+#    /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[3]/android.widget.Image
+    #选择终止原因
+    TerminataReasonButtonElement:
+      SimplifiedChinese: //*[contains(@text, '可以告诉我们原因吗?')]
+      TraditionalChinese: //*[contains(@text, '可以告訴我們原因嗎?')]
+      English: //*[contains(@text, 'Could you tell us why?')]
+    #勾选协议4
+    AgreementButtonElement4: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[5]/android.view.View[1]/android.widget.Image
+    #触发继续按钮
+    ContinueOpenButtonElement1:
+      SimplifiedChinese: //*[contains(@text, '继续')]
+      TraditionalChinese: //*[contains(@text, '繼續')]
+      English: //*[contains(@text, 'Continue')]
+    #触发继续按钮
+    ContinueOpenButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '继续')]
+      TraditionalChinese: //*[contains(@content-desc, '繼續')]
+      English: //*[contains(@content-desc, 'Continue')]
+    #录入身份证
+    EnterYoNurIDumberElemnet:
+      SimplifiedChinese: //*[contains(@text, '请输入身份证号码')]
+      TraditionalChinese: //*[contains(@text, '請輸入身份證號碼')]
+      English: //*[contains(@text, 'Enter your ID number')]
+    #终止页面，点击好的按钮
+    DoneButtonElement2:
+      SimplifiedChinese: //*[contains(@content-desc, '好的')]
+      TraditionalChinese: //*[contains(@content-desc, '好')]
+      English: //*[contains(@content-desc, 'OK')]
+    #终止页面，点击好的按钮
+    DoneButtonElement3:
+      SimplifiedChinese: //*[contains(@text, '好的')]
+      TraditionalChinese: //*[contains(@text, '好')]
+      English: //*[contains(@text, 'OK')]
+    #选择终止原因列表的元素1
+    TerminateReasonListElement1:
+      SimplifiedChinese: //*[contains(@text, '不需要分期贷款产品')]
+      TraditionalChinese: //*[contains(@text, '不需要分期貸款產品')]
+      English: //*[contains(@text, 'No need for an instalment product')]
+    #选择终止原因列表的元素2
+    TerminateReasonListElement2:
+      SimplifiedChinese: //*[contains(@text, '手续费太高')]
+      TraditionalChinese: //*[contains(@text, '手續費太高')]
+      English: //*[contains(@text, 'The handling fee is too high')]
+    #选择终止原因列表的元素3
+    TerminateReasonListElement3:
+      SimplifiedChinese: //*[contains(@text, '不满意信用限额')]
+      TraditionalChinese: //*[contains(@text, '不滿意信用限額')]
+      English: //*[contains(@text, 'Not satisfied with credit limit')]
+    TerminatedServiceElement:
+      SimplifiedChinese: //*[contains(@text, '已终止服务')]
+      TraditionalChinese: //*[contains(@text, '已終止服務')]
+      English: //*[contains(@text, 'Service has been terminated')]
+
+
+
+
+
+
+  ios:
+    #选择PayLater终止服务
+    PayLaterButtonElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeButton
+    #判断是否存在终止须知
+    ServiceTerminationElement:
+      SimplifiedChinese: //*[contains(@name, '终止livi PayLater前须')]
+      TraditionalChinese: //*[contains(@name, '終止livi PayLater前須')]
+      English: //*[contains(@name, 'Before you terminate livi PayLater')]
+    #选择暂停PayLaterMastercard
+    PayLaterMastercardElement:
+      SimplifiedChinese: //*[@name='暂停 livi PayLater Mastercard']
+      TraditionalChinese: //*[@name='暂停 livi PayLater Mastercard']
+      English: //*[@name='Suspend livi PayLater Mastercard']
+    #选择终止原因
+    TerminataReasonButtonElement:
+      SimplifiedChinese: //*[contains(@name, '可以告诉我们原因吗?')]
+      TraditionalChinese: //*[contains(@name, '可以告訴我們原因嗎?')]
+      English: //*[contains(@name, 'Could you tell us why?')]
+    #选择终止原因列表的元素1
+    TerminateReasonListElement1:
+      SimplifiedChinese: //XCUIElementTypeStaticText[@name="不需要分期贷款产品"]
+      TraditionalChinese: //XCUIElementTypeStaticText[@name="不需要分期貸款產品"]
+      English: //XCUIElementTypeStaticText[@name="No need for an instalment product"]
+    #选择终止原因列表的元素2
+    TerminateReasonListElement2:
+      SimplifiedChinese: //XCUIElementTypeStaticText[@name="手续费太高"]
+      TraditionalChinese: //XCUIElementTypeStaticText[@name="手續費太高"]
+      English: //XCUIElementTypeStaticText[@name="The handling fee is too high"]
+    #选择终止原因列表的元素3
+    TerminateReasonListElement3:
+      SimplifiedChinese: //XCUIElementTypeStaticText[@name="不满意信用限额"]
+      TraditionalChinese: //XCUIElementTypeStaticText[@name="不滿意信用限額"]
+      English: //XCUIElementTypeStaticText[@name="Not satisfied with credit limit"]
+    #勾选协议4
+    AgreementButtonElement4: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[6]/XCUIElementTypeOther[1]/XCUIElementTypeImage
+    #触发继续按钮
+    ContinueOpenButtonElement1:
+      SimplifiedChinese: //*[contains(@name, '继续')]
+      TraditionalChinese: //*[contains(@name, '繼續')]
+      English: //*[contains(@name, 'Continue')]
+    #触发继续按钮
+    ContinueOpenButtonElement:
+      SimplifiedChinese: //*[contains(@name, '继续')]
+      TraditionalChinese: //*[contains(@name, '繼續')]
+      English: //*[contains(@name, 'Contiune')]
+    #终止页面，点击好的按钮
+    DoneButtonElement2:
+      SimplifiedChinese: //*[contains(@name, '好的')]
+      TraditionalChinese: //*[contains(@name, '好')]
+      English: //*[contains(@name, 'OK')]
+    #终止页面，点击好的按钮
+    DoneButtonElement3:
+      SimplifiedChinese: //*[contains(@name, '好的')]
+      TraditionalChinese: //*[contains(@name, '好')]
+      English: //*[contains(@name, 'OK')]
+    TerminatedServiceElement:
+      SimplifiedChinese: //*[contains(@name, '已终止服务')]
+      TraditionalChinese: //*[contains(@name, '已終止服務')]
+      English: //*[contains(@name, 'Service has been terminated')]
+    #录入身份证
+    EnterYoNurIDumberElemnet:
+      SimplifiedChinese: //*[contains(@name, '请输入身份证号码')]
+      TraditionalChinese: //*[contains(@name, '請輸入身份證號碼')]
+      English: //*[contains(@name, 'Enter your ID number')]

@@ -1,0 +1,417 @@
+#livisava MC卡界面元素
+PayMentPortalPage:
+#登录前的页面
+  #登录界面前的提示页面的高级
+  SeniorLinkLoadPage: /html/body/div/div[2]/button[3]
+  ##登录界面前的提示页面的链接
+  URLLinkLoadPage: /html/body/div/div[3]/p[2]/a
+
+#登录页面
+  #账号输入框
+  AccountNumberInputBox: //*[@id='loginid']
+  #密码输入框
+  PasswordInputBox: //*[@id='password']
+  #验证码输入框
+  VerificationCodeInputBox: //*[@id="login"]/div[3]/input
+  #未知错异常后的验证码输入框
+  VerificationCodeInputBox1: //*[@id="login"]/div[4]/input
+
+  #登录按钮
+  LoginButton: //*[@id='sub']
+  # 系统未知异常
+  SystemUnknownException: //span[text()='系统未知异常']
+
+#partal首页元素
+  #首页登录账号显示
+  LoginAccountDisplay: /html/body/div[1]/div/section/section/header/div/div[2]/span/span[2]
+  #登录后的LOG显示
+  LoginLogo: //*[@id="logo"]/a/img
+
+#------------虚拟卡管理页面元素----------------------------------
+  #虚拟卡管理选项
+  VirtualCardManagement0ptions: /html/body/div/div/section/aside/div/div[2]/ul/li[2]/div[1]/span/span[2]
+  #卡片管理
+  CardManagement0ptions: /html/body/div/div/section/aside/div/div[2]/ul/li[2]/ul/li[1]/a
+  #客户ID输入框
+  CustomerIDInputBox: /html/body/div[1]/div/section/section/main/div/div[2]/div/div/div/form/div[1]/div[1]/div/div[2]/div/span/input
+  #查询按钮
+  QueryButton: //span[text()='查 询']
+  #审核结果判断
+  FindingsOfAudit0ptions: //*[@id='root']
+  #查询后的数据的客户ID
+  FindDataCustomerID0ptions: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[1]
+  #卡片状态
+  CardStatus0ptions: /html/body/div[1]/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[3]
+  #跨境开关状态
+  CrossBorderPayStatus0ptions: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[5]
+  #销户后查询，页面显示暂无数据
+  NoData0ptions: /html/body/div[1]/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td/div/div/p
+  #卡品牌选项下拉
+  VirtualCardType0ption: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[1]/div[2]/div/div[2]/div/span/div
+ #卡品牌选项下拉
+  VirtualMasterCard0ption: //div[@title='MasterCard']
+
+
+#详情
+  #详情按钮
+  DetailsButton: //span[text()='详 情']
+  #详情界面的客户ID
+  DetailsCustomerID0ptions: /html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div/div/div[1]/div[2]
+  ##详情界面的卡品牌
+  DetailsCardbrand0ptions: //div[text()='MasterCard']
+  #详情页面里的暂停判断
+  PauseJudgment0ptions: /html/body/div[1]/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[3]
+  #详情页面的每日限额判断1000
+  DailyLimitJudgment0ptions: //div[text()='1,000.00']
+  #详情页面的每日限额判断50000
+  DailyLimitJudgment0ptions1: //div[text()='49,999.00']
+  #详情页面的跨境支付判断
+  CrossBorderPayJudgment0ptions: /html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div/div/div[12]/div[2]
+
+#编辑
+  #编辑按钮
+  EditButton: //span[text()='编 辑']
+  #编辑界面的暂停/激活卡片
+  EditActivateCardButton: //*[@id='status']/span
+  #编辑页面提交说明
+  EditSubmissionInstructionsInputBox: //*[@id='submitRemark']
+  #编辑页面提交审核按钮
+  SubmitForReviewButton: //span[text()='提交审核']
+  #编辑界面的每日限额
+  EditDailylimitInputBox: //*[@id='dayLimit']
+  #跨境支付的关闭按钮
+  CrossBorderPaymentButton: //*[@id='crossBoard']
+  #跨境支付的关闭按钮
+  CrossBorderPaymentButton: //*[@id='crossBoard']
+
+#注销
+  #注销按钮
+  AccountCancellationButton: //span[text()='注 销']
+  #注销提交说明输入框
+  AccountCancellationInputBox: //*[@id='popsubmitRemark']
+  #注销界面的提交审核按钮
+  AccountCancellationSubmitForReviewButton: //span[text()='提交审核']
+
+#审核通过
+  PassButton: //span[text()='通 过']
+  #审核通过弹框，通过说明输入框
+  ExplainInputBox: //*[@id='popRemark']
+  #p审核确认按钮
+  ConfirmButton: //span[text()='确 认']
+
+
+#操作记录查询
+  #操作记录选项
+  OperationRecordOptions: //*[@id='/card$Menu']/li[2]
+  #客户ID输入框
+  OperationRecordCustomerIDInputBox: //*[@id='custId']
+  #选择记录类型
+  OperationRecordType: /html/body/div[1]/div/section/section/main/div/div[2]/div/div/div/form/div[1]/div[4]/div/div[2]/div/span/div/div/span[2]
+  #选择激活选项
+  OperationRecordTypeActivation: //div[@title='激活']
+  #选择记卡品牌
+  OperationRecordCardType: /html/body/div/div/section/section/main/div/div[2]/div/div/div/form/div[1]/div[5]/div/div[2]/div/span/div/div/span[2]
+  #选择MasterCard选项
+  OperationRecordMasterCard: //div[@title='MasterCard']
+  #查询按钮
+  OperationRecordQueryButton: //span[text()='查 询']
+  #判断结果为激活
+  OperationRecordQueryActivation: /html/body/div[1]/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[3]
+  #判断操作人
+  OperationRecordQueryUser: /html/body/div[1]/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[7]
+  #判断操作ID成功
+  OperationRecordQueryCustomerID: /html/body/div[1]/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[1]
+
+#-------------------------用户管理&&&白名单元素--------------------------
+  #用户管理
+  UserManagement: //*[@id='root']/div/section/aside/div/div[2]/ul/li[4]/div/span/span[2]
+  #白名单
+  UserManagementWhiteList: //*[@id='/user-profile$Menu']/li
+#查询
+  #客户ID输入框
+  WhiteListCustIdInputBox: //*[@id='custId']
+  #手机号码输入框
+  WhiteListPhoneInputBox: //*[@id='phone']
+  #未查询到结果显示：暂无数据
+  WhiteListPhoneNonExistentElement: //div[text()='暂无数据']
+  #查询按钮
+  WhiteListQueryButton: //span[text()='查 询']
+  #查询结果:共 1 条记录
+  WhiteListQueryResultElement: //li[text()='共 1 条记录']
+  #//*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/ul/li[1]
+
+#新增
+  #白名单的新增按钮
+  WhiteListAddButton: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[1]/div/div[2]/button
+  #新增界面，区号输入框
+  WhiteListAddAreaCodeInputBox: /html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div/div[1]/div[2]/div/div/div/span/div/div/span[1]
+  #选择区号852
+  WhiteListAddAreaCodeHK: //div[@title='+852']
+  #输入手机号码
+  WhiteListAddPopTel: //*[@id='popTel']
+  #unionPay反扫
+  WhiteListAddUnionPayCheckbox: /html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div/div[3]/div/div/label[1]/span[1]
+  #masterCard
+  WhiteListAddMasterCardCheckbox: /html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div/div[3]/div/div/label[2]/span[1]
+  #MDES一键绑卡
+  WhiteListAddMdesCardBindingCheckbox: /html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div/div[3]/div/div/label[6]/span[1]
+  #ApplePay
+  WhiteListAddApplePayCheckbox: /html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div/div[3]/div/div/label[5]/span[1]
+  #新增界面提交审核按钮
+  WhiteListAddSubmit: //span[text()='提交审核']
+
+#审核
+  #审核按钮
+  WhiteListReviewButton: //span[text()='审 核']
+
+  #选择单条待审核记录的复选框
+  WhiteListReviewCheckbox: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[1]/label/span/input
+  #全选
+  WhiteListReviewAllCheckbox: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/thead/tr/th[1]/div/label/span
+  #//*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/thead/tr/th[1]/div/label/span/input
+  #审核界面的通过按钮adopt
+  WhiteListReviewAdoptButton: //span[text()='通 过']
+  #确认通过页面的输入框
+  WhiteListReviewConfirmAdoptInputBox: //*[@id='popRemark']
+  #确认通过页面的确认按钮
+  WhiteListReviewAdoptConfirmButton: //span[text()='确 认']
+  #审核后的状态:已通过
+  WhiteListReviewStatePassedElement: //td[text()='已通过']
+  #UnionPay反扫打开
+  WhiteListReviewUnionPayOpenElement: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[11]
+  #masterCard
+  WhiteListReviewMasterCardOpenElement: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[12]
+  #MDES一键绑卡
+  WhiteListReviewMdesCardBindingOpenElement: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[16]
+  #ApplePay
+  WhiteListReviewApplePayOpenElement: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[15]
+
+#删除
+  #删除按钮
+  WhiteListDeleteButton: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[1]/div/div[1]/button[2]/span
+  #删除说明输入框
+  WhiteListDeleteSubmissionInstructionsInputBox: //*[@id='popDelDesc']
+  #删除提交审核按钮
+  WhiteListDeleteSubmitForReviewButton: //span[text()='提交审核']
+  #删除审核状态为审核中
+  WhiteListDeleteStateUnderReviewElement: //td[text()='审核中']
+#编辑
+  #编辑按钮
+  WhiteListEditButton: //span[text()='编 辑']
+  #unionPay反扫去掉选择
+  WhiteListEditunionPayCheckbox: /html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div/div[3]/div/div/label[1]/span[1]
+  #编辑提交审核按钮
+  WhiteListEditSubmitForReviewButton: //span[text()='提交审核']
+
+#--------------设置-------------------------------
+  #设置选项
+  SettingElement: //*[@id='root']/div/section/aside/div/div[2]/ul/li[5]/div/span/span[2]
+  #Icon配置
+  SettingIocnElement: //*[@id='/setting$Menu']/li
+  #编辑按钮
+  SettingIocnEditButton: //*[@id="root"]/div/section/section/main/div/div[2]/div/div/div/form/div/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[6]/button[1]/span
+  #图片名称输入框
+  IocnNameInputBox: //*[@id='iconName']
+  #上传图片的按钮Upload
+  IocnUploadButton: /html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div/div[3]/div[2]/div/div/div/span/span/div/span
+  #提交审核的按钮
+  IocnSubmitButton: //span[text()='提交审核']
+  #编辑的提交说明
+  IocnSubmitInputBox: //*[@id='submitRemark']
+  #修改后详情按钮
+  IocnEditDetailsButton: /html/body/div[1]/div/section/section/main/div/div[2]/div/div/div/form/div/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[6]/button/span
+  #通过按钮
+  IocnPassButton: //span[text()='通 过']
+  #确认通过弹框
+  IocnPassInputBox: //*[@id='popRemark']
+  #确认按钮
+  IocnConfirmButton: //span[text()='确 认']
+  #判断修改成功Icon名称
+  GetIconNameElement: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[1]
+
+
+# -------------------营销管理-------------
+  #营销管理
+  MarketingManagementElement: //*[@id='root']/div/section/aside/div/div[2]/ul/li[6]/div/span/span[2]
+  #奖励金账户
+  BonusAccountElement: //*[@id='/market-manage$Menu']/li[1]
+#------营销管理-奖励账户界面元素---------------
+  #用户ID
+  MarkingBonusAccountCustomeridInput: //*[@id='custId']
+  #时间控件选择开始时间
+  MarkingBonusAccountCreateDateElement: //*[@id='createDate']
+  #时间控件选择结束时间
+  MarkingBonusAccountEndDateElement: //*[@placeholder='End Date']
+
+  #查询按钮query
+  MarkingBonusAccountQueryButton: //span[text()='查 询']
+  #暂停按钮
+  MarkingBonusAccountSuspendButton: //span[text()='暂停']
+  #启用按钮
+  MarkingBonusAccountEnableButton: //span[text()='启用']
+  #更改原因输入框
+  MarkingBonusAccountChangeInputbox: //*[@id='popsubmitRemark']
+  #提交审核按钮
+  MarkingBonusAccountSubmitButton: //span[text()='提交审核']
+  #审核按钮
+  MarkingBonusAccountApprovalButton: //span[text()='审 核']
+  #审核通过按钮
+  MarkingBonusAccountApprovalPassButton: //span[text()='通 过']
+  #审核输入框
+  MarkingBonusAccountApprovalPassInputbox: //*[@id='popRemark']
+  #确认按钮
+  MarkingBonusAccountConfirmButton: //span[text()='确 认']
+  #判断暂停账户状态为暂停
+  MarkingBonusUserStatusElement: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[3]
+
+
+#---------------系统管理-----------------
+  #系统管理
+  SystemManagementElement: //*[@id='root']/div/section/aside/div/div[2]/ul/li[7]/div/span/span[2]
+#-------------系统字处理-系统参数----------------
+  #系统管理-参数配置
+  SystemManagementMenuElement: //*[@id='/sysmange$Menu']/li[1]
+  #参数名称输入框
+  SystemManagementMenuparNameInputbox: //*[@id='parmName']
+  #查询按钮
+  SystemManagementMenuQueryButton: //span[text()='查 询']
+  #判断查询结果
+  SystemManagementMenuQueryResultElement: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[1]
+  #编辑按钮
+  SystemManagementMenuModifyButton: //span[text()='编 辑']
+  #编辑-参数值输入框
+  SystemManagementMenuPopParamValInputbox: //*[@id='popParamVal']
+  #提交说明输入框
+  SystemManagementMenuPopSubmitRemarkInputbox: //*[@id='popSubmitRemark']
+  #提交审核按钮
+  SystemManagementMenuSubmitButton: //span[text()='提交审核']
+  #详情按钮
+  SystemManagementMenuDetailsButton: //span[text()='详 情']
+  #详情界面的通过按钮
+  SystemManagementMenuDetailsPassButton: //span[text()='通 过']
+  #详情界面的确定备注输入框
+  SystemManagementMenuDetailsPassPopRemarkInputbox: //*[@id='popRemark']
+  #详情界面的确认按钮
+  SystemManagementMenuDetailsPassConfirmButton: //span[text()='确 认']
+  #判断查询结果
+  SystemManagementMenuQueryResultPopParamValElement: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]
+  #参数值
+  SystemManagementMenuQueryResultParameterValueElement: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]
+#----------------------对账管理-------------
+  #对账管理
+  ReconciliationManagementElement: //*[@id='root']/div/section/aside/div/div[2]/ul/li[8]/div/span/span[2]
+  #余额试算
+  ReconciliationManagementTrialBalanceElement: //*[@id='/settlement$Menu']/li[1]
+  #流水试算
+  ReconciliationManagementDailyReconciliationElement: //*[@id='/settlement$Menu']/li[2]
+  #余额试算内部账户号输入框
+  ReconciliationManagemenInternalAccountInputbox: //*[@id='accountNo']
+  #余额试算查询按钮
+  ReconciliationManagementTrialBalanceQueryButton: //span[text()='查 询']
+  #余额试算内部户账号查询结果断言
+  ReconciliationManagementTrialBalanceQueryResultElement: //*[@id='rc-tabs-0-panel-1']/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[5]
+  #余额试算内部户名称查询结果断言
+  ReconciliationManagementTrialBalanceQueryResultNameElement: //*[@id='rc-tabs-0-panel-1']/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[4]
+  #流水对账，对账渠道选择
+  ReconciliationManagementDailyChannelElement: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[1]/div[2]/div/div[2]/div/span/div/div/span[2]
+  #账渠道选择下拉UnionPay
+  ReconciliationManagementDailyUnionPay0ption: //div[@title='UnionPay']
+  #流水对账查询按钮
+  ReconciliationManagementDailyQueryButton: //span[text()='查 询']
+  #余额试算内部户名称查询结果断言
+  ReconciliationManagementDailyQueryResultChannelElement: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]
+#----------------------结算管理-------------
+  #结算管理
+  SettlementManagementElement: //*[@id='root']/div/section/aside/div/div[2]/ul/li[9]/div/span/span[2]
+  #结算报表
+  SettlementManagementStatementElement: //*[@id='/report$Menu']/li[1]/a
+  #结算记录
+  SettlementManagementRecordElement: //*[@id='/report$Menu']/li[2]/a
+  #结算报表-结算日期-开始日期
+  SettlementManagementStatementDateCreateElement: //*[@id='tradeTime']
+  #结算报表-结算日期-结束日期
+  SettlementManagementStatementDateEndElement: //*[@placeholder='结束时间']
+  #流水对账，对账渠道选择
+  SettlementManagementStatementChannelElement: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[1]/div[2]/div/div[2]/div/span/div/div/span[2]
+  #结算报表-结算渠道
+  SettlementManagementStatementUnionPay0ption: //div[@title='UnionPay']
+  #结算报表-查询按钮
+  SettlementManagementStatementQueryButton: //span[text()='查 询']
+  #结算报表-渠道查询结果断言
+  SettlementManagementStatementQueryResultChannelElement: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]
+  #结算记录-结算日期-开始日期
+  SettlementManagementRecordDateCreateElement: //*[@id='tradeTime']
+  #结算记录-结算日期-结束日期
+  SettlementManagementRecordDateEndElement: //*[@placeholder='结束时间']
+  #结算记录，对账渠道选择
+  SettlementManagementRecordChannelElement: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[1]/div[2]/div/div[2]/div/span/div/div/span[2]
+  #结算报表-结算渠道
+  SettlementManagementRecordUnionPay0ption: //div[@title='UnionPay']
+  #结算报表-查询按钮
+  SettlementManagementRecordQueryButton: //span[text()='查 询']
+  #结算报表-渠道查询结果断言
+  SettlementManagementRecordQueryResultChannelElement: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[3]
+
+
+
+#----------------------报表中心-------------
+  #结算管理
+  ReportCenterElement: //*[@id='root']/div/section/aside/div/div[2]/ul/li[10]/div/span/span[2]
+  #异常监控报表
+  ReportCenterAbnormalElement: //*[@id='/report-center$Menu']/li[1]/a
+  #开卡统计报表
+  ReportCenterCreateCardElement: //*[@id='/report-center$Menu']/li[2]/a
+  #一键绑上统计报表
+  ReportCenterBindCardElement: //*[@id='/report-center$Menu']/li[3]/a
+  #异常报表中心-冲正异常-客户DI输入框
+  ReportCenterAbnormalCustIdInputbox: //*[@id='custId']
+  #异常报表中心-冲正异常-开始日期
+  ReportCenterAbnormalDateCreateElement: //*[@id='traStartTime']
+  #异常报表中心-冲正异常-结束日期
+  ReportCenterAbnormalDateEndElement: //*[@id='traEndTime']
+  #异常报表中心-冲正异常-平台订单号(livi交易平台)
+  ReportCenterAbnormalLivitraTxnIdInputbox: //*[@id='traTxnId']
+  #异常报表中心-冲正异常-TUTUKA订单号
+  ReportCenterAbnormaloutTransactionIdInputbox: //*[@id='outTransactionId']
+  #异常报表中心-冲正异常-卡品牌栏位
+  ReportCenterAbnormaCardTypeSelect: //*[@id='rc-tabs-0-panel-1']/form/div[1]/div[6]/div/div[2]/div/span/div/div/span[2]
+  #异常报表中心-冲正异常-卡品牌栏位选择MasterCard
+  ReportCenterAbnormaMasterCardElement: //div[@title='MasterCard']
+  #异常报表中心-冲正异常-查询按钮
+  ReportCenterAbnormaQueryButton: //span[text()='查 询']
+  #异常报表中心-冲正异常，查询结果断言-平台订单号(livi交易平台)
+  ReportCenterAbnormalLivitraTxnIdGetElement: //*[@id='rc-tabs-0-panel-1']/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]
+  #异常报表中心-冲正异常-TUTUKA订单号,查询结果断言
+  ReportCenterAbnormaloutTransactionIdGetElement: //*[@id='rc-tabs-0-panel-1']/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[3]
+  #开卡统计报表-开始日期
+  ReportCenterCreateCardDateCreateElement: //*[@id='recordDate']
+  #开卡统计报表-结束日期
+  ReportCenterCreateCardDateEndElement: //*[@placeholder='End Date']
+  #开卡统计报表-按钮年查询
+  ReportCenterCreateCardYearElement: //*[@id='sType']/label[1]/span[1]
+  #开卡统计报表-查询按钮
+  ReportCenterCreateCardQueryButton: //span[text()='查 询']
+  #开卡统计报-查询结果断言-查询时间2021
+  ReportCenterCreateCardQueryDateGetElement: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[1]
+  #开卡统计报-查询结果断言-查询时间2021的总开卡量
+  ReportCenterCreateCardQueryTotalCardOpenGetElement: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[2]
+  #一键绑上统计报表-开始日期
+  ReportCenterBindCardDateCreateElement: //*[@id='recordDate']
+  #一键绑上统计报表-结束日期
+  ReportCenterBindCardDateEndElement: //*[@placeholder='End Date']
+  #一键绑上统计报表-按钮年查询
+  ReportCenterBindCardYearElement: //*[@id='sType']/label[1]/span[1]
+  #一键绑上统计报表-查询按钮
+  ReportCenterBindCardQueryButton: //span[text()='查 询']
+  #一键绑上统计报表-查询结果断言-查询时间2021
+  ReportCenterBindCardQueryDateGetElement: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[1]
+
+
+
+
+
+
+
+
+
+

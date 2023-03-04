@@ -1,0 +1,56 @@
+checkTravelBeforeLogin:
+  -
+    Action: judge,click
+    Element: ${LandingPage}${updateNotificationElement}
+    TestData:
+    Remarks: 判断更新弹窗按钮是否存在，存在即点击
+
+  -
+    Action: get_text
+    Element: $${choose}
+    TestData: 1
+    Remarks: 初始赋值
+
+  -
+    Action: loop
+    Element: $${choose}
+    TestData: 2
+    Remarks: 判断是否结束循环
+    branchProcess:
+      -
+        Action: compare
+        Element: similar
+        TestData: sc02.png
+        Remarks: 判断图片
+        ifbranchProcess:
+          -
+            Action: sleep
+            Element:
+            TestData: 4
+            Remarks: 等待4
+          -
+            Action: click
+            Element: ${LandingPage}${getIntoOnboardingpageBottonElement1}
+            TestData:
+            Remarks: 点击图标进入endowment保险页
+
+          -
+            Action: get_text
+            Element: $${choose}
+            TestData: 2
+            Remarks: 对比通过赋值
+
+        elsebranchProcess:
+          -
+            Action: slide
+            Element: left
+            TestData:
+            Remarks: 左滑
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+

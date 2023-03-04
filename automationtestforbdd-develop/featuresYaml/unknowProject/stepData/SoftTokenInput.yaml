@@ -1,0 +1,7 @@
+#输入流动保安编码-登录后才能使用
+SoftTokenInput:
+  step1:
+    Action: sotfToken_input
+    Element:
+    TestData: ${sotfTokenPIN}
+    Remarks: 返回首页

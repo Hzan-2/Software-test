@@ -1,0 +1,61 @@
+#登录操作步骤
+Login_L2:
+  step1:
+    Action: judge,click
+    Element: ${LandingPage}${updateNotificationElement}
+    TestData:
+    Remarks: 判断更新弹窗按钮是否存在，存在即点击
+
+  step2:
+    Action: click
+    Element: ${LandingPage}${menuElement}
+    TestData:
+    Remarks: 点击右上角三点，进行切换账号
+
+  step3:
+    Action: click
+    Element: ${LandingPage}${SwitchUserElement}
+    TestData:
+    Remarks: 点击切换账号
+
+  step4:
+    Action: click
+    Element: ${LandingPage}${phoneInputElement}
+    TestData:
+    Remarks: 点击账号输入框
+
+  step5:
+    Action: input
+    Element: ${LandingPage}${phoneInputElement}
+    TestData: ${phone_L2}
+    Remarks: 输入账号
+
+  step6:
+    Action: click
+    Element: ${LandingPage}${LoginButtonElement}
+    TestData:
+    Remarks: 点击登录
+
+  step6_1:
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 停顿5
+
+  step7:
+    Action: keyboard
+    Element:
+    TestData: 123456
+    Remarks: 输入验证码
+
+  step8:
+    Action: sleep
+    Element:
+    TestData: 10
+    Remarks: 停顿10秒
+
+  step9:
+    Action: get
+    Element: ${HomePage}${underHomeButtonElement}
+    TestData: ['主页','主頁','Overview']
+    Remarks: 断言是否进入主页

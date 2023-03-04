@@ -1,0 +1,880 @@
+#登录Payment后管
+
+-
+  Step: Given
+  Text: 我使用账户${userName_jiang},密码${password_jiang}登录pay后管系统
+  Fixture: web
+  Process:
+    -
+      Action: open
+      Element:
+      TestData: ${Lending}${url_pay}
+      Remarks: 打开地址${Lending}${url_pay}
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+    -
+      Action: get_text
+      Element: $${user}
+      TestData: ${Lending}${userName_jiang}
+      Remarks: 赋值账号
+    -
+      Action: get_text
+      Element: $${password}
+      TestData: ${Lending}${password_jiang}
+      Remarks: 赋值密码
+    -
+      Action: get_text
+      Element: $${SystemException}
+      TestData: 0
+      Remarks: 赋值0
+    -
+      Action: loop
+      Element: $${SystemException}
+      TestData: 3
+      Remarks: 进入循环，当值为3，跳出循环
+      branchProcess:
+        -
+          Action: compare
+          Element:
+          TestData: $${SystemException} != 3
+          Remarks: 如果值不等于3，走if分支
+          ifbranchProcess:
+            -
+              Action: judge,branch
+              Element: //*[@id='details-button']
+              TestData:
+              Remarks: 判断是否存在高级按钮，若存在，走if分支
+              ifbranchProcess:
+                -
+                  Action: click
+                  Element: //*[@id='details-button']
+                  TestData:
+                  Remarks: 点击高级
+                -
+                  Action: click
+                  Element: //*[@id='proceed-link']
+                  TestData:
+                  Remarks: 点击进入链接
+                -
+                  Action: sleep
+                  Element:
+                  TestData: 2
+                  Remarks: 停顿2秒
+                -
+                  Action: click
+                  Element: //*[@id='details-button']
+                  TestData:
+                  Remarks: 点击高级
+                -
+                  Action: sleep
+                  Element:
+                  TestData: 2
+                  Remarks: 停顿2秒
+                -
+                  Action: click
+                  Element: //*[@id='proceed-link']
+                  TestData:
+                  Remarks: 点击进入链接
+                -
+                  Action: sleep
+                  Element:
+                  TestData: 2
+                  Remarks: 停顿2秒
+              elsebranchProcess:
+                -
+                  Action: sleep
+                  Element:
+                  TestData: 1
+                  Remarks: 不存在高级按钮
+            -
+              Action: input
+              Element: //*[@id='loginid']
+              TestData: $${user}
+              Remarks: 输入账号
+            -
+              Action: input
+              Element: //*[@id='password']
+              TestData: $${password}
+              Remarks: 输入密码
+            -
+              Action: sleep
+              Element:
+              TestData: 1
+              Remarks: 停顿1秒
+            -
+              Action: judge,branch
+              Element: //*[@id='login']/div[1]/span
+              TestData:
+              Remarks: 判断是否存在该元素，若存在，走if分支
+              ifbranchProcess:
+                -
+                  Action: input
+                  Element: //*[@id='login']/div[4]/input
+                  TestData: 123
+                  Remarks: 输入验证码
+              elsebranchProcess:
+                -
+                  Action: input
+                  Element: //*[@id='login']/div[3]/input
+                  TestData: 123
+                  Remarks: 输入验证码
+            -
+              Action: sleep
+              Element:
+              TestData: 1
+              Remarks: 停顿1秒
+            -
+              Action: click
+              Element: //*[@id='sub']
+              TestData:
+              Remarks: 点击登录
+            -
+              Action: sleep
+              Element:
+              TestData: 2
+              Remarks: 停顿2秒
+            -
+              Action: judge,branch
+              Element: //*[@id='login']/div[1]/span
+              TestData:
+              Remarks: 判断是否存在该元素，若存在，走if分支
+              ifbranchProcess:
+                -
+                  Action: sleep
+                  Element:
+                  TestData: 1
+                  Remarks: 登录失败
+                -
+                  Action: get_text
+                  Element: $${SystemException}
+                  TestData: $${SystemException}+1
+                  Remarks: SystemException+1
+              elsebranchProcess:
+                -
+                  Action: sleep
+                  Element:
+                  TestData: 1
+                  Remarks: 进入循环，登录成功
+                -
+                  Action: get_text
+                  Element: $${SystemException}
+                  TestData: 3
+                  Remarks: 赋值3
+          elsebranchProcess:
+            -
+              Action: sleep
+              Element:
+              TestData: 1
+              Remarks: 登录成功
+    -
+      Action: sleep
+      Element:
+      TestData: 1
+      Remarks: 等待1秒
+-
+  Step: Then
+  Text: 我能够看到页面左上角的logo显示为LiviPay Transaction Portal
+  Fixture: web
+  Process:
+    -
+      Action: get
+      Element: //*[@id='logo']/a/h1
+      TestData: 'LiviPay Transaction Portal'
+      Remarks: 断言工作提示，校验是否进入主页
+    -
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 等待5秒
+
+
+-
+  Step: Given
+  Text: 查询客户对应的MC卡
+  Fixture: web
+  Process:
+    -
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+    -
+      Action: click
+      Element: ${PayMentPortalPage}${VirtualCardManagement0ptions}
+      TestData:
+      Remarks: 点击，虚拟卡管理
+    -
+      Action: click
+      Element: ${PayMentPortalPage}${CardManagement0ptions}
+      TestData:
+      Remarks: 点击，卡片管理
+    -
+      Action: input
+      Element: ${PayMentPortalPage}${CustomerIDInputBox}
+      TestData: ${Lending}${CustomerId}
+      Remarks: 输入，客户ID
+    -
+      Action: click
+      Element: ${PayMentPortalPage}${VirtualCardType0ption}
+      TestData:
+      Remarks: 点击卡品牌下拉
+    -
+      Action: click
+      Element: ${PayMentPortalPage}${VirtualMasterCard0ption}
+      TestData:
+      Remarks: 选择MasterCard
+    -
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+    -
+      Action: click
+      Element: ${PayMentPortalPage}${QueryButton}
+      TestData:
+      Remarks: 点击，查询按钮
+    -
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+    -
+      Action: get
+      Element: ${PayMentPortalPage}${FindDataCustomerID0ptions}
+      TestData: ${Lending}${CustomerId}
+      Remarks: 断言，对比客户ID正确
+    -
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 停顿5秒
+
+-
+  Step: Then
+  Text: 我能获取到卡片的信息
+  Fixture: web
+  Process:
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+    -
+      Action: click
+      Element: //*[@id='root']/div/section/section/main/div/div[2]/div/div/div/form/div[4]/div[2]/div/div/div/div/div/table/tbody/tr[2]/td[10]/button[2]
+      TestData:
+      Remarks: 点击查看详情
+    -
+      Action: sleep
+      Element:
+      TestData: 10
+      Remarks: 停顿10秒
+    -
+      Action: get
+      Element: /html/body/div[3]/div/div[2]/div/div[2]/div[2]/div/div/div/div[9]/div[1]
+      TestData: '分期起点金额(HKD)'
+      Remarks: 断言，存在分期起点字样
+    -
+      Action: get_text
+      Element: /html/body/div[3]/div/div[2]/div/div[2]/div[2]/div/div/div/div[2]/div[2]
+      TestData: $${Reference}
+      Remarks: 获取
+    -
+      Action: get_global
+      Element:
+      TestData: $${refeqqq}
+      Remarks: 声明全局变量
+    -
+      Action: get_text
+      Element: $${refeqqq}
+      TestData: $${Reference}
+      Remarks: 全局变量赋值Reference
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+
+-
+  Step: Given
+  Text: 登录web端模拟器
+  Fixture: web
+  Process:
+    -
+      Action: open
+      Element:
+      TestData: ${Lending}${url_tutuka}
+      Remarks: 打开地址${Lending}${url_tutuka}
+
+-
+  Step: Given
+  Text: 进行PayLater消费
+  Fixture: web
+  Process:
+    -
+      Action: mouse
+      Element: //*[@id='root']/div/section/section/div/main/div/div/section/div[2]/form/div[1]/div[2]/div/div/div/span
+      TestData: click
+      Remarks: 选择测试环境
+    -
+      Action: click
+      Element: //div[text()='UAT3环境']
+      TestData:
+      Remarks: 选择消费环境
+  #  -
+  #    Action: click
+  #    Element: ${LendingElement}${ConsumptionCnvironment}
+  #    TestData:
+  #    Remarks: 选择消费环境
+  #  -
+  #    Action: click
+  #    Element: /html/body/div[2]/div/div/div/div[2]/div/div/div[2]/div
+  #    TestData:
+  #    Remarks: 选择SIT1环境
+    -
+      Action: mouse
+      Element: //*[@id='root']/div/section/section/div/main/div/div/section/div[2]/form/div[2]/div[2]/div/div/div/span/span
+      TestData: click
+      Remarks: 选择Terminal_ID
+    -
+      Action: click
+      Element: //div[2]/div[text()='0084575617']
+      TestData:
+      Remarks: 选择Terminal_ID
+  #  -
+  #    Action: click
+  #    Element: /html/body/div[3]/div/div/div/div[2]/div/div/div[2]/div
+  #    TestData:
+  #    Remarks: 选择0084575617
+  #需要根据环境调整
+  #  -
+  #    Action: click
+  #    Element: /html/body/div[3]/div/div/div/div[2]/div/div/div[1]
+  #    TestData:
+  #    Remarks: 选择0025986172
+    -
+      Action: input
+      Element: //*[@id='reference']
+      TestData: $${refeqqq}
+      Remarks: 输入reference
+    -
+      Action: input
+      Element: //*[@id='requestAmount']
+      TestData: ${Lending}${ConsumptionAmount}
+      Remarks: 输入消费金额
+    -
+      Action: get_global
+      Element:
+      TestData: $${StoreNumber}
+      Remarks: 声明全局变量
+    -
+      Action: get_text
+      Element: $${StoreNumber}
+      TestData: 4_${random(100,999)}
+      Remarks: 全局变量赋值，生成以4开头，后面拼接100-999的4位数
+    -
+      Action: input
+      Element: //*[@id='narrativeId']
+      TestData: $${StoreNumber}
+      Remarks: 输入商户ID
+    -
+      Action: input
+      Element: //*[@id='narrative']
+      TestData: $${StoreNumber}
+      Remarks: 输入商户名称
+    -
+      Action: input
+      Element: //*[@id='narrativeAddress']
+      TestData: HK
+      Remarks: 输入商户地址
+    -
+      Action: mouse
+      Element: //*[@id='root']/div/section/section/div/main/div/div/section/div[2]/form/div[9]/div[2]/div/div/div/span
+      TestData: click
+      Remarks: 选择商户币种
+    -
+      Action: click
+      Element: //div[text()='英镑']
+      TestData:
+      Remarks: 选择港币（目前为英镑)
+  #  -
+  #    Action: sleep
+  #    Element:
+  #    TestData: 3
+  #    Remarks: 选择港币（目前为英镑)
+    -
+      Action: js
+      Element:
+      TestData: document.querySelector('#root > div > section > section > div > main > div > div > section > div.Deduct-form > form > div:nth-child(9) > div.ant-col.ant-col-15.ant-form-item-control > div > div > div > div > span.ant-select-selection-item').textContent = '港币'
+      Remarks: 选择港币（目前为英镑)
+
+    -
+      Action: input
+      Element: //*[@id='panFour']
+      TestData: 1234
+      Remarks: 输入卡号后四位
+    -
+      Action: mouse
+      Element: //*[@id='root']/div/section/section/div/main/div/div/section/div[2]/form/div[11]/div[2]/div/div/div/span
+      TestData: click
+      Remarks: 选择钱包ID
+    -
+      Action: click
+      Element: //div[text()='GooglePay']
+      TestData:
+      Remarks: 选择GooglePay
+  #  -
+  #    Action: click
+  #    Element: /html/body/div[5]/div/div/div/div[2]/div/div/div[1]/div
+  #    TestData:
+  #    Remarks: 选择GooglePay
+    -
+      Action: input
+      Element: //*[@id='transactionType']
+      TestData: 250
+      Remarks: 输入250
+    -
+      Action: input
+      Element: //*[@id='lineType']
+      TestData: 262
+      Remarks: 输入262
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 等待2秒
+    -
+      Action: click
+      Element: //*[@id='root']/div/section/section/div/main/div/div/section/div[2]/form/div[15]/div/div/div/button[1]/span
+      TestData:
+      Remarks: 点击发送交易
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 等待2秒
+
+
+
+-
+  Step: Then
+  Text: 我能看到消费成功，返回码为1
+  Fixture: web
+  Process:
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 等待2秒
+    -
+      Action: get
+      Element: /html/body/div[2]/div/div[2]/div/div[2]/div[2]/div[2]/div[2]
+      TestData: '1'
+      Remarks: 断言，判断返回码是否为1
+
+
+#PayLater消费成功后，进行借据信息查询
+
+-
+  Step: Given
+  Text: 进入LOS后管，查询借据 #已使用账户登录pay后管，该步骤不需要输入账户密码登录
+  Fixture: web
+  Process:
+    -
+      Action: open
+      Element:
+      TestData: ${Lending}${url_los}
+      Remarks: 打开地址${Lending}${url_los}
+-
+  Step: Given
+  Text: 进入贷款台账菜单，该客户对应的${CustomerId}查询借据信息
+  Fixture: web
+  Process:
+    -
+      Action: mouse
+      Element: ${LendingElement}${PostLoanManagementElement}
+      TestData: hover
+      Remarks: 将鼠标悬停在指定元素上-贷后管理
+    -
+      Action: click
+      Element: //*[@id='main_menu']/ul/li[9]/ul/li[10]/a
+      TestData:
+      Remarks: 点击消费台账
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 等待2秒
+    -
+      Action: iframe
+      Element: //*[@id='main_bottom']/div/iframe
+      TestData:
+      Remarks: 切入表单
+    -
+      Action: click
+      Element: //*[@id='handle_right0']/span[2]/a
+      TestData:
+      Remarks: 点击借据台账
+    -
+      Action: iframe
+      Element: //*[@id='tabT01right0']
+      TestData:
+      Remarks: 切入表单
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 等待2秒
+    -
+      Action: click
+      Element: //*[@id='TH_Left_myiframe0']/tr/th[1]/div
+      TestData:
+      Remarks: 点击搜索
+    -
+      Action: input
+      Element: //*[@id='DOFILTER_MAIN1_CUSTOMERID']/input
+      TestData: ${Lending}${CustomerId}
+      Remarks: 输入客户号
+    -
+      Action: click
+      Element: //*[@id='DOFILTER_MAIN1_PRODUCTID']/span[1]/span[2]
+      TestData:
+      Remarks: 点击基础产品
+    -
+      Action: click
+      Element: //*[@id='DOFILTER_MAIN1_PRODUCTID']/span[1]/span[2]/span/a[text()='livi PayLater']
+      TestData:
+      Remarks: 选择-livi PayLater
+
+    -
+      Action: input
+      Element: //*[@id='DOFILTER_MAIN1_MERCHANTNO']/input
+      TestData: $${StoreNumber}
+      Remarks: 输入门店编号
+    -
+      Action: click
+      Element: //*[@id='TableFilter_AREA']/div[2]/table/tbody/tr/td/input[1]
+      TestData:
+      Remarks: 点击确定
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 等待2秒
+
+
+
+-
+  Step: Then
+  Text: 我能看到借据信息，借据状态，消费金额，还款计划等信息展示正确
+  Fixture: web
+  Process:
+    -
+      Action: get_text
+      Element: //*[@id='INPUT_myiframe0_SERIALNO_0_1']
+      TestData: $${AccountNo}
+      Remarks: 获取借据流水号
+    -
+      Action: get
+      Element: //*[@id='INPUT_myiframe0_LOANSTATUS_0_11']
+      TestData: '正常'
+      Remarks: 断言，借据状态为正常
+    -
+      Action: click
+      Element: /html/body/table/tbody/tr[1]/td/table/tbody/tr/td[1]/a/span[3]/span[2]
+      TestData:
+      Remarks: 点击详情
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 等待2秒
+    -
+      Action: q_iframe
+      Element:
+      TestData:
+      Remarks: 切出表单
+    -
+      Action: q_iframe
+      Element:
+      TestData:
+      Remarks: 切出表单
+    -
+      Action: iframe
+      Element: /html/body/div[5]/div/table/tbody/tr[2]/td/div/iframe
+      TestData:
+      Remarks: 切入表单
+    -
+      Action: iframe
+      Element: //*[@id='tabT010201']
+      TestData:
+      Remarks: 切入表单
+    -
+      Action: iframe
+      Element: //*[@id='SecondFrame']/iframe
+      TestData:
+      Remarks: 切入表单
+    -
+      Action: get_global
+      Element:
+      TestData: $${amount}
+      Remarks: 声明全局变量-消费金额
+    -
+      Action: get_value
+      Element: //*[@id='BUSINESSSUM']
+      TestData: $${BUSINESSSUM}
+      Remarks: 获取消费金额
+    -
+      Action: get_text
+      Element: $${amount}
+      TestData: $${BUSINESSSUM}
+      Remarks: 全局变量赋值amount
+    -
+      Action: get_value
+      Element: //*[@id='MATURITYDATE']
+      TestData: $${MATURITYDATE}
+      Remarks: 获取贷款到期日
+    -
+      Action: get_value
+      Element: //*[@id='TOTALPERIOD']
+      TestData: $${TOTALPERIOD}
+      Remarks: 获取贷款期数
+#    -
+#      Action: get
+#      Element: $${TOTALPERIOD}
+#      TestData: 3
+#      Remarks: 断言，判断贷款期数是否正确
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 等待2秒
+    -
+      Action: q_iframe
+      Element:
+      TestData:
+      Remarks: 切出表单
+
+  #  -
+  #    Action: iframe
+  #    Element: //*[@id='tabT010201']
+  #    TestData:
+  #    Remarks: 切入表单
+    -
+      Action: iframe
+      Element: //*[@id='FirstFrame']/iframe
+      TestData:
+      Remarks: 切入表单
+    -
+      Action: click
+      Element: //*[@id='htmltree']/ul/li[7]/span/span[2]
+      TestData:
+      Remarks: 点击还款计划
+    -
+      Action: q_iframe
+      Element: //*[@id='FirstFrame']/iframe
+      TestData:
+      Remarks: 切出表单
+    -
+      Action: iframe
+      Element: //*[@id='SecondFrame']/iframe
+      TestData:
+      Remarks: 切入表单
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 等待2秒
+    -
+      Action: get
+      Element: //*[@id='INPUT_myiframe0_PERIODNO_2_0']
+      TestData: 3
+      Remarks: 获取还款计划
+#    -
+#      Action: get
+#      Element: //*[@id='INPUT_myiframe0_PayDate_2_2']
+#      TestData: $${MATURITYDATE}
+#      Remarks: 断言，判断贷款到期日是否正确
+    -
+      Action: get_text
+      Element: //*[@id='INPUT_myiframe0_PayPrincipalAmt_0_3']
+      TestData: $${var1}
+      Remarks: 获取第一期还款本金
+    -
+      Action: get_text
+      Element: //*[@id='INPUT_myiframe0_PayPrincipalAmt_1_3']
+      TestData: $${var2}
+      Remarks: 获取第二期还款本金
+    -
+      Action: get_text
+      Element: //*[@id='INPUT_myiframe0_PayPrincipalAmt_2_3']
+      TestData: $${var3}
+      Remarks: 获取第三还款本金
+  #应还本金相加
+    -
+      Action: get_text
+      Element: $${var4}
+      TestData: $${var3} + $${var2}
+      Remarks: 获取还款本金
+    -
+      Action: get_text
+      Element: $${var5}
+      TestData: $${var4} + $${var1}
+      Remarks: 获取还款本金
+    -
+      Action: compare
+      Element:
+      TestData: $${BUSINESSSUM}=$${var5}
+      Remarks: 判断还款计划中的贷款本金是否正确，若正确，走if分支
+      ifbranchProcess:
+        -
+          Action: sleep
+          Element:
+          TestData: 2
+          Remarks: 应还本金正确
+      elsebranchProcess:
+        -
+          Action: sleep
+          Element:
+          TestData: 2
+          Remarks: 应还本金错误，检查数据
+        -
+          Action: get
+          Element: $${BUSINESSSUM}
+          TestData: $${var5}
+          Remarks: 断言，判断贷款期数是否正确
+    -
+      Action: q_iframe
+      Element:
+      TestData:
+      Remarks: 切出表单
+    -
+      Action: q_iframe
+      Element:
+      TestData:
+      Remarks: 切出表单
+    -
+      Action: q_iframe
+      Element:
+      TestData:
+      Remarks: 切出表单
+    -
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 等待5秒
+
+
+-
+  Step: Given
+  Text: 进入account页面，查看消费信息
+  Fixture: app
+  Process:
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+    -
+      Action: click
+      Element: ${HomePage}${paylaterElement}
+      TestData:
+      Remarks: 点击首页-paylater卡片
+    -
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 等待5秒
+    -
+      Action: click
+      Element: ${LendingPayLaterHomeElement}${ViewDetailsElement}
+      TestData:
+      Remarks: 点击查看详情，进入account页面
+    -
+      Action: judge,branch
+      Element: ${LendingPayLaterAccountElement}${InstalmentsPlansElement}
+      TestData:
+      Remarks: 判断是否存在交易记录
+      ifbranchProcess:
+        -
+          Action: click
+          Element: ${LendingPayLaterAccountElement}${InstalmentsPlansElement}
+          TestData:
+          Remarks: 点击交易记录，进入详情页面
+        -
+          Action: sleep
+          Element:
+          TestData: 10
+          Remarks: 等待10秒
+        -
+          Action: judge
+          Element: ${LendingPayLaterInstalmentDetails}${StagingDetailElement}
+          TestData: true
+          Remarks: 判断是否进入分期详情页面
+        -
+          Action: get_text
+          Element: $${currency}
+          TestData: ' HKD'
+          Remarks: 赋值币种
+        -
+          Action: get_text
+          Element: $${amount1}
+          TestData: $${amount}$${currency}
+          Remarks: 将变量amount的值和变量currency拼接，赋值给变量BUSINESSSUM
+        -
+          Action: get
+          Element: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[5]
+          TestData: $${amount1}
+          Remarks: 断言，判断金额是否正确
+        -
+          Action: get
+          Element: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[6]
+          TestData: $${StoreNumber}
+          Remarks: 断言，商户编号
+        -
+          Action: click
+          Element: ${LendingPayLaterInstalmentDetails}${RepaymentPlanButtonElement}
+          TestData:
+          Remarks: 查看还款计划
+        -
+          Action: judge
+          Element: ${LendingPayLaterInstalmentDetails}${RepaymentPlanElement}
+          TestData: true
+          Remarks: 判断是否进入还款计划详情页面
+        -
+          Action: sleep
+          Element:
+          TestData: 10
+          Remarks: 等待10秒
+      elsebranchProcess:
+        -
+          Action: click
+          Element: ${LendingPayLaterAccountElement}${BackPageButtonElement1}
+          TestData:
+          Remarks: 返回上一页
+
+-
+  Step: Given
+  Text: 进入卡设置页面，查看消费记录
+  Fixture: app
+  Process:
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+
+
+-
+  Step: Then
+  Text: 我能在APP端看到借据信息，借据状态，消费金额，还款计划等信息展示正确
+  Fixture: app
+  Process:
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒

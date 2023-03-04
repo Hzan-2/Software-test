@@ -1,0 +1,385 @@
+PayLatrPage:
+  android:
+    #卡详情反面有效期
+    TermOfValidityElement:
+      SimplifiedChinese: //*[contains(@content-desc, '有效期')]
+      TraditionalChinese: //*[contains(@content-desc, '有效期')]
+      English: //*[contains(@content-desc, 'Valid Thru')]
+    #卡片反面详情
+    ReverseDetailElement:
+      SimplifiedChinese: '有效期\n****\n安全码\n***'
+      TraditionalChinese: '有效期\n****\nCVC\n***'
+      English: '有效期\n****\nCVC\n***'
+    #粘贴按钮
+    CopyButton: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[2]/android.widget.ScrollView[1]/android.view.View[4]/android.view.View[1]/android.widget.ImageView[2]
+    #卡详情证明获取
+    CardDetailFront:
+      SimplifiedChinese: //*[contains(@content-desc, 'NH')]
+      TraditionalChinese: //*[contains(@content-desc, 'NH')]
+      English: //*[contains(@content-desc, 'NH')]
+    #详细资料按钮
+    DetailButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '详细资料')]
+      TraditionalChinese: //*[contains(@content-desc, '詳細資料')]
+      English: //*[contains(@content-desc, 'Card Details')]
+    #反转卡片按钮
+    FlipCardButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '反转卡面')]
+      TraditionalChinese: //*[contains(@content-desc, '反轉卡面')]
+      English: //*[contains(@content-desc, 'Flip Card')]
+    #点击MC卡
+    TriggerMcCardElement: //android.view.View/android.view.View[5]
+    #点击交易记录按钮
+    TransactionsButtonElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[2]/android.widget.ScrollView[1]/android.view.View[4]/android.widget.ImageView[8]
+    #触发交易记录详情
+    TransactionsDetailsButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '万事达卡消费')]
+      TraditionalChinese: //*[contains(@content-desc, 'Mastercard消費')]
+      English: //*[contains(@content-desc, 'Mastercard Payment')]
+    #进入详情页面
+    DetailElement:
+      SimplifiedChinese: //*[contains(@content-desc, '交易详情')]
+      TraditionalChinese: //*[contains(@content-desc, '交易詳情')]
+      English: //*[contains(@content-desc, 'Transaction Details')]
+    #查看分期详情
+    StagingDetailsButtonElement:
+      SimplifiedChinese: //*[contains(@text, '分期贷款详情')]
+      TraditionalChinese: //*[contains(@text, '分期貸款詳情')]
+      English: //*[contains(@text, 'iew Instalment Details')]
+    #进入详情页面
+    StagingDetailElement:
+      SimplifiedChinese: //*[contains(@content-desc, '分期贷款详情')]
+      TraditionalChinese: //*[contains(@content-desc, '分期貸款詳情')]
+      English: //*[contains(@content-desc, 'Instalment Details')]
+    #查看还款计划
+    RepaymentPlanButtonElement:
+      SimplifiedChinese: //*[contains(@text, '还款计划')]
+      TraditionalChinese: //*[contains(@text, '還款計劃')]
+      English: //*[contains(@text, 'Full Repayment Plan')]
+    #进入还款计划页面
+    RepaymentPlanElement:
+      SimplifiedChinese: //*[contains(@text, '还款计划')]
+      TraditionalChinese: //*[contains(@text, '還款計劃')]
+      English: //*[contains(@text, 'Repayment Plan')]
+    #返回上一页
+    BackPageButtonElement: //*[contains(@text, 'back')]
+    #返回上一页
+    BackPageButtonElement1: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]
+    #返回上一页
+    BackPageButtonElement2: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]
+    #点击livi按钮
+    ClickLiviButtonElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[7]
+    #返回上一页
+    BackPageButtonElement3: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]
+
+    #触发交易记录按钮
+    TransactionsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '交易纪录')]
+      TraditionalChinese: //*[contains(@content-desc, '交易紀錄')]
+      English: //*[contains(@content-desc, 'Transactions')]
+    #触发查看详情-进入acount页面
+    ViewDetailsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '查看详情')]
+      TraditionalChinese: //*[contains(@content-desc, '查看詳情')]
+      English: //*[contains(@content-desc, 'View Details')]
+    #account页面元素：livi PayLater
+    AccountElement: //*[contains(@content-desc, 'livi PayLater')]
+    #查看还款计划
+    InstalmentsPlansElement:
+      SimplifiedChinese: //*[contains(@content-desc, '交易日期')]
+      TraditionalChinese: //*[contains(@content-desc, '交易日期')]
+      English: //*[contains(@content-desc, 'Transaction date')]
+    #查看卡状态
+    CardStatusElement:
+      SimplifiedChinese: //*[contains(@content-desc, '停用')]
+      TraditionalChinese: //*[contains(@content-desc, '停用')]
+      English: //*[contains(@content-desc, 'Suspend')]
+    #变更卡状态为正常-Resume Card
+    ResumeCardElement:
+      SimplifiedChinese: //*[contains(@content-desc, '恢复使用')]
+      TraditionalChinese: //*[contains(@content-desc, '恢復使用')]
+      English: //*[contains(@content-desc, 'Resume Card')]
+    #变更卡状态为停用，点击弹窗按钮-是
+    SuspendMCElement:
+      SimplifiedChinese: //*[contains(@content-desc, '是')]
+      TraditionalChinese: //*[contains(@content-desc, '是')]
+      English: //*[contains(@content-desc, 'Yes')]
+    #分期起点按钮
+    MinimumInstalmentButtonAmountElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[2]/android.widget.ScrollView[1]/android.view.View[4]/android.widget.ImageView[3]
+    #分期起点页面
+    MinimumInstalmentAmountElement:
+      SimplifiedChinese: //*[contains(@content-desc, '最低分期金额')]
+      TraditionalChinese: //*[contains(@content-desc, '最低分期金額')]
+      English: //*[contains(@content-desc, 'Minimum Instalment Amount')]
+    #触发分期起点金额
+    UpdateMinimumInstalmentAmountElement: //*[contains(@text, '400')]
+    #触发提交按钮
+    ConfirmButtonElement:
+      SimplifiedChinese: //*[contains(@text, '确 定')]
+      TraditionalChinese: //*[contains(@text, '確 定')]
+      English: //*[contains(@text, 'Confirm')]
+    #还款期按钮
+    RepaymentPeriodButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '​还​款​期​')]
+      TraditionalChinese: //*[contains(@content-desc, '​還​款​期​')]
+      English: //*[contains(@content-desc, 'R​e​p​a​y​m​e​n​t​ ​P​e​r​i​o​d​')]
+    #修改分期期数页面
+    RepaymentPeriodElement:
+      SimplifiedChinese: //*[contains(@content-desc, '更改还款期')]
+      TraditionalChinese: //*[contains(@content-desc, '更改還款期')]
+      English: //*[contains(@content-desc, 'Change Repayment Period')]
+    #修改分期期数
+    ChangeRepaymentPeriod:
+      SimplifiedChinese: //*[contains(@text, '6 个月')]
+      TraditionalChinese: //*[contains(@text, '6 個月')]
+      English: //*[contains(@text, '6 months')]
+    #触发完成按钮
+    DoneButtonElement:
+      SimplifiedChinese: //*[contains(@text, '完 成')]
+      TraditionalChinese: //*[contains(@text, '完 成')]
+      English: //*[contains(@text, 'Done')]
+    #触发还款按钮
+    RepayButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '还款')]
+      TraditionalChinese: //*[contains(@content-desc, '還款')]
+      English: //*[contains(@content-desc, 'Repay')]
+    #月结单
+    ThisStatementElement:
+      SimplifiedChinese: //*[contains(@text, '暂无纪录')]
+      TraditionalChinese: //*[contains(@text, '暫無紀錄')]
+      English: //*[contains(@text, 'No records yet')]
+    #触发提前还款
+    EarlySettlementElement:
+      SimplifiedChinese: //*[contains(@text, '提前还款')]
+      TraditionalChinese: //*[contains(@text, '提前還款')]
+      English: //*[contains(@text, 'Early Settlement')]
+    #选择消费记录
+    InstalementPlansElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[6]/android.view.View/android.widget.Image
+    #提交按钮
+    ContinueButtonElement:
+      SimplifiedChinese: //*[contains(@text, '继 续')]
+      TraditionalChinese: //*[contains(@text, '繼 續')]
+      English: //*[contains(@text, 'Continue')]
+    #提前还款页面
+    EarlySettlementPageElement:
+      SimplifiedChinese: //*[contains(@content-desc, '提早还款')]
+      TraditionalChinese: //*[contains(@content-desc, '提早還款')]
+      English: //*[contains(@content-desc, 'Early Settlement')]
+    #提交按钮
+    RepaySelectedItemInFullButtonElement:
+      SimplifiedChinese: //*[contains(@text, '提前还清所选分期')]
+      TraditionalChinese: //*[contains(@text, '提前還清所選分期')]
+      English: //*[contains(@text, 'Repay Selected Item in Full')]
+    #确认页面
+    ReviewPageElement:
+      SimplifiedChinese: //*[contains(@content-desc, '查看')]
+      TraditionalChinese: //*[contains(@content-desc, '查閱')]
+      English: //*[contains(@content-desc, 'Early Settlement')]
+    #完成还款页面
+    CompletionOfRepaymentElement:
+      SimplifiedChinese: //*[contains(@text, '完成还款!')]
+      TraditionalChinese: //*[contains(@text, '完成還款!')]
+      English: //*[contains(@text, '')]
+    #cash元素
+    #查看分期详情页面
+    ViewinstalmentdetailsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '查看分期详情')]
+      TraditionalChinese: //*[contains(@content-desc, '查看分期詳情')]
+      English: //*[contains(@content-desc, 'View instalment details')]
+    #查看完整还款计划
+    FullRepaymentPlanButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '完整还款计划')]
+      TraditionalChinese: //*[contains(@content-desc, '完整還款計劃')]
+      English: //*[contains(@content-desc, 'Full Repayment Plan')]
+    #查看完整还款计划
+    DrawdownButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '提款')]
+      TraditionalChinese: //*[contains(@content-desc, '提款')]
+      English: //*[contains(@content-desc, 'Drawdown')]
+    #触发提款输入框
+    DrawdownloanAmountButtonElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.view.View
+    #录入提款金额输入框
+    DrawdownloanAmountElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.widget.EditText
+    #提款详情页面
+    LoanDisbursementPageElement:
+      SimplifiedChinese: //*[contains(@content-desc, '提取贷款')]
+      TraditionalChinese: //*[contains(@content-desc, '提取貸款')]
+      English: //*[contains(@content-desc, 'Loan Disbursement')]
+    #提款成功页面
+    SuccessfullyDrawDownPageElement:
+      SimplifiedChinese: //*[contains(@text, '成功提取金额！')]
+      TraditionalChinese: //*[contains(@text, '')]
+      English: //*[contains(@text, '')]
+
+
+  ios:
+    #卡详情反面有效期
+    TermOfValidityElement:
+      SimplifiedChinese: //*[contains(@name, '有效期')]
+      TraditionalChinese: //*[contains(@name, '有效期')]
+      English: //*[contains(@name, 'Valid Thru')]
+    #粘贴按钮
+    CopyButton: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[2]
+    #详细资料按钮
+    DetailButtonElement:
+      SimplifiedChinese: (//XCUIElementTypeImage[@name="详细资料"])[2]
+      TraditionalChinese: (//XCUIElementTypeImage[@name="詳細資料"])[2]
+      English: (//XCUIElementTypeImage[@name="Card Details"])[2]
+    #反转卡片按钮
+    FlipCardButtonElement:
+      SimplifiedChinese: (//XCUIElementTypeImage[@name="反转卡面"])[2]
+      TraditionalChinese: (//XCUIElementTypeImage[@name="反轉卡面"])[2]
+      English: (//XCUIElementTypeImage[@name="Flip Card"])[2]
+    #点击MC卡
+    TriggerMcCardElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther
+    #点击交易记录按钮 - 绝对路径
+    TransactionsButtonElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[8]
+    #查看交易记录详情
+    TransactionsDetailsButtonElement:
+      SimplifiedChinese: //*[contains(@name, '万事达卡消费')]
+      TraditionalChinese: //*[contains(@name, 'Mastercard消費')]
+      English: //*[contains(@name, 'Mastercard Payment')]
+    #进入详情页面
+    DetailElement:
+      SimplifiedChinese: //*[contains(@content-desc, '交易详情')]
+      TraditionalChinese: //*[contains(@content-desc, '交易詳情')]
+      English: //*[contains(@content-desc, 'Transaction Details')]
+    #查看分期详情
+    StagingDetailsButtonElement:
+      SimplifiedChinese: //*[contains(@text, '分期贷款详情')]
+      TraditionalChinese: //*[contains(@text, '分期貸款詳情')]
+      English: //*[contains(@text, 'iew Instalment Details')]
+    #进入详情页面
+    StagingDetailElement:
+      SimplifiedChinese: //*[contains(@content-desc, '分期贷款详情')]
+      TraditionalChinese: //*[contains(@content-desc, '分期貸款詳情')]
+      English: //*[contains(@content-desc, 'Instalment Details')]
+    #查看还款计划
+    RepaymentPlanButtonElement:
+      SimplifiedChinese: //*[contains(@text, '还款计划')]
+      TraditionalChinese: //*[contains(@text, '還款計劃')]
+      English: //*[contains(@text, 'Full Repayment Plan')]
+    #进入还款计划页面
+    RepaymentPlanElement:
+      SimplifiedChinese: //*[contains(@text, '还款计划')]
+      TraditionalChinese: //*[contains(@text, '還款計劃')]
+      English: //*[contains(@text, 'Repayment Plan')]
+    #返回上一页
+    BackPageButtonElement: //*[contains(@text, 'back')]
+    #返回上一页
+    BackPageButtonElement1: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]
+    #返回上一页
+    BackPageButtonElement2: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]
+    #点击livi按钮
+    ClickLiviButtonElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[7]
+    #返回上一页
+    BackPageButtonElement3: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]
+
+    #触发交易记录按钮
+    TransactionsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '交易纪录')]
+      TraditionalChinese: //*[contains(@content-desc, '交易紀錄')]
+      English: //*[contains(@content-desc, 'Transactions')]
+    #触发查看详情-进入acount页面
+    ViewDetailsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '查看详情')]
+      TraditionalChinese: //*[contains(@content-desc, '查看詳情')]
+      English: //*[contains(@content-desc, 'View Details')]
+    #account页面元素：livi PayLater
+    AccountElement: //*[contains(@content-desc, 'livi PayLater')]
+    #查看还款计划
+    InstalmentsPlansElement:
+      SimplifiedChinese: //*[contains(@content-desc, '交易日期')]
+      TraditionalChinese: //*[contains(@content-desc, '交易日期')]
+      English: //*[contains(@content-desc, 'Transaction date')]
+    #查看卡状态
+    CardStatusElement:
+      SimplifiedChinese: //*[contains(@content-desc, '停用')]
+      TraditionalChinese: //*[contains(@content-desc, '停用')]
+      English: //*[contains(@content-desc, 'Suspend')]
+    #变更卡状态为正常-Resume Card
+    ResumeCardElement:
+      SimplifiedChinese: //*[contains(@content-desc, '恢复使用')]
+      TraditionalChinese: //*[contains(@content-desc, '恢復使用')]
+      English: //*[contains(@content-desc, 'Resume Card')]
+    #变更卡状态为停用，点击弹窗按钮-是
+    SuspendMCElement:
+      SimplifiedChinese: //*[contains(@content-desc, '是')]
+      TraditionalChinese: //*[contains(@content-desc, '是')]
+      English: //*[contains(@content-desc, 'Yes')]
+    #分期起点按钮
+    MinimumInstalmentButtonAmountElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[2]/android.widget.ScrollView[1]/android.view.View[4]/android.widget.ImageView[3]
+    #分期起点页面
+    MinimumInstalmentAmountElement:
+      SimplifiedChinese: //*[contains(@content-desc, '最低分期金额')]
+      TraditionalChinese: //*[contains(@content-desc, '最低分期金額')]
+      English: //*[contains(@content-desc, 'Minimum Instalment Amount')]
+    #触发分期起点金额
+    UpdateMinimumInstalmentAmountElement: //*[contains(@text, '400')]
+    #触发提交按钮
+    ConfirmButtonElement:
+      SimplifiedChinese: //*[contains(@text, '确 定')]
+      TraditionalChinese: //*[contains(@text, '確 定')]
+      English: //*[contains(@text, 'Confirm')]
+    #还款期按钮
+    RepaymentPeriodButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '​还​款​期​')]
+      TraditionalChinese: //*[contains(@content-desc, '​還​款​期​')]
+      English: //*[contains(@content-desc, 'R​e​p​a​y​m​e​n​t​ ​P​e​r​i​o​d​')]
+    #修改分期期数页面
+    RepaymentPeriodElement:
+      SimplifiedChinese: //*[contains(@content-desc, '更改还款期')]
+      TraditionalChinese: //*[contains(@content-desc, '更改還款期')]
+      English: //*[contains(@content-desc, 'Change Repayment Period')]
+    #修改分期期数
+    ChangeRepaymentPeriod:
+      SimplifiedChinese: //*[contains(@text, '6 个月')]
+      TraditionalChinese: //*[contains(@text, '6 個月')]
+      English: //*[contains(@text, '6 months')]
+    #触发完成按钮
+    DoneButtonElement:
+      SimplifiedChinese: //*[contains(@text, '完 成')]
+      TraditionalChinese: //*[contains(@text, '完 成')]
+      English: //*[contains(@text, 'Done')]
+    #触发还款按钮
+    RepayButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '还款')]
+      TraditionalChinese: //*[contains(@content-desc, '還款')]
+      English: //*[contains(@content-desc, 'Repay')]
+    #月结单
+    ThisStatementElement:
+      SimplifiedChinese: //*[contains(@text, '暂无纪录')]
+      TraditionalChinese: //*[contains(@text, '暫無紀錄')]
+      English: //*[contains(@text, 'No records yet')]
+    #触发提前还款
+    EarlySettlementElement:
+      SimplifiedChinese: //*[contains(@text, '提前还款')]
+      TraditionalChinese: //*[contains(@text, '提前還款')]
+      English: //*[contains(@text, 'Early Settlement')]
+    #选择消费记录
+    InstalementPlansElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[6]/android.view.View/android.widget.Image
+    #提交按钮
+    ContinueButtonElement:
+      SimplifiedChinese: //*[contains(@text, '继 续')]
+      TraditionalChinese: //*[contains(@text, '繼 續')]
+      English: //*[contains(@text, 'Continue')]
+    #提前还款页面
+    EarlySettlementPageElement:
+      SimplifiedChinese: //*[contains(@content-desc, '提早还款')]
+      TraditionalChinese: //*[contains(@content-desc, '提早還款')]
+      English: //*[contains(@content-desc, 'Early Settlement')]
+    #提交按钮
+    RepaySelectedItemInFullButtonElement:
+      SimplifiedChinese: //*[contains(@text, '提前还清所选分期')]
+      TraditionalChinese: //*[contains(@text, '提前還清所選分期')]
+      English: //*[contains(@text, 'Repay Selected Item in Full')]
+    #确认页面
+    ReviewPageElement:
+      SimplifiedChinese: //*[contains(@content-desc, '查看')]
+      TraditionalChinese: //*[contains(@content-desc, '查閱')]
+      English: //*[contains(@content-desc, 'Early Settlement')]
+    #完成还款页面
+    CompletionOfRepaymentElement:
+      SimplifiedChinese: //*[contains(@text, '完成还款!')]
+      TraditionalChinese: //*[contains(@text, '提前還清所選分期')]
+      English: //*[contains(@text, 'Repay Selected Item in Full')]

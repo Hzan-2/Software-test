@@ -1,0 +1,14 @@
+#保险项目登录页
+LoginPage:
+  #高级按钮
+  detailsElement: //*[@id='details-button']
+  #进入安全连接
+  proceedElement: //*[@id='proceed-link']
+  #用户名输入框
+  userNameInputElement: //*[@id='loginid']
+  #用户名输入框
+  passWordInputElement: //*[@id='password']
+  #验证码输入框
+  validateCodeInputElement: //input[@name='validateCode']
+  #登录按钮
+  submitBottomElement: //*[@id='sub']

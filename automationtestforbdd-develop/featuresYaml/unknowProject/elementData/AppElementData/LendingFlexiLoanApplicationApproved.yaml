@@ -1,0 +1,58 @@
+#灵活贷-確認额度页面
+LendingFlexiLoanApplicationApproved:
+  android:
+    #勾选协议
+    AgreementButtonElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.widget.Image
+    #接受额度按钮
+    AcceptOfferButtonElement:
+      SimplifiedChinese: //*[contains(@text, '接受贷款')]
+      TraditionalChinese: //*[contains(@text, '接受貸款')]
+      English: //*[contains(@text, 'Accept Offer')]
+    #右上角...按钮
+    CancelButtonElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[2]
+    #取消申请 取消申請
+    CancelApplicationElement:
+      SimplifiedChinese: //android.view.View[@content-desc='取消申请']
+      TraditionalChinese: //android.view.View[@content-desc='取消申請']
+      English: //android.view.View[@content-desc='Cancel Application']
+    #取消申请 取消申請-弹窗
+    CancelApplicationElement1:
+      SimplifiedChinese: //android.widget.Button[@content-desc='取消申请']
+      TraditionalChinese: //android.widget.Button[@content-desc='取消申請']
+      English: //android.widget.Button[@content-desc='Cancel Application']
+    #额度確認页面元素
+    CongratulationsElement:
+      SimplifiedChinese: //*[contains(@text, '恭喜！')]
+      TraditionalChinese: //*[contains(@text, '恭喜！')]
+      English: //*[contains(@text, 'Accept Offer')]
+    #额度確認页面点击返回主页按钮
+    CurrentJobDoneButtonElement:
+      SimplifiedChinese: //*[contains(@text, '')]
+      TraditionalChinese: //*[contains(@text, '返回主頁')]
+      English: //*[contains(@text, '')]
+
+  ios:
+    #勾选协议
+    AgreementButtonElement: //XCUIElementTypeImage[@name="img"]
+    #接受额度按钮
+    AcceptOfferButtonElement:
+      SimplifiedChinese: //*[contains(@name, '接受贷款')]
+      TraditionalChinese: //*[contains(@name, '接受貸款')]
+      English: //*[contains(@name, 'Accept Offer')]
+    #右上角...按钮
+    CancelButtonElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[2]
+    #取消申请 取消申請
+    CancelApplicationElement:
+      SimplifiedChinese: //*[contains(@name, '取消申请')]
+      TraditionalChinese: //*[contains(@name, '取消申請')]
+      English: //*[contains(@name,'Cancel Application']
+    #额度確認页面元素
+    CongratulationsElement:
+      SimplifiedChinese: //*[contains(@name, '恭喜！')]
+      TraditionalChinese: //*[contains(@name, '恭喜！')]
+      English: //*[contains(@name, 'Accept Offer')]
+    #额度確認页面点击返回主页按钮
+    CurrentJobDoneButtonElement:
+      SimplifiedChinese: //*[contains(@name, '返回主页')]
+      TraditionalChinese: //*[contains(@name, '返回主頁')]
+      English: //*[contains(@name, 'Back to Overview')]

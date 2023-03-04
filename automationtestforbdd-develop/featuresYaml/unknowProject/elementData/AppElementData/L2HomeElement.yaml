@@ -1,0 +1,220 @@
+#l2首页元素
+L2HomePage:
+  android:
+    #L2首页右上角小头像
+    L2avatarButtonElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]
+    #继续开户按钮
+    OpenAnAccountButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '继续开户')]
+      TraditionalChinese: //*[contains(@content-desc, '繼續開戶')]
+      English: //*[contains(@content-desc, 'Resume')]
+    #身份证号码输入框
+    IdentificationNumberInputElement:
+      SimplifiedChinese: //*[contains(@text, '请输入身份证号码')]
+      TraditionalChinese: //*[contains(@text, '請輸入身份證號碼')]
+      English: //*[contains(@text, 'Enter your ID number')]
+    #继续按钮
+    ContinueButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '继续')]
+      TraditionalChinese: //*[contains(@content-desc, '繼續')]
+      English: //*[contains(@content-desc, 'Contiune')]
+    #搜寻地址输入1
+    SearchAddressElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[4]
+    #搜寻地址输入框
+    SearchAddressInputElement:
+      SimplifiedChinese: //*[contains(@text, '搜索你的住址')]
+      TraditionalChinese: //*[contains(@text, '搜尋你的住址')]
+      English: //*[contains(@text, 'Search for your address')]
+    SearchAddressInputElement1: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[3]
+    #搜索按钮
+    searchButtonElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[3]
+    #搜索地址内容第一个栏位
+    FirstColumnButtonElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]
+
+############ 手动输入地址 start #############
+    #手動輸入住址  手动输入住址 Type your address instead
+    TypeYourAddressInstead:
+      SimplifiedChinese: //*[contains(@content-desc, '手动输入住址')]
+      TraditionalChinese: //*[contains(@content-desc, '手動輸入住址')]
+      English: //*[contains(@content-desc, 'Type your address instead')]
+    #地址输入页 标题 Where do you live
+    AddressInputtittle:
+      SimplifiedChinese: //*[contains(@content-desc, '你住在哪里')]
+      TraditionalChinese: //*[contains(@content-desc, '你住在哪裡')]
+      English: //*[contains(@content-desc, 'Where do you live')]
+    #室输入框
+    RoomFlatEdit:
+      SimplifiedChinese: //*[contains(@text, '室')]
+      TraditionalChinese: //*[contains(@text, '室')]
+      English: //*[contains(@text, 'Room/Flat')]
+    #楼输入框
+    FloorEdit:
+      SimplifiedChinese: //*[contains(@text, '楼')]
+      TraditionalChinese: //*[contains(@text, '樓')]
+      English: //*[contains(@text, 'Floor')]
+    #栋 / 单元输入框
+    BlockEdit:
+      SimplifiedChinese: //*[contains(@text, '栋 / 单元（选填）')]
+      TraditionalChinese: //*[contains(@text, '座（選填）')]
+      English: //*[contains(@text, 'Block (optional)')]
+    #大厦/ 屋苑输入框
+    BuildingEdit:
+      SimplifiedChinese: //*[contains(@text, '大厦 / 屋苑')]
+      TraditionalChinese: //*[contains(@text, '大廈 / 屋苑')]
+      English: //*[contains(@text, 'Building / Estate')]
+    #街道及号码输入框
+    StreetEdit:
+      SimplifiedChinese: //*[contains(@text, '街道及号码')]
+      TraditionalChinese: //*[contains(@text, '街名及街號')]
+      English: //*[contains(@text, 'Number and name of street')]
+    #地区下拉选框
+    DistrictAreaSearch: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.ImageView[3]
+    #地区下拉选择-香港
+    HONGKONG:
+      SimplifiedChinese: //*[contains(@content-desc, '香港')]
+      TraditionalChinese: //*[contains(@content-desc, '香港')]
+      English: //*[contains(@content-desc, 'HONG KONG')]
+    #地区下拉选择-九龍
+    KOWLOON:
+      SimplifiedChinese: //*[contains(@content-desc, '九龍')]
+      TraditionalChinese: //*[contains(@content-desc, '九龍')]
+      English: //*[contains(@content-desc, 'KOWLOON')]
+    #地区下拉选择-九龍-红磡
+    HUNGHOM:
+      SimplifiedChinese: //*[contains(@content-desc, '紅磡')]
+      TraditionalChinese: //*[contains(@content-desc, '紅磡')]
+      English: //*[contains(@content-desc, 'HUNG HOM')]
+    #地区下拉选择-新界
+    NEWTERRITORIES:
+      SimplifiedChinese: //*[contains(@content-desc, '新界')]
+      TraditionalChinese: //*[contains(@content-desc, '新界')]
+      English: //*[contains(@content-desc, 'NEW TERRITORIES')]
+    #地区下拉选择-離島
+    ISLANDS:
+      SimplifiedChinese: //*[contains(@content-desc, '離島')]
+      TraditionalChinese: //*[contains(@content-desc, '離島')]
+      English: //*[contains(@content-desc, 'ISLANDS')]
+############ 手动输入地址 end #############
+
+
+
+
+    #意见反馈
+    FeedbackElement:
+      SimplifiedChinese: //*[contains(@content-desc, '意见反馈')]
+      TraditionalChinese: //*[contains(@content-desc, '意見')]
+      English: //*[contains(@content-desc, 'Feedback')]
+    #意见反馈内容输入框
+    FeedbackInputElement:
+      SimplifiedChinese: //*[contains(@text, '请提供意见反馈 (2,000字内)')]
+      TraditionalChinese: //*[contains(@text, '請敘述你的意見 (2,000字內)')]
+      English: //*[contains(@text, 'Your feedback (2,000 characters max)')]
+    #意见反馈称谓输入框
+    FeedbackTitleButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '称谓')]
+      TraditionalChinese: //*[contains(@content-desc, '稱謂')]
+      English: //*[contains(@content-desc, 'Title')]
+    #意见反馈先生选项
+    FeedbackMrButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '先生')]
+      TraditionalChinese: //*[contains(@content-desc, '先生')]
+      English: //*[contains(@content-desc, 'Mr')]
+    #意见反馈女士选项
+    FeedbackMsButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '女士')]
+      TraditionalChinese: //*[contains(@content-desc, '女士')]
+      English: //*[contains(@content-desc, 'Ms')]
+    #意见反馈姓名输入框
+    FeedbackNameInputElement:
+      SimplifiedChinese: //*[contains(@text, '姓名')]
+      TraditionalChinese: //*[contains(@text, '姓名')]
+      English: //*[contains(@text, 'Your Name')]
+    #意见反馈邮箱输入框
+    FeedbackEmailInputElement:
+      SimplifiedChinese: //*[contains(@text, '电邮')]
+      TraditionalChinese: //*[contains(@text, '電郵')]
+      English: //*[contains(@text, 'Email')]
+    #意见反馈提交按钮
+    FeedbackSubmitButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '提交')]
+      TraditionalChinese: //*[contains(@content-desc, '提交')]
+      English: //*[contains(@content-desc, 'Submit')]
+    #意见反馈提交成功
+    FeedbackIsSuccessfulElement:
+      SimplifiedChinese: //*[contains(@content-desc, '感谢你宝贵的意见！')]
+      TraditionalChinese: //*[contains(@content-desc, '感謝你寶貴的意見！')]
+      English: //*[contains(@content-desc, 'Thank you for your feedback!')]
+  ios:
+    #L2首页右上角小头像
+    L2avatarButtonElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[1]
+    #继续开户按钮
+    OpenAnAccountButtonElement:
+      SimplifiedChinese: //*[contains(@name, '继续开户')]
+      TraditionalChinese: //*[contains(@name, '繼續開戶')]
+      English: //*[contains(@name, 'Resume')]
+    #身份证号码输入框
+    IdentificationNumberInputElement:
+      SimplifiedChinese: //*[contains(@name, '请输入身份证号码')]
+      TraditionalChinese: //*[contains(@name, '請輸入身份證號碼')]
+      English: //*[contains(@name, 'Enter your ID number')]
+    #继续按钮
+    ContinueButtonElement:
+      SimplifiedChinese: //*[contains(@name, '继续')]
+      TraditionalChinese: //*[contains(@name, '繼續')]
+      English: //*[contains(@name, 'Contiune')]
+    #搜寻地址输入1
+    SearchAddressElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[3]
+    #搜寻地址输入框 //XCUIElementTypeTextField[@name="搜索你的住址"] 搜尋你的住址 Search for your address
+    SearchAddressInputElement:
+      SimplifiedChinese: //XCUIElementTypeTextField[@name="搜索你的住址"]
+      TraditionalChinese: //XCUIElementTypeTextField[@name="搜尋你的住址"]
+      English: //XCUIElementTypeTextField[@name="Search for your address"]
+    #搜索按钮
+    searchButtonElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[3]
+    #搜索地址内容第一个栏位
+    FirstColumnButtonElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeStaticText[1]
+    #意见反馈
+    FeedbackElement:
+      SimplifiedChinese: //*[contains(@name, '意见反馈')]
+      TraditionalChinese: //*[contains(@name, '意見')]
+      English: //*[contains(@name, 'Feedback')]
+    #意见反馈内容输入框
+    FeedbackInputElement:
+      SimplifiedChinese: //*[contains(@name, '请提供意见反馈 (2,000字内)')]
+      TraditionalChinese: //*[contains(@name, '請敘述你的意見 (2,000字內)')]
+      English: //*[contains(@name, 'Your feedback (2,000 characters max)')]
+    #意见反馈称谓输入框
+    FeedbackTitleButtonElement:
+      SimplifiedChinese: //*[contains(@name, '称谓')]
+      TraditionalChinese: //*[contains(@name, '稱謂')]
+      English: //*[contains(@name, 'Title')]
+    #意见反馈先生选项
+    FeedbackMrButtonElement:
+      SimplifiedChinese: //*[contains(@name, '先生')]
+      TraditionalChinese: //*[contains(@name, '先生')]
+      English: //*[contains(@name, 'Mr')]
+    #意见反馈女士选项
+    FeedbackMsButtonElement:
+      SimplifiedChinese: //*[contains(@name, '女士')]
+      TraditionalChinese: //*[contains(@name, '女士')]
+      English: //*[contains(@name, 'Ms')]
+    #意见反馈姓名输入框
+    FeedbackNameInputElement:
+      SimplifiedChinese: //*[contains(@name, '姓名')]
+      TraditionalChinese: //*[contains(@name, '姓名')]
+      English: //*[contains(@name, 'Your Name')]
+    #意见反馈邮箱输入框
+    FeedbackEmailInputElement:
+      SimplifiedChinese: //*[contains(@name, '电邮')]
+      TraditionalChinese: //*[contains(@name, '電郵')]
+      English: //*[contains(@name, 'Email')]
+    #意见反馈提交按钮
+    FeedbackSubmitButtonElement:
+      SimplifiedChinese: //*[contains(@name, '提交')]
+      TraditionalChinese: //*[contains(@name, '提交')]
+      English: //*[contains(@name, 'Submit')]
+    #意见反馈提交成功
+    FeedbackIsSuccessfulElement:
+      SimplifiedChinese: //*[contains(@name, '感谢你宝贵的意见！')]
+      TraditionalChinese: //*[contains(@name, '感謝你寶貴的意見！')]
+      English: //*[contains(@name, 'Thank you for your feedback!')]

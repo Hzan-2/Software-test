@@ -1,0 +1,779 @@
+#Lending材料复核
+-
+  Step: Given
+  Text: 进行提交材料复核
+  Fixture: web
+  Process:
+    -
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 等待5秒，进入材料复核审批阶段
+    -
+      Action: mouse
+      Element: ${LendingElement}${CreditProcessElement}
+      TestData: hover
+      Remarks: 将鼠标悬停在指定元素上
+    -
+      Action: click
+      Element: ${LendingElement}${ApprovalAndReviewElement}
+      TestData:
+      Remarks: 点击”Livi Cash/Livi PayLater审查审批“
+    -
+      Action: iframe
+      Element: ${LendingElement}${CreditIframe6}
+      TestData:
+      Remarks: 切入iframe1
+    -
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 等待5秒
+    -
+      Action: click
+      Element: ${LendingElement}${DocumentsUnderReviewButtonElement}
+      TestData:
+      Remarks: 点击”材料复核“
+    -
+      Action: iframe
+      Element: ${LendingElement}${CreditIframe18}
+      TestData:
+      Remarks: 切入iframe18
+    -
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 等待5秒
+    -
+      Action: iframe
+      Element: ${LendingElement}${CreditIframe8}
+      TestData:
+      Remarks: 切入iframe8
+    -
+      Action: click
+      Element: ${LendingElement}${GetTaskButtonElement}
+      TestData:
+      Remarks: 点击”自动获取任务“
+    -
+      Action: q_iframe
+      Element:
+      TestData:
+      Remarks: 切出iframe8
+    -
+      Action: q_iframe
+      Element: ${LendingElement}${CreditIframe18}
+      TestData:
+      Remarks: 切出iframe18
+    -
+      Action: q_iframe
+      Element: ${LendingElement}${CreditIframe6}
+      TestData:
+      Remarks: 切出iframe6
+    -
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 等待5秒
+    -
+      Action: iframe
+      Element: ${LendingElement}${CreditIframe4}
+      TestData:
+      Remarks: 切入iframe4
+    -
+      Action: iframe
+      Element: ${LendingElement}${CreditIframe5}
+      TestData:
+      Remarks: 切入iframe5
+    -
+      Action: click
+      Element: ${LendingElement}${SearchButtonElement}
+      TestData:
+      Remarks: 点击搜索按钮
+    -
+      Action: input
+      Element: ${LendingElement}${InputCustomerIdElement}
+      TestData: ${Lending}${CustomerId}
+      Remarks: 输入客户号
+    -
+      Action: click
+      Element: ${LendingElement}${ConfirmButtonElement}
+      TestData:
+      Remarks: 点击确定按钮
+    -
+      Action: q_iframe
+      Element:
+      TestData:
+      Remarks: 切出iframe5
+    -
+      Action: click
+      Element: ${LendingElement}${ConfirmButtonElement1}
+      TestData:
+      Remarks: 点击确定按钮
+    -
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 等待3秒
+    -
+      Action: alert
+      Element:
+      TestData:
+      Remarks: 关闭弹窗
+    -
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 等待3秒
+    -
+      Action: q_iframe
+      Element:
+      TestData:
+      Remarks: 切出iframe4
+  #判断是否有值
+    -
+      Action: judge,branch
+      Element: /html/body/div[5]/div/table/tbody/tr[1]/td/div
+      TestData:
+      Remarks: 判断是否弹窗是否依然存在可选取的审批任务,存在走if
+      ifbranchProcess:
+        -
+          Action: click
+          Element: /html/body/div[5]/div/table/tbody/tr[1]/td/button
+          TestData:
+          Remarks: 关闭弹窗
+      elsebranchProcess:
+        -
+          Action: iframe
+          Element: ${LendingElement}${CreditIframe6}
+          TestData:
+          Remarks: 切入iframe6
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 等待3秒
+        -
+          Action: iframe
+          Element: ${LendingElement}${CreditIframe18}
+          TestData:
+          Remarks: 切入iframe18
+        -
+          Action: iframe
+          Element: ${LendingElement}${CreditIframe8}
+          TestData:
+          Remarks: 切入iframe8
+        -
+          Action: click
+          Element: ${LendingElement}${SearchButtonElement}
+          TestData:
+          Remarks: 点击搜索按钮
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 等待3秒
+        -
+          Action: input
+          Element: ${LendingElement}${InputCustomerNameElement}
+          TestData: $${CustomerName}
+          Remarks: 输入客户名称
+        -
+          Action: click
+          Element: ${LendingElement}${ConfirmButtonElement}
+          TestData:
+          Remarks: 点击确定按钮
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 等待3秒
+        -
+          Action: click
+          Element: ${LendingElement}${ApplyDetailsButtonElement}
+          TestData:
+          Remarks: 申请详情
+        -
+          Action: q_iframe
+          Element:
+          TestData:
+          Remarks: 切出iframe8
+        -
+          Action: q_iframe
+          Element:
+          TestData:
+          Remarks: 切出iframe18
+        -
+          Action: q_iframe
+          Element:
+          TestData:
+          Remarks: 切出iframe6
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 等待3秒
+        -
+          Action: iframe
+          Element: ${LendingElement}${CreditIframe4}
+          TestData:
+          Remarks: 切入iframe4
+        -
+          Action: iframe
+          Element: ${LendingElement}${CreditIframe14}
+          TestData:
+          Remarks: 切入iframe14
+        -
+          Action: click
+          Element: ${LendingElement}${SignCommentsButtonElement}
+          TestData:
+          Remarks: 点击签署意见
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 等待3秒
+        -
+          Action: iframe
+          Element: ${LendingElement}${CreditIframe15}
+          TestData:
+          Remarks: 切入iframe15
+        -
+          Action: iframe
+          Element: ${LendingElement}${CreditIframe11}
+          TestData:
+          Remarks: 切入iframe11
+        -
+          Action: get_value
+          Element: //*[@id='ADVICELIMIT']
+          TestData: $${SystemLimit}
+          Remarks: 获取系统获批额度
+        -
+          Action: get_text
+          Element: $${ApprovalLimit}
+          TestData: 30000
+          Remarks: 赋值批准额度
+        -
+          Action: click
+          Element: ${LendingElement}${AgreeButtonElement}
+          TestData:
+          Remarks: 选择同意
+        -
+          Action: input
+          Element: ${LendingElement}${InputApprovedLimitElement}
+          TestData: $${ApprovalLimit}
+          Remarks: 录入批准额度
+        -
+          Action: input
+          Element: ${LendingElement}${RemarksElement}
+          TestData: 材料复核
+          Remarks: 录入备注
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 等待3秒
+        -
+          Action: judge,branch
+          Element: ${LendingElement}${CreditIframe19}
+          TestData:
+          Remarks: 判断是否上传住址证明，若存在则，走if分支
+          ifbranchProcess:
+            -
+              Action: sleep
+              Element:
+              TestData: 3
+              Remarks: 存在住址证明，进入审批
+            -
+              Action: iframe
+              Element: ${LendingElement}${CreditIframe19}
+              TestData:
+              Remarks: 切入iframe19
+            -
+              Action: click
+              Element: ${LendingElement}${DocumentClassification}
+              TestData:
+              Remarks: 选择文件细项
+            -
+              Action: click
+              Element: ${LendingElement}${ApprovalOpinions}
+              TestData:
+              Remarks: 触发审批意见
+            -
+              Action: click
+              Element: ${LendingElement}${SelectApprovedElement}
+              TestData:
+              Remarks: 选择已审核通过
+            -
+              Action: click
+              Element: ${LendingElement}${PreservationButtonElement1}
+              TestData:
+              Remarks: 点击报存按钮
+            -
+              Action: q_iframe
+              Element: ${LendingElement}${CreditIframe19}
+              TestData:
+              Remarks: 切出iframe19
+          elsebranchProcess:
+            -
+              Action: sleep
+              Element:
+              TestData: 3
+              Remarks: 不存在住址证明
+        -
+          Action: judge,branch
+          Element: ${LendingElement}${CreditIframe20}
+          TestData:
+          Remarks: 判断是否上传身份证明，若存在则，走if分支
+          ifbranchProcess:
+            -
+              Action: sleep
+              Element:
+              TestData: 10
+              Remarks: 存在身份证明，进入审批
+            -
+              Action: iframe
+              Element: ${LendingElement}${CreditIframe20}
+              TestData:
+              Remarks: 切入iframe19
+            -
+              Action: click
+              Element: ${LendingElement}${DocumentClassification}
+              TestData:
+              Remarks: 选择文件细项
+            -
+              Action: click
+              Element: ${LendingElement}${ApprovalOpinions}
+              TestData:
+              Remarks: 触发审批意见
+            -
+              Action: click
+              Element: ${LendingElement}${SelectApprovedElement}
+              TestData:
+              Remarks: 选择已审核通过
+            -
+              Action: click
+              Element: ${LendingElement}${PreservationButtonElement1}
+              TestData:
+              Remarks: 点击报存按钮
+            -
+              Action: q_iframe
+              Element: ${LendingElement}${CreditIframe20}
+              TestData:
+              Remarks: 切出iframe19
+          elsebranchProcess:
+            -
+              Action: sleep
+              Element:
+              TestData: 5
+              Remarks: 不存在身份证明
+        -
+          Action: judge,branch
+          Element: ${LendingElement}${CreditIframe21}
+          TestData:
+          Remarks: 判断是否上收入证明，若存在则，走if分支
+          ifbranchProcess:
+            -
+              Action: sleep
+              Element:
+              TestData: 3
+              Remarks: 存在收入证明，进入审批
+            -
+              Action: iframe
+              Element: ${LendingElement}${CreditIframe21}
+              TestData:
+              Remarks: 切入iframe19
+            -
+              Action: input
+              Element: ${LendingElement}${VerifyIncomeElement}
+              TestData: 10000
+              Remarks: 录入核实收入
+            -
+              Action: click
+              Element: ${LendingElement}${DocumentClassification}
+              TestData:
+              Remarks: 选择文件细项
+            -
+              Action: click
+              Element: ${LendingElement}${ApprovalOpinions}
+              TestData:
+              Remarks: 触发审批意见
+            -
+              Action: click
+              Element: ${LendingElement}${SelectApprovedElement1}
+              TestData:
+              Remarks: 选择已审核通过
+            -
+              Action: click
+              Element: ${LendingElement}${PreservationButtonElement1}
+              TestData:
+              Remarks: 点击报存按钮
+            -
+              Action: q_iframe
+              Element: ${LendingElement}${CreditIframe21}
+              TestData:
+              Remarks: 切出iframe19
+          elsebranchProcess:
+            -
+              Action: sleep
+              Element:
+              TestData: 3
+              Remarks: 不存在收入证明
+        -
+          Action: judge,branch
+          Element: ${LendingElement}${CreditIframe22}
+          TestData:
+          Remarks: 判断是否上还款证明，若存在则，走if分支
+          ifbranchProcess:
+            -
+              Action: sleep
+              Element:
+              TestData: 3
+              Remarks: 存在还款证明，进入审批
+            -
+              Action: iframe
+              Element: ${LendingElement}${CreditIframe22}
+              TestData:
+              Remarks: 切入iframe19
+            -
+              Action: click
+              Element: ${LendingElement}${ApprovalOpinions}
+              TestData:
+              Remarks: 触发审批意见
+            -
+              Action: click
+              Element: ${LendingElement}${SelectApprovedElement}
+              TestData:
+              Remarks: 选择已审核通过
+            -
+              Action: click
+              Element: ${LendingElement}${PreservationButtonElement1}
+              TestData:
+              Remarks: 点击报存按钮
+            -
+              Action: q_iframe
+              Element: ${LendingElement}${CreditIframe22}
+              TestData:
+              Remarks: 切出iframe19
+          elsebranchProcess:
+            -
+              Action: sleep
+              Element:
+              TestData: 2
+              Remarks: 不存在还款证明
+        -
+          Action: judge,branch
+          Element: ${LendingElement}${CreditIframe23}
+          TestData:
+          Remarks: 判断是否其他证明，若存在则，走if分支
+          ifbranchProcess:
+            -
+              Action: sleep
+              Element:
+              TestData: 3
+              Remarks: 存在其他证明，进入审批
+            -
+              Action: iframe
+              Element: ${LendingElement}${CreditIframe23}
+              TestData:
+              Remarks: 切入iframe19
+            -
+              Action: click
+              Element: ${LendingElement}${ApprovalOpinions}
+              TestData:
+              Remarks: 触发审批意见
+            -
+              Action: click
+              Element: ${LendingElement}${SelectApprovedElement}
+              TestData:
+              Remarks: 选择已审核通过
+            -
+              Action: click
+              Element: ${LendingElement}${PreservationButtonElement1}
+              TestData:
+              Remarks: 点击报存按钮
+            -
+              Action: q_iframe
+              Element:
+              TestData:
+              Remarks: 切出iframe19
+          elsebranchProcess:
+            -
+              Action: sleep
+              Element:
+              TestData: 3
+              Remarks: 不存在其他证明
+      #  step58_2:
+      #    Action: iframe
+      #    Element: ${LendingElement}${CreditIframe19}
+      #    TestData:
+      #    Remarks: 切入iframe19
+      #  step58_2_1:
+      #    Action: click
+      #    Element: ${LendingElement}${DocumentClassification}
+      #    TestData:
+      #    Remarks: 选择文件细项
+      #  step58_3:
+      #    Action: click
+      #    Element: ${LendingElement}${ApprovalOpinions}
+      #    TestData:
+      #    Remarks: 触发审批意见
+      #  step58_4:
+      #    Action: click
+      #    Element: ${LendingElement}${SelectApprovedElement}
+      #    TestData:
+      #    Remarks: 选择已审核通过
+      #  step58_5:
+      #    Action: click
+      #    Element: ${LendingElement}${PreservationButtonElement1}
+      #    TestData:
+      #    Remarks: 点击报存按钮
+      #  step58_6:
+      #    Action: q_iframe
+      #    Element: ${LendingElement}${CreditIframe19}
+      #    TestData:
+      #    Remarks: 切出iframe19
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 等待3秒
+        -
+          Action: click
+          Element: ${LendingElement}${PreservationAndQueryPcsmButtonElement}
+          TestData:
+          Remarks: 点击保存并查询决策引擎
+        -
+            Action: compare
+            Element:
+            TestData: $${ApprovalLimit}<$${SystemLimit}
+            Remarks: 判断批准额度小于系统审批额度，则走if分支
+            ifbranchProcess:
+              -
+                Action: sleep
+                Element:
+                TestData: 3
+                Remarks: 等待3秒，批准额度小于系统审批额度
+              -
+                Action: alert
+                Element:
+                TestData:
+                Remarks: 关闭弹窗
+              -
+                Action: sleep
+                Element:
+                TestData: 3
+                Remarks: 等待3秒
+            elsebranchProcess:
+              -
+                Action: sleep
+                Element:
+                TestData: 5
+                Remarks: 等待5秒，批准额度大于系统审批额度
+              -
+                Action: alert
+                Element:
+                TestData:
+                Remarks: 关闭弹窗
+              -
+                Action: sleep
+                Element:
+                TestData: 3
+                Remarks: 等待3秒
+              -
+                Action: alert
+                Element:
+                TestData:
+                Remarks: 关闭弹窗
+      #  step59_1:
+      #    Action: sleep
+      #    Element:
+      #    TestData: 6
+      #    Remarks: 等待6秒
+      #    #需要判断是否有弹窗，后续增加
+      #  step59_2:
+      #    Action: alert
+      #    Element:
+      #    TestData:
+      #    Remarks: 关闭弹窗
+      #  step59_3:
+      #    Action: sleep
+      #    Element:
+      #    TestData: 5
+      #    Remarks: 等待5秒
+        -
+          Action: q_iframe
+          Element:
+          TestData:
+          Remarks: 切出iframe11
+        -
+          Action: q_iframe
+          Element:
+          TestData:
+          Remarks: 切出iframe15
+        -
+          Action: click
+          Element: ${LendingElement}${SubmitButtonElement}
+          TestData:
+          Remarks: 点击提交
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 等待3秒
+        -
+          Action: q_iframe
+          Element:
+          TestData:
+          Remarks: 切出iframe14
+        -
+          Action: q_iframe
+          Element:
+          TestData:
+          Remarks: 切出iframe4
+        -
+          Action: iframe
+          Element: ${LendingElement}${CreditIframe12}
+          TestData:
+          Remarks: 切入iframe12
+        -
+          Action: click
+          Element: ${LendingElement}${CallNextStepElement}
+          TestData:
+          Remarks: 选择批准
+        -
+          Action: click
+          Element: ${LendingElement}${ApproverNextStepElement}
+          TestData:
+          Remarks: 选择系统管理员
+        -
+          Action: click
+          Element: ${LendingElement}${SubmitButtonElement1}
+          TestData:
+          Remarks: 点击提交
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 等待3秒
+        -
+          Action: alert
+          Element:
+          TestData:
+          Remarks: 关闭弹窗
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 等待3秒
+        -
+          Action: alert
+          Element:
+          TestData:
+          Remarks: 关闭弹窗
+        -
+          Action: q_iframe
+          Element:
+          TestData:
+          Remarks: 切出iframe12
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 等待3秒
+
+
+-
+  Step: Then
+  Text: 我能看到PayLater申请节点为待客户确认
+  Fixture: web
+  Process:
+    -
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 停顿3秒
+    -
+      Action: mouse
+      Element: ${LendingElement}${AdministrationProcess}
+      TestData: hover
+      Remarks: 将鼠标悬停在流程管理上
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+    -
+      Action: click
+      Element: ${LendingElement}${PayLater&CashProgressQuery}
+      TestData:
+      Remarks: PayLater/Cash进度查询
+    -
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 停顿3秒
+    -
+      Action: iframe
+      Element: ${LendingElement}${AdministrationIframe1}
+      TestData:
+      Remarks: 切入iframe1
+    -
+      Action: iframe
+      Element: ${LendingElement}${AdministrationIframe2}
+      TestData:
+      Remarks: 切入iframe2
+    -
+      Action: iframe
+      Element: ${LendingElement}${AdministrationIframe3}
+      TestData:
+      Remarks: 切入iframe3
+    -
+      Action: click
+      Element: ${LendingElement}${SearchButtonElement}
+      TestData:
+      Remarks: 点击搜索按钮
+    -
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 停顿3秒
+    -
+      Action: click
+      Element: //*[@id='DOFILTER_MAIN1_CUSTOMERID']/input
+      TestData:
+      Remarks: 点击客户号
+    -
+      Action: input
+      Element: ${LendingElement}${InputCustomerIdElement}
+      TestData: ${Lending}${CustomerId}
+      Remarks: 输入客户号
+    -
+      Action: click
+      Element: ${LendingElement}${ConfirmButtonElement}
+      TestData:
+      Remarks: 点击确定
+    -
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 停顿3秒
+    -
+      Action: get
+      Element: //*[@id='INPUT_myiframe0_PhaseName_0_7']
+      TestData: '客户确认'
+      Remarks: 查询审批阶段
+    -
+      Action: q_iframe
+      Element:
+      TestData:
+      Remarks: 切出iframe3
+    -
+      Action: q_iframe
+      Element:
+      TestData:
+      Remarks: 切出iframe2
+    -
+      Action: q_iframe
+      Element:
+      TestData:
+      Remarks: 切出iframe1

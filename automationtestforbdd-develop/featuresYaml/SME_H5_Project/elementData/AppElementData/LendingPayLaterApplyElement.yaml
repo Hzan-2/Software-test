@@ -1,0 +1,217 @@
+#LiviPayLater申请页面
+LendingPayLaterApplyElement:
+  android:
+    ##触发立即申请按钮
+    ApplyNowButtonElement:
+      SimplifiedChinese: //*[contains(@text, '立即申请')]
+      TraditionalChinese: //*[contains(@text, '立即申請')]
+      English: //*[contains(@text, 'Apply Now')]
+    #触发继续按钮
+    ContinueOpenButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '继续')]
+      TraditionalChinese: //*[contains(@content-desc, '繼續')]
+      English: //*[contains(@content-desc, 'Continue')]
+    #勾选协议按钮
+    AgreementButtonElement: //*[contains(@text, 'agree')]
+    #提交按钮
+    ContinueButtonElement:
+      SimplifiedChinese: //*[contains(@text, '继 续')]
+      TraditionalChinese: //*[contains(@text, '繼 續')]
+      English: //*[contains(@text, 'Continue')]
+    #PayLater-个人信息确认页面的确定按钮
+    ReviewConfirmButtonElement:
+      SimplifiedChinese: //android.widget.Button[@content-desc='确认']
+      TraditionalChinese: //android.widget.Button[@content-desc='確認']
+      English: //*[contains(@content-desc,'Confirm')]
+
+#Personal Information
+    #触发选择职业栏位
+    ProfessionButtonElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ImageView[2]
+    #选择具体行业-专业人士
+    ProfessionElement:
+      SimplifiedChinese: //*[contains(@content-desc, '专业人士')]
+      TraditionalChinese: //*[contains(@content-desc, '專業人士')]
+      English: //*[contains(@content-desc,'Professional')]
+    #选择职业-会计师
+    OccupationElement:
+      SimplifiedChinese: //*[contains(@content-desc, '会计')]
+      TraditionalChinese: //*[contains(@content-desc, '會計師 / 精算師')]
+      English: //*[contains(@content-desc,'Accountant or Actuary')]
+    #触发行业选择框
+    IndustryButtonElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.ImageView[3]
+    #触发行业
+    SelectIndustryElement:
+      SimplifiedChinese: //*[contains(@content-desc, '金融及保险服务业')]
+      TraditionalChinese: //*[contains(@content-desc, '金融及保險服務業')]
+      English: //*[contains(@content-desc,'Financial and Insurance Services')]
+    #选择银行业
+    IndustryElement:
+      SimplifiedChinese: //*[contains(@content-desc, '银行业')]
+      TraditionalChinese: //*[contains(@content-desc, '銀行業')]
+      English: //*[contains(@content-desc,'Banking')]
+    #触发公司名称
+    CompanyNameElement:
+      SimplifiedChinese: //*[contains(@text, '公司英文名称')]
+      TraditionalChinese: //*[contains(@text, '公司英文名稱')]
+      English: //*[contains(@text, 'Company Name (In English)')]
+    #触发就业信息
+    EmploymentStatusButtonElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ScrollView[1]/android.widget.ImageView[4]
+    #选择就业信息-选择全职受雇有固定收入
+    EmploymentStatusElement:
+      SimplifiedChinese: //*[contains(@content-desc, '全职受雇有固定收入')]
+      TraditionalChinese: //*[contains(@content-desc, '全職受僱有固定收入')]
+      English: //*[contains(@content-desc, 'Full time employed with fixed income')]
+    #触发工作任期
+    CurrentJobPeriodButtonElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ScrollView[1]/android.widget.ImageView[5]
+    #点击工作任期的完成按钮
+    CurrentJobDoneButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '完成')]
+      TraditionalChinese: //*[contains(@content-desc, '完成')]
+      English: //*[contains(@content-desc, 'Done')]
+    #触发每月收入
+    MonthlyIncomeElement:
+      SimplifiedChinese: //*[contains(@text, '每月收入')]
+      TraditionalChinese: //*[contains(@text, '每月收入')]
+      English: //*[contains(@text, 'Monthly income')]
+    #选择婚姻状况
+    MaritalStatusButtonElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ScrollView[1]/android.widget.ImageView[4]
+    #选择未婚
+    MaritalStatusElement:
+      SimplifiedChinese: //*[contains(@content-desc, '未婚')]
+      TraditionalChinese: //*[contains(@content-desc, '未婚')]
+      English: //*[contains(@content-desc, 'Single')]
+    #選擇教育程度
+    EducationLevelButtonElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ScrollView[1]/android.widget.ImageView[5]
+    #選擇大學及以上
+    UniversityOrAboveElement:
+      SimplifiedChinese: //*[contains(@content-desc, '大学或以上')]
+      TraditionalChinese: //*[contains(@content-desc, '大學或以上')]
+      English: //*[contains(@content-desc, 'University or above')]
+    #選擇居住状态
+    HousingStatusButtonElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ScrollView[1]/android.widget.ImageView[6]
+    #选择自有无抵押
+    SelfOwneDwithNoMortgageElement:
+      SimplifiedChinese: //*[contains(@content-desc,'自有无抵押')]
+      TraditionalChinese: //*[contains(@content-desc,'自有無抵押')]
+      English: //*[contains(@content-desc, 'Self-owned with no mortgage')]
+    #勾选协议按钮
+    AgreementButtonElement1: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ScrollView[1]/android.widget.ImageView[1]
+    #勾选协议按钮
+    AgreementButtonElement2: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ScrollView[1]/android.widget.ImageView[2]
+    #触发个人信息
+    PersonalInformationElement:
+      SimplifiedChinese: //*[contains(@content-desc, '个人信息')]
+      TraditionalChinese: //*[contains(@content-desc, '個人資料')]
+      English: //*[contains(@content-desc, 'Personal Information')]
+#    //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]
+
+
+
+
+
+
+
+
+  ios:
+    #触发立即申请按钮
+    ApplyNowButtonElement:
+      SimplifiedChinese: //*[contains(@name, '立即申请')]
+      TraditionalChinese: //*[contains(@name, '立即申請')]
+      English: //*[contains(@name, 'Apply Now')]
+    #触发继续按钮
+    ContinueOpenButtonElement:
+      SimplifiedChinese: //*[contains(@name, '继续')]
+      TraditionalChinese: //*[contains(@name, '繼續')]
+      English: //*[contains(@name, 'Continue')]
+    #勾选协议按钮
+    AgreementButtonElement: //XCUIElementTypeImage[@name="agree"]
+    #提交按钮
+    ContinueButtonElement:
+      SimplifiedChinese: //*[contains(@name, '继 续')]
+      TraditionalChinese: //*[contains(@name, '繼 續')]
+      English: //*[contains(@name, 'Continue')]
+    #个人信息确认页面的确定按钮
+    ReviewConfirmButtonElement:
+      SimplifiedChinese: //*[contains(@name,'确定')]
+      TraditionalChinese: //*[contains(@name,'確定')]
+      English: //*[contains(@name,'Confirm')]
+
+#Personal Information
+    #触发选择职业栏位
+    ProfessionButtonElement: //abc
+    #选择具体行业-专业人士
+    ProfessionElement:
+      SimplifiedChinese: //*[contains(@name, '专业人士')]
+      TraditionalChinese: //*[contains(@name, '專業人士')]
+      English: //*[contains(@name,'Professional')]
+    #选择职业-会计师
+    OccupationElement:
+      SimplifiedChinese: //*[contains(@name, '会计')]
+      TraditionalChinese: //*[contains(@name, '會計師 / 精算師')]
+      English: //*[contains(@name,'Accountant or Actuary')]
+    #触发行业选择框
+    IndustryButtonElement: //abc
+    #触发行业
+    SelectIndustryElement:
+      SimplifiedChinese: //*[contains(@name, '金融及保险服务业')]
+      TraditionalChinese: //*[contains(@name, '金融及保險服務業')]
+      English: //*[contains(@name,'Financial and Insurance Services')]
+    #选择银行业
+    IndustryElement:
+      SimplifiedChinese: //*[contains(@name, '银行业')]
+      TraditionalChinese: //*[contains(@name, '銀行業')]
+      English: //*[contains(@name,'Banking')]
+    #触发公司名称
+    CompanyNameElement:
+      SimplifiedChinese: //*[contains(@name, '公司英文名称')]
+      TraditionalChinese: //*[contains(@name, '公司英文名稱')]
+      English: //*[contains(@name, 'Company Name (In English)')]
+    #触发就业信息
+    EmploymentStatusButtonElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeImage[4]
+    #选择就业信息
+    EmploymentStatusElement:
+      SimplifiedChinese: //*[contains(@name, '兼职')]
+      TraditionalChinese: //*[contains(@name, '兼職')]
+      English: //*[contains(@name, 'Part time')]
+    #触发工作任期
+    CurrentJobPeriodButtonElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeImage[5]
+    #点击工作任期的完成按钮
+    CurrentJobDoneButtonElement:
+      SimplifiedChinese: //XCUIElementTypeButton[@name="完成"]
+      TraditionalChinese: //XCUIElementTypeButton[@name="完成"]
+      English: //XCUIElementTypeButton[@name="Done"]
+    #触发每月收入
+    MonthlyIncomeElement:
+      SimplifiedChinese: //*[contains(@name, '每月收入')]
+      TraditionalChinese: //*[contains(@name, '每月收入')]
+      English: //*[contains(@name, 'Monthly income')]
+    #选择婚姻状况
+    MaritalStatusButtonElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeImage[6]
+    #选择未婚
+    MaritalStatusElement:
+      SimplifiedChinese: //*[contains(@name, '未婚')]
+      TraditionalChinese: //*[contains(@name, '未婚')]
+      English: //*[contains(@name, 'Single')]
+    #選擇教育程度
+    EducationLevelButtonElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeImage[7]
+    #選擇大學及以上
+    UniversityOrAboveElement:
+      SimplifiedChinese: //*[contains(@name, '大学或以上')]
+      TraditionalChinese: //*[contains(@name, '大學或以上')]
+      English: //*[contains(@name, 'University or above')]
+    #選擇居住状态
+    HousingStatusButtonElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeImage[8]
+    #选择自有无抵押
+    SelfOwneDwithNoMortgageElement:
+      SimplifiedChinese: //*[contains(@name,'自有无抵押')]
+      TraditionalChinese: //*[contains(@name,'自有無抵押')]
+      English: //*[contains(@name, 'Self-owned with no mortgage')]
+    #勾选协议按钮
+    AgreementButtonElement1: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeImage[1]
+    #勾选协议按钮
+    AgreementButtonElement2: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeImage[2]
+    #触发个人信息
+    PersonalInformationElement:
+      SimplifiedChinese: //*[contains(@name, '个人信息')]
+      TraditionalChinese: //*[contains(@name, '個人資料')]
+      English: //*[contains(@name, 'Personal Information')]

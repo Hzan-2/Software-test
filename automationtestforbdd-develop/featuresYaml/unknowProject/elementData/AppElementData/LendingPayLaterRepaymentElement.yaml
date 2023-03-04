@@ -1,0 +1,111 @@
+LendingPayLaterRepaymentElement:
+  android:
+    #PayLater-还款页面
+    #检查页面展示还款元素
+    RepayButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '还款')]
+      TraditionalChinese: //*[contains(@content-desc, '還款')]
+      English: //*[contains(@content-desc, 'Repay')]
+    #月结单
+    ThisStatementElement:
+      SimplifiedChinese: //*[contains(@text, '暂无纪录')]
+      TraditionalChinese: //*[contains(@text, '暫無紀錄')]
+      English: //*[contains(@text, 'No records yet')]
+    #触发提前还款
+    EarlySettlementElement:
+      SimplifiedChinese: //*[contains(@text, '提前还款')]
+      TraditionalChinese: //*[contains(@text, '提前還款')]
+      English: //*[contains(@text, 'Early Settlement')]
+    #选择消费记录
+    InstalementPlansElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[11]/android.view.View/android.widget.Image
+    #选择全选
+    SelectAllElement:
+      SimplifiedChinese: //*[contains(@text, '全选')]
+      TraditionalChinese: //*[contains(@text, '全選')]
+      English: //*[contains(@text, 'Select All')]
+    #提交按钮
+    ContinueButtonElement:
+      SimplifiedChinese: //*[contains(@text, '继 续')]
+      TraditionalChinese: //*[contains(@text, '繼 續')]
+      English: //*[contains(@text, 'Continue')]
+    ###提前还款页面Early Settlement###
+    #提交按钮
+    RepaySelectedItemInFullButtonElement:
+      SimplifiedChinese: //*[contains(@text, '提前还清所选分期')]
+      TraditionalChinese: //*[contains(@text, '提前還清所選分期')]
+      English: //*[contains(@text, 'Repay Selected Item in Full')]
+    ###还款确认页面 Review###
+    #触发提交按钮
+    ConfirmButtonElement:
+      SimplifiedChinese: //*[contains(@text, '确 定')]
+      TraditionalChinese: //*[contains(@text, '確 定')]
+      English: //*[contains(@text, 'Confirm')]
+    #完成还款页面
+    CompletionOfRepaymentElement:
+      SimplifiedChinese: //*[contains(@text, '完成还款!')]
+      TraditionalChinese: //*[contains(@text, '完成還款!')]
+      English: //*[contains(@text, 'Repayment')]
+    #触发完成按钮
+    DoneButtonElement:
+      SimplifiedChinese: //*[contains(@text, '完 成')]
+      TraditionalChinese: //*[contains(@text, '完 成')]
+      English: //*[contains(@text, 'Done')]
+    #返回上一页
+    BackPageButtonElement2: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]
+
+
+
+
+
+  ios:
+    #检查页面展示还款元素
+    RepayButtonElement:
+      SimplifiedChinese: //XCUIElementTypeImage[@name="还款"]
+      TraditionalChinese: //XCUIElementTypeImage[@name="還款"]
+      English: //XCUIElementTypeImage[@name="Repay"]
+    #月结单
+    ThisStatementElement:
+      SimplifiedChinese: //XCUIElementTypeStaticText[@name="暂无纪录"]
+      TraditionalChinese: //XCUIElementTypeStaticText[@name="暫無紀錄"]
+      English: //XCUIElementTypeStaticText[@name="No records yet"]
+    #触发提前还款
+    EarlySettlementElement:
+      SimplifiedChinese: //*[contains(@name, '提前还款')]
+      TraditionalChinese: //*[contains(@name, '提前還款')]
+      English: //*[contains(@name, 'Early Settlement')]
+    #选择消费记录 iOS元素无法交互，使用坐标点，机型iPhone12 mini
+    InstalementPlansElement: [325,320]
+    #选择全选
+    SelectAllElement:
+      SimplifiedChinese: //*[contains(@name, '全选')]
+      TraditionalChinese: //*[contains(@name, '全選')]
+      English: //*[contains(@name, 'Select All')]
+    #提交按钮
+    ContinueButtonElement:
+      SimplifiedChinese: //*[contains(@name, '继 续')]
+      TraditionalChinese: //*[contains(@name, '繼 續')]
+      English: //*[contains(@name, 'Continue')]
+    ###提前还款页面Early Settlement###
+    #提交按钮
+    RepaySelectedItemInFullButtonElement:
+      SimplifiedChinese: //*[contains(@name, '提前还清所选分期')]
+      TraditionalChinese: //*[contains(@name, '提前還清所選分期')]
+      English: //*[contains(@name, 'Repay Selected Item in Full')]
+    ###还款确认页面 Review###
+    #触发提交按钮
+    ConfirmButtonElement:
+      SimplifiedChinese: //*[contains(@name, '确 定')]
+      TraditionalChinese: //*[contains(@name, '確 定')]
+      English: //*[contains(@name, 'Confirm')]
+    #完成还款页面
+    CompletionOfRepaymentElement:
+      SimplifiedChinese: //*[contains(@name, '完成还款!')]
+      TraditionalChinese: //*[contains(@name, '完成還款!')]
+      English: //*[contains(@name, 'Repayment Complete!')]
+    #触发完成按钮
+    DoneButtonElement:
+      SimplifiedChinese: //*[contains(@name, '完 成')]
+      TraditionalChinese: //*[contains(@name, '完 成')]
+      English: //*[contains(@name, 'Done')]
+    #返回上一页
+    BackPageButtonElement2: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]

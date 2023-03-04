@@ -1,0 +1,356 @@
+#Lending反欺诈人审
+-
+  Step: Given
+  Text: 进行反欺诈人审
+  Fixture: web
+  Process:
+    -
+      Action: mouse
+      Element: ${LendingElement}${CreditProcessElement}
+      TestData: hover
+      Remarks: 将鼠标悬停在指定元素上-授信流程
+    -
+      Action: click
+      Element: ${LendingElement}${ApprovalAndReviewElement}
+      TestData:
+      Remarks: 点击”Livi Cash/Livi PayLater审查审批“
+    -
+      Action: iframe
+      Element: ${LendingElement}${CreditIframe6}
+      TestData:
+      Remarks: 切入iframe6
+    -
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 等待3秒
+    -
+      Action: click
+      Element: ${LendingElement}${ManualRiskReviewElement}
+      TestData:
+      Remarks: 点击”反欺诈人工审核“
+    -
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 等待3秒
+    -
+      Action: iframe
+      Element: ${LendingElement}${CreditIframe17}
+      TestData:
+      Remarks: 切入iframe17
+    -
+      Action: iframe
+      Element: ${LendingElement}${CreditIframe8}
+      TestData:
+      Remarks: 切入iframe8
+    -
+      Action: click
+      Element: ${LendingElement}${GetTaskButtonElement}
+      TestData:
+      Remarks: 点击”自动获取任务“
+    -
+      Action: q_iframe
+      Element:
+      TestData:
+      Remarks: 切出iframe8
+    -
+      Action: q_iframe
+      Element:
+      TestData:
+      Remarks: 切出iframe17
+    -
+      Action: q_iframe
+      Element:
+      TestData:
+      Remarks: 切出iframe6
+    -
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 等待3秒
+    -
+      Action: iframe
+      Element: ${LendingElement}${CreditIframe4}
+      TestData:
+      Remarks: 切入iframe4
+    -
+      Action: iframe
+      Element: ${LendingElement}${CreditIframe5}
+      TestData:
+      Remarks: 切入iframe5
+    -
+      Action: click
+      Element: ${LendingElement}${SearchButtonElement}
+      TestData:
+      Remarks: 点击搜索按钮
+    -
+      Action: input
+      Element: ${LendingElement}${InputCustomerIdElement}
+      TestData: ${Lending}${CustomerId}
+      Remarks: 输入客户号
+    -
+      Action: click
+      Element: ${LendingElement}${ConfirmButtonElement}
+      TestData:
+      Remarks: 点击确定按钮
+    -
+      Action: q_iframe
+      Element:
+      TestData:
+      Remarks: 切出iframe5
+    -
+      Action: click
+      Element: ${LendingElement}${ConfirmButtonElement1}
+      TestData:
+      Remarks: 点击确定按钮
+    -
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 等待3秒
+    -
+      Action: alert
+      Element:
+      TestData:
+      Remarks: 关闭弹窗
+    -
+      Action: sleep
+      Element:
+      TestData: 3
+      Remarks: 等待3秒
+    -
+      Action: q_iframe
+      Element:
+      TestData:
+      Remarks: 切出iframe4
+    #判断是否有值
+    -
+      Action: judge,branch
+      Element: /html/body/div[5]/div/table/tbody/tr[1]/td/div
+      TestData:
+      Remarks: 判断是否弹窗是否依然存在可选取的审批任务,存在走if
+      ifbranchProcess:
+        -
+          Action: click
+          Element: /html/body/div[5]/div/table/tbody/tr[1]/td/button
+          TestData:
+          Remarks: 关闭弹窗
+      elsebranchProcess:
+        -
+          Action: iframe
+          Element: ${LendingElement}${CreditIframe6}
+          TestData:
+          Remarks: 切入iframe6
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 等待3秒
+        -
+          Action: iframe
+          Element: ${LendingElement}${CreditIframe17}
+          TestData:
+          Remarks: 切入iframe17
+        -
+          Action: iframe
+          Element: ${LendingElement}${CreditIframe8}
+          TestData:
+          Remarks: 切入iframe8
+        -
+          Action: click
+          Element: ${LendingElement}${SearchButtonElement}
+          TestData:
+          Remarks: 点击搜索按钮
+        -
+          Action: sleep
+          Element:
+          TestData: 2
+          Remarks: 等待2秒
+        -
+          Action: input
+          Element: ${LendingElement}${InputCustomerNameElement}
+          TestData: ${Lending}${CustomerName}
+          Remarks: 输入客户名称
+        -
+          Action: click
+          Element: ${LendingElement}${ConfirmButtonElement}
+          TestData:
+          Remarks: 点击确定按钮
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 等待3秒
+        -
+          Action: click
+          Element: ${LendingElement}${ApplyDetailsButtonElement}
+          TestData:
+          Remarks: 申请详情
+        -
+          Action: q_iframe
+          Element:
+          TestData:
+          Remarks: 切出iframe8
+        -
+          Action: q_iframe
+          Element:
+          TestData:
+          Remarks: 切出iframe7
+        -
+          Action: q_iframe
+          Element:
+          TestData:
+          Remarks: 切出iframe6
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 等待3秒
+        -
+          Action: iframe
+          Element: ${LendingElement}${CreditIframe4}
+          TestData:
+          Remarks: 切入iframe4
+        -
+          Action: iframe
+          Element: ${LendingElement}${CreditIframe14}
+          TestData:
+          Remarks: 切入iframe14
+        -
+          Action: click
+          Element: ${LendingElement}${SignCommentsButtonElement}
+          TestData:
+          Remarks: 点击签署意见
+        -
+          Action: iframe
+          Element: ${LendingElement}${CreditIframe10}
+          TestData:
+          Remarks: 切入iframe10
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 等待3秒
+        -
+          Action: iframe
+          Element: ${LendingElement}${CreditIframe11}
+          TestData:
+          Remarks: 切入iframe11
+        -
+          Action: click
+          Element: ${LendingElement}${AgreeButtonElement}
+          TestData:
+          Remarks: 选择同意
+        -
+          Action: input
+          Element: ${LendingElement}${RemarksElement}
+          TestData: 反欺诈人审
+          Remarks: 录入备注
+        -
+          Action: sleep
+          Element:
+          TestData: 5
+          Remarks: 等待5秒
+        -
+          Action: click
+          Element: ${LendingElement}${PreservationButtonElement}
+          TestData:
+          Remarks: 点击报存按钮
+        -
+          Action: q_iframe
+          Element:
+          TestData:
+          Remarks: 切出iframe11
+        -
+          Action: q_iframe
+          Element:
+          TestData:
+          Remarks: 切出iframe10
+        -
+          Action: click
+          Element: ${LendingElement}${SubmitButtonElement}
+          TestData:
+          Remarks: 点击提交按钮
+        -
+          Action: sleep
+          Element:
+          TestData: 2
+          Remarks: 等待2秒
+        -
+          Action: q_iframe
+          Element:
+          TestData:
+          Remarks: 切出iframe14
+        -
+          Action: q_iframe
+          Element:
+          TestData:
+          Remarks: 切出iframe4
+        -
+          Action: iframe
+          Element: ${LendingElement}${CreditIframe12}
+          TestData:
+          Remarks: 切入iframe12
+        -
+          Action: click
+          Element: ${LendingElement}${CallNextStepElement}
+          TestData:
+          Remarks: 进行下一步—调用PCSM授信决策2
+        -
+          Action: judge,branch
+          Element: ${LendingElement}${ApproverNextStepElement}
+          TestData:
+          Remarks: 判断是否需要选择审批人，若需要走if分支
+          ifbranchProcess:
+            -
+              Action: click
+              Element: ${LendingElement}${ApproverNextStepElement}
+              TestData:
+              Remarks: 选择审批人，进入批准流程
+          elsebranchProcess:
+            -
+              Action: sleep
+              Element:
+              TestData: 1
+              Remarks: 进入PCSM复核流程
+        -
+          Action: click
+          Element: ${LendingElement}${SubmitButtonElement1}
+          TestData:
+          Remarks: 点击提交
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 等待3秒
+        -
+          Action: alert
+          Element:
+          TestData:
+          Remarks: 关闭弹窗
+        -
+          Action: sleep
+          Element:
+          TestData: 3
+          Remarks: 等待3秒
+        -
+          Action: alert
+          Element:
+          TestData:
+          Remarks: 关闭弹窗
+        -
+          Action: sleep
+          Element:
+          TestData: 5
+          Remarks: 等待5秒
+        -
+          Action: q_iframe
+          Element:
+          TestData:
+          Remarks: 切出iframe12
+        -
+          Action: sleep
+          Element:
+          TestData: 2
+          Remarks: 等待2秒

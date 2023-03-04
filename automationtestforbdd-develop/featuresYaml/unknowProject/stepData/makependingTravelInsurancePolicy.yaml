@@ -1,0 +1,242 @@
+makependingTravelInsurancePolicy:
+  -
+    Action: get_text
+    Element: $${var}
+    TestData: 1
+    Remarks: 建立循环初始值
+
+  - Action: loop
+    Element: $${var}
+    TestData: 2
+    Remarks: 循环判断
+    branchProcess:
+      -
+        Action: judge,branch
+        Element: ${InsuranceTravelPage}${TravelToAsiaArea}
+        TestData:
+        Remarks: 判断确定旅游地点
+        ifbranchProcess:
+          -
+            Action: click
+            Element: ${InsuranceTravelPage}${TravelToAsiaArea}
+            TestData:
+            Remarks: 点击确定旅游地点
+
+          -
+            Action: get_text
+            Element: $${var}
+            TestData: 2
+            Remarks: 跳出循环赋值
+
+        elsebranchProcess:
+          -
+            Action: slide_space
+            Element: up
+            TestData: 0.6 -> 0.5
+            Remarks: 向上滑动
+
+          - Action: sleep
+            Element:
+            TestData: 2
+            Remarks: 等待2
+
+
+#  -
+#    Action: click
+#    Element: ${InsuranceTravelPage}${TravelToAsiaArea}
+#    TestData:
+#    Remarks: 点击旅游区域
+
+  -
+    Action: sleep
+    Element:
+    TestData: 3
+    Remarks: 等待3
+
+
+  -
+    Action: get_text
+    Element: $${choose}
+    TestData: 1
+    Remarks: 初始赋值
+
+  -
+    Action: loop
+    Element: $${choose}
+    TestData: 2
+    Remarks: 判断是否结束循环
+    branchProcess:
+      -
+        Action: judge,branch
+        Element: ${InsuranceTravelPage}${TravelTimeInsureElement}
+        TestData:
+        Remarks: 判断按钮
+        ifbranchProcess:
+          -
+            Action: click
+            Element: ${InsuranceTravelPage}${TravelTimeInsureElement}
+            TestData:
+            Remarks: 点击确定日期
+
+          -
+            Action: get_text
+            Element: $${choose}
+            TestData: 2
+            Remarks: 对比通过赋值
+
+        elsebranchProcess:
+          -
+            Action: slide_space
+            Element: up
+            TestData: 0.7 -> 0.5
+            Remarks: 向上滑
+          -
+            Action: sleep
+            Element:
+            TestData: 2
+            Remarks: 等待2
+
+
+  -
+    Action: sleep
+    Element:
+    TestData: 1
+    Remarks: 等待3
+
+  -
+    Action: get_text
+    Element: $${var}
+    TestData: 1
+    Remarks: 建立循环初始值
+
+  - Action: loop
+    Element: $${var}
+    TestData: 2
+    Remarks: 循环判断
+    branchProcess:
+      -
+        Action: judge,branch
+        Element: ${InsuranceTravelPage}${TravelScopeOfCoverageElement}
+        TestData:
+        Remarks: 判断确定旅游人士
+        ifbranchProcess:
+          -
+            Action: click
+            Element: ${InsuranceTravelPage}${TravellerFamilyButtonElement}
+            TestData:
+            Remarks: 点击确定旅游人士
+
+          -
+            Action: get_text
+            Element: $${var}
+            TestData: 2
+            Remarks: 跳出循环赋值
+
+        elsebranchProcess:
+          -
+            Action: slide_space
+            Element: up
+            TestData: 0.6 -> 0.5
+            Remarks: 点击确定旅游人士
+
+          - Action: sleep
+            Element:
+            TestData: 2
+            Remarks: 等待2
+
+  -
+    Action: sleep
+    Element:
+    TestData: 2
+    Remarks: 等待2
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${TravelFamilyCouplepairElement}
+    TestData:
+    Remarks: 点击确定旅游人数
+
+  -
+    Action: slide
+    Element: bottom
+    TestData:
+    Remarks: 滑至底部
+
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${TravelpageNextElement}
+    TestData:
+    Remarks: 点击下一步1
+
+  -
+    Action: sleep
+    Element:
+    TestData: 6
+    Remarks: 等待6
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${TravelNowPlusElement}
+    TestData:
+    Remarks: 选择旅游计划
+
+  -
+    Action: sleep
+    Element:
+    TestData: 2
+    Remarks: 等待2
+
+  -
+    Action: slide
+    Element: bottom
+    TestData:
+    Remarks: 滑至底部
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${TravelpageNextElement}
+    TestData:
+    Remarks: 点击下一步2
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${TravelpageNextElement}
+    TestData:
+    Remarks: 点击下一步3
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${PersonInformationMenuElement}
+    TestData:
+    Remarks: 点击受保人资料页...菜单
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5
+
+  -
+    Action: click
+    Element: ${InsuranceTravelPage}${savePendingPolicyElement}
+    TestData:
+    Remarks: 点击保存保单
+
+  -
+    Action: sleep
+    Element:
+    TestData: 5
+    Remarks: 等待5

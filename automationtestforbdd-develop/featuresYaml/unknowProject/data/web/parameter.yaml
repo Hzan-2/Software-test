@@ -1,0 +1,17 @@
+#保险项目参数
+
+#Insurance:
+#  url: https://iasim.sit1.livibank.hk/index
+#  userName: vb-lijiaqian
+#  passWord: AES<<66b53544d5a94c7b90d0d04ba9cc8586>>AES
+Lending:
+  url: https://loswb.livibank.hk/los_web
+  #测试账户1
+  userName_jiang: jiangjunqi
+  password_jiang: Livi@SZ1234567qwe
+  #测试账户1
+  userName_wang: wanghuan
+  password_wang: LiviSZ@123qwe!@#
+  #测试数据
+  CustomerId: '100000021144'
+  CustomerName: FP Bzd

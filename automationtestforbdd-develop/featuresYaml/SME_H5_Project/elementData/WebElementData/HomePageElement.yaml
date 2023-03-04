@@ -1,0 +1,26 @@
+#保险项目首页
+HomePage:
+  #Livi Bank logo文本
+  LiviBankTextElement: //span[text()='Livi Bank']
+
+  #菜单栏Company选项
+  CompanySpanElement: //span[text()='Company']
+  #第一行的放大镜图标
+  magnifierElement: //a[@href='#/company/437936558046412800']
+  #Company详情页
+  LicenseNoTextElement: //label[@for='inputLicenseNo']
+
+  #菜单栏Company选项
+  ApplicationSpanElement: //span[text()='Application']
+  #policy Type下拉选项
+  policyTypeSelectElement: //*[@id='inputPolicyType']
+  #Search按钮
+  SearchButtonElement: //button[text()='Search']
+  #export按钮
+  exportButtonElement: //button[text()='export']
+  #确认按钮
+  yesButtonElement: //button[text()='Yes.']
+  #取消按钮
+  noButtonElement: //button[text()='No.']
+  #TRAVEL详情页
+  ApplicationStatusTextElement: //label[@for='inputApplicationStatus']

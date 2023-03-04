@@ -1,0 +1,82 @@
+#收款人頁面元素--by yang.yang
+PayeeElementPage:
+  android:
+    #搜尋好友/商戶
+    SearchEditTextElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.EditText
+    #放大鏡
+    SearchElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.ImageView[1]
+    #通訊錄
+    AddressBookElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.ImageView[2]
+    #添加好友
+    AddPayeeElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView
+    #好友
+    FriendsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '好友')]
+      TraditionalChinese: //*[contains(@content-desc, '好友')]
+      English: //*[contains(@content-desc, 'Friends')]
+    #商戶
+    MerchantsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '商户')]
+      TraditionalChinese: //*[contains(@content-desc, '商戶')]
+      English: //*[contains(@content-desc, 'Merchants')]
+    #编辑/删除好友_1
+    EditorDelete1Element: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[3]/android.view.View/android.view.View[1]/android.widget.ImageView[1]
+    #编辑/删除好友_2
+    EditorDelete2Element: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[3]/android.view.View/android.view.View[1]/android.widget.ImageView[2]
+    #删除-删除标题
+    RemovetittleElement:
+      SimplifiedChinese: //*[contains(@content-desc, '删除')]
+      TraditionalChinese: //*[contains(@content-desc, '刪除')]
+      English: //*[contains(@content-desc, 'Remove')]
+    #删除-确定按钮
+    DeleteConfirmElement:
+      SimplifiedChinese: //android.widget.Button[@content-desc='确定']
+      TraditionalChinese: //android.widget.Button[@content-desc='確認']
+      English: //android.widget.Button[@content-desc='Confirm']
+    #删除-取消按钮
+    DeleteCancelElement:
+      SimplifiedChinese: //*[contains(@content-desc, '取消')]
+      TraditionalChinese: //*[contains(@content-desc, '取消')]
+      English: //*[contains(@content-desc, 'Cancel')]
+
+  ios:
+    #搜尋好友/商戶
+    SearchEditTextElement:
+      SimplifiedChinese: //XCUIElementTypeTextField[@name="搜索好友/商戶"]
+      TraditionalChinese: //XCUIElementTypeTextField[@name="搜尋好友/商戶"]
+      English: //XCUIElementTypeTextField[@name="Search friends / merchants"]
+    #放大鏡
+    SearchElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.ImageView[1]
+    #通訊錄
+    AddressBookElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.ImageView[2]
+    #添加好友
+    AddPayeeElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage
+    #好友
+    FriendsElement:
+      SimplifiedChinese: //*[contains(@name, '好友')]
+      TraditionalChinese: //*[contains(@name, '好友')]
+      English: //*[contains(@name, 'Friends')]
+    #商戶
+    MerchantsElement:
+      SimplifiedChinese: //*[contains(@name, '商户')]
+      TraditionalChinese: //*[contains(@name, '商戶')]
+      English: //*[contains(@name, 'Merchants')]
+    #编辑/删除好友_1
+    EditorDelete1Element: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeImage[2]
+    #编辑/删除好友_2
+    EditorDelete2Element: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeImage[1]
+    #删除-删除标题
+    RemovetittleElement:
+      SimplifiedChinese: //XCUIElementTypeStaticText[@name="删除"]
+      TraditionalChinese: //XCUIElementTypeStaticText[@name="删除"]
+      English: //XCUIElementTypeStaticText[@name="Remove"]
+    #删除-确定按钮 確定 Confirm //XCUIElementTypeButton[@name="确定"]
+    DeleteConfirmElement:
+      SimplifiedChinese: //XCUIElementTypeButton[@name="确定"]
+      TraditionalChinese: //XCUIElementTypeButton[@name="確認"]
+      English: //XCUIElementTypeButton[@name="Confirm"]
+    #删除-取消按钮 //XCUIElementTypeButton[@name="取消"] Cancel
+    DeleteCancelElement:
+      SimplifiedChinese: //XCUIElementTypeButton[@name="取消"]
+      TraditionalChinese: //XCUIElementTypeButton[@name="取消"]
+      English: //XCUIElementTypeButton[@name="Cancel"]

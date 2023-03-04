@@ -1,0 +1,103 @@
+#登录页元素
+LandingPage:
+  android:
+    #登录页的问候语言
+    languageElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.Button[1]
+    #更新弹窗
+    updateNotificationElement:
+      SimplifiedChinese: //*[contains(@content-desc, '取消')]
+      TraditionalChinese: //*[contains(@content-desc, '取消')]
+      English: //*[contains(@content-desc, 'Cancel')]
+    #登录页右上角“...”的菜单元素
+    menuElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[3]
+    #切换用户的按钮
+    SwitchUserElement:
+      SimplifiedChinese: //*[contains(@content-desc, '切换用户')]
+      TraditionalChinese: //*[contains(@content-desc, '切換用戶')]
+      English: //*[contains(@content-desc, 'Switch User')]
+    #手机号输入框
+    phoneInputElement:
+      SimplifiedChinese: //*[contains(@text, '手机号码')]
+      TraditionalChinese: //*[contains(@text, '手提電話號碼')]
+      English: //*[contains(@text, 'Mobile Number')]
+    #登录按钮
+    LoginButtonElement:
+      SimplifiedChinese: //*[@content-desc='登录']
+      TraditionalChinese: //*[@content-desc='登入']
+      English: //*[@content-desc='Login']
+    #输入密码文本（通过点击这个文本收起键盘）
+    passwordTextElement:
+      SimplifiedChinese: //*[contains(@content-desc, '输入密码')]
+      TraditionalChinese: //*[contains(@content-desc, '輸入密碼')]
+      English: //*[contains(@content-desc, 'Enter Your Password')]
+    #密码输入框
+    passwordInputElement:
+      SimplifiedChinese: //*[contains(@text, '密码')]
+      TraditionalChinese: //*[contains(@text, '密碼')]
+      English: //*[contains(@text, 'Password')]
+    #通知弹窗确认
+    notifyTipsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '我们该如何通知你？')]
+      TraditionalChinese: //*[contains(@content-desc, '我們該如何通知你？')]
+      English: //*[contains(@content-desc, 'How shall we notify you?')]
+    #通知弹窗确认
+    notifyConfirmBottonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '完成')]
+      TraditionalChinese: //*[contains(@content-desc, '完成')]
+      English: //*[contains(@content-desc, 'Done')]
+    #生物认证弹窗稍后决定按钮
+    BiometricCertificationBottonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '稍后决定')]
+      TraditionalChinese: //*[contains(@content-desc, '稍後决定')]
+      English: //*[contains(@content-desc, 'Maybe Later')]
+
+  ios:
+    #登录页的问候语言
+    languageElement: //XCUIElementTypeApplication/XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeButton
+    #更新弹窗
+    updateNotificationElement:
+      SimplifiedChinese: //*[contains(@name, '取消')]
+      TraditionalChinese: //*[contains(@name, '取消')]
+      English: //*[contains(@name, 'Cancel')]
+    #登录页右上角“...”的菜单元素
+    menuElement: //XCUIElementTypeApplication/XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[3]
+    #切换用户的按钮
+    SwitchUserElement:
+      SimplifiedChinese: //*[contains(@name, '切换用户')]
+      TraditionalChinese: //*[contains(@name, '切換用戶')]
+      English: //*[contains(@name, 'Switch User')]
+    #手机号输入框
+    phoneInputElement:
+      SimplifiedChinese: //*[contains(@name, '手机号码')]
+      TraditionalChinese: //*[contains(@name, '手提電話號碼')]
+      English: //*[contains(@name, 'Mobile Number')]
+    #登录按钮
+    LoginButtonElement:
+      SimplifiedChinese: //XCUIElementTypeButton[@name="登录"]
+      TraditionalChinese: //XCUIElementTypeButton[@name="登入"]
+      English: //XCUIElementTypeButton[@name="Login"]
+    #输入密码文本（通过点击这个文本收起键盘）
+    passwordTextElement:
+      SimplifiedChinese: //*[contains(@name, '输入密码')]
+      TraditionalChinese: //*[contains(@name, '輸入密碼')]
+      English: //*[contains(@name, 'Enter Your Password')]
+    #密码输入框
+    passwordInputElement:
+      SimplifiedChinese: //XCUIElementTypeTextField[@name="密码"]
+      TraditionalChinese: //XCUIElementTypeTextField[@name="密碼"]
+      English: //XCUIElementTypeTextField[@name="Password"]
+    #通知弹窗确认
+    notifyTipsElement:
+      SimplifiedChinese: //*[contains(@name, '我们该如何通知你？')]
+      TraditionalChinese: //*[contains(@name, '密碼')]
+      English: //*[contains(@name, 'How shall we notify you?')]
+    #通知弹窗确认
+    notifyConfirmBottonElement:
+      SimplifiedChinese: //*[contains(@name, '完成')]
+      TraditionalChinese: //*[contains(@name, '完成')]
+      English: //*[contains(@name, 'Done')]
+    #生物认证弹窗稍后决定按钮
+    BiometricCertificationBottonElement:
+      SimplifiedChinese: //*[contains(@name, '稍后决定')]
+      TraditionalChinese: //*[contains(@name, '稍後决定')]
+      English: //*[contains(@name, 'Maybe Later')]

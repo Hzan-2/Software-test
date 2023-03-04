@@ -1,0 +1,52 @@
+#灵活贷-首页
+LendingFlexiLoanHomeElement:
+  android:
+    #FlexiLoan-banner
+    FlexiLoanBannerElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[1]
+    #接受额度按钮  //android.view.View[@content-desc="View Offer"]
+    ViewOfferButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '查看结果')]
+      TraditionalChinese: //*[contains(@content-desc, '查閱結果')]
+      English: //android.view.View[@content-desc="View Offer"]
+  #      English: //*[contains(@cont  ent-desc,'View Offer')]
+    #触发查看详情-进入acount页面
+    ViewDetailsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '查看详情')]
+      TraditionalChinese: //*[contains(@content-desc, '查看詳情')]
+      English: //*[contains(@content-desc, 'View Details')]
+    #当前加借金额
+    InstantTopUpAmountElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[5]
+    #点击提款
+    DrawdownButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '提款')]
+      TraditionalChinese: //*[contains(@content-desc, '提款')]
+      English: //*[contains(@content-desc, 'Drawdown')]
+
+
+
+
+
+
+
+
+
+  ios:
+    #FlexiLoan-banner
+    FlexiLoanBannerElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[1]
+    #接受额度按钮
+    ViewOfferButtonElement:
+      SimplifiedChinese: //*[contains(@name, '查看结果')]
+      TraditionalChinese: //*[contains(@name, '查閱結果')]
+      English: //*[contains(@name, 'View Offer')]
+    #触发查看详情-进入acount页面
+    ViewDetailsElement:
+      SimplifiedChinese: //*[contains(@name, '查看详情')]
+      TraditionalChinese: //*[contains(@name, '查看詳情')]
+      English: //*[contains(@name, 'View Details')]
+    #当前加借金额
+    InstantTopUpAmountElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeStaticText[5]
+    #点击提款
+    DrawdownButtonElement:
+      SimplifiedChinese: //*[contains(@name, '提款')]
+      TraditionalChinese: //*[contains(@name, '提款')]
+      English: //*[contains(@name, 'Drawdown')]

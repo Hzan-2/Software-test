@@ -1,0 +1,33 @@
+#添加银行列表頁面元素--by yang.yang
+BanklistElementPage:
+  android:
+    #标题
+    BanklisttittleElement:
+      SimplifiedChinese: //*[contains(@content-desc, '选择银行')]
+      TraditionalChinese: //*[contains(@content-desc, '選擇銀行')]
+      English: //*[contains(@content-desc, 'Select Bank')]
+    #返回按钮
+    backButtonElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]
+    #搜索输入框-收款人列表-添加银行账户-搜索框
+    SearchTextElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.widget.EditText
+    #搜索输入框-存入-添加银行账户-搜索框
+    SearchTextElement1: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.widget.EditText
+
+    #查询结果
+    SearchBank1Element: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[2]
+    SearchBank2Element: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]
+  ios:
+    #标题
+    BanklisttittleElement:
+      SimplifiedChinese: //*[contains(@name, '选择银行')]
+      TraditionalChinese: //*[contains(@name, '選擇銀行')]
+      English: //*[contains(@name, 'Select Bank')]
+    #返回按钮
+    backButtonElement: //
+    #搜索输入框
+    SearchTextElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField
+    #搜索输入框-存入-添加银行账户-搜索框
+    SearchTextElement1: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField
+    #查询结果
+    SearchBank1Element: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]
+    SearchBank2Element: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[3]

@@ -1,0 +1,80 @@
+#FlexiLoan 分期详情页面
+LendingFlexiLoanViewInstalmentDetails:
+  android:
+    #查看分期详情页面
+    ViewinstalmentdetailsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '查看分期详情')]
+      TraditionalChinese: //*[contains(@content-desc, '查看分期詳情')]
+      English: //*[contains(@content-desc, 'View instalment details')]
+    #查看完整还款计划
+    FullRepaymentPlanButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '完整还款计划')]
+      TraditionalChinese: //*[contains(@content-desc, '完整還款計劃')]
+      English: //*[contains(@content-desc, 'Full Repayment Plan')]
+    #触发提前还款
+    EarlySettlementElement:
+      SimplifiedChinese: //*[contains(@text, '提前还款')]
+      TraditionalChinese: //*[contains(@text, '提前還款')]
+      English: //*[contains(@text, 'Early Settlement')]
+    #触发提交按钮
+    ConfirmButtonElement:
+      SimplifiedChinese: //*[contains(@text, '确 定')]
+      TraditionalChinese: //*[contains(@text, '確 定')]
+      English: //*[contains(@text, 'Confirm')]
+    #完成还款页面
+    CompletionOfRepaymentElement:
+      SimplifiedChinese: //*[contains(@text, '完成还款!')]
+      TraditionalChinese: //*[contains(@text, '完成還款!')]
+      English: //*[contains(@text, 'Repayment Complete!')]
+    #触发完成按钮
+    DoneButtonElement:
+      SimplifiedChinese: //*[contains(@text, '完 成')]
+      TraditionalChinese: //*[contains(@text, '完 成')]
+      English: //*[contains(@text, 'Done')]
+    #获取总还款额
+    TotalRepaymentAmountElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[4]
+    #获取本金余额
+    RemainingPrincipalElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[6]
+    #取消还款按钮
+    CancelButtonElement:
+      SimplifiedChinese: //*[contains(@text, '取消')]
+      TraditionalChinese: //*[contains(@text, '取消')]
+      English: //*[contains(@text, 'Cancel')]
+
+
+
+
+
+
+
+  ios:
+    #查看分期详情页面
+    ViewinstalmentdetailsElement:
+      SimplifiedChinese: //*[contains(@name, '查看分期详情')]
+      TraditionalChinese: //*[contains(@name, '查看分期詳情')]
+      English: //*[contains(@name, 'View instalment details')]
+    #查看完整还款计划
+    FullRepaymentPlanButtonElement:
+      SimplifiedChinese: //*[contains(@name, '完整还款计划')]
+      TraditionalChinese: //*[contains(@name, '完整還款計劃')]
+      English: //*[contains(@name, 'Full Repayment Plan')]
+    #触发提前还款
+    EarlySettlementElement:
+      SimplifiedChinese: //*[contains(@name, '提前还款')]
+      TraditionalChinese: //*[contains(@name, '提前還款')]
+      English: //*[contains(@name, 'Early Settlement')]
+    #触发提交按钮
+    ConfirmButtonElement:
+      SimplifiedChinese: //*[contains(@name, '确 定')]
+      TraditionalChinese: //*[contains(@name, '確 定')]
+      English: //*[contains(@name, 'Confirm')]
+    #完成还款页面
+    CompletionOfRepaymentElement:
+      SimplifiedChinese: //*[contains(@name, '完成还款!')]
+      TraditionalChinese: //*[contains(@name, '完成還款!')]
+      English: //*[contains(@name, 'Repayment Complete!')]
+    #触发完成按钮
+    DoneButtonElement:
+      SimplifiedChinese: //*[contains(@name, '完 成')]
+      TraditionalChinese: //*[contains(@name, '完 成')]
+      English: //*[contains(@name, 'Done')]

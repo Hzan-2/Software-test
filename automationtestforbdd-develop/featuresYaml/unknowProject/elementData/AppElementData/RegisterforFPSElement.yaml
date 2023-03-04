@@ -1,0 +1,149 @@
+#登记转数快頁面元素--by yang.yang
+RegisterforFPSElementPage:
+  android:
+    #标题
+    RegisterforFPStittleElement:
+      SimplifiedChinese: //*[contains(@content-desc, '登记转数快')]
+      TraditionalChinese: //*[contains(@content-desc, '登記轉數快')]
+      English: //*[contains(@content-desc, 'Register for FPS')]
+
+    #登记状态标题
+    RegisterStatusElement:
+      SimplifiedChinese: //*[contains(@content-desc, '登记状态')]
+      TraditionalChinese: //*[contains(@content-desc, '登記狀態')]
+      English: //*[contains(@content-desc, 'View Registration Status')]
+
+    #登记转数快-电话号码登记按钮
+    #电话号码_add按钮
+    RegisterforFPS_MobileElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.widget.ListView/android.view.View[1]/android.view.View[2]/android.widget.Image[2]
+    #电话号码-其他户口/其他账户/other accounts
+    MobileOtherAccountsElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.widget.ListView/android.view.View[2]/android.view.View[2]/android.widget.TextView[2]
+    #电话号码-更改/更改
+    MobileChangeElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.widget.ListView/android.view.View[2]/android.view.View[2]/android.widget.TextView[4]
+    #电话号码-登记成功
+    RegisteredMobileElement:
+      SimplifiedChinese: //*[contains(@text, '已登记手机号码')]
+      TraditionalChinese: //*[contains(@text, '已登記手提電話號碼')]
+      English: //*[contains(@text, 'Registered Mobile Number')]
+
+    #登记转数快-邮箱登记按钮
+    #邮箱_add按钮
+    RegisterforFPS_Email1Element: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.widget.ListView/android.view.View[2]/android.view.View[2]/android.widget.Image[2]
+    RegisterforFPS_Email2Element: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.widget.ListView/android.view.View[1]/android.view.View[2]/android.widget.Image[2]
+    #邮箱-其他户口/其他账户/other accounts
+    EmailOtherAccountsElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.widget.ListView/android.view.View[1]/android.view.View[2]/android.widget.TextView[2]
+    #邮箱-更改/更改--手机号未登记转数快
+    EmailChangeElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.widget.ListView/android.view.View[2]/android.view.View[2]/android.widget.TextView[4]
+    #邮箱-更改/更改--手机号已登记转数快
+    EmailChangeElement1: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.widget.ListView/android.view.View[1]/android.view.View[2]/android.widget.TextView[4]
+    #郵箱-登记成功
+    RegisteredEmailElement:
+      SimplifiedChinese: //*[contains(@text, '已登记电邮')]
+      TraditionalChinese: //*[contains(@text, '已登記電郵')]
+      English: //*[contains(@text, 'Registered Email')]
+
+    #登记转数快-HKID登记按钮
+    #HKID_add按钮
+    RegisterforFPS_HKIDElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.widget.ListView/android.view.View[3]/android.view.View[2]/android.widget.Image[2]
+    #HKID_立即登记按钮
+    HKIDRegisterNowElement:
+      SimplifiedChinese: //android.view.View[(@text='立即登记')]
+      TraditionalChinese: //android.view.View[(@text='立即登記')]
+      English: //android.view.View[(@text='Register Now')]
+    #HKID-移除/remove
+    HKIDRemoveElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.widget.ListView/android.view.View[3]/android.view.View[2]/android.widget.TextView[2]
+    #HKID-登记成功
+    RegisteredHKIDElement:
+      SimplifiedChinese: //*[contains(@text, '已登记身份证')]
+      TraditionalChinese: //*[contains(@text, '已登記身份證')]
+      English: //*[contains(@text, 'Registered HKID')]
+    #HKID转数快移除弹框
+    #移除
+    HKIDRemoveConfirmElement:
+      SimplifiedChinese: //android.view.View[(@text='移除')]
+      TraditionalChinese: //android.view.View[(@text='移除')]
+      English: //android.view.View[(@text='Remove')]
+    #取消
+    HKIDRemoveCancelElement:
+      SimplifiedChinese: //*[contains(@text, '现在不要')]
+      TraditionalChinese: //*[contains(@text, '現在不要')]
+      English: //*[contains(@text, 'Not now')]
+
+  ios:
+    #标题
+    RegisterforFPStittleElement:
+      SimplifiedChinese: //*[contains(@name, '登记转数快')]
+      TraditionalChinese: //*[contains(@name, '登記轉數快')]
+      English: //*[contains(@name, 'Register for FPS')]
+
+    #登记状态标题
+    RegisterStatusElement:
+      SimplifiedChinese: //*[contains(@name, '登记状态')]
+      TraditionalChinese: //*[contains(@name, '登記狀態')]
+      English: //*[contains(@name, 'View Registration Status')]
+
+    #登记转数快-电话号码登记按钮
+    #电话号码
+    RegisterforFPS_MobileElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeImage[2]
+    #电话号码-其他户口/其他账户/other accounts
+    MobileOtherAccountsElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]
+    #电话号码-更改/更改
+    MobileChangeElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[9]
+    #电话号码-更改/更改 由于元素位置不同需要适配
+    MobileChangeElement1: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[9]
+    #电话号码-登记成功
+    RegisteredMobileElement:
+      SimplifiedChinese: //*[contains(@name, '已登记手机号码')]
+      TraditionalChinese: //*[contains(@name, '已登記手提電話號碼')]
+      English: //*[contains(@name, 'Registered Mobile Number')]
+
+    #登记转数快-邮箱登记按钮
+    #邮箱
+    RegisterforFPS_Email1Element: //XCUIElementTypeWebView[@name="platform_view[1]"]/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[2]
+#    RegisterforFPS_Email2Element: //
+
+    RegisterforFPS_EmailElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[2]
+    #邮箱-其他户口/其他账户/other accounts
+    EmailOtherAccountsElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther[3]
+    #邮箱-更改/更改
+    EmailChangeElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[9]
+    #邮箱-更改/更改 由于元素位置不同需要适配
+    EmailChangeElement1: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[9]
+    #郵箱-登记成功
+    RegisteredEmailElement:
+      SimplifiedChinese: //*[contains(@name, '已登记电邮')]
+      TraditionalChinese: //*[contains(@name, '已登記電郵')]
+      English: //*[contains(@name, 'Registered Email')]
+
+    #登记转数快-HKID登记按钮
+    #HKID
+    RegisterforFPS_HKIDElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeImage[2]
+    #HKID-移除/remove
+    HKIDRemoveElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[3]
+    #HKID-登记成功
+    RegisteredHKIDElement:
+      SimplifiedChinese: //*[contains(@name, '已登记身份证')]
+      TraditionalChinese: //*[contains(@name, '已登記身份證')]
+      English: //*[contains(@name, 'Registered HKID')]
+    #HKID转数快移除弹框
+    #移除
+    HKIDRemoveConfirmElement: //XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[7]
+#      SimplifiedChinese: //XCUIElementTypeStaticText[@name="移除" and @visible='true'][2]
+#      TraditionalChinese: //XCUIElementTypeStaticText[@name="移除" and @visible='true'][2]
+#      English: //XCUIElementTypeStaticText[@name="Remove" and @visible='true'][2]
+    #取消
+    HKIDRemoveCancelElement:
+      SimplifiedChinese: //XCUIElementTypeStaticText[@name="现在不要"]
+      TraditionalChinese: //XCUIElementTypeStaticText[@name="現在不要"]
+      English: //XCUIElementTypeStaticText[@name="Not now"]
+    #HKID_立即登记按钮
+    HKIDRegisterNowElement:
+      SimplifiedChinese: //*[contains(@name, '立即登记')]
+      TraditionalChinese: //*[contains(@name, '立即登記')]
+      English: //*[contains(@name, 'Register Now')]
+
+    # 返回按钮
+    BackButtonElement1: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]
+    BackButtonElement2: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]
+    BackButtonElement3: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]
+    BackButtonElement4: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]

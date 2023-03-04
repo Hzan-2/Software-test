@@ -1,0 +1,29 @@
+#设备信息
+desired_caps:
+  platformName: android
+  platformVersion: 10
+  deviceName: MGFVB20908005234
+  appPackage: com.livibank.hk
+  appActivity: com.jd.jr.common.splash.activity.LaunchActivity
+  #autoLaunch为True时会重启app，False时不重启app，可在app继续执行步骤(仅限安卓)
+  autoLaunch: true
+  #noReset为False时会重启app，True时不重启app，可在app继续执行步骤(仅限ios)
+  noReset: true
+  udid: 12A957BF-4ED8-4F22-A928-3790B3B69205
+
+#设备语言 (简体：SimplifiedChinese；繁体：TraditionalChinese；英文：English)，autoLaunch为false生效,noReset为true生效
+language: SimplifiedChinese
+
+#App测试环境
+Science: UAT2
+
+#L2账号
+phone_L2: 55674562
+
+#L3账号
+phone_L3: 48924771
+password: Aa123456
+
+#流动保安编码
+sotfTokenPIN: 147258
+

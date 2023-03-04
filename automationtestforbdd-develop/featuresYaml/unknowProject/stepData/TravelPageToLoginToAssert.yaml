@@ -1,0 +1,52 @@
+TravelPageToLoginToAssert:
+  -
+    Action: judge,click
+    Element: ${InsuranceTravelPage}${pendingPolicyRestartElement}
+    TestData:
+    Remarks: 判断并点击重开投保
+  -
+    Action: sleep
+    Element:
+    TestData: 3
+    Remarks: 等待3
+
+  - Action: get_text
+    Element: $${var}
+    TestData: 1
+    Remarks: 建立循环初始值
+
+  - Action: loop
+    Element: $${var}
+    TestData: 2
+    Remarks: 循环判断
+    branchProcess:
+      - Action: judge,branch
+        Element: ${InsuranceTravelPage}${TravelScopeOfCoverageElement}
+        TestData:
+        Remarks: 判断确定旅游人士
+        ifbranchProcess:
+          - Action: judge
+            Element: ${InsuranceTravelPage}${assertTravelpageFamilyCouplepairElement}
+            TestData: true
+            Remarks: 断言预选择存在
+
+          - Action: judge
+            Element: ${InsuranceTravelPage}${assertTravelpagetotalpersonElement}
+            TestData: true
+            Remarks: 断言预选择总人数存在
+
+          - Action: get_text
+            Element: $${var}
+            TestData: 2
+            Remarks: 跳出循环赋值
+
+        elsebranchProcess:
+          - Action: slide_space
+            Element: up
+            TestData: 0.6 -> 0.5
+            Remarks: 点击确定旅游人士
+
+          - Action: sleep
+            Element:
+            TestData: 2
+            Remarks: 等待2

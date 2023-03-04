@@ -1,0 +1,87 @@
+#转账设定元素--by yang.yang
+TransferSettingElementPage:
+  android:
+    #转账
+    TransferElement:
+      SimplifiedChinese: //*[contains(@content-desc, '转账')]
+      TraditionalChinese: //*[contains(@content-desc, '轉賬')]
+      English: //*[contains(@content-desc, 'Transfer')]
+    #登记转数快
+    RegisterforFPSElement:
+      SimplifiedChinese: //*[contains(@text, '登记转数快')]
+      TraditionalChinese: //*[contains(@text, '登記轉數快')]
+      English: //*[contains(@text, 'Register for FPS')]
+    #好友名单
+    FriendListElement:
+      SimplifiedChinese: //*[contains(@text, '好友列表')]
+      TraditionalChinese: //*[contains(@text, '好友名單')]
+      English: //*[contains(@text, 'Friend List')]
+    #预约转账 Scheduled Transfer 預設轉賬
+    ScheduledTransferElement:
+      SimplifiedChinese: //*[contains(@text, '预约转账')]
+      TraditionalChinese: //*[contains(@text, '預設轉賬')]
+      English: //*[contains(@text, 'Scheduled Transfer')]
+
+
+    #快速存入
+    QuickSaveElement:
+      SimplifiedChinese: //*[contains(@text, '快速存入')]
+      TraditionalChinese: //*[contains(@text, '快速存入')]
+      English: //*[contains(@text, 'Quick Save')]
+    #直接付款授权
+    DirectDebitAuthorisationElement:
+      SimplifiedChinese: //*[contains(@text, '直接付款授权')]
+      TraditionalChinese: //*[contains(@text, '直接付款授權')]
+      English: //*[contains(@text, 'Direct Debit Authorisation')]
+    #绑定银行账户
+    LinkedBankAccountsElement:
+      SimplifiedChinese: //*[contains(@text, '绑定银行账户')]
+      TraditionalChinese: //*[contains(@text, '綁定銀行戶口')]
+      English: //*[contains(@text, 'Linked Bank Accounts')]
+    #转账限额
+    TransferLimitElement:
+      SimplifiedChinese: //*[contains(@text, '转账限额')]
+      TraditionalChinese: //*[contains(@text, '轉賬限額')]
+      English: //*[contains(@text, 'Transfer Limit')]
+
+  ios:
+    #转账
+    TransferElement:
+      SimplifiedChinese: //XCUIElementTypeAny[@name="转账"]
+      TraditionalChinese: //XCUIElementTypeAny[@name="轉賬"]
+      English: //XCUIElementTypeAny[@name="Transfer"]
+    #登记转数快
+    RegisterforFPSElement:
+      SimplifiedChinese: //XCUIElementTypeStaticText[@name="登记转数快"]
+      TraditionalChinese: //XCUIElementTypeStaticText[@name="登記轉數快"]
+      English: //XCUIElementTypeStaticText[@name="Register for FPS"]
+    #好友名单
+    FriendListElement:
+      SimplifiedChinese: //XCUIElementTypeAny[@name="好友列表"]
+      TraditionalChinese: //XCUIElementTypeAny[@name="好友名單"]
+      English: //XCUIElementTypeAny[@name="Friend List"]
+    #预约转账 Scheduled Transfer 預設轉賬
+    ScheduledTransferElement:
+      SimplifiedChinese: //XCUIElementTypeAny[@name="预约转账"]
+      TraditionalChinese: //XCUIElementTypeAny[@name="預設轉賬"]
+      English: //XCUIElementTypeAny[@name="Scheduled Transfer"]
+    #快速存入
+    QuickSaveElement:
+      SimplifiedChinese: //XCUIElementTypeAny[@name="快速存入"]
+      TraditionalChinese: //XCUIElementTypeAny[@name="快速存入"]
+      English: //XCUIElementTypeAny[@name="Quick Save"]
+    #直接付款授权
+    DirectDebitAuthorisationElement:
+      SimplifiedChinese: //XCUIElementTypeAny[@name="直接付款授权"]
+      TraditionalChinese: //XCUIElementTypeAny[@name="直接付款授權"]
+      English: //XCUIElementTypeAny[@name="Direct Debit Authorisation"]
+    #绑定银行账户
+    LinkedBankAccountsElement:
+      SimplifiedChinese: //XCUIElementTypeAny[@name="绑定银行账户"]
+      TraditionalChinese: //XCUIElementTypeAny[@name="綁定銀行戶口"]
+      English: //XCUIElementTypeAny[@name="Linked Bank Accounts"]
+    #转账限额
+    TransferLimitElement:
+      SimplifiedChinese: //XCUIElementTypeStaticText[@name="转账限额"]
+      TraditionalChinese: //XCUIElementTypeStaticText[@name="轉賬限額"]
+      English: //XCUIElementTypeStaticText[@name="Transfer Limit"]

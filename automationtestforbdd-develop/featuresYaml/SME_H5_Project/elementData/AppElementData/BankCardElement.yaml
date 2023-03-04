@@ -1,0 +1,115 @@
+#Lending-PayLater涉及元素
+BankCardPage:
+  android:
+    # 银行服务设定-银行卡
+    # 详细资料
+    DetailsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '详细资料')]
+      TraditionalChinese: //*[contains(@content-desc, '详细资料')]
+      English: //*[contains(@content-desc, 'Details')]
+
+    #反转卡面
+    ReverseCardFaceElement:
+      SimplifiedChinese: //*[contains(@content-desc, '反转卡面')]
+      TraditionalChinese: //*[contains(@content-desc, '反转卡面')]
+      English: //*[contains(@content-desc, 'Reverse Card Face')]
+
+    #停用
+    DeactivateElement:
+      SimplifiedChinese: //*[contains(@content-desc, '停用')]
+      TraditionalChinese: //*[contains(@content-desc, '停用')]
+      English: //*[contains(@content-desc, 'Deactivate')]
+
+    # 已用/剩余每日限额
+    RemainingDailyLimitElement:
+      SimplifiedChinese: //*[contains(@content-desc, '已用/剩余每日限额')]
+      TraditionalChinese: //*[contains(@content-desc, '已用/剩余每日限额')]
+      English: //*[contains(@content-desc, 'Remaining daily limit')]
+
+    # 一键绑卡
+    OnekeyElement:
+      SimplifiedChinese: //*[contains(@content-desc, '一键绑卡')]
+      TraditionalChinese: //*[contains(@content-desc, '一键绑卡')]
+      English: //*[contains(@content-desc, 'One button binding card')]
+
+    # 交易纪录
+    TransactionsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '​交​易​纪​录​')]
+      TraditionalChinese: //*[contains(@content-desc, '交​易​紀​錄')]
+      English: //*[contains(@content-desc, 'T​r​a​n​s​a​c​t​i​o​n​s')]
+
+    # 日期
+    DateElement:
+      SimplifiedChinese: //*[contains(@content-desc, '六月 2022')]
+      TraditionalChinese: //*[contains(@content-desc, '六月 2022')]
+      English: //*[contains(@content-desc, 'Remaining daily limit')]
+
+    TransactionRecordDatePickerElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.ImageView[1]
+
+    TransactionRecordDatePickerPrevMonthElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View[2]/android.widget.ImageView[2]
+
+    DataPickerClick2022MayFirstDayElement: //android.view.View[@content-desc='星期日, 2022年5月1日']
+
+    DataPickerClick2022MayLastDayElement: //android.view.View[@content-desc='星期二, 2022年5月31日']
+
+    DataPickerDoneElement:
+      SimplifiedChinese: //*[contains(@content-desc, '完成')]
+      TraditionalChinese: //*[contains(@content-desc, '完成')]
+      English: //*[contains(@content-desc, 'Done')]
+
+  ios:
+    # 银行服务设定-银行卡
+    # 详细资料
+    DetailsElement:
+      SimplifiedChinese: //*[contains(@name, '详细资料')]
+      TraditionalChinese: //*[contains(@name, '详细资料')]
+      English: //*[contains(@name, 'Details')]
+
+    #反转卡面
+    ReverseCardFaceElement:
+      SimplifiedChinese: //*[contains(@name, '反转卡面')]
+      TraditionalChinese: //*[contains(@name, '反转卡面')]
+      English: //*[contains(@name, 'Reverse Card Face')]
+
+    #停用
+    DeactivateElement:
+      SimplifiedChinese: //*[contains(@name, '停用')]
+      TraditionalChinese: //*[contains(@name '停用')]
+      English: //*[contains(@name, 'Deactivate')]
+
+    # 已用/剩余每日限额
+    RemainingDailyLimitElement:
+      SimplifiedChinese: //*[contains(@name, '已用/剩余每日限额')]
+      TraditionalChinese: //*[contains(@name, '已用/剩余每日限额')]
+      English: //*[contains(@name, 'Remaining daily limit')]
+
+    # 一键绑卡
+    OnekeyElement:
+      SimplifiedChinese: //*[contains(@name, '一键绑卡')]
+      TraditionalChinese: //*[contains(@name, '一键绑卡')]
+      English: //*[contains(@name, 'One button binding card')]
+
+    # 交易纪录
+    TransactionsElement:
+      SimplifiedChinese: //*[contains(@name, '​交​易​纪​录​')]
+      TraditionalChinese: //*[contains(@name, '交​易​紀​錄')]
+      English: //*[contains(@name, 'T​r​a​n​s​a​c​t​i​o​n​s')]
+
+    # 日期
+    DateElement:
+      SimplifiedChinese: //*[contains(@name, '七月 2022')]
+      TraditionalChinese: //*[contains(@name, '7月 2022')]
+      English: //*[contains(@name, 'July 2022')]
+
+    TransactionRecordDatePickerElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[1]
+
+    TransactionRecordDatePickerPrevMonthElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeImage[2]
+
+    DataPickerClick2022MayFirstDayElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeStaticText[1]
+
+    DataPickerClick2022MayLastDayElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeStaticText[31]
+
+    DataPickerDoneElement:
+      SimplifiedChinese: //XCUIElementTypeButton[@name="完成"]
+      TraditionalChinese: //XCUIElementTypeButton[@name="完成"]
+      English: //XCUIElementTypeButton[@name="Done"]

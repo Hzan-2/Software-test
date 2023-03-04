@@ -1,0 +1,99 @@
+#App设置页元素
+AppSettingPage:
+  android:
+    #语言下拉框
+    languageElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]
+    #语言选择
+    EnglishElement: //*[contains(@content-desc, 'English')]
+    SimplifiedChineseElement: //*[contains(@content-desc, '简体中文')]
+    TraditionalChineseElement: //*[contains(@content-desc, '繁體中文')]
+    #通知按钮
+    notificationsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '通知')]
+      TraditionalChinese: //*[contains(@content-desc, '通知')]
+      English: //*[contains(@content-desc, 'Notifications')]
+    #登录设置按钮
+    loginSettingsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '登录设置')]
+      TraditionalChinese: //*[contains(@content-desc, '登入設定')]
+      English: //*[contains(@content-desc, 'Login Settings')]
+    #更改登录密码
+    Changeloginpassword:
+      SimplifiedChinese: //*[contains(@content-desc, '更改登录密码')]
+      TraditionalChinese: //*[contains(@content-desc, '更改登入密碼')]
+      English: //*[contains(@content-desc, 'Change Login Password')]
+    #流动保安编码按钮
+    softTokenSettingsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '流动保安编码')]
+      TraditionalChinese: //*[contains(@content-desc, '流動保安編碼')]
+      English: //*[contains(@content-desc, 'Soft Token')]
+    #流动保安编码开关元素
+    softTokenSwitchElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.widget.Switch[1]
+    #关闭保安流动编码弹窗确认元素
+    closeSoftTokenSwitchElement_YES:
+      SimplifiedChinese: //*[contains(@content-desc, '是')]
+      TraditionalChinese: //*[contains(@content-desc, '是')]
+      English: //*[contains(@content-desc, 'Yes')]
+    closeSoftTokenSwitchElement_Cancel:
+      SimplifiedChinese: //*[contains(@content-desc, '取消')]
+      TraditionalChinese: //*[contains(@content-desc, '取消')]
+      English: //*[contains(@content-desc, 'Cancel')]
+    #流动保安编码设置成功页面元素
+    softTokenSettingsSuccessElement:
+      SimplifiedChinese: //*[contains(@content-desc, '你已成功启用流动保安编码！')]
+      TraditionalChinese: //*[contains(@content-desc, '你已成功啟用流動保安編碼！')]
+      English: //*[contains(@content-desc, 'Your Soft Token has been activated successfully!')]
+    #版本更新按钮
+    versionUpdateElement:
+      SimplifiedChinese: //*[contains(@content-desc, '版本更新')]
+      TraditionalChinese: //*[contains(@content-desc, '版本更新')]
+      English: //*[contains(@content-desc, 'Version Update')]
+
+  ios:
+    #语言下拉框
+    languageElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]
+    #语言选择
+    EnglishElement: //*[contains(@name, 'English')]
+    SimplifiedChineseElement: //*[contains(@name, '简体中文')]
+    TraditionalChineseElement: //*[contains(@name, '繁體中文')]
+    #通知按钮
+    notificationsElement:
+      SimplifiedChinese: //*[contains(@name, '通知')]
+      TraditionalChinese: //*[contains(@name, '通知')]
+      English: //*[contains(@name, 'Notifications')]
+    #登录设置按钮
+    loginSettingsElement:
+      SimplifiedChinese: //*[contains(@name, '登录设置')]
+      TraditionalChinese: //*[contains(@name, '登入設定')]
+      English: //*[contains(@name, 'Login Settings')]
+    #更改登录密码
+    Changeloginpassword:
+      SimplifiedChinese: //*[contains(@name, '更改登录密码')]
+      TraditionalChinese: //*[contains(@name, '更改登入密碼')]
+      English: //*[contains(@name, 'Change Login Password')]
+    #流动保安编码按钮
+    softTokenSettingsElement:
+      SimplifiedChinese: //*[contains(@name, '流动保安编码')]
+      TraditionalChinese: //*[contains(@name, '流動保安編碼')]
+      English: //*[contains(@name, 'Soft Token')]
+    #流动保安编码开关元素
+    softTokenSwitchElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeSwitch
+    #关闭保安流动编码弹窗确认元素
+    closeSoftTokenSwitchElement_YES:
+      SimplifiedChinese: //*[contains(@name, '是')]
+      TraditionalChinese: //*[contains(@name, '是')]
+      English: //*[contains(@name, 'Yes')]
+    closeSoftTokenSwitchElement_Cancel:
+      SimplifiedChinese: //*[contains(@name, '取消')]
+      TraditionalChinese: //*[contains(@name, '取消')]
+      English: //*[contains(@name, 'Cancel')]
+    #流动保安编码设置成功页面元素
+    softTokenSettingsSuccessElement:
+      SimplifiedChinese: //*[contains(@name, '你已成功启用流动保安编码！')]
+      TraditionalChinese: //*[contains(@name, '你已成功啟用流動保安編碼！')]
+      English: //*[contains(@name, 'Your Soft Token has been activated successfully!')]
+    #版本更新按钮
+    versionUpdateElement:
+      SimplifiedChinese: //*[contains(@name, '版本更新')]
+      TraditionalChinese: //*[contains(@name, '版本更新')]
+      English: //*[contains(@name, 'Version Update')]

@@ -1,0 +1,222 @@
+#Endowment投保流页面元素
+InsuranceEndowmentPage:
+  android:
+    #预登录报价页-登入按钮
+    LogInElement:
+      SimplifiedChinese: //*[contains(@text, '登 入')]
+      TraditionalChinese: //*[contains(@text, '登 入')]
+      English: //*[contains(@text, 'Log In')]
+    #查看详情
+    ViewDetailsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '查看详情')]
+      TraditionalChinese: //*[contains(@content-desc, '查看詳情')]
+      English: //*[contains(@content-desc, 'View Details')]
+    #筛选图标
+    FiltericonElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.widget.Image
+    #选项-生效保单
+#    InForceOptionsElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[7]/android.view.View/android.view.View[4]
+    InForceOptionsElement:
+      SimplifiedChinese: //*[contains(@text, '生效保险')]
+      TraditionalChinese: //*[contains(@text, '生效保險')]
+      English: //*[contains(@text, 'In-force')]
+    #Endowment按钮
+    endowmentFilterElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]
+    #Travel按钮
+    TravelFilterElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]
+    #生效保单链接
+    InForceElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[4]
+    #保单资料
+    PolicyInformationElement:
+      SimplifiedChinese: //*[contains(@text, '保单资料')]
+      TraditionalChinese: //*[contains(@text, '保單資料')]
+      English: //*[contains(@text, 'Policy Information')]
+
+########################################################################################################################
+    #储蓄保险banner
+    EndowmenBanner: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.HorizontalScrollView[1]/android.widget.ImageView[2]
+    #报价页-在途申请单弹窗
+    InTransitElement:
+      SimplifiedChinese: //*[contains(@text, '是的，继续')]
+      TraditionalChinese: //*[contains(@text, '是的，繼續')]
+      English: //*[contains(@text, 'Yes, continue')]
+    #报价页-在途申请单弹窗
+#    RestartElement:
+#      SimplifiedChinese: //*[contains(@text, '重新开始投保')]
+#      TraditionalChinese: //*[contains(@text, '重新開始投保')]
+#      English: //*[contains(@text, 'Start a new application')]
+#    RestartElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[3]/android.view.View[2]
+    #报价页-切换币种
+    CutoverHKDElement:
+      SimplifiedChinese: //*[@text = '港元']
+      TraditionalChinese: //*[@text = '港元']
+      English: //*[@text = 'HKD']
+    CutoverCNYElement:
+      SimplifiedChinese: //*[@text = '人民币']
+      TraditionalChinese: //*[@text = '人民幣']
+      English: //*[@text = 'CNY']
+    #报价页-原保费HKD
+    HKDElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView[1]
+    #报价页-原保费CNY
+#    CNYElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView[2]
+    CNYElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView[1]
+    #建议书摘要页-原保费HKD
+    OverviewHKDElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.widget.TextView[5]
+    #建议书摘要页-原保费CNY
+#    OverviewCNYElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.widget.TextView[6]
+    OverviewCNYElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.widget.TextView[5]
+    #报价页-继续按钮
+    ContinueElement:
+      SimplifiedChinese: //*[contains(@text, '继 续')]
+      TraditionalChinese: //*[contains(@text, '繼 續')]
+      English: //*[contains(@text, 'Continue')]
+    #建议书摘要页-勾选协议1
+    protocolOneElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[6]/android.view.View[2]/android.widget.CheckBox
+    #建议书摘要页-勾选协议2
+    protocolTwoElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[6]/android.view.View[3]/android.widget.CheckBox
+    #建议书摘要页-勾选协议3
+    protocolThreeElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[6]/android.view.View[4]/android.widget.CheckBox
+    #建议书摘要页-勾选协议4
+    protocolFourElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[8]/android.widget.CheckBox
+    #建议书摘要页-小册子
+    # BrochureElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[4]
+    BrochureElement:
+      SimplifiedChinese: //*[contains(@text, '请参阅产品小册子')]
+      TraditionalChinese: //*[contains(@text, '請參閱產品小冊子')]
+      English: //*[contains(@text, 'Please read the Product Brochure')]
+    #小册子的返回按钮
+    ReturnElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]
+    #建议书摘要页-开始投保按钮
+    ApplyNowElement:
+      SimplifiedChinese: //*[contains(@text, '开始投保')]
+      TraditionalChinese: //*[contains(@text, '開始投保')]
+      English: //*[contains(@text, 'Apply Now')]
+    #确认转保声明
+    DeclarationsElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[10]/android.widget.CheckBox
+    DeclarationsElement02: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[9]/android.widget.CheckBox
+    #转保声明-同意及明白按钮
+    AgreeConfirmElement:
+      SimplifiedChinese: //*[contains(@text, '同意及明白')]
+      TraditionalChinese: //*[contains(@text, '同意及明白')]
+      English: //*[contains(@text, 'Agree and Confirm')]
+    #受益人选择页-下一步按钮
+    NextElement:
+      SimplifiedChinese: //*[contains(@text, '下一步')]
+      TraditionalChinese: //*[contains(@text, '下一步')]
+      English: //*[contains(@text, 'Next')]
+    #确认资料页-确认按钮
+    ConfirmElement:
+      SimplifiedChinese: //*[contains(@text, '确 认')]
+      TraditionalChinese: //*[contains(@text, '確 認')]
+      English: //*[contains(@text, 'Confirm')]
+
+    #投保人声明-同意及明白按钮
+    AgreeUnderstandElement:
+      SimplifiedChinese: //*[contains(@text, '同意及明白')]
+      TraditionalChinese: //*[contains(@text, '同意及明白')]
+      English: //*[contains(@text, 'Agree and Understand')]
+    #付款页-提交申请按钮
+    SubmitElement:
+      SimplifiedChinese: //*[@text = '提交申请']
+      TraditionalChinese: //*[@text = '提交申請']
+      English: //*[@text = 'Submit application']
+    #投保申请提交成功
+    SuccessElement:
+      SimplifiedChinese: //*[contains(@text, '成功')]
+      TraditionalChinese: //*[contains(@text, '成功')]
+      English: //*[contains(@text, 'success')]
+    #在途申请退出图标...
+    ExitMenuElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView
+    #保存退出
+    SaveExitElement:
+      SimplifiedChinese: //*[contains(@text, '保存并离开')]
+      TraditionalChinese: //*[contains(@text, '儲存並離開')]
+      English: //*[contains(@text, 'Save & Exit')]
+
+##益人选择页#############################################################################################
+    #受益人选择页-家庭成员
+    BeneficiaryChooseElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[5]/android.view.View[1]/android.view.View/android.widget.Image
+    #新增/编辑受益人按钮
+    AddBeneficiaryElement:
+      SimplifiedChinese: //*[contains(@text, '新增/编辑受益人')]
+      TraditionalChinese: //*[contains(@text, '新增/編輯受益人')]
+      English: //*[contains(@text, 'Add/EditBeneficiary')]
+    #受益人姓名输入框
+    InputBeneficiaryElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[9]/android.view.View/android.view.View[2]/android.widget.ListView/android.view.View[1]/android.view.View[2]/android.widget.EditText
+    #关系下拉框
+    RelationshipElement:
+      SimplifiedChinese: //*[contains(@text, '关系')]
+      TraditionalChinese: //*[contains(@text, '關係')]
+      English: //*[contains(@text, 'Relationship')]
+    #关系选项-配偶
+    SpouseElement:
+      SimplifiedChinese: //*[contains(@text, '配偶')]
+      TraditionalChinese: //*[contains(@text, '配偶')]
+      English: //*[contains(@text, 'Spouse')]
+    #保存按钮
+    SaveButtonElement:
+      SimplifiedChinese: //*[contains(@text, '保 存')]
+      TraditionalChinese: //*[contains(@text, '儲 存')]
+      English: //*[contains(@text, 'Save')]
+##补充资料##################################################################################
+    #补充资料-非永久居民
+    NoChinaElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[5]/android.view.View/android.view.View[2]/android.view.View[3]/android.view.View/android.widget.Image
+    #补充资料-多国籍
+    NationalityElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[5]/android.view.View/android.view.View[2]/android.view.View[5]
+#   NationalityElement:
+#     SimplifiedChinese: //*[@text = '国籍']
+#     TraditionalChinese: //*[@text = '國籍']
+#     English: //*[@text = 'Nationality']
+    NationalityWElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[6]/android.view.View/android.view.View[2]/android.view.View[1]
+    #补充资料-三级行业职业
+    DetailElement:
+      SimplifiedChinese: //*[contains(@text, '行业 - 行业明细')]
+      TraditionalChinese: //*[contains(@text, '行業 - 行業明細')]
+      English: //*[contains(@text, 'ndustry detail')]
+    NdustryElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[6]/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View
+    #补充资料-行业职业为其他
+    ClickOccupationElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[5]/android.view.View/android.view.View[2]/android.view.View[11]/android.view.View[2]/android.widget.EditText
+    InputOccupationElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[5]/android.view.View/android.view.View[2]/android.view.View[5]/android.view.View[2]/android.widget.EditText
+    #补充资料页-下一步按钮
+    SINextElement:
+      SimplifiedChinese: //*[contains(@text, '继 续')]
+      TraditionalChinese: //*[contains(@text, '繼 續')]
+      English: //*[contains(@text, 'Next')]
+
+    #确认资料页-编辑补充资料按钮
+    AdditionalElement:
+      SimplifiedChinese: //*[contains(@text, '编辑补充资料')]
+      TraditionalChinese: //*[contains(@text, '編輯補充資料')]
+      English: //*[contains(@text, 'Edit Additional Information')]
+
+    #确认资料页-保单资料
+    PolicyElement:
+      SimplifiedChinese: //*[contains(@text, '保单资料')]
+      TraditionalChinese: //*[contains(@text, '保單資料')]
+      English: //*[contains(@text, 'Policy information')]
+
+    #确认资料页-受益人资料
+    BeneficiaryElement:
+      SimplifiedChinese: //*[contains(@text, '受益人资料')]
+      TraditionalChinese: //*[contains(@text, '受益人資料')]
+      English: //*[contains(@text, 'Beneficiary Information')]
+
+    #确认资料页-编辑按钮
+    EditElement:
+      SimplifiedChinese: //*[@text = '编辑']
+      TraditionalChinese: //*[@text = '編輯']
+      English: //*[@text = 'Edit']
+
+    #补充资料页-关闭按钮
+    ClosedElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[5]/android.view.View/android.view.View[1]/android.view.View[2]
+    #确认资料页-返回按钮
+    ComebackElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]
+    #确认资料页-编辑按钮
+    AddMoneyElement:
+      SimplifiedChinese: //*[@text = '存入']
+      TraditionalChinese: //*[@text = '存入']
+      English: //*[@text = 'Add money']
+    #确认资料页-编辑按钮
+    EDDAElement:
+      SimplifiedChinese: //*[contains(@content-desc, '存入')]
+      TraditionalChinese: //*[contains(@content-desc, '存入')]
+      English: //*[contains(@content-desc, 'Add Money')]

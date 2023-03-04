@@ -1,0 +1,162 @@
+#添加收款人頁面元素--by yang.yang
+AddPayeeElementPage:
+  android:
+    #标题
+    AddPayeetittleElement:
+      SimplifiedChinese: //*[contains(@content-desc, '添加收款人')]
+      TraditionalChinese: //*[contains(@content-desc, '添加收款人')]
+      English: //*[contains(@content-desc, 'Add payee')]
+    #電話號碼输入框
+    MobileNumberElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.EditText[2]
+    #邮箱输入框
+    EmailTextElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.EditText[2]
+    #FPSID输入框
+    FPSIDTextElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.EditText[2]
+    #好友昵称输入框-绝对路径会有变化，第一个为页面内均为空时的位置，第二个为（银行账号好友）其他元素已填写完毕时的位置
+    PayeeNameElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.EditText[1]
+    PayeeName2Element: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.widget.EditText[1]
+    #通訊錄
+    AddressBookElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.ImageView[9]
+    #添加好友
+    AddPayeeElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView
+    #HKD单选框
+    HKDRadioboxElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.view.View[4]
+    #CNY单选框
+    CNYRadioboxElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.view.View[6]
+    #收款行查询页
+    ReceivingBankSelectElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.widget.ImageView[8]
+    #户口号码/银行账号输入框
+    AccountNOElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.widget.EditText[2]
+    #收款人全名输入框
+    RecipientsFullNameElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.widget.EditText[3]
+    #個人
+    PersonalElement:
+      SimplifiedChinese: //*[contains(@content-desc, '个人')]
+      TraditionalChinese: //*[contains(@content-desc, '個人')]
+      English: //*[contains(@content-desc, 'Personal')]
+    #商戶
+    MerchantsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '商户')]
+      TraditionalChinese: //*[contains(@content-desc, '商戶')]
+      English: //*[contains(@content-desc, 'Merchants')]
+    #手机
+    MobileElement:
+      SimplifiedChinese: //*[contains(@content-desc, '手机号码')]
+      TraditionalChinese: //*[contains(@content-desc, '手提電話')]
+      English: //*[contains(@content-desc, 'Mobile')]
+    #邮箱
+    EmailElement:
+      SimplifiedChinese: //*[contains(@content-desc, '电邮')]
+      TraditionalChinese: //*[contains(@content-desc, '電郵')]
+      English: //*[contains(@content-desc, 'Email')]
+    #账户
+    AccountElement:
+      SimplifiedChinese: //*[contains(@content-desc, '账户号码')]
+      TraditionalChinese: //*[contains(@content-desc, '戶口號碼')]
+      English: //*[contains(@content-desc, 'Account')]
+    #FPS-ID
+    FPSIDElement:
+      SimplifiedChinese: //*[contains(@content-desc, '转数快识别码')]
+      TraditionalChinese: //*[contains(@content-desc, '轉數快識別碼')]
+      English: //*[contains(@content-desc, 'FPS ID')]
+
+    #储存按钮
+    SaveElement:
+      SimplifiedChinese: //*[contains(@content-desc, '储存')]
+      TraditionalChinese: //*[contains(@content-desc, '儲存')]
+      English: //*[contains(@content-desc, 'Save')]
+    #取消按钮
+    CancelElement:
+      SimplifiedChinese: //*[contains(@content-desc, '取消')]
+      TraditionalChinese: //*[contains(@content-desc, '取消')]
+      English: //*[contains(@content-desc, 'Cancel')]
+  ios:
+    AddPayeeTopLabelElement:
+      SimplifiedChinese: //XCUIElementTypeAny[@name="添加收款人"]
+      TraditionalChinese: //XCUIElementTypeAny[@name="添加收款人"]
+      English: //XCUIElementTypeAny[@name="Add payee"]
+    #标题
+    AddPayeetittleElement:
+      SimplifiedChinese: //XCUIElementTypeAny[@name="添加收款人"]
+      TraditionalChinese: //XCUIElementTypeAny[@name="添加收款人"]
+      English: //XCUIElementTypeAny[@name="Add payee"]
+    #電話號碼输入框
+    MobileNumberElement:
+      SimplifiedChinese: //XCUIElementTypeTextField[@name="手机号码"]
+      TraditionalChinese: //XCUIElementTypeTextField[@name="手提電話"]
+      English: //XCUIElementTypeTextField[@name="Mobile Number"]
+    #邮箱输入框
+    EmailTextElement:
+      SimplifiedChinese: //XCUIElementTypeTextField[@name="电邮"]
+      TraditionalChinese: //XCUIElementTypeTextField[@name="電郵"]
+      English: //XCUIElementTypeTextField[@name="Email"]
+    #FPSID输入框
+    FPSIDTextElement:
+      SimplifiedChinese: //XCUIElementTypeTextField[@name="FPS ID"]
+      TraditionalChinese: //XCUIElementTypeTextField[@name="FPS ID"]
+      English: //XCUIElementTypeTextField[@name="FPS ID"]
+    #好友昵称输入框
+    PayeeNameElement:
+      SimplifiedChinese: //XCUIElementTypeTextField[@name="好友昵称"]
+      TraditionalChinese: //XCUIElementTypeTextField[@name="好友暱稱"]
+      English: //XCUIElementTypeTextField[@name="Friend’s Nickname"]
+    #通訊錄
+    AddressBookElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.ImageView[9]
+    #添加好友
+    AddPayeeElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView
+    #HKD单选框
+    HKDRadioboxElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]
+    #CNY单选框
+    CNYRadioboxElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]
+    #收款行查询页
+    ReceivingBankSelectElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeImage[8]
+    #户口号码/银行账号输入框
+    AccountNOElement:
+      SimplifiedChinese: //XCUIElementTypeTextField[@name="账户号码"]
+      TraditionalChinese: //XCUIElementTypeTextField[@name="戶口號碼"]
+      English: //XCUIElementTypeTextField[@name="Account Number"]
+    #收款人全名输入框
+    RecipientsFullNameElement:
+      SimplifiedChinese: //XCUIElementTypeTextField[@name="收款人全名"]
+      TraditionalChinese: //XCUIElementTypeTextField[@name="收款人全名"]
+      English: //XCUIElementTypeTextField[@name="Recipient’s Full Name"]
+    #個人
+    PersonalElement:
+      SimplifiedChinese: //*[contains(@name, '个人')]
+      TraditionalChinese: //*[contains(@name, '個人')]
+      English: //*[contains(@name, 'Personal')]
+    #商戶
+    MerchantsElement:
+      SimplifiedChinese: //*[contains(@name, '商户')]
+      TraditionalChinese: //*[contains(@name, '商戶')]
+      English: //*[contains(@name, 'Merchants')]
+    #手机
+    MobileElement:
+      SimplifiedChinese: //*[contains(@name, '手机号码')]
+      TraditionalChinese: //*[contains(@name, '手提電話')]
+      English: //*[contains(@name, 'Mobile')]
+    #邮箱
+    EmailElement:
+      SimplifiedChinese: //*[contains(@name, '电邮')]
+      TraditionalChinese: //*[contains(@name, '電郵')]
+      English: //*[contains(@name, 'Email')]
+    #账户
+    AccountElement:
+      SimplifiedChinese: //*[contains(@name, '账户号码')]
+      TraditionalChinese: //*[contains(@name, '戶口號碼')]
+      English: //*[contains(@name, 'Account')]
+    #FPS-ID
+    FPSIDElement:
+      SimplifiedChinese: //*[contains(@name, '转数快识别码')]
+      TraditionalChinese: //*[contains(@name, '轉數快識別碼')]
+      English: //*[contains(@name, 'FPS ID')]
+    #储存按钮
+    SaveElement:
+      SimplifiedChinese: //XCUIElementTypeButton[@name="储存"]
+      TraditionalChinese: //XCUIElementTypeButton[@name="儲存"]
+      English: //XCUIElementTypeButton[@name="Save"]
+    #取消按钮
+    CancelElement:
+      SimplifiedChinese: //*[contains(@name, '取消')]
+      TraditionalChinese: //*[contains(@name, '取消')]
+      English: //*[contains(@name, 'Cancel')]

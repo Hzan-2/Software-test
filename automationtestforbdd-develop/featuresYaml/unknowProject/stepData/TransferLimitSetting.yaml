@@ -1,0 +1,115 @@
+#设定每日转账限额
+TransferLimitSetting:
+  step1:
+    Action: judge
+    Element: ${TransferLimitElementPage}${TransferLimittittleElement}
+    TestData: true
+    Remarks: 判断已进入每日转账限额的设定页面
+
+  step2:
+    Action: click
+    Element: ${TransferLimitElementPage}${DailyTransferLimitElement}
+    TestData:
+    Remarks: 点击每日转账限额设定页面的每日转账限额输入框
+
+  step3:
+    Action: input
+    Element: ${TransferLimitElementPage}${DailyTransferLimitElement}
+    TestData: ${DailyTransferLimit}
+    Remarks: 在每日转账限额设定页面的每日转账限额输入框内输入限额值
+
+  step3_1:
+    Action: keyboard
+    Element:
+    TestData: recovery
+    Remarks: 关闭键盘
+
+  step4:
+    Action: click
+    Element: ${TransferLimitElementPage}${DailySmallValueTransferLimitElement}
+    TestData:
+    Remarks: 点击每日转账限额设定页面的每日小额转账限额输入框
+
+  step5:
+    Action: input
+    Element: ${TransferLimitElementPage}${DailySmallValueTransferLimitElement}
+    TestData: ${DailySmallValueTransferLimit}
+    Remarks: 在每日转账限额设定页面的每日小额转账限额输入框内输入限额值
+
+  step5_1:
+    Action: keyboard
+    Element:
+    TestData: recovery
+    Remarks: 关闭键盘
+
+  step6:
+    Action: sleep
+    Element:
+    TestData: 2
+    Remarks: 停顿2
+
+  step7:
+    Action: click
+    Element: ${TransferLimitElementPage}${ConfirmElement}
+    TestData:
+    Remarks: 点击每日转账限额设定页面的确认按钮
+
+  step8:
+    Action: sleep
+    Element:
+    TestData: 10
+    Remarks: 停顿10秒
+
+  step9:
+    Action: judge,branch
+    Element: ${OTPInputElementPage}${OTPInputtittleElement}
+    TestData:
+    Remarks: 判斷当前页面标题是否为手机验证码输入页面
+    branchProcess:
+      step1:
+        Action: keyboard
+        Element:
+        TestData: 123456
+        Remarks: 输入验证码123456
+
+  step10:
+    Action: sleep
+    Element:
+    TestData: 10
+    Remarks: 停顿10秒
+
+  step11:
+    Action: judge,branch
+    Element: ${SofttokenInputElementPage}${SofttokenInputtittleElement}
+    TestData:
+    Remarks: 判斷当前页面标题是否为PIN码输入页面
+    branchProcess:
+      step1:
+        Action: sotfToken_input
+        Element:
+        TestData: ${sotfTokenPIN}
+        Remarks: 输入PIN码
+
+  step12:
+    Action: sleep
+    Element:
+    TestData: 10
+    Remarks: 停顿10秒
+
+  step13:
+    Action: judge
+    Element: ${TransferLimitElementPage}${LimitSetResultElement}
+    TestData: true
+    Remarks: 判断每日转账限额设定成功
+
+  step14:
+    Action: click
+    Element: ${TransferLimitElementPage}${LimitSetResultButtonElement}
+    TestData:
+    Remarks: 点击每日转账限额设定结果页面的完成按钮
+
+  step15:
+    Action: sleep
+    Element:
+    TestData: 2
+    Remarks: 停顿2，结束设定限额流程

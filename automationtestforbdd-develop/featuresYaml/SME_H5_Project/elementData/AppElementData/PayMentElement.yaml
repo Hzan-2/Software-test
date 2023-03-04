@@ -1,0 +1,298 @@
+#livisava MC卡界面元素
+PayMent:
+  android:
+    #提示页按钮
+    PayButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '支付！')]
+      TraditionalChinese: //*[contains(@content-desc, '支付！')]
+      English: //*[contains(@content-desc, 'Pay')]
+
+    #银行服务设定界面的银行卡选项
+    MCCardsButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '银行卡')]
+      TraditionalChinese: //*[contains(@content-desc, '銀行卡')]
+      English: //*[contains(@content-desc, 'Cards')]
+#---------------------------------MC卡相关元素--------------------------------
+    #银行服务设定界面
+    MCCreateCardButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '申请livi 理慧借记万事达卡®')]
+      TraditionalChinese: //*[contains(@content-desc, '申請 livi Debit Mastercard®')]
+      English: //*[contains(@content-desc, 'Apply for livi Debit Mastercard®')]
+
+    #开卡协议筛选框
+    MCCreateCardCheckbox: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.widget.ImageView[2]
+
+    #协议界面的同意按钮
+    MCCreateCardagreedButtonElement:
+      SimplifiedChinese: //*[contains(@text, '我已阅读并同意')]
+      TraditionalChinese: //*[contains(@text, '我已閱讀並同意')]
+      English: //*[contains(@text, 'I have read and agreed')]
+
+    #开卡界面的继续按钮
+    MCCreateCardContiuneButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '继续')]
+      TraditionalChinese: //*[contains(@content-desc, '繼續')]
+      English: //*[contains(@content-desc, 'Contiune')]
+
+    #开卡完成按钮
+    MCCreateCardDoneButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '完成')]
+      TraditionalChinese: //*[contains(@content-desc, '完成')]
+      English: //*[contains(@content-desc, 'Done')]
+
+    #livisavaMC小眼睛
+    MCCardDetailsButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '详细资料')]
+      TraditionalChinese: //*[contains(@content-desc, '詳細資料')]
+      English: //*[contains(@content-desc, 'Card Details')]
+
+    MCCardDetailsIsHidden: //*[contains(@content-desc,'**** **** **** ****')]
+
+
+
+    #小眼睛闭着：
+    MCCardDetailsclose: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]
+    #小眼睛开着
+    MCCardDetailsopen: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[2]
+
+    #MC卡片框
+    MCcardnumber: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.widget.ImageView[1]
+
+    #MC 卡界面的复制按钮
+    MCcardcopyButtonElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[4]/android.view.View[1]/android.widget.ImageView[2]
+    #判断复制按钮不存在
+    MCcardcopyButtonElement1: //android.view.View/android.widget.ImageView[2]
+
+    MCCardNumberCopiedButtonElement1:
+      SimplifiedChinese: //*[contains(@content-desc, '已复制卡号')]
+      TraditionalChinese: //*[contains(@content-desc, '已複製卡號')]
+      English: //*[contains(@content-desc, 'Card number copied ')]
+
+    #已复制卡号
+    MCCardNumberCopiedButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '已复制卡号')]
+      TraditionalChinese: //*[contains(@content-desc, '已複製卡號')]
+      English: //*[contains(@content-desc, 'Card number copied ')]
+    #livisavaMC反转页面
+    MCFlipCardButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '反转页面')]
+      TraditionalChinese: //*[contains(@content-desc, '反轉卡面')]
+      English: //*[contains(@content-desc, 'Flip Card')]
+
+      #livisavaMC反转页面判断
+    MCFlipCardJudgeButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '有效期')]
+      TraditionalChinese: //*[contains(@content-desc, '有效期')]
+      English: //*[contains(@content-desc, 'Valid Thru')]
+
+
+    #livisavaMC停用
+    MCSuspendButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '停用')]
+      TraditionalChinese: //*[contains(@content-desc, '停用')]
+      English: //*[contains(@content-desc, 'Suspend ')]
+
+    #livisavaMC恢复使用
+    MCResumeCardButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '恢复使用')]
+      TraditionalChinese: //*[contains(@content-desc, '恢復使用')]
+      English: //*[contains(@content-desc, 'Resume Card')]
+
+
+    #livisavaMC确认启用
+    MCEnableNowButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '立即启用')]
+      TraditionalChinese: //*[contains(@content-desc, '立即啟用')]
+      English: //*[contains(@content-desc, 'Enable Now')]
+
+
+    #livisavaMC是否停用弹框
+    MCYesButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '是')]
+      TraditionalChinese: //*[contains(@content-desc, '是')]
+      English: //*[contains(@content-desc, 'Yes')]
+
+    #livisavaMC交易记录
+    MCTransactionsButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '交​易​纪​录')]
+      TraditionalChinese: //*[contains(@content-desc, '交​易​紀​錄')]
+      English: //*[contains(@content-desc, '​T​r​a​n​s​a​c​t​i​o​n​s')]
+
+
+    #livisavaMC交易记录界面
+    MCTransactionsPageButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '交易记录')]
+      TraditionalChinese: //*[contains(@content-desc, '交易紀錄')]
+      English: //*[contains(@content-desc, 'Transactions ')]
+
+     #livisavaMC一建绑卡
+    MCTokenConnectButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '一键绑卡')]
+      TraditionalChinese: //*[contains(@content-desc, '一鍵綁卡')]
+      English: //*[contains(@content-desc, 'Token Connect ')]
+
+    #一建绑卡界面判断SaveProFilmHubElement
+    SaveProFilmHubElement: //android.widget.ImageView[@content-desc="ProFilmHub"]
+
+    #save卡限额按钮
+    SaveQuotaButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '剩​余​每​日​限​额​')]
+      TraditionalChinese: //*[contains(@content-desc, '​剩​餘​每​日​限​額')]
+      English: //*[contains(@content-desc, 'R​e​m​a​i​n​i​n​g​ ​D​a​i​l​y​ ​L​i​m​i​t')]
+    #save卡限额
+    SaveSetDailylimitElement:
+      SimplifiedChinese: //*[contains(@text, '金额')]
+      TraditionalChinese: //*[contains(@text, '金額')]
+      English: //*[contains(@text, 'Amount')]
+    #save卡限额提交按钮
+    SaveSubmitDailylimitElement:
+      SimplifiedChinese: //*[contains(@content-desc, '确认')]
+      TraditionalChinese: //*[contains(@content-desc, '確認')]
+      English: //*[contains(@content-desc, 'Confirm')]
+
+
+
+
+      #-------------------------------IOS-------------------------------------
+
+  ios:
+    #提示页按钮
+    PayButtonElement:
+      SimplifiedChinese: //*[contains(@name, '支付！')]
+      TraditionalChinese: //*[contains(@name, '支付！')]
+      English: //*[contains(@name, 'Pay')]
+
+    #银行服务设定界面的银行卡选项
+    MCCardsButtonElement:
+      SimplifiedChinese: //*[contains(@name, '银行卡')]
+      TraditionalChinese: //*[contains(@name, '銀行卡')]
+      English: //*[contains(@name, 'Cards')]
+
+    #livisavaMC小眼睛
+    MCCardDetailsButtonElement:
+      SimplifiedChinese: //XCUIElementTypeImage[@name="详细资料" and @visible='true']
+      TraditionalChinese: //XCUIElementTypeImage[@name="詳細資料" and @visible='true']
+      English: //XCUIElementTypeImage[@name="Card Details" and @visible='true']
+
+    #小眼睛闭着：
+    MCCardDetailsclose: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[2]
+
+    #小眼睛开着
+    MCCardDetailsopen: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[1]
+
+    #MC卡片框
+    MCcardnumber: //
+
+    #MC 卡界面的复制按钮
+    MCcardcopyButtonElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[2]
+
+    #判断复制按钮不存在
+#    MCcardcopyButtonElement1: //android.view.View/android.widget.ImageView[2]
+
+    # 卡片中是否有包含****，如果有是隐藏，否则是显示
+    MCCardDetailsIsHidden: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[contains(@name, "**** **** **** ****")][1]
+
+    #已复制卡号
+    MCCardNumberCopiedButtonElement:
+      SimplifiedChinese: //*[contains(@name, '已复制卡号')]
+      TraditionalChinese: //*[contains(@name, '已複製卡號')]
+      English: //*[contains(@name, 'Card number copied')]
+
+    #livisavaMC反转页面
+    MCFlipCardButtonElement:
+      SimplifiedChinese: //*[contains(@name, '反转页面') and @visible='true']
+      TraditionalChinese: //*[contains(@name, '反轉卡面') and @visible='true']
+      English: //*[contains(@name, 'Flip Card') and @visible='true']
+
+    #livisavaMC停用
+    MCSuspendButtonElement:
+      SimplifiedChinese: //*[contains(@name, '停用') and @visible='true']
+      TraditionalChinese: //*[contains(@name, '停用') and @visible='true']
+      English: //*[contains(@name, 'Suspend') and @visible='true']
+
+    #livisavaMC恢复使用
+    MCResumeCardButtonElement:
+      SimplifiedChinese: //*[contains(@name, '恢复使用') and @visible='true']
+      TraditionalChinese: //*[contains(@name, '恢復使用') and @visible='true']
+      English: //*[contains(@name, 'Resume Card') and @visible='true']
+
+    #livisavaMC确认启用
+    MCEnableNowButtonElement:
+      SimplifiedChinese: //*[contains(@name, '立即启用') and @visible='true']
+      TraditionalChinese: //*[contains(@name, '立即啟用') and @visible='true']
+      English: //*[contains(@name, 'Enable Now') and @visible='true']
+
+    #livisavaMC是否停用弹框
+    MCYesButtonElement:
+      SimplifiedChinese: //*[contains(@name, '是')]
+      TraditionalChinese: //*[contains(@name, '是')]
+      English: //*[contains(@name, 'Yes')]
+
+    #livisavaMC交易记录
+    MCTransactionsButtonElement:
+      SimplifiedChinese: //*[contains(@name, '​交​易​纪​录​')][1]
+      TraditionalChinese: //*[contains(@name, '​交​易​紀​錄​')][1]
+      English: //*[contains(@name, '​T​r​a​n​s​a​c​t​i​o​n​s​')][1]
+
+    #livisavaMC交易记录界面
+    MCTransactionsPageButtonElement:
+      SimplifiedChinese: //*[contains(@name, '交易纪录') and @visible='true']
+      TraditionalChinese: //*[contains(@name, '交易紀錄') and @visible='true']
+      English: //*[contains(@name, 'Transactions') and @visible='true']
+
+    #livisavaMC一建绑卡
+    MCTokenConnectButtonElement:
+      SimplifiedChinese: //*[contains(@name, '一键绑卡')]
+      TraditionalChinese: //*[contains(@name, '一鍵綁卡')]
+      English: //*[contains(@name, 'Token Connect')]
+
+    #save卡限额按钮
+    SaveQuotaButtonElement:
+      SimplifiedChinese: //*[contains(@name, '剩​余​每​日​限​额​')]
+      TraditionalChinese: //*[contains(@name, '​剩​餘​每​日​限​額')]
+      English: //*[contains(@name, 'R​e​m​a​i​n​i​n​g​ ​D​a​i​l​y​ ​L​i​m​i​t')]
+
+    #一建绑卡界面判断SaveProFilmHubElement
+    SaveProFilmHubElement: //XCUIElementTypeImage[@name="ProFilmHub"]
+
+    #save卡限额
+    SaveSetDailylimitElement:
+      SimplifiedChinese: //*[contains(@name, '金额')]
+      TraditionalChinese: //*[contains(@name, '金額')]
+      English: //*[contains(@name, 'Amount')]
+
+    #save卡限额提交按钮
+    SaveSubmitDailylimitElement:
+      SimplifiedChinese: //*[contains(@name, '确认')]
+      TraditionalChinese: //*[contains(@name, '確認')]
+      English: //*[contains(@name, 'Confirm')]
+
+
+#---------------------------------MC卡相关元素--------------------------------
+    #save开卡申请页面
+    MCCreateCardButtonElement:
+      SimplifiedChinese: //*[contains(@name, '申请livi 理慧借记万事达卡®')]
+      TraditionalChinese: //*[contains(@name, '申請 livi Debit Mastercard®')]
+      English: //*[contains(@name, 'Apply for livi Debit Mastercard®')]
+
+    #开卡协议筛选框
+    MCCreateCardCheckbox: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeImage[2]
+
+    #协议界面的同意按钮
+    MCCreateCardagreedButtonElement:
+      SimplifiedChinese: //*[contains(@name, '我已阅读并同意')]
+      TraditionalChinese: //*[contains(@name, '我已閱讀並同意')]
+      English: //*[contains(@name, 'I have read and agreed')]
+
+    #开卡界面的继续按钮
+    MCCreateCardContiuneButtonElement:
+      SimplifiedChinese: //*[contains(@name, '继续')]
+      TraditionalChinese: //*[contains(@name, '繼續')]
+      English: //*[contains(@name, 'Continue')]
+
+    #开卡完成按钮
+    MCCreateCardDoneButtonElement:
+      SimplifiedChinese: //*[contains(@name, '完成')]
+      TraditionalChinese: //*[contains(@name, '完成')]
+      English: //*[contains(@name, 'Done')]
+

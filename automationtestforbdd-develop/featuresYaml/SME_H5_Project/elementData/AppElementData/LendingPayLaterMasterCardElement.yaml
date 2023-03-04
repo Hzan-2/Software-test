@@ -1,0 +1,142 @@
+#PayLater卡设置页面
+LendingPayLaterMasterCardElement:
+  android:
+    #详细资料按钮
+    DetailButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '详细资料')]
+      TraditionalChinese: //*[contains(@content-desc, '詳細資料')]
+      English: //*[contains(@content-desc, 'Card Details')]
+    #粘贴按钮
+    CopyButton: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[2]/android.widget.ScrollView[1]/android.view.View[4]/android.view.View[1]/android.widget.ImageView[2]
+    #反转卡片按钮
+    FlipCardButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '反转卡面')]
+      TraditionalChinese: //*[contains(@content-desc, '反轉卡面')]
+      English: //*[contains(@content-desc, 'Flip Card')]
+    #卡详情反面有效期
+    TermOfValidityElement:
+      SimplifiedChinese: //*[contains(@content-desc, '有效期')]
+      TraditionalChinese: //*[contains(@content-desc, '有效期')]
+      English: //*[contains(@content-desc, 'Valid Thru')]
+    #变更卡状态为正常-Resume Card
+    ResumeCardElement:
+      SimplifiedChinese: //*[contains(@content-desc, '恢复使用')]
+      TraditionalChinese: //*[contains(@content-desc, '恢復使用')]
+      English: //*[contains(@content-desc, 'Resume Card')]
+    #变更卡状态为停用，点击弹窗按钮-是
+    SuspendMCElement:
+      SimplifiedChinese: //*[contains(@content-desc, '是')]
+      TraditionalChinese: //*[contains(@content-desc, '是')]
+      English: //*[contains(@content-desc, 'Yes')]
+    #返回上一页
+    BackPageButtonElement2: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]
+    #查看卡状态
+    CardStatusElement:
+      SimplifiedChinese: //*[contains(@content-desc, '停用')]
+      TraditionalChinese: //*[contains(@content-desc, '停用')]
+      English: //*[contains(@content-desc, 'Suspend')]
+    #分期起点按钮
+    MinimumInstalmentButtonAmountElement:
+      SimplifiedChinese: //*[contains(@content-desc, '​最​低​分​期​金​额')]
+      TraditionalChinese: //*[contains(@content-desc, '​最​低​分​期​金​額')]
+      English: //*[contains(@content-desc, '​M​i​n​i​m​u​m​ ​I​n​s​t​a​l​m​e​n​t​ ​A​m​o​u​n​t')]
+    #当前分期期数-3
+    NowRepaymentPeriodElement:
+      SimplifiedChinese: //*[contains(@content-desc, '​3​')]
+      TraditionalChinese: //*[contains(@content-desc, '​3​')]
+      English: //*[contains(@content-desc, '​3​')]
+    #触发更改分期
+    ChangeRepaymentPeriodButtonElement:
+      SimplifiedChinese: //*[contains(@text, '更改还款期')]
+      TraditionalChinese: //*[contains(@text, '更改還款期')]
+      English: //*[contains(@text, 'Change Repayment Period')]
+    #当前分期期数-6
+    NowRepaymentPeriodElement2:
+      SimplifiedChinese: //*[contains(@content-desc, '​6​')]
+      TraditionalChinese: //*[contains(@content-desc, '​6​')]
+      English: //*[contains(@content-desc, '​6​')]
+    #还款期按钮
+    RepaymentPeriodButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '​还​款​期​')]
+      TraditionalChinese: //*[contains(@content-desc, '​還​款​期​')]
+      English: //*[contains(@content-desc, 'R​e​p​a​y​m​e​n​t​ ​P​e​r​i​o​d​')]
+    #点击交易记录按钮
+    TransactionsButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '​交​易​纪​录​')]
+      TraditionalChinese: //*[contains(@content-desc, '​交​易​紀​錄​')]
+      English: //*[contains(@content-desc, '​T​r​a​n​s​a​c​t​i​o​n​s​')]
+
+
+
+
+
+
+
+
+
+
+
+  ios:
+    #详细资料按钮
+    DetailButtonElement:
+      SimplifiedChinese: //XCUIElementTypeImage[@name="详细资料" and @visible='true']
+      TraditionalChinese: //XCUIElementTypeImage[@name="詳細資料" and @visible='true']
+      English: //XCUIElementTypeImage[@name="Card Details" and @visible='true']
+    #粘贴按钮
+    CopyButton: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[2]
+    #反转卡片按钮
+    FlipCardButtonElement:
+      SimplifiedChinese: //XCUIElementTypeImage[@name="反转卡面" and @visible='true']
+      TraditionalChinese: //XCUIElementTypeImage[@name="反轉卡面" and @visible='true']
+      English: //XCUIElementTypeImage[@name="Flip Card" and @visible='true']
+    #卡详情反面有效期
+    TermOfValidityElement:
+      SimplifiedChinese: //*[contains(@name, '有效期') and @visible='true']
+      TraditionalChinese: //*[contains(@name, '有效期') and @visible='true']
+      English: //*[contains(@name, 'Valid Thru') and @visible='true']
+    #变更卡状态为正常-Resume Card
+    ResumeCardElement:
+      SimplifiedChinese: //*[contains(@name, '恢复使用') and @visible='true']
+      TraditionalChinese: //*[contains(@name, '恢復使用') and @visible='true']
+      English: //*[contains(@name, 'Resume Card') and @visible='true']
+    #变更卡状态为停用，点击弹窗按钮-是
+    SuspendMCElement:
+      SimplifiedChinese: //*[contains(@name, '是')]
+      TraditionalChinese: //*[contains(@name, '是')]
+      English: //*[contains(@name, 'Yes')]
+    #返回上一页
+    BackPageButtonElement2: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]
+    #查看卡状态
+    CardStatusElement:
+      SimplifiedChinese: //*[contains(@name, '停用') and @visible='true']
+      TraditionalChinese: //*[contains(@name, '停用') and @visible='true']
+      English: //*[contains(@name, 'Suspend') and @visible='true']
+    #分期起点按钮
+    MinimumInstalmentButtonAmountElement:
+      SimplifiedChinese: //*[contains(@name, '​最​低​分​期​金​额')]
+      TraditionalChinese: //*[contains(@name, '​最​低​分​期​金​額')]
+      English: //*[contains(@name, '​M​i​n​i​m​u​m​ ​I​n​s​t​a​l​m​e​n​t​ ​A​m​o​u​n​t')]
+    #当前分期期数-3
+    NowRepaymentPeriodElement:
+      SimplifiedChinese: //*[contains(@name, '​3​')]
+      TraditionalChinese: //*[contains(@name, '​3​')]
+      English: //*[contains(@name, '​3​')]
+    #还款期按钮
+    RepaymentPeriodButtonElement:
+      SimplifiedChinese: //*[contains(@name, '​还​款​期​')]
+      TraditionalChinese: //*[contains(@name, '​還​款​期​')]
+      English: //*[contains(@name, 'R​e​p​a​y​m​e​n​t​ ​P​e​r​i​o​d​')]
+    #当前分期期数-6
+    NowRepaymentPeriodElement2:
+      SimplifiedChinese: //*[contains(@name, '​6​')]
+      TraditionalChinese: //*[contains(@name, '​6​')]
+      English: //*[contains(@name, '​6​')]
+    #触发更改分期
+    ChangeRepaymentPeriodButtonElement:
+      SimplifiedChinese: //XCUIElementTypeStaticText[contains(@name, '更改还款期')]
+      TraditionalChinese: //XCUIElementTypeStaticText[contains(@name, '更改還款期')]
+      English: //XCUIElementTypeStaticText[contains(@name, 'Change Repayment Period')]
+    #点击交易记录按钮 - 绝对路径
+    TransactionsButtonElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[8]
+    # '喜欢用livi Paylater吗？'用户调查弹窗的关闭按钮
+    PayLaterLikePageCloseButtonElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[2]

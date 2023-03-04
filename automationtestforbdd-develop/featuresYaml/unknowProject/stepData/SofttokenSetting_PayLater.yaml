@@ -1,0 +1,154 @@
+#设置流动保安编码-登录后才能使用
+SofttokenSetting_PayLater:
+  -
+    Action: click
+    Element: ${HomePage}${personalCenterElement}
+    TestData:
+    Remarks: 点击右上角进入个人中心
+  -
+    Action: click
+    Element: ${PersonalCenterPage}${appSettingsElement}
+    TestData:
+    Remarks: 点击App设定
+  -
+    Action: click
+    Element: ${AppSettingPage}${softTokenSettingsElement}
+    TestData:
+    Remarks: 点击流动保安编码设置
+  -
+    Action: sleep
+    Element:
+    TestData: 10
+    Remarks: 等待10秒
+  -
+    Action: judge,branch
+    Element: ${AppSettingPage}${ChangePinElement}
+    TestData:
+    Remarks: 判断元素checked是否开启保安流动编码，如果有则执行if分支，否则走else分支
+    ifbranchProcess:
+      -
+        Action: sleep
+        Element:
+        TestData: 5
+        Remarks: 停顿5秒
+      -
+        Action: click
+        Element: ${AppSettingPage}${softTokenSwitchElement1}
+        TestData:
+        Remarks: 关闭pin
+      -
+        Action: sleep
+        Element:
+        TestData: 2
+        Remarks: 停顿2秒
+      -
+        Action: click
+        Element: ${AppSettingPage}${closeSoftTokenSwitchElement_YES}
+        TestData:
+        Remarks: 确认关闭
+      -
+        Action: sleep
+        Element:
+        TestData: 5
+        Remarks: 停顿5秒
+      -
+        Action: click
+        Element: ${AppSettingPage}${softTokenSwitchElement}
+        TestData:
+        Remarks: 打开流动保安编码确认密码开关
+      -
+        Action: sleep
+        Element:
+        TestData: 5
+        Remarks: 停顿5秒
+      -
+        Action: keyboard
+        Element:
+        TestData: 123456
+        Remarks: 输入验证码
+      -
+        Action: sleep
+        Element:
+        TestData: 3
+        Remarks: 停顿3秒
+      -
+        Action: sotfToken_input
+        Element:
+        TestData: ${sotfTokenPIN}
+        Remarks: 输入流动编码
+      -
+        Action: sleep
+        Element:
+        TestData: 3
+        Remarks: 停顿3秒
+      -
+        Action: sotfToken_input
+        Element:
+        TestData: ${sotfTokenPIN}
+        Remarks: 二次输入流动编码
+      -
+        Action: sleep
+        Element:
+        TestData: 3
+        Remarks: 停顿3秒
+      -
+        Action: get
+        Element: ${AppSettingPage}${softTokenSettingsSuccessElement}
+        TestData: [ '你已成功启用流动保安编码！','你已成功啟用流動保安編碼！','Your Soft Token has been activated successfully!' ]
+        Remarks: 校验是否成功启动流动保安编码！
+      -
+        Action: backHome
+        Element:
+        TestData:
+        Remarks: 返回首页
+    elsebranchProcess:
+      -
+        Action: click
+        Element: ${AppSettingPage}${softTokenSwitchElement}
+        TestData:
+        Remarks: 打开流动保安编码确认密码开关
+      -
+        Action: sleep
+        Element:
+        TestData: 5
+        Remarks: 停顿5秒
+      -
+        Action: keyboard
+        Element:
+        TestData: 123456
+        Remarks: 输入验证码
+      -
+        Action: sleep
+        Element:
+        TestData: 3
+        Remarks: 停顿3秒
+      -
+        Action: sotfToken_input
+        Element:
+        TestData: ${sotfTokenPIN}
+        Remarks: 输入流动编码
+      -
+        Action: sleep
+        Element:
+        TestData: 3
+        Remarks: 停顿3秒
+      -
+        Action: sotfToken_input
+        Element:
+        TestData: ${sotfTokenPIN}
+        Remarks: 二次输入流动编码
+      -
+        Action: sleep
+        Element:
+        TestData: 3
+        Remarks: 停顿3秒
+      -
+        Action: get
+        Element: ${AppSettingPage}${softTokenSettingsSuccessElement}
+        TestData: [ '你已成功启用流动保安编码！','你已成功啟用流動保安編碼！','Your Soft Token has been activated successfully!' ]
+        Remarks: 校验是否成功启动流动保安编码！
+      -
+        Action: backHome
+        Element:
+        TestData:
+        Remarks: 返回首页

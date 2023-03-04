@@ -1,0 +1,118 @@
+#首页元素
+HomePage:
+  android:
+    #提示页按钮
+    tipsButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '明白了！')]
+      TraditionalChinese: //*[contains(@content-desc, '明白了！')]
+      English: //*[contains(@content-desc, 'Got It!')]
+    #登录页的问候语
+    greetingsElement: //android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]
+    #右上角的个人中心头像
+    personalCenterElement: ${greetingsElement}/android.widget.ImageView[3]
+    #通知弹窗确认按钮
+    notificationPopupElemnt:
+      SimplifiedChinese: //*[contains(@text, '确认')]
+      TraditionalChinese: //*[contains(@text, '確認')]
+      English: //*[contains(@text, 'ok')]
+    #导肮头
+    #liviSave按钮
+    liviSaveElement:
+      SimplifiedChinese: //*[contains(@content-desc, '存款')]
+      TraditionalChinese: //*[contains(@content-desc, 'liviSave')]
+      English: //*[contains(@content-desc, 'liviSave')]
+    #paylater按钮
+    paylaterElement: //*[contains(@content-desc, 'PayLater')]
+    #Loan按钮
+    LoanElement:
+      SimplifiedChinese: //*[contains(@content-desc, '贷款')]
+      TraditionalChinese: //*[contains(@content-desc, '貸款')]
+      English: //*[contains(@content-desc, 'Loan')]
+    #保险按钮
+    insuranceElement:
+      SimplifiedChinese: //*[contains(@content-desc, '保险')]
+      TraditionalChinese: //*[contains(@content-desc, '保險')]
+      English: //*[contains(@content-desc, 'Insurance')]
+    #贷款按钮
+    loanElement:
+      SimplifiedChinese: //*[contains(@content-desc, '贷款')]
+      TraditionalChinese: //*[contains(@content-desc, '貸款')]
+      English: //*[contains(@content-desc, 'Loan')]
+
+
+    #账户余额
+    accountBalanceElemnet: //android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]
+
+
+    #页面底下三个按钮
+    #首页按钮
+    underHomeButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '主页')]
+      TraditionalChinese: //*[contains(@content-desc, '主頁')]
+      English: //*[contains(@content-desc, 'Overview')]
+    #随你赏按钮
+    underHappinessButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '随你赏')]
+      TraditionalChinese: //*[contains(@content-desc, '隨你賞')]
+      English: //*[contains(@content-desc, 'Happiness')]
+    #交易记录按钮
+    underTransactionsButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '交易纪录')]
+      TraditionalChinese: //*[contains(@content-desc, '交易紀錄')]
+      English: //*[contains(@content-desc, 'Transactions')]
+
+  ios:
+    #提示页按钮
+    tipsButtonElement:
+      SimplifiedChinese: //*[contains(@name, '明白了！')]
+      TraditionalChinese: //*[contains(@name, '明白了！')]
+      English: //*[contains(@name, 'Got It!')]
+    #登录页的问候语
+    greetingsElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther
+    #右上角的个人中心头像
+    personalCenterElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[3]
+    #通知弹窗确认按钮
+    notificationPopupElemnt:
+      SimplifiedChinese: //*[contains(@name, '确认')]
+      TraditionalChinese: //*[contains(@name, '確認')]
+      English: //*[contains(@name, 'ok')]
+    #导肮头
+    #liviSave按钮
+    liviSaveElement:
+      SimplifiedChinese: //*[contains(@name, '存款')]
+      TraditionalChinese: //*[contains(@name, 'liviSave')]
+      English: //*[contains(@name, 'liviSave')]
+    #paylater按钮
+    paylaterElement: //*[contains(@name, 'PayLater')]
+    #保险按钮
+    insuranceElement:
+      SimplifiedChinese: //*[contains(@name, '保险')]
+      TraditionalChinese: //*[contains(@name, '保險')]
+      English: //*[contains(@name, 'Insurance')]
+    #贷款按钮
+    loanElement:
+      SimplifiedChinese: //*[contains(@name, '贷款')]
+      TraditionalChinese: //*[contains(@name, '貸款')]
+      English: //*[contains(@name, 'Loan')]
+
+
+    #账户余额
+    accountBalanceElemnet: //android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]
+
+
+    #页面底下三个按钮
+    #首页按钮
+    underHomeButtonElement:
+      SimplifiedChinese: //*[contains(@name, '主页')]
+      TraditionalChinese: //*[contains(@name, '主頁')]
+      English: //*[contains(@name, 'Overview')]
+    #随你赏按钮
+    underHappinessButtonElement:
+      SimplifiedChinese: //*[contains(@name, '随你赏')]
+      TraditionalChinese: //*[contains(@name, '隨你賞')]
+      English: //*[contains(@name, 'Happiness')]
+    #交易记录按钮
+    underTransactionsButtonElement:
+      SimplifiedChinese: //*[contains(@name, '交易纪录')]
+      TraditionalChinese: //*[contains(@name, '交易紀錄')]
+      English: //*[contains(@name, 'Transactions')]

@@ -1,0 +1,190 @@
+#登录LOS后管
+-
+  Step: Given
+  Text: 我使用账户${userName},密码${password}登录LOS后管系统
+  Fixture: web
+  Process:
+    -
+      Action: open
+      Element:
+      TestData: ${Lending}${url_los}
+      Remarks: 打开地址${Lending}${url_los}
+    -
+      Action: sleep
+      Element:
+      TestData: 2
+      Remarks: 停顿2秒
+    -
+      Action: get_text
+      Element: $${user}
+      TestData: ${Lending}${userName_jiang}
+      Remarks: 赋值账号
+    -
+      Action: get_text
+      Element: $${password}
+      TestData: ${Lending}${password_jiang}
+      Remarks: 赋值密码
+    -
+      Action: get_text
+      Element: $${SystemException}
+      TestData: 0
+      Remarks: 赋值0
+    -
+      Action: loop
+      Element: $${SystemException}
+      TestData: 3
+      Remarks: 进入循环，当值为3，跳出循环
+      branchProcess:
+        -
+          Action: compare
+          Element:
+          TestData: $${SystemException} != 3
+          Remarks: 如果值不等于3，走if分支
+          ifbranchProcess:
+            -
+              Action: judge,branch
+              Element: //*[@id='details-button']
+              TestData:
+              Remarks: 判断是否存在高级按钮，若存在，走if分支
+              ifbranchProcess:
+                -
+                  Action: click
+                  Element: //*[@id='details-button']
+                  TestData:
+                  Remarks: 点击高级
+                -
+                  Action: click
+                  Element: //*[@id='proceed-link']
+                  TestData:
+                  Remarks: 点击进入链接
+                -
+                  Action: sleep
+                  Element:
+                  TestData: 2
+                  Remarks: 停顿2秒
+                -
+                  Action: click
+                  Element: //*[@id='details-button']
+                  TestData:
+                  Remarks: 点击高级
+                -
+                  Action: sleep
+                  Element:
+                  TestData: 2
+                  Remarks: 停顿2秒
+                -
+                  Action: click
+                  Element: //*[@id='proceed-link']
+                  TestData:
+                  Remarks: 点击进入链接
+                -
+                  Action: sleep
+                  Element:
+                  TestData: 2
+                  Remarks: 停顿2秒
+              elsebranchProcess:
+                -
+                  Action: sleep
+                  Element:
+                  TestData: 1
+                  Remarks: 不存在高级按钮
+            -
+              Action: input
+              Element: //*[@id='loginid']
+              TestData: $${user}
+              Remarks: 输入账号
+            -
+              Action: input
+              Element: //*[@id='password']
+              TestData: $${password}
+              Remarks: 输入密码
+            -
+              Action: sleep
+              Element:
+              TestData: 1
+              Remarks: 停顿1秒
+            -
+              Action: judge,branch
+              Element: //*[@id='login']/div[1]/span
+              TestData:
+              Remarks: 判断是否存在该元素，若存在，走if分支
+              ifbranchProcess:
+                -
+                  Action: input
+                  Element: //*[@id='login']/div[4]/input
+                  TestData: 123
+                  Remarks: 输入验证码
+              elsebranchProcess:
+                -
+                  Action: input
+                  Element: //*[@id='login']/div[3]/input
+                  TestData: 123
+                  Remarks: 输入验证码
+            -
+              Action: sleep
+              Element:
+              TestData: 1
+              Remarks: 停顿1秒
+            -
+              Action: click
+              Element: //*[@id='sub']
+              TestData:
+              Remarks: 点击登录
+            -
+              Action: sleep
+              Element:
+              TestData: 2
+              Remarks: 停顿2秒
+            -
+              Action: judge,branch
+              Element: //*[@id='login']/div[1]/span
+              TestData:
+              Remarks: 判断是否存在该元素，若存在，走if分支
+              ifbranchProcess:
+                -
+                  Action: sleep
+                  Element:
+                  TestData: 1
+                  Remarks: 登录失败
+                -
+                  Action: get_text
+                  Element: $${SystemException}
+                  TestData: $${SystemException}+1
+                  Remarks: SystemException+1
+              elsebranchProcess:
+                -
+                  Action: sleep
+                  Element:
+                  TestData: 1
+                  Remarks: 进入循环，登录成功
+                -
+                  Action: get_text
+                  Element: $${SystemException}
+                  TestData: 3
+                  Remarks: 赋值3
+          elsebranchProcess:
+            -
+              Action: sleep
+              Element:
+              TestData: 1
+              Remarks: 登录成功
+    -
+      Action: sleep
+      Element:
+      TestData: 1
+      Remarks: 等待1秒
+-
+  Step: Then
+  Text: 我能够看到页面左上角的logo显示为我的信息
+  Fixture: web
+  Process:
+    -
+      Action: get
+      Element: //*[@id='main_sys']/ul/li[4]/a
+      TestData: ' 我的信息 '
+      Remarks: 断言工作提示，校验是否进入主页
+    -
+      Action: sleep
+      Element:
+      TestData: 5
+      Remarks: 等待5秒

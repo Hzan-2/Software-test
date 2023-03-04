@@ -1,0 +1,54 @@
+#PayLater交易记录页面
+LendingPayLaterTransactions:
+  android:
+    # '喜欢用livi Paylater吗？'用户调查弹窗的关闭按钮
+    PayLaterLikePageCloseButtonElement: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[2]
+    #触发交易记录详情
+    TransactionsDetailsButtonElement:
+      SimplifiedChinese: //*[contains(@content-desc, '万事达卡消费')]
+      TraditionalChinese: //*[contains(@content-desc, 'Mastercard消費')]
+      English: //*[contains(@content-desc, 'Mastercard Payment')]
+    #进入详情页面
+    DetailElement:
+      SimplifiedChinese: //*[contains(@content-desc, '交易详情')]
+      TraditionalChinese: //*[contains(@content-desc, '交易詳情')]
+      English: //*[contains(@content-desc, 'Transaction Details')]
+    #查看分期详情
+    StagingDetailsButtonElement:
+      SimplifiedChinese: //*[contains(@text, '分期贷款详情')]
+      TraditionalChinese: //*[contains(@text, '分期貸款詳情')]
+      English: //*[contains(@text, 'iew Instalment Details')]
+    #返回上一页
+    BackPageButtonElement1: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]
+    #返回上一页
+    BackPageButtonElement2: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]
+
+
+
+
+
+
+
+
+  ios:
+    # '喜欢用livi Paylater吗？'用户调查弹窗的关闭按钮
+    PayLaterLikePageCloseButtonElement: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[2]
+    #查看交易记录详情
+    TransactionsDetailsButtonElement:
+      SimplifiedChinese: //*[contains(@name, '万事达卡消费')][1]
+      TraditionalChinese: //*[contains(@name, 'Mastercard消費')][1]
+      English: //*[contains(@name, 'Mastercard Payment')][1]
+    #进入详情页面
+    DetailElement:
+      SimplifiedChinese: //*[contains(@name, '交易详情')]
+      TraditionalChinese: //*[contains(@name, '交易詳情')]
+      English: //*[contains(@name, 'Transaction Details')]
+    #查看分期详情
+    StagingDetailsButtonElement:
+      SimplifiedChinese: //*[contains(@name, '分期贷款详情')]
+      TraditionalChinese: //*[contains(@name, '分期貸款詳情')]
+      English: //*[contains(@name, 'Instalment Details')]
+    #返回上一页
+    BackPageButtonElement1: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]
+    #返回上一页
+    BackPageButtonElement2: //XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]

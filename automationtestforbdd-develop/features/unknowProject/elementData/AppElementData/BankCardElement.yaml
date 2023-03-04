@@ -1,0 +1,45 @@
+#Lending-PayLater涉及元素
+BankCardPage:
+  android:
+    # 银行服务设定-银行卡
+    # 详细资料
+    DetailsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '详细资料')]
+      TraditionalChinese: //*[contains(@content-desc, '详细资料')]
+      English: //*[contains(@content-desc, 'Details')]
+
+    #反转卡面
+    ReverseCardFaceElement:
+      SimplifiedChinese: //*[contains(@content-desc, '反转卡面')]
+      TraditionalChinese: //*[contains(@content-desc, '反转卡面')]
+      English: //*[contains(@content-desc, 'Reverse Card Face')]
+
+    #停用
+    DeactivateElement:
+      SimplifiedChinese: //*[contains(@content-desc, '停用')]
+      TraditionalChinese: //*[contains(@content-desc, '停用')]
+      English: //*[contains(@content-desc, 'Deactivate')]
+
+    # 已用/剩余每日限额
+    RemainingDailyLimitElement:
+      SimplifiedChinese: //*[contains(@content-desc, '已用/剩余每日限额')]
+      TraditionalChinese: //*[contains(@content-desc, '已用/剩余每日限额')]
+      English: //*[contains(@content-desc, 'Remaining daily limit')]
+
+    # 一键绑卡
+    OnekeyElement:
+      SimplifiedChinese: //*[contains(@content-desc, '一键绑卡')]
+      TraditionalChinese: //*[contains(@content-desc, '一键绑卡')]
+      English: //*[contains(@content-desc, 'One button binding card')]
+
+    # 交易纪录
+    TransactionsElement:
+      SimplifiedChinese: //*[contains(@content-desc, '​交​易​纪​录​')]
+      TraditionalChinese: //*[contains(@content-desc, '交​易​紀​錄')]
+      English: //*[contains(@content-desc, 'T​r​a​n​s​a​c​t​i​o​n​s')]
+
+    # 日期
+    DateElement:
+      SimplifiedChinese: //*[contains(@content-desc, '六月 2022')]
+      TraditionalChinese: //*[contains(@content-desc, '六月 2022')]
+      English: //*[contains(@content-desc, 'Remaining daily limit')]
